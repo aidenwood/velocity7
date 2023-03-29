@@ -9,7 +9,7 @@ import { Icon } from "astro-icon";
   <style>
      svg{width:100%;height:100%;perspective:50px}circle{stroke:hsl(279,100%,50%);stroke-width:5px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:1s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}body{background:#161a1c;align-items:center;justify-content:center;flex-direction:column}
   </style>
-  <div class="py-6 md:order-1 hidden md:block">
+  <div class="py-6 w-full hidden md:block">
             <div id="animationWrapper" translate="no">
               <svg viewBox="-500 -500 1000 1000">
                 <circle r="450"></circle>
@@ -28,7 +28,7 @@ import { Icon } from "astro-icon";
                 <circle class="meridian" r="450" style="--start:0deg; --end:15deg"></circle>
               </svg>
   </div>
-  <div>
+  <div class="py-6 md:order-1 hidden md:block">
     <h1
       class="text-white text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
       Building Better Brands.
