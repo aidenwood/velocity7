@@ -3,7 +3,7 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import aidxnLogo from 'assets/aidxn-logo-meridian.svg';
+import briehairLogo from 'assets/briehair-logo-v2.svg';
 
 const menuitems = [
   {
@@ -11,12 +11,13 @@ const menuitems = [
     path: "/about",
   },
   {
-    title: "Products",
+    title: "Our Products",
     path: "#",
     children: [
-      { title: "Velocity - Start Up", path: "/velocity" },
-      { title: "Velocity - Expansion", path: "/velocity" },
-      { title: "Velocity - Enterprise", path: "/velocity" },
+      { title: "Mukti Botanicals", path: "#" },
+      { title: "Davroe", path: "#" },
+      { title: "Keune So Pure", path: "#" },
+      { title: "Wella Colours", path: "#" },
     ],
   },
   {
@@ -41,7 +42,7 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class=""
-          ><img id="navLogo" src={aidxnLogo} alt="Aidxn Design - Code by Aiden Wood"/>
+          ><img id="navLogo" src={briehairLogo} alt="Brie Hair - Hair by Bryan"/>
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -74,15 +75,13 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="https://shop.sitelabanalytics.com/" style="muted" block size="md">Log in</Link>
-          <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md" block>Sign up</Link>
+          <Link href="/book" size="md" block>Book</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="https://shop.sitelabanalytics.com/">Log in</a>
-        <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md">Sign up</Link>
+        <Link href="/book" size="md">Book</Link>
       </div>
     </div>
   </header>
