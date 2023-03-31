@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "@components/ui/button.astro";
+import Contactform from "@components/contactform.astro";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Get ready to deploy on Velocity</Fragment>
+      <Fragment slot="desc">Online in under 24 hours. Perfectly designed for your brand in 21 days.</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">What we need from you.</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Building a website isn't easy. We've just done it plenty of times.
+          To make our promises a possibility. We use automation to collect
+          the necessary information and files from you, ready for our developers.
+          After filling out the form, you'll have instructions and links, sent to your email. 
+          We have done our best to ask only what we absolutely need straight away, 
+          this should only take around 5 minutes. Please try upload only .svg logos
+          and high quality .jpg/.png image files. Do you best to follow the provided file structure.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>2 Carnarvon Court, Oxenford</span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+              href="mailto:hi@aidxn.com"
+              >hi@aidxn.com</a
+            >
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+              href="tel:+61 412 213 169">0412 213 169</a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>
