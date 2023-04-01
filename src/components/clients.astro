@@ -7,7 +7,40 @@ import tbcLogo from 'assets/theboogiecollective-logo-greyed.svg';
 import tsdLogo from 'assets/social-dandelion-greyed.svg';
 import cobraLogo from 'assets/cobra-car-club-greyed.svg';
 ---
-
+<style>
+  :doodle {
+  grid-gap: 2px;
+  width: 75vh;
+  height: 75vh;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  }
+  background: #1d1e22;
+  border-radius:100%;
+  --scaledelay: calc((
+  (@abs(@abs(@row - @size-row/2) + @abs(@col - @size-col/2) - @size-col) / @size-col) - 1) * -1.5s) ;
+  animation-name: scale;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-delay: var(--scaledelay);
+  transform: scale(0.2);
+  @keyframes scale {
+  0%{
+  transform: scale(0.2);
+  }
+  50%{
+  transform: scale(1);
+  }
+  100%{
+  transform: scale(0.2);
+  }
+  }
+</style>
+  
+  
 <div class="mt-24">
   <h2 class="text-center text-slate-500">Works with your technologies</h2>
   <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
@@ -22,53 +55,9 @@ import cobraLogo from 'assets/cobra-car-club-greyed.svg';
 <div>
   
 <div class="hero-section">
-  <css-doodle grid="21">
-    :container {
-      transform: skewX(-12deg);
-      transform-style: preserve-3d;
-      perspective: 700px;
-      z-index: -1; /* add a negative z-index to position the animation behind the hero section */
-    }
-    :doodle {
-      grid-gap: 5px;
-      width: 75vh;
-      height: 75vh;
-      position: absolute;
-      top: 50%;
-      left: 75%;
-      transform: translate(-30%,-30%);
-      z-index: -1; /* add a negative z-index to position the animation behind the hero section */
-    }
-    background: #000;
-    border-radius:100%;
-
-    --scaledelay: calc((
-    (@abs(@abs(@row - @size-row/2) + @abs(@col - @size-col/2) - @size-col) / @size-col) - 1) * -1.5s) ;
-    animation-name: scale;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-delay: var(--scaledelay);
-    perspective: 100px;
-    transform-style: preserve-3d;
-    transform: skewX(12deg) translateZ(0px);
-    box-shadow: 20px 20px 8px -1px rgba(29, 30, 34, 0.5);
-    @keyframes scale {
-      0%{
-        transform: skewX(12deg) translate3d(0, 0, 0);
-        box-shadow: 20px 20px 8px -1px rgba(29, 30, 34, 0.5);
-      }
-      50%{
-        transform: skewX(12deg) translate3d(20px, 20px, 20px);
-        box-shadow: 2px 2px 1px 0px rgba(29, 30, 34, 0.8);
-      }
-      100%{
-        transform: skewX(12deg) translate3d(0, 0, 0);
-        box-shadow: 20px 20px 8px -1px rgba(29, 30, 34, 0.5);
-      }
-    }
-  </css-doodle>
-  <!-- your hero section content here -->
+    <css-doodle grid="21">
+  
+    </css-doodle>
 </div>
 
   
