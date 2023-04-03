@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Improve Website Speed with Velocity"
-date: "2023-03-22"
+date: "2023-04-03"
 snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 image: {
     src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
@@ -9,8 +9,8 @@ image: {
 }
 publishDate: "2022-11-07 15:39"
 category: "Tutorials"
-author: "Connor Lopez"
-tags: [astro, tailwindcss, frontend]
+author: "Aiden Wood"
+tags: [velocity, dns, backend]
 ---
 
 Have you ever considered the impact that website speed can have on your business? It's no secret that customers expect websites to load quickly, and studies have shown that even a small improvement in website speed can lead to significant increases in conversions. In fact, for every 100 milliseconds that Walmart improved their website speed, they saw a 1% increase in total website conversion. 
