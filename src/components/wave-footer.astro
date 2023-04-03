@@ -20,7 +20,2365 @@
 
 <script type="module">
   import $ from "https://code.jquery.com/jquery-3.6.0.min.js";
-  if(THREE.SpriteCanvasMaterial=function(e){THREE.Material.call(this),this.type="SpriteCanvasMaterial",this.color=new THREE.Color(16777215),this.program=function(){},this.setValues(e)},THREE.SpriteCanvasMaterial.prototype=Object.create(THREE.Material.prototype),THREE.SpriteCanvasMaterial.prototype.constructor=THREE.SpriteCanvasMaterial,THREE.SpriteCanvasMaterial.prototype.isSpriteCanvasMaterial=!0,THREE.SpriteCanvasMaterial.prototype.clone=function(){var e=new THREE.SpriteCanvasMaterial;return e.copy(this),e.color.copy(this.color),e.program=this.program,e},THREE.CanvasRenderer=function(e){console.log("THREE.CanvasRenderer",THREE.REVISION),e=e||{};var r,i,t,n,o,a,s,l,c,p,f,d,h,m,u,v,x,y,g,S=this,w=new THREE.Projector,_=void 0!==e.canvas?e.canvas:document.createElement("canvas"),M=_.width,C=_.height,b=Math.floor(M/2),z=Math.floor(C/2),R=0,V=0,j=M,L=C,T=1,B=_.getContext("2d",{alpha:!0===e.alpha}),O=new THREE.Color(16711680),W=1,P=1,E=0,k=null,N=null,F=null,H=null,A=null,D=[],G=new THREE.Color,I=new THREE.Color,U=new THREE.Color,q=new THREE.Color,J={},K=new THREE.Box2,Q=new THREE.Box2,X=new THREE.Box2,Y=new THREE.Color,Z=new THREE.Color,ee=new THREE.Color,er=new THREE.Vector3,ei=new THREE.Vector3,et=new THREE.Vector3,en=new THREE.Matrix3;function eo(e,r,i){ed(i.opacity),eh(i.blending);var t=r.scale.x*b,n=r.scale.y*z,o=Math.sqrt(t*t+n*n);if(X.min.set(e.x-o,e.y-o),X.max.set(e.x+o,e.y+o),i.isSpriteMaterial){var a=i.map;if(null!==a){var s=J[a.id];if((void 0===s||s.version!==a.version)&&(s=ep(a),J[a.id]=s),void 0!==s.canvas){ey(s.canvas);var l=a.image,c=l.width*a.offset.x,p=l.height*a.offset.y,f=l.width*a.repeat.x,d=l.height*a.repeat.y;B.save(),B.translate(e.x,e.y),0!==i.rotation&&B.rotate(i.rotation),B.translate(-t/2,-n/2),B.scale(t/f,n/d),B.translate(-c,-p),B.fillRect(c,p,f,d),B.restore()}}else ey(i.color.getStyle()),B.save(),B.translate(e.x,e.y),0!==i.rotation&&B.rotate(i.rotation),B.scale(t,-n),B.fillRect(-.5,-.5,1,1),B.restore()}else i.isSpriteCanvasMaterial?(ex(i.color.getStyle()),ey(i.color.getStyle()),B.save(),B.translate(e.x,e.y),0!==i.rotation&&B.rotate(i.rotation),B.scale(t,n),i.program(B),B.restore()):i.isPointsMaterial&&(ey(i.color.getStyle()),B.save(),B.translate(e.x,e.y),0!==i.rotation&&B.rotate(i.rotation),B.scale(t*i.size,-n*i.size),B.fillRect(-.5,-.5,1,1),B.restore())}function ea(e,r,i,t){if(ed(t.opacity),eh(t.blending),B.beginPath(),B.moveTo(e.positionScreen.x,e.positionScreen.y),B.lineTo(r.positionScreen.x,r.positionScreen.y),t.isLineBasicMaterial){if(em(t.linewidth),eu(t.linecap),ev(t.linejoin),t.vertexColors!==THREE.VertexColors)ex(t.color.getStyle());else{var n=i.vertexColors[0].getStyle(),o=i.vertexColors[1].getStyle();if(n===o)ex(n);else{try{var a=B.createLinearGradient(e.positionScreen.x,e.positionScreen.y,r.positionScreen.x,r.positionScreen.y);a.addColorStop(0,n),a.addColorStop(1,o)}catch(s){a=n}ex(a)}}B.stroke(),X.expandByScalar(2*t.linewidth)}else t.isLineDashedMaterial&&(em(t.linewidth),eu(t.linecap),ev(t.linejoin),ex(t.color.getStyle()),eg([t.dashSize,t.gapSize]),B.stroke(),X.expandByScalar(2*t.linewidth),eg([]))}function es(e,r,i,n,o,a,w,_){var M,C,b,z,R,V;if(S.info.render.vertices+=3,S.info.render.faces++,ed(_.opacity),eh(_.blending),s=e.positionScreen.x,l=e.positionScreen.y,c=r.positionScreen.x,p=r.positionScreen.y,f=i.positionScreen.x,M=s,C=l,b=c,z=p,R=f,V=d=i.positionScreen.y,B.beginPath(),B.moveTo(M,C),B.lineTo(b,z),B.lineTo(R,V),B.closePath(),(_.isMeshLambertMaterial||_.isMeshPhongMaterial||_.isMeshStandardMaterial)&&null===_.map)I.copy(_.color),U.copy(_.emissive),_.vertexColors===THREE.FaceColors&&I.multiply(w.color),G.copy(Y),ei.copy(e.positionWorld).add(r.positionWorld).add(i.positionWorld).divideScalar(3),function e(r,i,n){for(var o=0,a=t.length;o<a;o++){var s=t[o];if(q.copy(s.color),s.isDirectionalLight){var l=er.setFromMatrixPosition(s.matrixWorld).normalize(),c=i.dot(l);if(c<=0)continue;c*=s.intensity,n.add(q.multiplyScalar(c))}else if(s.isPointLight){var l=er.setFromMatrixPosition(s.matrixWorld),c=i.dot(er.subVectors(l,r).normalize());if(c<=0||0==(c*=0==s.distance?1:1-Math.min(r.distanceTo(l)/s.distance,1)))continue;c*=s.intensity,n.add(q.multiplyScalar(c))}}}(ei,w.normalModel,G),G.multiply(I).add(U),!0===_.wireframe?el(G,_.wireframeLinewidth,_.wireframeLinecap,_.wireframeLinejoin):ec(G);else _.isMeshBasicMaterial||_.isMeshLambertMaterial||_.isMeshPhongMaterial||_.isMeshStandardMaterial?null!==_.map?_.map.mapping===THREE.UVMapping&&ef(s,l,c,p,f,d,(h=w.uvs)[n].x,h[n].y,h[o].x,h[o].y,h[a].x,h[a].y,_.map):null!==_.envMap?_.envMap.mapping===THREE.SphericalReflectionMapping&&(et.copy(w.vertexNormalsModel[n]).applyMatrix3(en),m=.5*et.x+.5,u=.5*et.y+.5,et.copy(w.vertexNormalsModel[o]).applyMatrix3(en),v=.5*et.x+.5,x=.5*et.y+.5,et.copy(w.vertexNormalsModel[a]).applyMatrix3(en),ef(s,l,c,p,f,d,m,u,v,x,y=.5*et.x+.5,g=.5*et.y+.5,_.envMap)):(G.copy(_.color),_.vertexColors===THREE.FaceColors&&G.multiply(w.color),!0===_.wireframe?el(G,_.wireframeLinewidth,_.wireframeLinecap,_.wireframeLinejoin):ec(G)):_.isMeshNormalMaterial?(et.copy(w.normalModel).applyMatrix3(en),G.setRGB(et.x,et.y,et.z).multiplyScalar(.5).addScalar(.5),!0===_.wireframe?el(G,_.wireframeLinewidth,_.wireframeLinecap,_.wireframeLinejoin):ec(G)):(G.setRGB(1,1,1),!0===_.wireframe?el(G,_.wireframeLinewidth,_.wireframeLinecap,_.wireframeLinejoin):ec(G))}function el(e,r,i,t){em(r),eu(i),ev(t),ex(e.getStyle()),B.stroke(),X.expandByScalar(2*r)}function ec(e){ey(e.getStyle()),B.fill()}function ep(e){if(0===e.version||e instanceof THREE.CompressedTexture||e instanceof THREE.DataTexture)return{canvas:void 0,version:e.version};var r=e.image;if(!1===r.complete)return{canvas:void 0,version:0};var i=e.wrapS===THREE.RepeatWrapping||e.wrapS===THREE.MirroredRepeatWrapping,t=e.wrapT===THREE.RepeatWrapping||e.wrapT===THREE.MirroredRepeatWrapping,n=e.wrapS===THREE.MirroredRepeatWrapping,o=e.wrapT===THREE.MirroredRepeatWrapping,a=document.createElement("canvas");a.width=r.width*(n?2:1),a.height=r.height*(o?2:1);var s=a.getContext("2d");s.setTransform(1,0,0,-1,0,r.height),s.drawImage(r,0,0),!0===n&&(s.setTransform(-1,0,0,-1,r.width,r.height),s.drawImage(r,-r.width,0)),!0===o&&(s.setTransform(1,0,0,1,0,0),s.drawImage(r,0,r.height)),!0===n&&!0===o&&(s.setTransform(-1,0,0,1,r.width,0),s.drawImage(r,-r.width,r.height));var l="no-repeat";!0===i&&!0===t?l="repeat":!0===i?l="repeat-x":!0===t&&(l="repeat-y");var c=B.createPattern(a,l);return e.onUpdate&&e.onUpdate(e),{canvas:c,version:e.version}}function ef(e,r,i,t,n,o,a,s,l,c,p,f,d){var h=J[d.id];if((void 0===h||h.version!==d.version)&&(h=ep(d),J[d.id]=h),void 0!==h.canvas)ey(h.canvas);else{ey("rgba( 0, 0, 0, 1)"),B.fill();return}var m,u,v,x,y,g,S,w,_=d.offset.x/d.repeat.x,M=d.offset.y/d.repeat.y,C=d.image.width*d.repeat.x,b=d.image.height*d.repeat.y;a=(a+_)*C,s=(s+M)*b,l=(l+_)*C,c=(c+M)*b,p=(p+_)*C,f=(f+M)*b,i-=e,t-=r,n-=e,o-=r,l-=a,c-=s,p-=a,f-=s,0!=(S=l*f-p*c)&&(m=(f*i-c*n)*(w=1/S),u=(f*t-c*o)*w,v=(l*n-p*i)*w,x=(l*o-p*t)*w,y=e-m*a-v*s,g=r-u*a-x*s,B.save(),B.transform(m,u,v,x,y,g),B.fill(),B.restore())}function e$(e,r,i){var t,n=r.x-e.x,o=r.y-e.y,a=n*n+o*o;0!==a&&(n*=t=i/Math.sqrt(a),o*=t,r.x+=n,r.y+=o,e.x-=n,e.y-=o)}function ed(e){P!==e&&(B.globalAlpha=e,P=e)}function eh(e){E!==e&&(e===THREE.NormalBlending?B.globalCompositeOperation="source-over":e===THREE.AdditiveBlending?B.globalCompositeOperation="lighter":e===THREE.SubtractiveBlending?B.globalCompositeOperation="darker":e===THREE.MultiplyBlending&&(B.globalCompositeOperation="multiply"),E=e)}function em(e){F!==e&&(B.lineWidth=e,F=e)}function eu(e){H!==e&&(B.lineCap=e,H=e)}function ev(e){A!==e&&(B.lineJoin=e,A=e)}function ex(e){k!==e&&(B.strokeStyle=e,k=e)}function ey(e){N!==e&&(B.fillStyle=e,N=e)}function eg(e){D.length!==e.length&&(B.setLineDash(e),D=e)}void 0===B.setLineDash&&(B.setLineDash=function(){}),this.domElement=_,this.autoClear=!0,this.sortObjects=!0,this.sortElements=!0,this.info={render:{vertices:0,faces:0}},this.supportsVertexTextures=function(){},this.setFaceCulling=function(){},this.getContext=function(){return B},this.getContextAttributes=function(){return B.getContextAttributes()},this.getPixelRatio=function(){return T},this.setPixelRatio=function(e){void 0!==e&&(T=e)},this.setSize=function(e,r,i){M=e*T,C=r*T,_.width=M,_.height=C,b=Math.floor(M/2),z=Math.floor(C/2),!1!==i&&(_.style.width=e+"px",_.style.height=r+"px"),K.min.set(-b,-z),K.max.set(b,z),Q.min.set(-b,-z),Q.max.set(b,z),P=1,E=0,k=null,N=null,F=null,H=null,A=null,this.setViewport(0,0,e,r)},this.setViewport=function(e,r,i,t){R=e*T,V=r*T,j=i*T,L=t*T},this.setScissor=function(){},this.setScissorTest=function(){},this.setClearColor=function(e,r){O.set(e),W=void 0!==r?r:1,Q.min.set(-b,-z),Q.max.set(b,z)},this.setClearColorHex=function(e,r){console.warn("THREE.CanvasRenderer: .setClearColorHex() is being removed. Use .setClearColor() instead."),this.setClearColor(e,r)},this.getClearColor=function(){return O},this.getClearAlpha=function(){return W},this.getMaxAnisotropy=function(){return 0},this.clear=function(){!1===Q.isEmpty()&&(Q.intersect(K),Q.expandByScalar(2),Q.min.x=Q.min.x+b,Q.min.y=-Q.min.y+z,Q.max.x=Q.max.x+b,Q.max.y=-Q.max.y+z,W<1&&B.clearRect(0|Q.min.x,0|Q.max.y,Q.max.x-Q.min.x|0,Q.min.y-Q.max.y|0),W>0&&(eh(THREE.NormalBlending),ed(1),ey("rgba("+Math.floor(255*O.r)+","+Math.floor(255*O.g)+","+Math.floor(255*O.b)+","+W+")"),B.fillRect(0|Q.min.x,0|Q.max.y,Q.max.x-Q.min.x|0,Q.min.y-Q.max.y|0)),Q.makeEmpty())},this.clearColor=function(){},this.clearDepth=function(){},this.clearStencil=function(){},this.render=function(e,s){if(void 0===s.isCamera){console.error("THREE.CanvasRenderer.render: camera is not an instance of THREE.Camera.");return}var l=e.background;l&&l.isColor?(ey("rgb(0,0,0)"),B.fillRect(0,0,M,C)):!0===this.autoClear&&this.clear(),S.info.render.vertices=0,S.info.render.faces=0,B.setTransform(j/M,0,0,-L/C,R,C-V),B.translate(b,z),i=(r=w.projectScene(e,s,this.sortObjects,this.sortElements)).elements,t=r.lights,en.getNormalMatrix(s.matrixWorldInverse),function e(){Y.setRGB(0,0,0),Z.setRGB(0,0,0),ee.setRGB(0,0,0);for(var r=0,i=t.length;r<i;r++){var n=t[r],o=n.color;n.isAmbientLight?Y.add(o):n.isDirectionalLight?Z.add(o):n.isPointLight&&ee.add(o)}}();for(var c=0,p=i.length;c<p;c++){var f=i[c],d=f.material;if(void 0!==d&&0!==d.opacity){if(X.makeEmpty(),f instanceof THREE.RenderableSprite)n=f,n.x*=b,n.y*=z,eo(n,f,d);else if(f instanceof THREE.RenderableLine)n=f.v1,o=f.v2,n.positionScreen.x*=b,n.positionScreen.y*=z,o.positionScreen.x*=b,o.positionScreen.y*=z,X.setFromPoints([n.positionScreen,o.positionScreen]),!0===K.intersectsBox(X)&&ea(n,o,f,d);else if(f instanceof THREE.RenderableFace){if(n=f.v1,o=f.v2,a=f.v3,n.positionScreen.z<-1||n.positionScreen.z>1||o.positionScreen.z<-1||o.positionScreen.z>1||a.positionScreen.z<-1||a.positionScreen.z>1)continue;n.positionScreen.x*=b,n.positionScreen.y*=z,o.positionScreen.x*=b,o.positionScreen.y*=z,a.positionScreen.x*=b,a.positionScreen.y*=z,d.overdraw>0&&(e$(n.positionScreen,o.positionScreen,d.overdraw),e$(o.positionScreen,a.positionScreen,d.overdraw),e$(a.positionScreen,n.positionScreen,d.overdraw)),X.setFromPoints([n.positionScreen,o.positionScreen,a.positionScreen]),!0===K.intersectsBox(X)&&es(n,o,a,0,1,2,f,d)}Q.union(X)}}B.setTransform(1,0,0,1,0,0)}},THREE.RenderableObject=function(){this.id=0,this.object=null,this.z=0,this.renderOrder=0},THREE.RenderableFace=function(){this.id=0,this.v1=new THREE.RenderableVertex,this.v2=new THREE.RenderableVertex,this.v3=new THREE.RenderableVertex,this.normalModel=new THREE.Vector3,this.vertexNormalsModel=[new THREE.Vector3,new THREE.Vector3,new THREE.Vector3],this.vertexNormalsLength=0,this.color=new THREE.Color,this.material=null,this.uvs=[new THREE.Vector2,new THREE.Vector2,new THREE.Vector2],this.z=0,this.renderOrder=0},THREE.RenderableVertex=function(){this.position=new THREE.Vector3,this.positionWorld=new THREE.Vector3,this.positionScreen=new THREE.Vector4,this.visible=!0},THREE.RenderableVertex.prototype.copy=function(e){this.positionWorld.copy(e.positionWorld),this.positionScreen.copy(e.positionScreen)},THREE.RenderableLine=function(){this.id=0,this.v1=new THREE.RenderableVertex,this.v2=new THREE.RenderableVertex,this.vertexColors=[new THREE.Color,new THREE.Color],this.material=null,this.z=0,this.renderOrder=0},THREE.RenderableSprite=function(){this.id=0,this.object=null,this.x=0,this.y=0,this.z=0,this.rotation=0,this.scale=new THREE.Vector2,this.material=null,this.renderOrder=0},THREE.Projector=function(){var e,r,i,t,n,o,a,s,l,c,p,f=[],d=0,h=[],m=0,u=[],v=0,x=[],y=0,g=[],S=0,w={objects:[],lights:[],elements:[]},_=new THREE.Vector3,M=new THREE.Vector4,C=new THREE.Box3(new THREE.Vector3(-1,-1,-1),new THREE.Vector3(1,1,1)),b=new THREE.Box3,z=[,,,],R=new THREE.Matrix4,V=new THREE.Matrix4,j=new THREE.Matrix4,L=new THREE.Matrix3,T=new THREE.Frustum,B=new THREE.Vector4,O=new THREE.Vector4;this.projectVector=function(e,r){console.warn("THREE.Projector: .projectVector() is now vector.project()."),e.project(r)},this.unprojectVector=function(e,r){console.warn("THREE.Projector: .unprojectVector() is now vector.unproject()."),e.unproject(r)},this.pickingRay=function(){console.error("THREE.Projector: .pickingRay() is now raycaster.setFromCamera().")};var W=new function(){var e=[],r=[],t=[],o=null,s=null,l=new THREE.Matrix3;function c(e){var r=e.position,i=e.positionWorld,t=e.positionScreen;i.copy(r).applyMatrix4(p),t.copy(i).applyMatrix4(V);var n=1/t.w;t.x*=n,t.y*=n,t.z*=n,e.visible=t.x>=-1&&t.x<=1&&t.y>=-1&&t.y<=1&&t.z>=-1&&t.z<=1}function f(e,r,i){return!0===e.visible||!0===r.visible||!0===i.visible||(z[0]=e.positionScreen,z[1]=r.positionScreen,z[2]=i.positionScreen,C.intersectsBox(b.setFromPoints(z)))}function d(e,r,i){return(i.positionScreen.x-e.positionScreen.x)*(r.positionScreen.y-e.positionScreen.y)-(i.positionScreen.y-e.positionScreen.y)*(r.positionScreen.x-e.positionScreen.x)<0}return{setObject:function i(n){s=(o=n).material,l.getNormalMatrix(o.matrixWorld),e.length=0,r.length=0,t.length=0},projectVertex:c,checkTriangleVisibility:f,checkBackfaceCulling:d,pushVertex:function e(r,t,n){(i=k()).position.set(r,t,n),c(i)},pushNormal:function r(i,t,n){e.push(i,t,n)},pushColor:function e(i,t,n){r.push(i,t,n)},pushUv:function e(r,i){t.push(r,i)},pushLine:function e(i,t){var n=h[i],s=h[t];n.positionScreen.copy(n.position).applyMatrix4(j),s.positionScreen.copy(s.position).applyMatrix4(j),!0===A(n.positionScreen,s.positionScreen)&&(n.positionScreen.multiplyScalar(1/n.positionScreen.w),s.positionScreen.multiplyScalar(1/s.positionScreen.w),(a=F()).id=o.id,a.v1.copy(n),a.v2.copy(s),a.z=Math.max(n.positionScreen.z,s.positionScreen.z),a.renderOrder=o.renderOrder,a.material=o.material,o.material.vertexColors===THREE.VertexColors&&(a.vertexColors[0].fromArray(r,3*i),a.vertexColors[1].fromArray(r,3*t)),w.elements.push(a))},pushTriangle:function r(i,a,c){var p=h[i],m=h[a],u=h[c];if(!1!==f(p,m,u)&&(s.side===THREE.DoubleSide||!0===d(p,m,u))){(n=N()).id=o.id,n.v1.copy(p),n.v2.copy(m),n.v3.copy(u),n.z=(p.positionScreen.z+m.positionScreen.z+u.positionScreen.z)/3,n.renderOrder=o.renderOrder,n.normalModel.fromArray(e,3*i),n.normalModel.applyMatrix3(l).normalize();for(var v=0;v<3;v++){var x=n.vertexNormalsModel[v];x.fromArray(e,3*arguments[v]),x.applyMatrix3(l).normalize(),n.uvs[v].fromArray(t,2*arguments[v])}n.vertexNormalsLength=3,n.material=o.material,w.elements.push(n)}}}};function P(i){(e=function e(){if(r===d){var i=new THREE.RenderableObject;return f.push(i),d++,r++,i}return f[r++]}()).id=i.id,e.object=i,_.setFromMatrixPosition(i.matrixWorld),_.applyMatrix4(V),e.z=_.z,e.renderOrder=i.renderOrder,w.objects.push(e)}function E(e,r,i){var t=1/e.w;e.z*=t,e.z>=-1&&e.z<=1&&((l=function e(){if(c===S){var r=new THREE.RenderableSprite;return g.push(r),S++,c++,r}return g[c++]}()).id=r.id,l.x=e.x*t,l.y=e.y*t,l.z=e.z,l.renderOrder=r.renderOrder,l.object=r,l.rotation=r.rotation,l.scale.x=r.scale.x*Math.abs(l.x-(e.x+i.projectionMatrix.elements[0])/(e.w+i.projectionMatrix.elements[12])),l.scale.y=r.scale.y*Math.abs(l.y-(e.y+i.projectionMatrix.elements[5])/(e.w+i.projectionMatrix.elements[13])),l.material=r.material,w.elements.push(l))}function k(){if(t===m){var e=new THREE.RenderableVertex;return h.push(e),m++,t++,e}return h[t++]}function N(){if(o===v){var e=new THREE.RenderableFace;return u.push(e),v++,o++,e}return u[o++]}function F(){if(s===y){var e=new THREE.RenderableLine;return x.push(e),y++,s++,e}return x[s++]}function H(e,r){return e.renderOrder!==r.renderOrder?e.renderOrder-r.renderOrder:e.z!==r.z?r.z-e.z:e.id!==r.id?e.id-r.id:0}function A(e,r){var i=0,t=1,n=e.z+e.w,o=r.z+r.w,a=-e.z+e.w,s=-r.z+r.w;return!!(n>=0)&&!!(o>=0)&&!!(a>=0)&&!!(s>=0)||(!(n<0)||!(o<0))&&(!(a<0)||!(s<0))&&(n<0?i=Math.max(i,n/(n-o)):o<0&&(t=Math.min(t,n/(n-o))),a<0?i=Math.max(i,a/(a-s)):s<0&&(t=Math.min(t,a/(a-s))),!(t<i)&&(e.lerp(r,i),r.lerp(e,1-t),!0))}this.projectScene=function(e,i,l,f){o=0,s=0,c=0,w.elements.length=0,!0===e.autoUpdate&&e.updateMatrixWorld(),null===i.parent&&i.updateMatrixWorld(),R.copy(i.matrixWorldInverse),V.multiplyMatrices(i.projectionMatrix,R),T.setFromMatrix(V),r=0,w.objects.length=0,w.lights.length=0,function e(r){if(!1!==r.visible){if(r instanceof THREE.Light)w.lights.push(r);else if(r instanceof THREE.Mesh||r instanceof THREE.Line||r instanceof THREE.Points){if(!1===r.material.visible||!0===r.frustumCulled&&!1===T.intersectsObject(r))return;P(r)}else if(r instanceof THREE.Sprite){if(!1===r.material.visible||!0===r.frustumCulled&&!1===T.intersectsSprite(r))return;P(r)}for(var i=r.children,t=0,n=i.length;t<n;t++)e(i[t])}}(e),!0===l&&w.objects.sort(H);for(var d=w.objects,m=0,u=d.length;m<u;m++){var v=d[m].object,x=v.geometry;if(W.setObject(v),p=v.matrixWorld,t=0,v instanceof THREE.Mesh){if(x instanceof THREE.BufferGeometry){var y=x.attributes,g=x.groups;if(void 0===y.position)continue;for(var S=y.position.array,C=0,b=S.length;C<b;C+=3)W.pushVertex(S[C],S[C+1],S[C+2]);if(void 0!==y.normal)for(var z=y.normal.array,C=0,b=z.length;C<b;C+=3)W.pushNormal(z[C],z[C+1],z[C+2]);if(void 0!==y.uv)for(var D=y.uv.array,C=0,b=D.length;C<b;C+=2)W.pushUv(D[C],D[C+1]);if(null!==x.index){var G=x.index.array;if(g.length>0)for(var I=0;I<g.length;I++)for(var U=g[I],C=U.start,b=U.start+U.count;C<b;C+=3)W.pushTriangle(G[C],G[C+1],G[C+2]);else for(var C=0,b=G.length;C<b;C+=3)W.pushTriangle(G[C],G[C+1],G[C+2])}else for(var C=0,b=S.length/3;C<b;C+=3)W.pushTriangle(C,C+1,C+2)}else if(x instanceof THREE.Geometry){var q=x.vertices,J=x.faces,K=x.faceVertexUvs[0];L.getNormalMatrix(p);for(var Q=v.material,X=Array.isArray(Q),Y=0,Z=q.length;Y<Z;Y++){var ee=q[Y];if(_.copy(ee),!0===Q.morphTargets)for(var er=x.morphTargets,ei=v.morphTargetInfluences,et=0,en=er.length;et<en;et++){var eo=ei[et];if(0!==eo){var ea=er[et].vertices[Y];_.x+=(ea.x-ee.x)*eo,_.y+=(ea.y-ee.y)*eo,_.z+=(ea.z-ee.z)*eo}}W.pushVertex(_.x,_.y,_.z)}for(var es=0,el=J.length;es<el;es++){var ec=J[es];if(void 0!==(Q=!0===X?v.material[ec.materialIndex]:v.material)){var ep=Q.side,ef=h[ec.a],e$=h[ec.b],ed=h[ec.c];if(!1!==W.checkTriangleVisibility(ef,e$,ed)){var eh=W.checkBackfaceCulling(ef,e$,ed);if(ep!==THREE.DoubleSide&&(ep===THREE.FrontSide&&!1===eh||ep===THREE.BackSide&&!0===eh))continue;(n=N()).id=v.id,n.v1.copy(ef),n.v2.copy(e$),n.v3.copy(ed),n.normalModel.copy(ec.normal),!1===eh&&(ep===THREE.BackSide||ep===THREE.DoubleSide)&&n.normalModel.negate(),n.normalModel.applyMatrix3(L).normalize();for(var em=ec.vertexNormals,eu=0,ev=Math.min(em.length,3);eu<ev;eu++){var ex=n.vertexNormalsModel[eu];ex.copy(em[eu]),!1===eh&&(ep===THREE.BackSide||ep===THREE.DoubleSide)&&ex.negate(),ex.applyMatrix3(L).normalize()}n.vertexNormalsLength=em.length;var ey=K[es];if(void 0!==ey)for(var eg=0;eg<3;eg++)n.uvs[eg].copy(ey[eg]);n.color=ec.color,n.material=Q,n.z=(ef.positionScreen.z+e$.positionScreen.z+ed.positionScreen.z)/3,n.renderOrder=v.renderOrder,w.elements.push(n)}}}}}else if(v instanceof THREE.Line){if(j.multiplyMatrices(V,p),x instanceof THREE.BufferGeometry){var y=x.attributes;if(void 0!==y.position){for(var S=y.position.array,C=0,b=S.length;C<b;C+=3)W.pushVertex(S[C],S[C+1],S[C+2]);if(void 0!==y.color)for(var eS=y.color.array,C=0,b=eS.length;C<b;C+=3)W.pushColor(eS[C],eS[C+1],eS[C+2]);if(null!==x.index)for(var G=x.index.array,C=0,b=G.length;C<b;C+=2)W.pushLine(G[C],G[C+1]);else for(var ew=v instanceof THREE.LineSegments?2:1,C=0,b=S.length/3-1;C<b;C+=ew)W.pushLine(C,C+1)}}else if(x instanceof THREE.Geometry){var q=v.geometry.vertices;if(0===q.length)continue;(ef=k()).positionScreen.copy(q[0]).applyMatrix4(j);for(var ew=v instanceof THREE.LineSegments?2:1,Y=1,Z=q.length;Y<Z;Y++)(ef=k()).positionScreen.copy(q[Y]).applyMatrix4(j),(Y+1)%ew>0||(e$=h[t-2],B.copy(ef.positionScreen),O.copy(e$.positionScreen),!0===A(B,O)&&(B.multiplyScalar(1/B.w),O.multiplyScalar(1/O.w),(a=F()).id=v.id,a.v1.positionScreen.copy(B),a.v2.positionScreen.copy(O),a.z=Math.max(B.z,O.z),a.renderOrder=v.renderOrder,a.material=v.material,v.material.vertexColors===THREE.VertexColors&&(a.vertexColors[0].copy(v.geometry.colors[Y]),a.vertexColors[1].copy(v.geometry.colors[Y-1])),w.elements.push(a)))}}else if(v instanceof THREE.Points){if(j.multiplyMatrices(V,p),x instanceof THREE.Geometry)for(var q=v.geometry.vertices,Y=0,Z=q.length;Y<Z;Y++){var ee=q[Y];M.set(ee.x,ee.y,ee.z,1),M.applyMatrix4(j),E(M,v,i)}else if(x instanceof THREE.BufferGeometry){var y=x.attributes;if(void 0!==y.position)for(var S=y.position.array,C=0,b=S.length;C<b;C+=3)M.set(S[C],S[C+1],S[C+2],1),M.applyMatrix4(j),E(M,v,i)}}else v instanceof THREE.Sprite&&(M.set(p.elements[12],p.elements[13],p.elements[14],1),M.applyMatrix4(V),E(M,v,i))}return!0===f&&w.elements.sort(H),w}},$("#home_wave").length>0){var e,r,i,t,n,o,a,s=200,l=40,c=60,p=0,f=0,d=0,h=window.innerWidth/2,m=window.innerHeight/2;init(),animate()}function init(){e=$("#home_wave"),(i=new THREE.PerspectiveCamera(65,window.innerWidth/window.innerHeight,1,1e4)).position.z=1e4,(t=new THREE.Scene).fog=new THREE.Fog(16777215,2e3,1e4),o=[];for(var r=2*Math.PI,p=new THREE.SpriteCanvasMaterial({color:2170687,program:function(e){e.beginPath(),e.arc(0,0,.5,0,r,!0),e.fill()}}),f=0,d=0;d<l;d++)for(var h=0;h<c;h++)(a=o[f++]=new THREE.Sprite(p)).position.x=d*s-l*s/2,a.position.z=h*s-c*s/2,t.add(a);(n=new THREE.CanvasRenderer({alpha:!0})).setPixelRatio(window.devicePixelRatio),n.setSize(window.innerWidth,window.innerHeight),n.setClearColor(t.fog.color),e.append(n.domElement),window.addEventListener("resize",onWindowResize,!1)}function onWindowResize(){h=window.innerWidth/2,m=window.innerHeight/2,i.aspect=window.innerWidth/window.innerHeight,i.updateProjectionMatrix(),n.setSize(window.innerWidth,window.innerHeight)}function animate(){requestAnimationFrame(animate),render()}function render(){i.position.set(0,355,122);for(var e=0,r=0;r<l;r++)for(var s=0;s<c;s++)(a=o[e++]).position.y=50*Math.sin((r+p)*.3)+50*Math.sin((s+p)*.5),a.scale.x=a.scale.y=(Math.sin((r+p)*.3)+1)*4+(Math.sin((s+p)*.5)+1)*4;n.render(t,i),p+=.1}
+  
+  
+  /**
+ * @author mrdoob / http://mrdoob.com/
+ */
+
+THREE.SpriteCanvasMaterial = function ( parameters ) {
+
+	THREE.Material.call( this );
+
+	this.type = 'SpriteCanvasMaterial';
+
+	this.color = new THREE.Color( 0xffffff );
+	this.program = function () {};
+
+	this.setValues( parameters );
+
+};
+
+THREE.SpriteCanvasMaterial.prototype = Object.create( THREE.Material.prototype );
+THREE.SpriteCanvasMaterial.prototype.constructor = THREE.SpriteCanvasMaterial;
+THREE.SpriteCanvasMaterial.prototype.isSpriteCanvasMaterial = true;
+
+THREE.SpriteCanvasMaterial.prototype.clone = function () {
+
+	var material = new THREE.SpriteCanvasMaterial();
+
+	material.copy( this );
+	material.color.copy( this.color );
+	material.program = this.program;
+
+	return material;
+
+};
+
+//
+
+
+
+THREE.CanvasRenderer = function ( parameters ) {
+
+	console.log( 'THREE.CanvasRenderer', THREE.REVISION );
+
+	parameters = parameters || {};
+
+	var _this = this,
+		_renderData, _elements, _lights,
+		_projector = new THREE.Projector(),
+
+		_canvas = parameters.canvas !== undefined
+				 ? parameters.canvas
+				 : document.createElement( 'canvas' ),
+
+		_canvasWidth = _canvas.width,
+		_canvasHeight = _canvas.height,
+		_canvasWidthHalf = Math.floor( _canvasWidth / 2 ),
+		_canvasHeightHalf = Math.floor( _canvasHeight / 2 ),
+
+		_viewportX = 0,
+		_viewportY = 0,
+		_viewportWidth = _canvasWidth,
+		_viewportHeight = _canvasHeight,
+
+		_pixelRatio = 1,
+
+		_context = _canvas.getContext( '2d', {
+			alpha: parameters.alpha === true
+		} ),
+
+		_clearColor = new THREE.Color( 0xff0000 ),
+		_clearAlpha = 1,
+
+		_contextGlobalAlpha = 1,
+		_contextGlobalCompositeOperation = 0,
+		_contextStrokeStyle = null,
+		_contextFillStyle = null,
+		_contextLineWidth = null,
+		_contextLineCap = null,
+		_contextLineJoin = null,
+		_contextLineDash = [],
+
+		_v1, _v2, _v3,
+
+		_v1x, _v1y, _v2x, _v2y, _v3x, _v3y,
+
+		_color = new THREE.Color(),
+
+		_diffuseColor = new THREE.Color(),
+		_emissiveColor = new THREE.Color(),
+
+		_lightColor = new THREE.Color(),
+
+		_patterns = {},
+
+		_uvs,
+		_uv1x, _uv1y, _uv2x, _uv2y, _uv3x, _uv3y,
+
+		_clipBox = new THREE.Box2(),
+		_clearBox = new THREE.Box2(),
+		_elemBox = new THREE.Box2(),
+
+		_ambientLight = new THREE.Color(),
+		_directionalLights = new THREE.Color(),
+		_pointLights = new THREE.Color(),
+
+		_vector3 = new THREE.Vector3(), // Needed for PointLight
+		_centroid = new THREE.Vector3(),
+		_normal = new THREE.Vector3(),
+		_normalViewMatrix = new THREE.Matrix3();
+
+	/* TODO
+	_canvas.mozImageSmoothingEnabled = false;
+	_canvas.webkitImageSmoothingEnabled = false;
+	_canvas.msImageSmoothingEnabled = false;
+	_canvas.imageSmoothingEnabled = false;
+	*/
+
+	// dash+gap fallbacks for Firefox and everything else
+
+	if ( _context.setLineDash === undefined ) {
+
+		_context.setLineDash = function () {};
+
+	}
+
+	this.domElement = _canvas;
+
+	this.autoClear = true;
+	this.sortObjects = true;
+	this.sortElements = true;
+
+	this.info = {
+
+		render: {
+
+			vertices: 0,
+			faces: 0
+
+		}
+
+	};
+
+	// WebGLRenderer compatibility
+
+	this.supportsVertexTextures = function () {};
+	this.setFaceCulling = function () {};
+
+	// API
+
+	this.getContext = function () {
+
+		return _context;
+
+	};
+
+	this.getContextAttributes = function () {
+
+		return _context.getContextAttributes();
+
+	};
+
+	this.getPixelRatio = function () {
+
+		return _pixelRatio;
+
+	};
+
+	this.setPixelRatio = function ( value ) {
+
+		if ( value !== undefined ) _pixelRatio = value;
+
+	};
+
+	this.setSize = function ( width, height, updateStyle ) {
+
+		_canvasWidth = width * _pixelRatio;
+		_canvasHeight = height * _pixelRatio;
+
+		_canvas.width = _canvasWidth;
+		_canvas.height = _canvasHeight;
+
+		_canvasWidthHalf = Math.floor( _canvasWidth / 2 );
+		_canvasHeightHalf = Math.floor( _canvasHeight / 2 );
+
+		if ( updateStyle !== false ) {
+
+			_canvas.style.width = width + 'px';
+			_canvas.style.height = height + 'px';
+
+		}
+
+		_clipBox.min.set( - _canvasWidthHalf, - _canvasHeightHalf );
+		_clipBox.max.set(   _canvasWidthHalf,   _canvasHeightHalf );
+
+		_clearBox.min.set( - _canvasWidthHalf, - _canvasHeightHalf );
+		_clearBox.max.set(   _canvasWidthHalf,   _canvasHeightHalf );
+
+		_contextGlobalAlpha = 1;
+		_contextGlobalCompositeOperation = 0;
+		_contextStrokeStyle = null;
+		_contextFillStyle = null;
+		_contextLineWidth = null;
+		_contextLineCap = null;
+		_contextLineJoin = null;
+
+		this.setViewport( 0, 0, width, height );
+
+	};
+
+	this.setViewport = function ( x, y, width, height ) {
+
+		_viewportX = x * _pixelRatio;
+		_viewportY = y * _pixelRatio;
+
+		_viewportWidth = width * _pixelRatio;
+		_viewportHeight = height * _pixelRatio;
+
+	};
+
+	this.setScissor = function () {};
+	this.setScissorTest = function () {};
+
+	this.setClearColor = function ( color, alpha ) {
+
+		_clearColor.set( color );
+		_clearAlpha = alpha !== undefined ? alpha : 1;
+
+		_clearBox.min.set( - _canvasWidthHalf, - _canvasHeightHalf );
+		_clearBox.max.set(   _canvasWidthHalf,   _canvasHeightHalf );
+
+	};
+
+	this.setClearColorHex = function ( hex, alpha ) {
+
+		console.warn( 'THREE.CanvasRenderer: .setClearColorHex() is being removed. Use .setClearColor() instead.' );
+		this.setClearColor( hex, alpha );
+
+	};
+
+	this.getClearColor = function () {
+
+		return _clearColor;
+
+	};
+
+	this.getClearAlpha = function () {
+
+		return _clearAlpha;
+
+	};
+
+	this.getMaxAnisotropy = function () {
+
+		return 0;
+
+	};
+
+	this.clear = function () {
+
+		if ( _clearBox.isEmpty() === false ) {
+
+			_clearBox.intersect( _clipBox );
+			_clearBox.expandByScalar( 2 );
+
+			_clearBox.min.x =   _clearBox.min.x + _canvasWidthHalf;
+			_clearBox.min.y = - _clearBox.min.y + _canvasHeightHalf;		// higher y value !
+			_clearBox.max.x =   _clearBox.max.x + _canvasWidthHalf;
+			_clearBox.max.y = - _clearBox.max.y + _canvasHeightHalf;		// lower y value !
+
+			if ( _clearAlpha < 1 ) {
+
+				_context.clearRect(
+					_clearBox.min.x | 0,
+					_clearBox.max.y | 0,
+					( _clearBox.max.x - _clearBox.min.x ) | 0,
+					( _clearBox.min.y - _clearBox.max.y ) | 0
+				);
+
+			}
+
+			if ( _clearAlpha > 0 ) {
+
+				setBlending( THREE.NormalBlending );
+				setOpacity( 1 );
+
+				setFillStyle( 'rgba(' + Math.floor( _clearColor.r * 255 ) + ',' + Math.floor( _clearColor.g * 255 ) + ',' + Math.floor( _clearColor.b * 255 ) + ',' + _clearAlpha + ')' );
+
+				_context.fillRect(
+					_clearBox.min.x | 0,
+					_clearBox.max.y | 0,
+					( _clearBox.max.x - _clearBox.min.x ) | 0,
+					( _clearBox.min.y - _clearBox.max.y ) | 0
+				);
+
+			}
+
+			_clearBox.makeEmpty();
+
+		}
+
+	};
+
+	// compatibility
+
+	this.clearColor = function () {};
+	this.clearDepth = function () {};
+	this.clearStencil = function () {};
+
+	this.render = function ( scene, camera ) {
+
+		if ( camera.isCamera === undefined ) {
+
+			console.error( 'THREE.CanvasRenderer.render: camera is not an instance of THREE.Camera.' );
+			return;
+
+		}
+
+		var background = scene.background;
+    
+    //scene.background = new THREE.Color( 0xff0000 );
+
+		if ( background && background.isColor ) {
+
+			setFillStyle( 'rgb(0,0,0)' );
+			_context.fillRect( 0, 0, _canvasWidth, _canvasHeight );
+
+		} else if ( this.autoClear === true ) {
+
+			this.clear();
+
+		}
+
+		_this.info.render.vertices = 0;
+		_this.info.render.faces = 0;
+
+		_context.setTransform( _viewportWidth / _canvasWidth, 0, 0, - _viewportHeight / _canvasHeight, _viewportX, _canvasHeight - _viewportY );
+		_context.translate( _canvasWidthHalf, _canvasHeightHalf );
+
+		_renderData = _projector.projectScene( scene, camera, this.sortObjects, this.sortElements );
+		_elements = _renderData.elements;
+		_lights = _renderData.lights;
+
+		_normalViewMatrix.getNormalMatrix( camera.matrixWorldInverse );
+
+		/* DEBUG
+		setFillStyle( 'rgba( 0, 255, 255, 0.5 )' );
+		_context.fillRect( _clipBox.min.x, _clipBox.min.y, _clipBox.max.x - _clipBox.min.x, _clipBox.max.y - _clipBox.min.y );
+		*/
+
+		calculateLights();
+
+		for ( var e = 0, el = _elements.length; e < el; e ++ ) {
+
+			var element = _elements[ e ];
+
+			var material = element.material;
+
+			if ( material === undefined || material.opacity === 0 ) continue;
+
+			_elemBox.makeEmpty();
+
+			if ( element instanceof THREE.RenderableSprite ) {
+
+				_v1 = element;
+				_v1.x *= _canvasWidthHalf; _v1.y *= _canvasHeightHalf;
+
+				renderSprite( _v1, element, material );
+
+			} else if ( element instanceof THREE.RenderableLine ) {
+
+				_v1 = element.v1; _v2 = element.v2;
+
+				_v1.positionScreen.x *= _canvasWidthHalf; _v1.positionScreen.y *= _canvasHeightHalf;
+				_v2.positionScreen.x *= _canvasWidthHalf; _v2.positionScreen.y *= _canvasHeightHalf;
+
+				_elemBox.setFromPoints( [
+					_v1.positionScreen,
+					_v2.positionScreen
+				] );
+
+				if ( _clipBox.intersectsBox( _elemBox ) === true ) {
+
+					renderLine( _v1, _v2, element, material );
+
+				}
+
+			} else if ( element instanceof THREE.RenderableFace ) {
+
+				_v1 = element.v1; _v2 = element.v2; _v3 = element.v3;
+
+				if ( _v1.positionScreen.z < - 1 || _v1.positionScreen.z > 1 ) continue;
+				if ( _v2.positionScreen.z < - 1 || _v2.positionScreen.z > 1 ) continue;
+				if ( _v3.positionScreen.z < - 1 || _v3.positionScreen.z > 1 ) continue;
+
+				_v1.positionScreen.x *= _canvasWidthHalf; _v1.positionScreen.y *= _canvasHeightHalf;
+				_v2.positionScreen.x *= _canvasWidthHalf; _v2.positionScreen.y *= _canvasHeightHalf;
+				_v3.positionScreen.x *= _canvasWidthHalf; _v3.positionScreen.y *= _canvasHeightHalf;
+
+				if ( material.overdraw > 0 ) {
+
+					expand( _v1.positionScreen, _v2.positionScreen, material.overdraw );
+					expand( _v2.positionScreen, _v3.positionScreen, material.overdraw );
+					expand( _v3.positionScreen, _v1.positionScreen, material.overdraw );
+
+				}
+
+				_elemBox.setFromPoints( [
+					_v1.positionScreen,
+					_v2.positionScreen,
+					_v3.positionScreen
+				] );
+
+				if ( _clipBox.intersectsBox( _elemBox ) === true ) {
+
+					renderFace3( _v1, _v2, _v3, 0, 1, 2, element, material );
+
+				}
+
+			}
+
+			/* DEBUG
+			setLineWidth( 1 );
+			setStrokeStyle( 'rgba( 0, 255, 0, 0.5 )' );
+			_context.strokeRect( _elemBox.min.x, _elemBox.min.y, _elemBox.max.x - _elemBox.min.x, _elemBox.max.y - _elemBox.min.y );
+			*/
+
+			_clearBox.union( _elemBox );
+
+		}
+
+		/* DEBUG
+		setLineWidth( 1 );
+		setStrokeStyle( 'rgba( 255, 0, 0, 0.5 )' );
+		_context.strokeRect( _clearBox.min.x, _clearBox.min.y, _clearBox.max.x - _clearBox.min.x, _clearBox.max.y - _clearBox.min.y );
+		*/
+
+		_context.setTransform( 1, 0, 0, 1, 0, 0 );
+
+	};
+
+	//
+
+	function calculateLights() {
+
+		_ambientLight.setRGB( 0, 0, 0 );
+		_directionalLights.setRGB( 0, 0, 0 );
+		_pointLights.setRGB( 0, 0, 0 );
+
+		for ( var l = 0, ll = _lights.length; l < ll; l ++ ) {
+
+			var light = _lights[ l ];
+			var lightColor = light.color;
+
+			if ( light.isAmbientLight ) {
+
+				_ambientLight.add( lightColor );
+
+			} else if ( light.isDirectionalLight ) {
+
+				// for sprites
+
+				_directionalLights.add( lightColor );
+
+			} else if ( light.isPointLight ) {
+
+				// for sprites
+
+				_pointLights.add( lightColor );
+
+			}
+
+		}
+
+	}
+
+	function calculateLight( position, normal, color ) {
+
+		for ( var l = 0, ll = _lights.length; l < ll; l ++ ) {
+
+			var light = _lights[ l ];
+
+			_lightColor.copy( light.color );
+
+			if ( light.isDirectionalLight ) {
+
+				var lightPosition = _vector3.setFromMatrixPosition( light.matrixWorld ).normalize();
+
+				var amount = normal.dot( lightPosition );
+
+				if ( amount <= 0 ) continue;
+
+				amount *= light.intensity;
+
+				color.add( _lightColor.multiplyScalar( amount ) );
+
+			} else if ( light.isPointLight ) {
+
+				var lightPosition = _vector3.setFromMatrixPosition( light.matrixWorld );
+
+				var amount = normal.dot( _vector3.subVectors( lightPosition, position ).normalize() );
+
+				if ( amount <= 0 ) continue;
+
+				amount *= light.distance == 0 ? 1 : 1 - Math.min( position.distanceTo( lightPosition ) / light.distance, 1 );
+
+				if ( amount == 0 ) continue;
+
+				amount *= light.intensity;
+
+				color.add( _lightColor.multiplyScalar( amount ) );
+
+			}
+
+		}
+
+	}
+
+	function renderSprite( v1, element, material ) {
+
+		setOpacity( material.opacity );
+		setBlending( material.blending );
+
+		var scaleX = element.scale.x * _canvasWidthHalf;
+		var scaleY = element.scale.y * _canvasHeightHalf;
+
+		var dist = Math.sqrt( scaleX * scaleX + scaleY * scaleY ); // allow for rotated sprite
+		_elemBox.min.set( v1.x - dist, v1.y - dist );
+		_elemBox.max.set( v1.x + dist, v1.y + dist );
+
+		if ( material.isSpriteMaterial ) {
+
+			var texture = material.map;
+
+			if ( texture !== null ) {
+
+				var pattern = _patterns[ texture.id ];
+
+				if ( pattern === undefined || pattern.version !== texture.version ) {
+
+					pattern = textureToPattern( texture );
+					_patterns[ texture.id ] = pattern;
+
+				}
+
+				if ( pattern.canvas !== undefined ) {
+
+					setFillStyle( pattern.canvas );
+
+					var bitmap = texture.image;
+
+					var ox = bitmap.width * texture.offset.x;
+					var oy = bitmap.height * texture.offset.y;
+
+					var sx = bitmap.width * texture.repeat.x;
+					var sy = bitmap.height * texture.repeat.y;
+
+					var cx = scaleX / sx;
+					var cy = scaleY / sy;
+
+					_context.save();
+					_context.translate( v1.x, v1.y );
+					if ( material.rotation !== 0 ) _context.rotate( material.rotation );
+					_context.translate( - scaleX / 2, - scaleY / 2 );
+					_context.scale( cx, cy );
+					_context.translate( - ox, - oy );
+					_context.fillRect( ox, oy, sx, sy );
+					_context.restore();
+
+				}
+
+			} else {
+
+				// no texture
+
+				setFillStyle( material.color.getStyle() );
+
+				_context.save();
+				_context.translate( v1.x, v1.y );
+				if ( material.rotation !== 0 ) _context.rotate( material.rotation );
+				_context.scale( scaleX, - scaleY );
+				_context.fillRect( - 0.5, - 0.5, 1, 1 );
+				_context.restore();
+
+			}
+
+		} else if ( material.isSpriteCanvasMaterial ) {
+
+			setStrokeStyle( material.color.getStyle() );
+			setFillStyle( material.color.getStyle() );
+
+			_context.save();
+			_context.translate( v1.x, v1.y );
+			if ( material.rotation !== 0 ) _context.rotate( material.rotation );
+			_context.scale( scaleX, scaleY );
+
+			material.program( _context );
+
+			_context.restore();
+
+		} else if ( material.isPointsMaterial ) {
+
+			setFillStyle( material.color.getStyle() );
+
+			_context.save();
+			_context.translate( v1.x, v1.y );
+			if ( material.rotation !== 0 ) _context.rotate( material.rotation );
+			_context.scale( scaleX * material.size, - scaleY * material.size );
+			_context.fillRect( - 0.5, - 0.5, 1, 1 );
+			_context.restore();
+
+		}
+
+		/* DEBUG
+		setStrokeStyle( 'rgb(255,255,0)' );
+		_context.beginPath();
+		_context.moveTo( v1.x - 10, v1.y );
+		_context.lineTo( v1.x + 10, v1.y );
+		_context.moveTo( v1.x, v1.y - 10 );
+		_context.lineTo( v1.x, v1.y + 10 );
+		_context.stroke();
+		*/
+
+	}
+
+	function renderLine( v1, v2, element, material ) {
+
+		setOpacity( material.opacity );
+		setBlending( material.blending );
+
+		_context.beginPath();
+		_context.moveTo( v1.positionScreen.x, v1.positionScreen.y );
+		_context.lineTo( v2.positionScreen.x, v2.positionScreen.y );
+
+		if ( material.isLineBasicMaterial ) {
+
+			setLineWidth( material.linewidth );
+			setLineCap( material.linecap );
+			setLineJoin( material.linejoin );
+
+			if ( material.vertexColors !== THREE.VertexColors ) {
+
+				setStrokeStyle( material.color.getStyle() );
+
+			} else {
+
+				var colorStyle1 = element.vertexColors[ 0 ].getStyle();
+				var colorStyle2 = element.vertexColors[ 1 ].getStyle();
+
+				if ( colorStyle1 === colorStyle2 ) {
+
+					setStrokeStyle( colorStyle1 );
+
+				} else {
+
+					try {
+
+						var grad = _context.createLinearGradient(
+							v1.positionScreen.x,
+							v1.positionScreen.y,
+							v2.positionScreen.x,
+							v2.positionScreen.y
+						);
+						grad.addColorStop( 0, colorStyle1 );
+						grad.addColorStop( 1, colorStyle2 );
+
+					} catch ( exception ) {
+
+						grad = colorStyle1;
+
+					}
+
+					setStrokeStyle( grad );
+
+				}
+
+			}
+
+			_context.stroke();
+			_elemBox.expandByScalar( material.linewidth * 2 );
+
+		} else if ( material.isLineDashedMaterial ) {
+
+			setLineWidth( material.linewidth );
+			setLineCap( material.linecap );
+			setLineJoin( material.linejoin );
+			setStrokeStyle( material.color.getStyle() );
+			setLineDash( [ material.dashSize, material.gapSize ] );
+
+			_context.stroke();
+
+			_elemBox.expandByScalar( material.linewidth * 2 );
+
+			setLineDash( [] );
+
+		}
+
+	}
+
+	function renderFace3( v1, v2, v3, uv1, uv2, uv3, element, material ) {
+
+		_this.info.render.vertices += 3;
+		_this.info.render.faces ++;
+
+		setOpacity( material.opacity );
+		setBlending( material.blending );
+
+		_v1x = v1.positionScreen.x; _v1y = v1.positionScreen.y;
+		_v2x = v2.positionScreen.x; _v2y = v2.positionScreen.y;
+		_v3x = v3.positionScreen.x; _v3y = v3.positionScreen.y;
+
+		drawTriangle( _v1x, _v1y, _v2x, _v2y, _v3x, _v3y );
+
+		if ( ( material.isMeshLambertMaterial || material.isMeshPhongMaterial || material.isMeshStandardMaterial ) && material.map === null ) {
+
+			_diffuseColor.copy( material.color );
+			_emissiveColor.copy( material.emissive );
+
+			if ( material.vertexColors === THREE.FaceColors ) {
+
+				_diffuseColor.multiply( element.color );
+
+			}
+
+			_color.copy( _ambientLight );
+
+			_centroid.copy( v1.positionWorld ).add( v2.positionWorld ).add( v3.positionWorld ).divideScalar( 3 );
+
+			calculateLight( _centroid, element.normalModel, _color );
+
+			_color.multiply( _diffuseColor ).add( _emissiveColor );
+
+			material.wireframe === true
+				 ? strokePath( _color, material.wireframeLinewidth, material.wireframeLinecap, material.wireframeLinejoin )
+				 : fillPath( _color );
+
+		} else if ( material.isMeshBasicMaterial || material.isMeshLambertMaterial || material.isMeshPhongMaterial || material.isMeshStandardMaterial ) {
+
+			if ( material.map !== null ) {
+
+				var mapping = material.map.mapping;
+
+				if ( mapping === THREE.UVMapping ) {
+
+					_uvs = element.uvs;
+					patternPath( _v1x, _v1y, _v2x, _v2y, _v3x, _v3y, _uvs[ uv1 ].x, _uvs[ uv1 ].y, _uvs[ uv2 ].x, _uvs[ uv2 ].y, _uvs[ uv3 ].x, _uvs[ uv3 ].y, material.map );
+
+				}
+
+			} else if ( material.envMap !== null ) {
+
+				if ( material.envMap.mapping === THREE.SphericalReflectionMapping ) {
+
+					_normal.copy( element.vertexNormalsModel[ uv1 ] ).applyMatrix3( _normalViewMatrix );
+					_uv1x = 0.5 * _normal.x + 0.5;
+					_uv1y = 0.5 * _normal.y + 0.5;
+
+					_normal.copy( element.vertexNormalsModel[ uv2 ] ).applyMatrix3( _normalViewMatrix );
+					_uv2x = 0.5 * _normal.x + 0.5;
+					_uv2y = 0.5 * _normal.y + 0.5;
+
+					_normal.copy( element.vertexNormalsModel[ uv3 ] ).applyMatrix3( _normalViewMatrix );
+					_uv3x = 0.5 * _normal.x + 0.5;
+					_uv3y = 0.5 * _normal.y + 0.5;
+
+					patternPath( _v1x, _v1y, _v2x, _v2y, _v3x, _v3y, _uv1x, _uv1y, _uv2x, _uv2y, _uv3x, _uv3y, material.envMap );
+
+				}
+
+			} else {
+
+				_color.copy( material.color );
+
+				if ( material.vertexColors === THREE.FaceColors ) {
+
+					_color.multiply( element.color );
+
+				}
+
+				material.wireframe === true
+					 ? strokePath( _color, material.wireframeLinewidth, material.wireframeLinecap, material.wireframeLinejoin )
+					 : fillPath( _color );
+
+			}
+
+		} else if ( material.isMeshNormalMaterial ) {
+
+			_normal.copy( element.normalModel ).applyMatrix3( _normalViewMatrix );
+
+			_color.setRGB( _normal.x, _normal.y, _normal.z ).multiplyScalar( 0.5 ).addScalar( 0.5 );
+
+			material.wireframe === true
+				 ? strokePath( _color, material.wireframeLinewidth, material.wireframeLinecap, material.wireframeLinejoin )
+				 : fillPath( _color );
+
+		} else {
+
+			_color.setRGB( 1, 1, 1 );
+
+			material.wireframe === true
+				 ? strokePath( _color, material.wireframeLinewidth, material.wireframeLinecap, material.wireframeLinejoin )
+				 : fillPath( _color );
+
+		}
+
+	}
+
+	//
+
+	function drawTriangle( x0, y0, x1, y1, x2, y2 ) {
+
+		_context.beginPath();
+		_context.moveTo( x0, y0 );
+		_context.lineTo( x1, y1 );
+		_context.lineTo( x2, y2 );
+		_context.closePath();
+
+	}
+
+	function strokePath( color, linewidth, linecap, linejoin ) {
+
+		setLineWidth( linewidth );
+		setLineCap( linecap );
+		setLineJoin( linejoin );
+		setStrokeStyle( color.getStyle() );
+
+		_context.stroke();
+
+		_elemBox.expandByScalar( linewidth * 2 );
+
+	}
+
+	function fillPath( color ) {
+
+		setFillStyle( color.getStyle() );
+		_context.fill();
+
+	}
+
+	function textureToPattern( texture ) {
+
+		if ( texture.version === 0 ||
+			texture instanceof THREE.CompressedTexture ||
+			texture instanceof THREE.DataTexture ) {
+
+			return {
+				canvas: undefined,
+				version: texture.version
+			};
+
+		}
+
+		var image = texture.image;
+
+		if ( image.complete === false ) {
+
+			return {
+				canvas: undefined,
+				version: 0
+			};
+
+		}
+
+		var repeatX = texture.wrapS === THREE.RepeatWrapping || texture.wrapS === THREE.MirroredRepeatWrapping;
+		var repeatY = texture.wrapT === THREE.RepeatWrapping || texture.wrapT === THREE.MirroredRepeatWrapping;
+
+		var mirrorX = texture.wrapS === THREE.MirroredRepeatWrapping;
+		var mirrorY = texture.wrapT === THREE.MirroredRepeatWrapping;
+
+		//
+
+		var canvas = document.createElement( 'canvas' );
+		canvas.width = image.width * ( mirrorX ? 2 : 1 );
+		canvas.height = image.height * ( mirrorY ? 2 : 1 );
+
+		var context = canvas.getContext( '2d' );
+		context.setTransform( 1, 0, 0, - 1, 0, image.height );
+		context.drawImage( image, 0, 0 );
+
+		if ( mirrorX === true ) {
+
+			context.setTransform( - 1, 0, 0, - 1, image.width, image.height );
+			context.drawImage( image, - image.width, 0 );
+
+		}
+
+		if ( mirrorY === true ) {
+
+			context.setTransform( 1, 0, 0, 1, 0, 0 );
+			context.drawImage( image, 0, image.height );
+
+		}
+
+		if ( mirrorX === true && mirrorY === true ) {
+
+			context.setTransform( - 1, 0, 0, 1, image.width, 0 );
+			context.drawImage( image, - image.width, image.height );
+
+		}
+
+		var repeat = 'no-repeat';
+
+		if ( repeatX === true && repeatY === true ) {
+
+			repeat = 'repeat';
+
+		} else if ( repeatX === true ) {
+
+			repeat = 'repeat-x';
+
+		} else if ( repeatY === true ) {
+
+			repeat = 'repeat-y';
+
+		}
+
+		var pattern = _context.createPattern( canvas, repeat );
+
+		if ( texture.onUpdate ) texture.onUpdate( texture );
+
+		return {
+			canvas: pattern,
+			version: texture.version
+		};
+
+	}
+
+	function patternPath( x0, y0, x1, y1, x2, y2, u0, v0, u1, v1, u2, v2, texture ) {
+
+		var pattern = _patterns[ texture.id ];
+
+		if ( pattern === undefined || pattern.version !== texture.version ) {
+
+			pattern = textureToPattern( texture );
+			_patterns[ texture.id ] = pattern;
+
+		}
+
+		if ( pattern.canvas !== undefined ) {
+
+			setFillStyle( pattern.canvas );
+
+		} else {
+
+			setFillStyle( 'rgba( 0, 0, 0, 1)' );
+			_context.fill();
+			return;
+
+		}
+
+		// http://extremelysatisfactorytotalitarianism.com/blog/?p=2120
+
+		var a, b, c, d, e, f, det, idet,
+			offsetX = texture.offset.x / texture.repeat.x,
+			offsetY = texture.offset.y / texture.repeat.y,
+			width = texture.image.width * texture.repeat.x,
+			height = texture.image.height * texture.repeat.y;
+
+		u0 = ( u0 + offsetX ) * width;
+		v0 = ( v0 + offsetY ) * height;
+
+		u1 = ( u1 + offsetX ) * width;
+		v1 = ( v1 + offsetY ) * height;
+
+		u2 = ( u2 + offsetX ) * width;
+		v2 = ( v2 + offsetY ) * height;
+
+		x1 -= x0; y1 -= y0;
+		x2 -= x0; y2 -= y0;
+
+		u1 -= u0; v1 -= v0;
+		u2 -= u0; v2 -= v0;
+
+		det = u1 * v2 - u2 * v1;
+
+		if ( det === 0 ) return;
+
+		idet = 1 / det;
+
+		a = ( v2 * x1 - v1 * x2 ) * idet;
+		b = ( v2 * y1 - v1 * y2 ) * idet;
+		c = ( u1 * x2 - u2 * x1 ) * idet;
+		d = ( u1 * y2 - u2 * y1 ) * idet;
+
+		e = x0 - a * u0 - c * v0;
+		f = y0 - b * u0 - d * v0;
+
+		_context.save();
+		_context.transform( a, b, c, d, e, f );
+		_context.fill();
+		_context.restore();
+
+	}
+
+	/*
+	function clipImage( x0, y0, x1, y1, x2, y2, u0, v0, u1, v1, u2, v2, image ) {
+
+		// http://extremelysatisfactorytotalitarianism.com/blog/?p=2120
+
+		var a, b, c, d, e, f, det, idet,
+		width = image.width - 1,
+		height = image.height - 1;
+
+		u0 *= width; v0 *= height;
+		u1 *= width; v1 *= height;
+		u2 *= width; v2 *= height;
+
+		x1 -= x0; y1 -= y0;
+		x2 -= x0; y2 -= y0;
+
+		u1 -= u0; v1 -= v0;
+		u2 -= u0; v2 -= v0;
+
+		det = u1 * v2 - u2 * v1;
+
+		idet = 1 / det;
+
+		a = ( v2 * x1 - v1 * x2 ) * idet;
+		b = ( v2 * y1 - v1 * y2 ) * idet;
+		c = ( u1 * x2 - u2 * x1 ) * idet;
+		d = ( u1 * y2 - u2 * y1 ) * idet;
+
+		e = x0 - a * u0 - c * v0;
+		f = y0 - b * u0 - d * v0;
+
+		_context.save();
+		_context.transform( a, b, c, d, e, f );
+		_context.clip();
+		_context.drawImage( image, 0, 0 );
+		_context.restore();
+
+	}
+	*/
+
+	// Hide anti-alias gaps
+
+	function expand( v1, v2, pixels ) {
+
+		var x = v2.x - v1.x, y = v2.y - v1.y,
+			det = x * x + y * y, idet;
+
+		if ( det === 0 ) return;
+
+		idet = pixels / Math.sqrt( det );
+
+		x *= idet; y *= idet;
+
+		v2.x += x; v2.y += y;
+		v1.x -= x; v1.y -= y;
+
+	}
+
+	// Context cached methods.
+
+	function setOpacity( value ) {
+
+		if ( _contextGlobalAlpha !== value ) {
+
+			_context.globalAlpha = value;
+			_contextGlobalAlpha = value;
+
+		}
+
+	}
+
+	function setBlending( value ) {
+
+		if ( _contextGlobalCompositeOperation !== value ) {
+
+			if ( value === THREE.NormalBlending ) {
+
+				_context.globalCompositeOperation = 'source-over';
+
+			} else if ( value === THREE.AdditiveBlending ) {
+
+				_context.globalCompositeOperation = 'lighter';
+
+			} else if ( value === THREE.SubtractiveBlending ) {
+
+				_context.globalCompositeOperation = 'darker';
+
+			} else if ( value === THREE.MultiplyBlending ) {
+
+				_context.globalCompositeOperation = 'multiply';
+
+			}
+
+			_contextGlobalCompositeOperation = value;
+
+		}
+
+	}
+
+	function setLineWidth( value ) {
+
+		if ( _contextLineWidth !== value ) {
+
+			_context.lineWidth = value;
+			_contextLineWidth = value;
+
+		}
+
+	}
+
+	function setLineCap( value ) {
+
+		// "butt", "round", "square"
+
+		if ( _contextLineCap !== value ) {
+
+			_context.lineCap = value;
+			_contextLineCap = value;
+
+		}
+
+	}
+
+	function setLineJoin( value ) {
+
+		// "round", "bevel", "miter"
+
+		if ( _contextLineJoin !== value ) {
+
+			_context.lineJoin = value;
+			_contextLineJoin = value;
+
+		}
+
+	}
+
+	function setStrokeStyle( value ) {
+
+		if ( _contextStrokeStyle !== value ) {
+
+			_context.strokeStyle = value;
+			_contextStrokeStyle = value;
+
+		}
+
+	}
+
+	function setFillStyle( value ) {
+
+		if ( _contextFillStyle !== value ) {
+
+			_context.fillStyle = value;
+			_contextFillStyle = value;
+
+		}
+
+	}
+
+	function setLineDash( value ) {
+
+		if ( _contextLineDash.length !== value.length ) {
+
+			_context.setLineDash( value );
+			_contextLineDash = value;
+
+		}
+
+	}
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author supereggbert / http://www.paulbrunt.co.uk/
+ * @author julianwa / https://github.com/julianwa
+ */
+
+THREE.RenderableObject = function () {
+
+	this.id = 0;
+
+	this.object = null;
+	this.z = 0;
+	this.renderOrder = 0;
+
+};
+
+//
+
+THREE.RenderableFace = function () {
+
+	this.id = 0;
+
+	this.v1 = new THREE.RenderableVertex();
+	this.v2 = new THREE.RenderableVertex();
+	this.v3 = new THREE.RenderableVertex();
+
+	this.normalModel = new THREE.Vector3();
+
+	this.vertexNormalsModel = [ new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3() ];
+	this.vertexNormalsLength = 0;
+
+	this.color = new THREE.Color();
+	this.material = null;
+	this.uvs = [ new THREE.Vector2(), new THREE.Vector2(), new THREE.Vector2() ];
+
+	this.z = 0;
+	this.renderOrder = 0;
+
+};
+
+//
+
+THREE.RenderableVertex = function () {
+
+	this.position = new THREE.Vector3();
+	this.positionWorld = new THREE.Vector3();
+	this.positionScreen = new THREE.Vector4();
+
+	this.visible = true;
+
+};
+
+THREE.RenderableVertex.prototype.copy = function ( vertex ) {
+
+	this.positionWorld.copy( vertex.positionWorld );
+	this.positionScreen.copy( vertex.positionScreen );
+
+};
+
+//
+
+THREE.RenderableLine = function () {
+
+	this.id = 0;
+
+	this.v1 = new THREE.RenderableVertex();
+	this.v2 = new THREE.RenderableVertex();
+
+	this.vertexColors = [ new THREE.Color(), new THREE.Color() ];
+	this.material = null;
+
+	this.z = 0;
+	this.renderOrder = 0;
+
+};
+
+//
+
+THREE.RenderableSprite = function () {
+
+	this.id = 0;
+
+	this.object = null;
+
+	this.x = 0;
+	this.y = 0;
+	this.z = 0;
+
+	this.rotation = 0;
+	this.scale = new THREE.Vector2();
+
+	this.material = null;
+	this.renderOrder = 0;
+
+};
+
+//
+
+THREE.Projector = function () {
+
+	var _object, _objectCount, _objectPool = [], _objectPoolLength = 0,
+		_vertex, _vertexCount, _vertexPool = [], _vertexPoolLength = 0,
+		_face, _faceCount, _facePool = [], _facePoolLength = 0,
+		_line, _lineCount, _linePool = [], _linePoolLength = 0,
+		_sprite, _spriteCount, _spritePool = [], _spritePoolLength = 0,
+
+		_renderData = { objects: [], lights: [], elements: [] },
+
+		_vector3 = new THREE.Vector3(),
+		_vector4 = new THREE.Vector4(),
+
+		_clipBox = new THREE.Box3( new THREE.Vector3( - 1, - 1, - 1 ), new THREE.Vector3( 1, 1, 1 ) ),
+		_boundingBox = new THREE.Box3(),
+		_points3 = new Array( 3 ),
+
+		_viewMatrix = new THREE.Matrix4(),
+		_viewProjectionMatrix = new THREE.Matrix4(),
+
+		_modelMatrix,
+		_modelViewProjectionMatrix = new THREE.Matrix4(),
+
+		_normalMatrix = new THREE.Matrix3(),
+
+		_frustum = new THREE.Frustum(),
+
+		_clippedVertex1PositionScreen = new THREE.Vector4(),
+		_clippedVertex2PositionScreen = new THREE.Vector4();
+
+	//
+
+	this.projectVector = function ( vector, camera ) {
+
+		console.warn( 'THREE.Projector: .projectVector() is now vector.project().' );
+		vector.project( camera );
+
+	};
+
+	this.unprojectVector = function ( vector, camera ) {
+
+		console.warn( 'THREE.Projector: .unprojectVector() is now vector.unproject().' );
+		vector.unproject( camera );
+
+	};
+
+	this.pickingRay = function () {
+
+		console.error( 'THREE.Projector: .pickingRay() is now raycaster.setFromCamera().' );
+
+	};
+
+	//
+
+	var RenderList = function () {
+
+		var normals = [];
+		var colors = [];
+		var uvs = [];
+
+		var object = null;
+		var material = null;
+
+		var normalMatrix = new THREE.Matrix3();
+
+		function setObject( value ) {
+
+			object = value;
+			material = object.material;
+
+			normalMatrix.getNormalMatrix( object.matrixWorld );
+
+			normals.length = 0;
+			colors.length = 0;
+			uvs.length = 0;
+
+		}
+
+		function projectVertex( vertex ) {
+
+			var position = vertex.position;
+			var positionWorld = vertex.positionWorld;
+			var positionScreen = vertex.positionScreen;
+
+			positionWorld.copy( position ).applyMatrix4( _modelMatrix );
+			positionScreen.copy( positionWorld ).applyMatrix4( _viewProjectionMatrix );
+
+			var invW = 1 / positionScreen.w;
+
+			positionScreen.x *= invW;
+			positionScreen.y *= invW;
+			positionScreen.z *= invW;
+
+			vertex.visible = positionScreen.x >= - 1 && positionScreen.x <= 1 &&
+					 positionScreen.y >= - 1 && positionScreen.y <= 1 &&
+					 positionScreen.z >= - 1 && positionScreen.z <= 1;
+
+		}
+
+		function pushVertex( x, y, z ) {
+
+			_vertex = getNextVertexInPool();
+			_vertex.position.set( x, y, z );
+
+			projectVertex( _vertex );
+
+		}
+
+		function pushNormal( x, y, z ) {
+
+			normals.push( x, y, z );
+
+		}
+
+		function pushColor( r, g, b ) {
+
+			colors.push( r, g, b );
+
+		}
+
+		function pushUv( x, y ) {
+
+			uvs.push( x, y );
+
+		}
+
+		function checkTriangleVisibility( v1, v2, v3 ) {
+
+			if ( v1.visible === true || v2.visible === true || v3.visible === true ) return true;
+
+			_points3[ 0 ] = v1.positionScreen;
+			_points3[ 1 ] = v2.positionScreen;
+			_points3[ 2 ] = v3.positionScreen;
+
+			return _clipBox.intersectsBox( _boundingBox.setFromPoints( _points3 ) );
+
+		}
+
+		function checkBackfaceCulling( v1, v2, v3 ) {
+
+			return ( ( v3.positionScreen.x - v1.positionScreen.x ) *
+				    ( v2.positionScreen.y - v1.positionScreen.y ) -
+				    ( v3.positionScreen.y - v1.positionScreen.y ) *
+				    ( v2.positionScreen.x - v1.positionScreen.x ) ) < 0;
+
+		}
+
+		function pushLine( a, b ) {
+
+			var v1 = _vertexPool[ a ];
+			var v2 = _vertexPool[ b ];
+
+			// Clip
+
+			v1.positionScreen.copy( v1.position ).applyMatrix4( _modelViewProjectionMatrix );
+			v2.positionScreen.copy( v2.position ).applyMatrix4( _modelViewProjectionMatrix );
+
+			if ( clipLine( v1.positionScreen, v2.positionScreen ) === true ) {
+
+				// Perform the perspective divide
+				v1.positionScreen.multiplyScalar( 1 / v1.positionScreen.w );
+				v2.positionScreen.multiplyScalar( 1 / v2.positionScreen.w );
+
+				_line = getNextLineInPool();
+				_line.id = object.id;
+				_line.v1.copy( v1 );
+				_line.v2.copy( v2 );
+				_line.z = Math.max( v1.positionScreen.z, v2.positionScreen.z );
+				_line.renderOrder = object.renderOrder;
+
+				_line.material = object.material;
+
+				if ( object.material.vertexColors === THREE.VertexColors ) {
+
+					_line.vertexColors[ 0 ].fromArray( colors, a * 3 );
+					_line.vertexColors[ 1 ].fromArray( colors, b * 3 );
+
+				}
+
+				_renderData.elements.push( _line );
+
+			}
+
+		}
+
+		function pushTriangle( a, b, c ) {
+
+			var v1 = _vertexPool[ a ];
+			var v2 = _vertexPool[ b ];
+			var v3 = _vertexPool[ c ];
+
+			if ( checkTriangleVisibility( v1, v2, v3 ) === false ) return;
+
+			if ( material.side === THREE.DoubleSide || checkBackfaceCulling( v1, v2, v3 ) === true ) {
+
+				_face = getNextFaceInPool();
+
+				_face.id = object.id;
+				_face.v1.copy( v1 );
+				_face.v2.copy( v2 );
+				_face.v3.copy( v3 );
+				_face.z = ( v1.positionScreen.z + v2.positionScreen.z + v3.positionScreen.z ) / 3;
+				_face.renderOrder = object.renderOrder;
+
+				// use first vertex normal as face normal
+
+				_face.normalModel.fromArray( normals, a * 3 );
+				_face.normalModel.applyMatrix3( normalMatrix ).normalize();
+
+				for ( var i = 0; i < 3; i ++ ) {
+
+					var normal = _face.vertexNormalsModel[ i ];
+					normal.fromArray( normals, arguments[ i ] * 3 );
+					normal.applyMatrix3( normalMatrix ).normalize();
+
+					var uv = _face.uvs[ i ];
+					uv.fromArray( uvs, arguments[ i ] * 2 );
+
+				}
+
+				_face.vertexNormalsLength = 3;
+
+				_face.material = object.material;
+
+				_renderData.elements.push( _face );
+
+			}
+
+		}
+
+		return {
+			setObject: setObject,
+			projectVertex: projectVertex,
+			checkTriangleVisibility: checkTriangleVisibility,
+			checkBackfaceCulling: checkBackfaceCulling,
+			pushVertex: pushVertex,
+			pushNormal: pushNormal,
+			pushColor: pushColor,
+			pushUv: pushUv,
+			pushLine: pushLine,
+			pushTriangle: pushTriangle
+		};
+
+	};
+
+	var renderList = new RenderList();
+
+	function projectObject( object ) {
+
+		if ( object.visible === false ) return;
+
+		if ( object instanceof THREE.Light ) {
+
+			_renderData.lights.push( object );
+
+		} else if ( object instanceof THREE.Mesh || object instanceof THREE.Line || object instanceof THREE.Points ) {
+
+			if ( object.material.visible === false ) return;
+			if ( object.frustumCulled === true && _frustum.intersectsObject( object ) === false ) return;
+
+			addObject( object );
+
+		} else if ( object instanceof THREE.Sprite ) {
+
+			if ( object.material.visible === false ) return;
+			if ( object.frustumCulled === true && _frustum.intersectsSprite( object ) === false ) return;
+
+			addObject( object );
+
+		}
+
+		var children = object.children;
+
+		for ( var i = 0, l = children.length; i < l; i ++ ) {
+
+			projectObject( children[ i ] );
+
+		}
+
+	}
+
+	function addObject( object ) {
+
+		_object = getNextObjectInPool();
+		_object.id = object.id;
+		_object.object = object;
+
+		_vector3.setFromMatrixPosition( object.matrixWorld );
+		_vector3.applyMatrix4( _viewProjectionMatrix );
+		_object.z = _vector3.z;
+		_object.renderOrder = object.renderOrder;
+
+		_renderData.objects.push( _object );
+
+	}
+
+	this.projectScene = function ( scene, camera, sortObjects, sortElements ) {
+
+		_faceCount = 0;
+		_lineCount = 0;
+		_spriteCount = 0;
+
+		_renderData.elements.length = 0;
+
+		if ( scene.autoUpdate === true ) scene.updateMatrixWorld();
+		if ( camera.parent === null ) camera.updateMatrixWorld();
+
+		_viewMatrix.copy( camera.matrixWorldInverse );
+		_viewProjectionMatrix.multiplyMatrices( camera.projectionMatrix, _viewMatrix );
+
+		_frustum.setFromMatrix( _viewProjectionMatrix );
+
+		//
+
+		_objectCount = 0;
+
+		_renderData.objects.length = 0;
+		_renderData.lights.length = 0;
+
+		projectObject( scene );
+
+		if ( sortObjects === true ) {
+
+			_renderData.objects.sort( painterSort );
+
+		}
+
+		//
+
+		var objects = _renderData.objects;
+
+		for ( var o = 0, ol = objects.length; o < ol; o ++ ) {
+
+			var object = objects[ o ].object;
+			var geometry = object.geometry;
+
+			renderList.setObject( object );
+
+			_modelMatrix = object.matrixWorld;
+
+			_vertexCount = 0;
+
+			if ( object instanceof THREE.Mesh ) {
+
+				if ( geometry instanceof THREE.BufferGeometry ) {
+
+					var attributes = geometry.attributes;
+					var groups = geometry.groups;
+
+					if ( attributes.position === undefined ) continue;
+
+					var positions = attributes.position.array;
+
+					for ( var i = 0, l = positions.length; i < l; i += 3 ) {
+
+						renderList.pushVertex( positions[ i ], positions[ i + 1 ], positions[ i + 2 ] );
+
+					}
+
+					if ( attributes.normal !== undefined ) {
+
+						var normals = attributes.normal.array;
+
+						for ( var i = 0, l = normals.length; i < l; i += 3 ) {
+
+							renderList.pushNormal( normals[ i ], normals[ i + 1 ], normals[ i + 2 ] );
+
+						}
+
+					}
+
+					if ( attributes.uv !== undefined ) {
+
+						var uvs = attributes.uv.array;
+
+						for ( var i = 0, l = uvs.length; i < l; i += 2 ) {
+
+							renderList.pushUv( uvs[ i ], uvs[ i + 1 ] );
+
+						}
+
+					}
+
+					if ( geometry.index !== null ) {
+
+						var indices = geometry.index.array;
+
+						if ( groups.length > 0 ) {
+
+							for ( var g = 0; g < groups.length; g ++ ) {
+
+								var group = groups[ g ];
+
+								for ( var i = group.start, l = group.start + group.count; i < l; i += 3 ) {
+
+									renderList.pushTriangle( indices[ i ], indices[ i + 1 ], indices[ i + 2 ] );
+
+								}
+
+							}
+
+						} else {
+
+							for ( var i = 0, l = indices.length; i < l; i += 3 ) {
+
+								renderList.pushTriangle( indices[ i ], indices[ i + 1 ], indices[ i + 2 ] );
+
+							}
+
+						}
+
+					} else {
+
+						for ( var i = 0, l = positions.length / 3; i < l; i += 3 ) {
+
+							renderList.pushTriangle( i, i + 1, i + 2 );
+
+						}
+
+					}
+
+				} else if ( geometry instanceof THREE.Geometry ) {
+
+					var vertices = geometry.vertices;
+					var faces = geometry.faces;
+					var faceVertexUvs = geometry.faceVertexUvs[ 0 ];
+
+					_normalMatrix.getNormalMatrix( _modelMatrix );
+
+					var material = object.material;
+
+					var isMultiMaterial = Array.isArray( material );
+
+					for ( var v = 0, vl = vertices.length; v < vl; v ++ ) {
+
+						var vertex = vertices[ v ];
+
+						_vector3.copy( vertex );
+
+						if ( material.morphTargets === true ) {
+
+							var morphTargets = geometry.morphTargets;
+							var morphInfluences = object.morphTargetInfluences;
+
+							for ( var t = 0, tl = morphTargets.length; t < tl; t ++ ) {
+
+								var influence = morphInfluences[ t ];
+
+								if ( influence === 0 ) continue;
+
+								var target = morphTargets[ t ];
+								var targetVertex = target.vertices[ v ];
+
+								_vector3.x += ( targetVertex.x - vertex.x ) * influence;
+								_vector3.y += ( targetVertex.y - vertex.y ) * influence;
+								_vector3.z += ( targetVertex.z - vertex.z ) * influence;
+
+							}
+
+						}
+
+						renderList.pushVertex( _vector3.x, _vector3.y, _vector3.z );
+
+					}
+
+					for ( var f = 0, fl = faces.length; f < fl; f ++ ) {
+
+						var face = faces[ f ];
+
+						material = isMultiMaterial === true
+							 ? object.material[ face.materialIndex ]
+							 : object.material;
+
+						if ( material === undefined ) continue;
+
+						var side = material.side;
+
+						var v1 = _vertexPool[ face.a ];
+						var v2 = _vertexPool[ face.b ];
+						var v3 = _vertexPool[ face.c ];
+
+						if ( renderList.checkTriangleVisibility( v1, v2, v3 ) === false ) continue;
+
+						var visible = renderList.checkBackfaceCulling( v1, v2, v3 );
+
+						if ( side !== THREE.DoubleSide ) {
+
+							if ( side === THREE.FrontSide && visible === false ) continue;
+							if ( side === THREE.BackSide && visible === true ) continue;
+
+						}
+
+						_face = getNextFaceInPool();
+
+						_face.id = object.id;
+						_face.v1.copy( v1 );
+						_face.v2.copy( v2 );
+						_face.v3.copy( v3 );
+
+						_face.normalModel.copy( face.normal );
+
+						if ( visible === false && ( side === THREE.BackSide || side === THREE.DoubleSide ) ) {
+
+							_face.normalModel.negate();
+
+						}
+
+						_face.normalModel.applyMatrix3( _normalMatrix ).normalize();
+
+						var faceVertexNormals = face.vertexNormals;
+
+						for ( var n = 0, nl = Math.min( faceVertexNormals.length, 3 ); n < nl; n ++ ) {
+
+							var normalModel = _face.vertexNormalsModel[ n ];
+							normalModel.copy( faceVertexNormals[ n ] );
+
+							if ( visible === false && ( side === THREE.BackSide || side === THREE.DoubleSide ) ) {
+
+								normalModel.negate();
+
+							}
+
+							normalModel.applyMatrix3( _normalMatrix ).normalize();
+
+						}
+
+						_face.vertexNormalsLength = faceVertexNormals.length;
+
+						var vertexUvs = faceVertexUvs[ f ];
+
+						if ( vertexUvs !== undefined ) {
+
+							for ( var u = 0; u < 3; u ++ ) {
+
+								_face.uvs[ u ].copy( vertexUvs[ u ] );
+
+							}
+
+						}
+
+						_face.color = face.color;
+						_face.material = material;
+
+						_face.z = ( v1.positionScreen.z + v2.positionScreen.z + v3.positionScreen.z ) / 3;
+						_face.renderOrder = object.renderOrder;
+
+						_renderData.elements.push( _face );
+
+					}
+
+				}
+
+			} else if ( object instanceof THREE.Line ) {
+
+				_modelViewProjectionMatrix.multiplyMatrices( _viewProjectionMatrix, _modelMatrix );
+
+				if ( geometry instanceof THREE.BufferGeometry ) {
+
+					var attributes = geometry.attributes;
+
+					if ( attributes.position !== undefined ) {
+
+						var positions = attributes.position.array;
+
+						for ( var i = 0, l = positions.length; i < l; i += 3 ) {
+
+							renderList.pushVertex( positions[ i ], positions[ i + 1 ], positions[ i + 2 ] );
+
+						}
+
+						if ( attributes.color !== undefined ) {
+
+							var colors = attributes.color.array;
+
+							for ( var i = 0, l = colors.length; i < l; i += 3 ) {
+
+								renderList.pushColor( colors[ i ], colors[ i + 1 ], colors[ i + 2 ] );
+
+							}
+
+						}
+
+						if ( geometry.index !== null ) {
+
+							var indices = geometry.index.array;
+
+							for ( var i = 0, l = indices.length; i < l; i += 2 ) {
+
+								renderList.pushLine( indices[ i ], indices[ i + 1 ] );
+
+							}
+
+						} else {
+
+							var step = object instanceof THREE.LineSegments ? 2 : 1;
+
+							for ( var i = 0, l = ( positions.length / 3 ) - 1; i < l; i += step ) {
+
+								renderList.pushLine( i, i + 1 );
+
+							}
+
+						}
+
+					}
+
+				} else if ( geometry instanceof THREE.Geometry ) {
+
+					var vertices = object.geometry.vertices;
+
+					if ( vertices.length === 0 ) continue;
+
+					v1 = getNextVertexInPool();
+					v1.positionScreen.copy( vertices[ 0 ] ).applyMatrix4( _modelViewProjectionMatrix );
+
+					var step = object instanceof THREE.LineSegments ? 2 : 1;
+
+					for ( var v = 1, vl = vertices.length; v < vl; v ++ ) {
+
+						v1 = getNextVertexInPool();
+						v1.positionScreen.copy( vertices[ v ] ).applyMatrix4( _modelViewProjectionMatrix );
+
+						if ( ( v + 1 ) % step > 0 ) continue;
+
+						v2 = _vertexPool[ _vertexCount - 2 ];
+
+						_clippedVertex1PositionScreen.copy( v1.positionScreen );
+						_clippedVertex2PositionScreen.copy( v2.positionScreen );
+
+						if ( clipLine( _clippedVertex1PositionScreen, _clippedVertex2PositionScreen ) === true ) {
+
+							// Perform the perspective divide
+							_clippedVertex1PositionScreen.multiplyScalar( 1 / _clippedVertex1PositionScreen.w );
+							_clippedVertex2PositionScreen.multiplyScalar( 1 / _clippedVertex2PositionScreen.w );
+
+							_line = getNextLineInPool();
+
+							_line.id = object.id;
+							_line.v1.positionScreen.copy( _clippedVertex1PositionScreen );
+							_line.v2.positionScreen.copy( _clippedVertex2PositionScreen );
+
+							_line.z = Math.max( _clippedVertex1PositionScreen.z, _clippedVertex2PositionScreen.z );
+							_line.renderOrder = object.renderOrder;
+
+							_line.material = object.material;
+
+							if ( object.material.vertexColors === THREE.VertexColors ) {
+
+								_line.vertexColors[ 0 ].copy( object.geometry.colors[ v ] );
+								_line.vertexColors[ 1 ].copy( object.geometry.colors[ v - 1 ] );
+
+							}
+
+							_renderData.elements.push( _line );
+
+						}
+
+					}
+
+				}
+
+			} else if ( object instanceof THREE.Points ) {
+
+				_modelViewProjectionMatrix.multiplyMatrices( _viewProjectionMatrix, _modelMatrix );
+
+				if ( geometry instanceof THREE.Geometry ) {
+
+					var vertices = object.geometry.vertices;
+
+					for ( var v = 0, vl = vertices.length; v < vl; v ++ ) {
+
+						var vertex = vertices[ v ];
+
+						_vector4.set( vertex.x, vertex.y, vertex.z, 1 );
+						_vector4.applyMatrix4( _modelViewProjectionMatrix );
+
+						pushPoint( _vector4, object, camera );
+
+					}
+
+				} else if ( geometry instanceof THREE.BufferGeometry ) {
+
+					var attributes = geometry.attributes;
+
+					if ( attributes.position !== undefined ) {
+
+						var positions = attributes.position.array;
+
+						for ( var i = 0, l = positions.length; i < l; i += 3 ) {
+
+							_vector4.set( positions[ i ], positions[ i + 1 ], positions[ i + 2 ], 1 );
+							_vector4.applyMatrix4( _modelViewProjectionMatrix );
+
+							pushPoint( _vector4, object, camera );
+
+						}
+
+					}
+
+				}
+
+			} else if ( object instanceof THREE.Sprite ) {
+
+				_vector4.set( _modelMatrix.elements[ 12 ], _modelMatrix.elements[ 13 ], _modelMatrix.elements[ 14 ], 1 );
+				_vector4.applyMatrix4( _viewProjectionMatrix );
+
+				pushPoint( _vector4, object, camera );
+
+			}
+
+		}
+
+		if ( sortElements === true ) {
+
+			_renderData.elements.sort( painterSort );
+
+		}
+
+		return _renderData;
+
+	};
+
+	function pushPoint( _vector4, object, camera ) {
+
+		var invW = 1 / _vector4.w;
+
+		_vector4.z *= invW;
+
+		if ( _vector4.z >= - 1 && _vector4.z <= 1 ) {
+
+			_sprite = getNextSpriteInPool();
+			_sprite.id = object.id;
+			_sprite.x = _vector4.x * invW;
+			_sprite.y = _vector4.y * invW;
+			_sprite.z = _vector4.z;
+			_sprite.renderOrder = object.renderOrder;
+			_sprite.object = object;
+
+			_sprite.rotation = object.rotation;
+
+			_sprite.scale.x = object.scale.x * Math.abs( _sprite.x - ( _vector4.x + camera.projectionMatrix.elements[ 0 ] ) / ( _vector4.w + camera.projectionMatrix.elements[ 12 ] ) );
+			_sprite.scale.y = object.scale.y * Math.abs( _sprite.y - ( _vector4.y + camera.projectionMatrix.elements[ 5 ] ) / ( _vector4.w + camera.projectionMatrix.elements[ 13 ] ) );
+
+			_sprite.material = object.material;
+
+			_renderData.elements.push( _sprite );
+
+		}
+
+	}
+
+	// Pools
+
+	function getNextObjectInPool() {
+
+		if ( _objectCount === _objectPoolLength ) {
+
+			var object = new THREE.RenderableObject();
+			_objectPool.push( object );
+			_objectPoolLength ++;
+			_objectCount ++;
+			return object;
+
+		}
+
+		return _objectPool[ _objectCount ++ ];
+
+	}
+
+	function getNextVertexInPool() {
+
+		if ( _vertexCount === _vertexPoolLength ) {
+
+			var vertex = new THREE.RenderableVertex();
+			_vertexPool.push( vertex );
+			_vertexPoolLength ++;
+			_vertexCount ++;
+			return vertex;
+
+		}
+
+		return _vertexPool[ _vertexCount ++ ];
+
+	}
+
+	function getNextFaceInPool() {
+
+		if ( _faceCount === _facePoolLength ) {
+
+			var face = new THREE.RenderableFace();
+			_facePool.push( face );
+			_facePoolLength ++;
+			_faceCount ++;
+			return face;
+
+		}
+
+		return _facePool[ _faceCount ++ ];
+
+
+	}
+
+	function getNextLineInPool() {
+
+		if ( _lineCount === _linePoolLength ) {
+
+			var line = new THREE.RenderableLine();
+			_linePool.push( line );
+			_linePoolLength ++;
+			_lineCount ++;
+			return line;
+
+		}
+
+		return _linePool[ _lineCount ++ ];
+
+	}
+
+	function getNextSpriteInPool() {
+
+		if ( _spriteCount === _spritePoolLength ) {
+
+			var sprite = new THREE.RenderableSprite();
+			_spritePool.push( sprite );
+			_spritePoolLength ++;
+			_spriteCount ++;
+			return sprite;
+
+		}
+
+		return _spritePool[ _spriteCount ++ ];
+
+	}
+
+	//
+
+	function painterSort( a, b ) {
+
+		if ( a.renderOrder !== b.renderOrder ) {
+
+			return a.renderOrder - b.renderOrder;
+
+		} else if ( a.z !== b.z ) {
+
+			return b.z - a.z;
+
+		} else if ( a.id !== b.id ) {
+
+			return a.id - b.id;
+
+		} else {
+
+			return 0;
+
+		}
+
+	}
+
+	function clipLine( s1, s2 ) {
+
+		var alpha1 = 0, alpha2 = 1,
+
+		// Calculate the boundary coordinate of each vertex for the near and far clip planes,
+		// Z = -1 and Z = +1, respectively.
+
+			bc1near = s1.z + s1.w,
+			bc2near = s2.z + s2.w,
+			bc1far = - s1.z + s1.w,
+			bc2far = - s2.z + s2.w;
+
+		if ( bc1near >= 0 && bc2near >= 0 && bc1far >= 0 && bc2far >= 0 ) {
+
+			// Both vertices lie entirely within all clip planes.
+			return true;
+
+		} else if ( ( bc1near < 0 && bc2near < 0 ) || ( bc1far < 0 && bc2far < 0 ) ) {
+
+			// Both vertices lie entirely outside one of the clip planes.
+			return false;
+
+		} else {
+
+			// The line segment spans at least one clip plane.
+
+			if ( bc1near < 0 ) {
+
+				// v1 lies outside the near plane, v2 inside
+				alpha1 = Math.max( alpha1, bc1near / ( bc1near - bc2near ) );
+
+			} else if ( bc2near < 0 ) {
+
+				// v2 lies outside the near plane, v1 inside
+				alpha2 = Math.min( alpha2, bc1near / ( bc1near - bc2near ) );
+
+			}
+
+			if ( bc1far < 0 ) {
+
+				// v1 lies outside the far plane, v2 inside
+				alpha1 = Math.max( alpha1, bc1far / ( bc1far - bc2far ) );
+
+			} else if ( bc2far < 0 ) {
+
+				// v2 lies outside the far plane, v2 inside
+				alpha2 = Math.min( alpha2, bc1far / ( bc1far - bc2far ) );
+
+			}
+
+			if ( alpha2 < alpha1 ) {
+
+				// The line segment spans two boundaries, but is outside both of them.
+				// (This can't happen when we're only clipping against just near/far but good
+				//  to leave the check here for future usage if other clip planes are added.)
+				return false;
+
+			} else {
+
+				// Update the s1 and s2 vertices to match the clipped line segment.
+				s1.lerp( s2, alpha1 );
+				s2.lerp( s1, 1 - alpha2 );
+
+				return true;
+
+			}
+
+		}
+
+	}
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	if($('#home_wave').length > 0) {
+		var SEPARATION = 200, AMOUNTX = 40, AMOUNTY = 60;
+		var container, stats;
+		var camera, scene, renderer;
+
+		var particles, particle, count = 0;
+
+		var mouseX = 0, mouseY = 0;
+
+		var windowHalfX = window.innerWidth / 2;
+		var windowHalfY = window.innerHeight / 2;
+
+
+		init();
+		animate();
+
+	}
+
+
+	function init() {
+
+		container = $('#home_wave');
+		
+
+		camera = new THREE.PerspectiveCamera( 65, window.innerWidth / window.innerHeight, 1, 10000 );
+		camera.position.z = 10000;
+
+		scene = new THREE.Scene();
+		scene.fog = new THREE.Fog( 0xffffff, 2000, 10000 );
+
+		particles = new Array();
+
+		var PI2 = Math.PI * 2;
+		var material = new THREE.SpriteCanvasMaterial( {
+
+			color: 0x211f3f,
+			program: function ( context ) {
+
+				context.beginPath();
+				context.arc( 0, 0, 0.5, 0, PI2, true );
+				context.fill();
+
+			}
+
+		} );
+
+		var i = 0;
+
+		for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+
+			for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+
+				particle = particles[ i ++ ] = new THREE.Sprite( material );
+				particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );
+				particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 );
+				scene.add( particle );
+
+			}
+
+		}
+
+		renderer = new THREE.CanvasRenderer({ alpha: true });
+		renderer.setPixelRatio( window.devicePixelRatio );
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		renderer.setClearColor(scene.fog.color );
+		container.append( renderer.domElement );
+
+		//stats = new Stats();
+		//stats.domElement.style.position = 'absolute';
+		//stats.domElement.style.top = '0px';
+		//container.appendChild( stats.domElement );
+
+
+
+		//
+
+		window.addEventListener( 'resize', onWindowResize, false );
+
+	}
+
+	function onWindowResize() {
+
+		windowHalfX = window.innerWidth / 2;
+		windowHalfY = window.innerHeight / 2;
+
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+
+	}
+
+	//
+
+	//
+
+	function animate() {
+
+		requestAnimationFrame( animate );
+
+		render();
+		//stats.update();
+
+	}
+
+	function render() {
+
+
+		camera.position.set(0,355,122);
+
+		var i = 0;
+
+		for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+
+			for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+
+				particle = particles[ i++ ];
+				particle.position.y = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+					( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+				particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 4 +
+					( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
+
+			}
+
+		}
+
+		renderer.render( scene, camera );
+
+		count += 0.1;
+
+	}
+
+
 </script>
 
 <footer class="mt-20 py-10 lg:py-30 bg-gray-100" id="home_wave">
