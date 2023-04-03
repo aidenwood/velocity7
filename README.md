@@ -49,9 +49,6 @@ Any static assets, like images, can be placed in the `public/` directory.
 [Web3Forms]([https://web3forms.com/])
 
 
-![image](https://user-images.githubusercontent.com/1884712/200831799-10ef2456-a02e-4068-b580-4b5326f0b33b.png)
-
-
 # Purchase:
 Includes: design, deployment, development and debugging by aidxn.com/.
 Purchase: [Velocity - Pricing](https://aidxn.com/pricing)
