@@ -13,9 +13,9 @@
   <div class="flex flex-col lg:flex-row items-center">
     
     <div id="footerCard" class="w-full lg:w-1/4 mx-4">
-      <div class="max-w-lg h-24 mx-auto">
+      <div class="max-w-lg mx-auto">
         <div class="py-6 w-full max-h-fit block">
-	  <div id="animationWrapper" translate="no" class="">
+	  <div id="animationWrapper" translate="no" class="h-24">
 	    <svg viewBox="-500 -500 1000 1000">
 	      <circle r="450"></circle>
 	      <circle class="equator" r="450"></circle>
@@ -33,9 +33,7 @@
 	      <circle class="meridian" r="450" style="--start:0deg; --end:15deg"></circle>
 	    </svg>
           </div>
-        </div>
-	      
-        <div data-netlify-identity-menu></div>
+	</div>
       </div>
     </div>
     
@@ -86,11 +84,11 @@
   </div>
   <div id="finalFooter" class="px-4 flex flex-row items-center">
 	
-	<p class="text-2xl font-bold text-slate-500 lg:text-2xl mr-12">
+	<p class="text-2xl font-bold text-slate-500 lg:text-2xl mr-16">
           Built with <a href="https://aidxn.com" target="_blank" rel="noopener" class="hover:text-slate-700 transition duration-200">Velocity V7</a>
         </p>
 	
-	<div data-netlify-identity-menu></div>
+	<div data-netlify-identity-menu class="text-xs lg:text-sm text-gray-500 mr-16"></div>
 	
 	<p class="text-xs lg:text-sm text-gray-500">
           © {new Date().getFullYear()} Aidxn Design. All rights reserved.
