@@ -36,6 +36,9 @@ const menuitems = [
 <style>
   #navLogo {height: 90px; max-width: 75vw;}
 </style>
+
+  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
 <Container>
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
@@ -73,6 +76,9 @@ const menuitems = [
             ))
           }
         </ul>
+        <div data-netlify-identity-menu></div>
+        <div data-netlify-identity-button>Login with Netlify Identity</div>
+        
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link href="https://shop.sitelabanalytics.com/" style="muted" block size="md">Log in</Link>
           <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md" block>Sign up</Link>
