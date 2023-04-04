@@ -53,7 +53,19 @@ const makeTitle = title
         },
       }}
     />
+    
+  <!-- aidxn.com property linked to search console for better SEO - Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MN4T5PXYLD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MN4T5PXYLD');
+    </script>
+    
   </head>
+  
   <body>
     <Navbar />
     <slot />
