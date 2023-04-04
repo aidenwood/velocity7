@@ -1,14 +1,14 @@
 ---
 draft: false
-title: "Improve Website Speed with Velocity"
+title: "Improve Website Speed and other Vitals with Velocity V7: Available Soon."
 date: "2023-04-03"
-snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+snippet: "Learn how to improve your website's speed and performance with Velocity. In this post, we'll discuss the impact of website speed on your business and how Velocity can help you create a faster, more responsive website that meets your needs and exceeds your expectations. Start creating a better user experience for your customers and improve your search engine rankings with Velocity."
 image: {
     src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
-    alt: "frontend master"
+    alt: "website design with ultra fast page load"
 }
 publishDate: "2022-11-07 15:39"
-category: "Tutorials"
+category: "Web Performance"
 author: "Aiden Wood"
 tags: [velocity, dns, backend]
 ---
