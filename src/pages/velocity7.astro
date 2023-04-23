@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
+import Containerfw from "@components/container-fullwidth.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Pricing from "@components/pricing.astro";
 import Clients from "@components/clients.astro";
@@ -90,7 +90,7 @@ const pricing = [
 ---
 
 <Layout title="Velocity7">
-  <Container>
+  <Containerfw>
     <Sectionhead>
       <Fragment slot="title">Velocity 7</Fragment>
       <Fragment slot="desc"
@@ -98,7 +98,7 @@ const pricing = [
       >
     </Sectionhead>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
     
