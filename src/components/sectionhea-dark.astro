@@ -1,20 +1,12 @@
 ---
 const { align = "center" } = Astro.props;
 ---
-<div id="containerFlex" class="flex justify-center">
-<div id="leftContainer" class="mt-16 mb-8">
+
+<div class:list={["mt-16", align === "center" && "text-center"]}>
   <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     <slot name="title">Title</slot>
   </h1>
   <p class="text-lg mt-4 text-slate-600">
     <slot name="desc">Some description goes here</slot>
   </p>
-</div>
-<diu>
-
-  <div id="rightContainer" class="w-full lg:w-1/2">
-    <p>x</p>
-  </div>
-
-</diu>
 </div>
