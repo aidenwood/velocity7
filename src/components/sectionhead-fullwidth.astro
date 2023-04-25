@@ -16,10 +16,10 @@ const { align = "center" } = Astro.props;
     <section class="py-8 px-4">
       <div class="flex flex-wrap w-full lg:w-1/2 -mx-4 -mb-8">
         
-        <slot name="img1" class="md:w-1/2 px-4 mb-8"><img class="rounded shadow-md" src="/src/assets/sqr-bg.webp" alt=""></slot>
-        <slot name="img2" class="md:w-1/2 px-4 mb-8"><img class="rounded shadow-md" src="/src/assets/sqr-bg.webp" alt=""></slot>
-        <slot name="img3" class="md:w-1/2 px-4 mb-8"><img class="rounded shadow-md" src="/src/assets/sqr-bg.webp" alt=""></slot>
-        <slot name="img4" class="md:w-1/2 px-4 mb-8"><img class="rounded shadow-md" src="/src/assets/sqr-bg.webp" alt=""></slot>
+        <div class="md:w-1/2 px-4 mb-8"><slot name="img1" class="rounded shadow-md"></slot></div>
+        <div class="md:w-1/2 px-4 mb-8"><slot name="img2" class="rounded shadow-md"></slot></div>
+        <div class="md:w-1/2 px-4 mb-8"><slot name="img3" class="rounded shadow-md"></slot></div>
+        <div class="md:w-1/2 px-4 mb-8"><slot name="img4" class="rounded shadow-md"></slot></div>
       </div>
     </section>
   </div>
