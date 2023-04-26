@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { Picture } from "@astrojs/image/components";
-import Layout from "@layouts/Layout.astro";
+≈import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
@@ -15,7 +14,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   <Container>
     <Sectionhead>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="desc">A small team, by design.</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
@@ -23,7 +22,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         Empowering Australian Businesses with Faster Applications and Websites.
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        Over 30 years of combined development experience. Over 20 years of combined graphic design experience.
+        Over 30 years of combined development experience.
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
