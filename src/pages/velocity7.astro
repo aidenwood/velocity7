@@ -4,6 +4,7 @@ import Containerfw from "@components/container-fullwidth.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Sectionfw from "@components/sectionhead-fullwidth.astro";
 import Pricing from "@components/pricing.astro";
+import Logos from "@components/logos.astro";
 import Clients from "@components/clients.astro";
 
 const pricing = [
@@ -101,6 +102,8 @@ const pricing = [
         >Welcome to Web4.
       </Fragment>
     </Sectionfw>
+
+    <Logos />
     
     <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}

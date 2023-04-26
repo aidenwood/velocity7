@@ -1,4 +1,5 @@
 ---
+import Pricing from "@components/pricing.astro";
 const { align = "center" } = Astro.props;
 ---
 <div id="containerFlex" class="flex justify-center items-center">
@@ -15,10 +16,58 @@ const { align = "center" } = Astro.props;
   <div id="rightContainer" class="w-full lg:w-1/2">
     <section class="py-8 px-4">
       <div class="flex flex-wrap w-full lg:w-1/2 -mx-4 -mb-8"> 
-        <div class="md:w-1/2 px-4 mb-8"><img name="img1" class="rounded shadow-md" src="/src/assets/web-dev.png" /></div>
-        <div class="md:w-1/2 px-4 mb-8"><slot name="img2" class="rounded shadow-md" src="/src/assets/dig-mark.png" /></div>
-        <div class="md:w-1/2 px-4 mb-8"><slot name="img3" class="rounded shadow-md" src="/src/assets/3d-video.png" /></div>
-        <div class="md:w-1/2 px-4 mb-8"><slot name="img4" class="rounded shadow-md" src="/src/assets/graph-des.png" /></div>
+        <div class="md:w-1/2 px-4 mb-8">
+          <Picture
+                src="/src/assets/web-dev.png"
+                alt=""
+                sizes="(max-width: 800px) 100vw, 400px"
+                widths={[200, 400]}
+                aspectRatio="1:1"
+                background="#ffffff"
+                fit="cover"
+                position="center"
+                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+              />
+        </div>
+        <div class="md:w-1/2 px-4 mb-8">
+          <Picture
+          src="/src/assets/dig-mark.png"
+          alt=""
+          sizes="(max-width: 800px) 100vw, 400px"
+          widths={[200, 400]}
+          aspectRatio="1:1"
+          background="#ffffff"
+          fit="cover"
+          position="center"
+          class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+        />
+        </div>
+        <div class="md:w-1/2 px-4 mb-8">
+          <Picture
+          src="/src/assets/3d-video.png"
+          alt=""
+          sizes="(max-width: 800px) 100vw, 400px"
+          widths={[200, 400]}
+          aspectRatio="1:1"
+          background="#ffffff"
+          fit="cover"
+          position="center"
+          class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+        />
+        </div>
+        <div class="md:w-1/2 px-4 mb-8">
+          <Picture
+          src="/src/assets/graph-des.png"
+          alt=""
+          sizes="(max-width: 800px) 100vw, 400px"
+          widths={[200, 400]}
+          aspectRatio="1:1"
+          background="#ffffff"
+          fit="cover"
+          position="center"
+          class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+        />
+        </div>
       </div>
     </section>
   </div>
