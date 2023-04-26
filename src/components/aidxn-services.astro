@@ -1,0 +1,84 @@
+---
+// @ts-ignore
+import raywhiteLogo from 'assets/ray-white-greyed.svg';
+import ballrealtyLogo from 'assets/ball-realty-greyed.svg';
+import nwfundingLogo from 'assets/nwfunding-logo-greyed.svg';
+import tbcLogo from 'assets/tbc-grey.svg';
+import tsdLogo from 'assets/social-dandelion-greyed.svg';
+import cobraLogo from 'assets/cobra-car-club-greyed.svg';
+import brieLogo from 'assets/brie-logo-greyed.svg';
+import snacksLogo from 'assets/snacks-photography-logo-greyed.svg';
+import immersiveLogo from 'assets/immersive-structures-logo-greyed.svg';
+---
+<style>
+  :doodle {
+  grid-gap: 2px;
+  width: 75vh;
+  height: 75vh;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  }
+  background: #1d1e22;
+  border-radius:100%;
+  --scaledelay: calc((
+  (@abs(@abs(@row - @size-row/2) + @abs(@col - @size-col/2) - @size-col) / @size-col) - 1) * -1.5s) ;
+  animation-name: scale;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-delay: var(--scaledelay);
+  transform: scale(0.2);
+  @keyframes scale {
+  0%{
+  transform: scale(0.2);
+  }
+  50%{
+  transform: scale(1);
+  }
+  100%{
+  transform: scale(0.2);
+  }
+  }
+</style>
+  
+  
+<div class="mt-24">
+  <div class="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto rounded-lg flex flex-col items-center text-center">
+    <h2 class="text-white text-4xl md:text-6xl tracking-tight">
+      Building better brands.
+    </h2>
+    <p class="text-slate-400 mt-4 text-lg md:text-xl">
+      Keeping industry leading brands at the forefront of Marketing.
+    </p>
+    <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+      <img src={raywhiteLogo} class="h-8 md:h-12" />
+      <img src={ballrealtyLogo} class="h-8 md:h-12" />
+      <img src={nwfundingLogo} class="h-8 md:h-24" />
+      <img src={tbcLogo} class="h-8 md:h-24" />
+      <img src={tsdLogo} class="h-8 md:h-24" />
+      <img src={cobraLogo} class="h-8 md:h-12" />
+      <img src={immersiveLogo} class="h-8 md:h-24" />
+      <img src={brieLogo} class="h-8 md:h-24" />
+      <img src={snacksLogo} class="h-8 md:h-24" />
+    </div>
+  </div>
+</div>
+  
+<div>
+  
+<div class="hero-section">
+    <css-doodle grid="21">
+  
+    </css-doodle>
+</div>
+
+  
+</div>
+  
+<div>
+  
+  
+  
+</div>
