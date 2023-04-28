@@ -1,16 +1,16 @@
 ---
 draft: false
 title: "10 Reasons to Move Your Slow Website to Velocity7 as a Gold Coast Business Owner"
-date: "2023-04-28"
+date: "2023-04-20"
 snippet: "Learn how to improve your website's speed and performance with Velocity. In this post, we'll discuss the impact of website speed on your business and how Velocity can help you create a faster, more responsive website that meets your needs and exceeds your expectations. Start creating a better user experience for your customers and improve your search engine rankings with Velocity."
 image: {
     src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
     alt: "website design with ultra fast page load"
 }
-publishDate: "2023-04-27 13:39"
+publishDate: "2023-04-20 13:39"
 category: "Web Performance"
 author: "Aiden Wood"
-tags: [velocity, wordpress migration, australian e-commerce]
+tags: [velocity, wordpress, e-commerce]
 ---
 
 ## 10 Reasons to Move Your Slow Website to Velocity7 as a Gold Coast Business Owner
