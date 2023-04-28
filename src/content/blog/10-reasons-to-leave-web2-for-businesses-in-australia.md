@@ -36,8 +36,8 @@ Let's take a deeper look at how Velocity compares to other frameworks. Check out
 
 | Framework | Overall Top Ability | Customization | SEO | Mobile Responsiveness | Pageload Speed | Pricing Model |
 | :-------: | :----------------: | :-----------: | :-: | :------------------: | :------------: | :-----------: |
-| Velocity  |         95         |      90       |  85 |          95          |       90       |  Freemium     |
-| Velocity Vanilla | 85            |      95       |  90 |          80          |       85       |  Freemium     |
+| Velocity7  |         95         |      90       |  85 |          95          |       90       |  Freemium     |
+| Velocity.Vanilla | 85            |      95       |  90 |          80          |       85       |  Freemium     |
 | Shopify   |         90         |      80       |  90 |          85          |       80       |  Paid         |
 | Squarespace |       80         |      85       |  80 |          90          |       85       |  Paid         |
 | WordPress |         85         |      95       |  85 |          80          |       90       |  Free         |
