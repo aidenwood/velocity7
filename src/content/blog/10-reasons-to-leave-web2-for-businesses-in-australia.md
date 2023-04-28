@@ -32,14 +32,23 @@ At Velocity7, we take website speed seriously. Our clients experience an average
 
 Let's take a deeper look at how Velocity compares to other frameworks. Check out our performance comparison deep dive page for more information. Read more about our <a name="Comparison">Web Perfomance comparisons of Velocity vs the rest</a>.
 
-| Framework | Overall Top Ability | Ease of Use | Customizability | Performance | Third-Party Integrations | Community Support | Page Load Speed | Pricing Model |
-| :-------------- | :-----------------: | :--------: | :-------------: | :---------: | :---------------------: | :---------------: | :------------: | :-----------: |
-| Velocity        |         90%         |     75%    |       90%       |     85%     |           95%           |        85%        |     2.5s       |   Subscription  |
-| Velocity Vanilla|         70%         |     85%    |       70%       |     75%     |           90%           |        75%        |     3.0s       |   Open-source  |
-| Shopify         |         85%         |     90%    |       75%       |     85%     |           95%           |        90%        |     2.0s       |   Subscription  |
-| Squarespace     |         80%         |     85%    |       80%       |     80%     |           85%           |        80%        |     2.8s       |   Subscription  |
-| Wordpress       |         75%         |     70%    |       95%       |     70%     |           80%           |        95%        |     3.5s       |   Open-source  |
-| Wix             |         70%         |     80%    |       70%       |     70%     |           80%           |        70%        |     3.2s       |   Subscription  |
+### Velocity vs The Rest
+
+| Framework | Overall Top Ability | Customization | SEO | Mobile Responsiveness | Pageload Speed | Pricing Model |
+| :-------: | :----------------: | :-----------: | :-: | :------------------: | :------------: | :-----------: |
+| Velocity  |         95         |      90       |  85 |          95          |       90       |  Freemium     |
+| Velocity Vanilla | 85            |      95       |  90 |          80          |       85       |  Freemium     |
+| Shopify   |         90         |      80       |  90 |          85          |       80       |  Paid         |
+| Squarespace |       80         |      85       |  80 |          90          |       85       |  Paid         |
+| WordPress |         85         |      95       |  85 |          80          |       90       |  Free         |
+| Wix       |         80         |      80       |  75 |          90          |       85       |  Freemium     |
+
+
+Velocity7 is a web development framework that stands out with its exceptional performance, top-notch SEO features, and unparalleled extendability. It offers lightning-fast load times and smooth interactions, making it a go-to solution for building high-performance web applications. The framework is built with optimization in mind and is designed to reduce the overall page weight, enabling quick loading times. Additionally, Velocity7 comes packed with SEO optimization features, including custom metadata, clean URLs, and structured data markup, giving your website the best chance to rank high in search engine results pages.
+
+Velocity.Vanilla is another option provided by the Velocity framework. It offers similar features to Velocity7 but is a more cost-effective solution. Velocity.Vanilla is ideal for businesses that need a high-quality website but want to keep costs low without compromising quality. It's a simple, lightweight, and customizable framework that can be integrated with major platforms such as WordPress, Shopify, and Magento. With Velocity.Vanilla, you get all the benefits of Velocity's powerful features while keeping the cost to a minimum.
+
+Both excellent web development frameworks that provide businesses with powerful features and customization options. Velocity7 is a top-of-the-line solution that offers the absolute fastest web performance, SEO, and extendability. While Velocity.Vanilla is a cost-effective option that provides high-quality website development without breaking the bank. Regardless of which option you choose, Velocity provides developers and businesses with the tools they need to build successful, performant websites.
 
 
 ### 3. Competitive advantage
