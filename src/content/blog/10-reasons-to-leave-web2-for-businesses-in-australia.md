@@ -30,7 +30,7 @@ At Velocity7, we take website speed seriously. Our clients experience an average
 
 ## 3. Performance Comparison Table
 
-Using this as a template, let's take a deeper look at how Velocity compares to other frameworks. Check out our performance comparison deep dive page for more information. Read more about our <a name="Comparison">Web Perfomance comparisons of Velocity vs the rest</a>.
+Let's take a deeper look at how Velocity compares to other frameworks. Check out our performance comparison deep dive page for more information. Read more about our <a name="Comparison">Web Perfomance comparisons of Velocity vs the rest</a>.
 
 | Framework | Overall Top Ability | Ease of Use | Customizability | Performance | Third-Party Integrations | Community Support | Page Load Speed | Pricing Model |
 | :-------------- | :-----------------: | :--------: | :-------------: | :---------: | :---------------------: | :---------------: | :------------: | :-----------: |
