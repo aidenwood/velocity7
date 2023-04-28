@@ -7,7 +7,7 @@ image: {
     src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
     alt: "website design with ultra fast page load"
 }
-publishDate: "2023-04-28 13:39"
+publishDate: "2023-04-27 13:39"
 category: "Web Performance"
 author: "Aiden Wood"
 tags: [velocity, wordpress migration, australian e-commerce]
