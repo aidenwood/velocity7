@@ -5,7 +5,7 @@ import Sectionhead from "@components/sectionhead.astro";
 import Sectionfw from "@components/sectionhead-fullwidth.astro";
 import Pricing from "@components/pricing.astro";
 import Logos from "@components/logos.astro";
-import Clients from "@components/clients.astro";
+import Velocitycta from "@components/velocity-cta.astro";
 
 const pricing = [
   {
@@ -96,15 +96,15 @@ const pricing = [
 
     <Sectionfw>
       <Fragment slot="title">
-        Velocity 7
+        Velocity7
       </Fragment>
       <Fragment slot="desc"
-        >Welcome to Web4.
+        >Migrate to Web3 with ease.
       </Fragment>
     </Sectionfw>
 
-    <Logos />
-    
+    <Velocitycta />
+
     <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
@@ -112,11 +112,11 @@ const pricing = [
     <Sectionhead>
       <Fragment slot="title">Out-of-the-Box Everything</Fragment>
       <Fragment slot="desc"
-        >30+ user-friendly, high-conversion components.</Fragment
+        >30+ components and 20+ integrations, built-in.</Fragment
       >
     </Sectionhead>
-
-    <Clients />
+    
+    <Logos />
     
   </Containerfw>
 </Layout>
