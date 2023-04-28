@@ -1,10 +1,9 @@
 ---
-import Pricing from "@components/pricing.astro";
-import { Picture } from "@astrojs/image/components";
+import Velocitycover from 'assets/bal-bg.webp';
 
 const { align = "center" } = Astro.props;
 ---
-<div id="containerFlex" class="flex justify-center items-center">
+<div id="containerFlex" class="flex justify-start items-center">
 <div id="leftContainer" class="w-full lg:w-1/2 mt-16 mb-8">
   <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     <slot name="title">Title</slot>
@@ -13,66 +12,7 @@ const { align = "center" } = Astro.props;
     <slot name="desc">Some description goes here</slot>
   </p>
 </div>
-<diu>
-
-  <div id="rightContainer" class="w-full lg:w-1/2">
-    <section class="py-8 px-4">
-      <div class="flex flex-wrap w-full lg:w-1/2 -mx-4 -mb-8"> 
-        <div class="md:w-1/2 px-4 mb-8">
-          <Picture
-                src="/src/assets/web-dev.png"
-                alt=""
-                sizes="(max-width: 800px) 100vw, 400px"
-                widths={[200, 400]}
-                aspectRatio="1:1"
-                background="#ffffff"
-                fit="cover"
-                position="center"
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
-        </div>
-        <div class="md:w-1/2 px-4 mb-8">
-          <Picture
-          src="/src/assets/dig-mark.png"
-          alt=""
-          sizes="(max-width: 800px) 100vw, 400px"
-          widths={[200, 400]}
-          aspectRatio="1:1"
-          background="#ffffff"
-          fit="cover"
-          position="center"
-          class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-        />
-        </div>
-        <div class="md:w-1/2 px-4 mb-8">
-          <Picture
-          src="/src/assets/3d-video.png"
-          alt=""
-          sizes="(max-width: 800px) 100vw, 400px"
-          widths={[200, 400]}
-          aspectRatio="1:1"
-          background="#ffffff"
-          fit="cover"
-          position="center"
-          class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-        />
-        </div>
-        <div class="md:w-1/2 px-4 mb-8">
-          <Picture
-          src="/src/assets/graph-des.png"
-          alt=""
-          sizes="(max-width: 800px) 100vw, 400px"
-          widths={[200, 400]}
-          aspectRatio="1:1"
-          background="#ffffff"
-          fit="cover"
-          position="center"
-          class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-        />
-        </div>
-      </div>
-    </section>
-  </div>
-
-</diu>
+<div id="rightContainer" class="w-full lg:w-1/2 flex items-center justify-center">
+    <slot class="bg-grey-700" name="cover"><img src={Velocitycover} class="w-full h-full bg-cover" /></slot>
+</div>
 </div>
