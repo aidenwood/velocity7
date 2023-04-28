@@ -17,6 +17,8 @@ tags: [velocity, wordpress migration, australian e-commerce]
 
 As a business owner, you know that having a fast, reliable website is critical for success in today's digital age. Slow website speeds can lead to decreased traffic, decreased sales, and a loss of customer trust. At Velocity7, we understand the importance of website speed and offer a range of solutions to help Gold Coast businesses improve their website performance. Here are ten reasons why you should move your slow website to Velocity7.
 
+
+
 ### 1. Improved e-commerce conversion rates
 
 If you're an e-commerce business, every second counts when it comes to website speed. Studies show that a delay of just one second can lead to a 7% reduction in conversions. At Velocity7, we specialize in e-commerce website optimization and can help you improve your website speed, resulting in increased conversions and sales.
@@ -24,6 +26,19 @@ If you're an e-commerce business, every second counts when it comes to website s
 ### 2. Lightning-fast page load speeds
 
 At Velocity7, we take website speed seriously. Our clients experience an average page load speed of just 0.2 seconds, which is significantly faster than the industry average. With our optimized hosting solutions, content delivery network, and other performance-boosting tools, we can help your website load lightning fast.
+
+
+## <a name="Comparison"></a>Performance Comparison Table
+
+| Framework | Overall Top Ability | Ease of Use | Customizability | Performance | Third-Party Integrations | Community Support | Page Load Speed | Pricing Model |
+| :-------------- | :-----------------: | :--------: | :-------------: | :---------: | :---------------------: | :---------------: | :------------: | :-----------: |
+| Velocity        |         90%         |     75%    |       90%       |     85%     |           95%           |        85%        |     2.5s       |   Subscription  |
+| Velocity Vanilla|         70%         |     85%    |       70%       |     75%     |           90%           |        75%        |     3.0s       |   Open-source  |
+| Shopify         |         85%         |     90%    |       75%       |     85%     |           95%           |        90%        |     2.0s       |   Subscription  |
+| Squarespace     |         80%         |     85%    |       80%       |     80%     |           85%           |        80%        |     2.8s       |   Subscription  |
+| Wordpress       |         75%         |     70%    |       95%       |     70%     |           80%           |        95%        |     3.5s       |   Open-source  |
+| Wix             |         70%         |     80%    |       70%       |     70%     |           80%           |        70%        |     3.2s       |   Subscription  |
+
 
 ### 3. Competitive advantage
 
@@ -58,4 +73,11 @@ Website downtime can be costly for your business. At Velocity7, we understand th
 We know that cost is a critical factor for Gold Coast businesses. That's why we offer affordable pricing for our range of hosting and optimization solutions. With Velocity7, you can improve your website speed and performance without breaking the bank.
 
 In conclusion,
+
+
+Take Velocity7 for a test drive: [Velocity7: live demo](https://aidxn.com/) page. 
+
+Also available in white: [Velocity.Vanilla: live demo](https://www.vanilla.aidxn.com/) 
+for those needing more custom experiences and further complexity down the track.
+
 
