@@ -34,14 +34,14 @@ Let's take a deeper look at how Velocity compares to other frameworks. Check out
 
 ### Velocity vs The Rest
 
-| Framework | Overall Top Ability | Customization | SEO | Mobile Responsiveness | Pageload Speed | Pricing Model |
+| Framework | Lighthouse Score | Customization | SEO | Mobile Responsiveness | Pageload Speed | Pricing Model |
 | :-------: | :----------------: | :-----------: | :-: | :------------------: | :------------: | :-----------: |
-| Velocity7  |         95         |      90       |  85 |          95          |       90       |  Freemium     |
-| Velocity.Vanilla | 85            |      95       |  90 |          80          |       85       |  Freemium     |
-| Shopify   |         90         |      80       |  90 |          85          |       80       |  Paid         |
-| Squarespace |       80         |      85       |  80 |          90          |       85       |  Paid         |
-| WordPress |         85         |      95       |  85 |          80          |       90       |  Free         |
-| Wix       |         80         |      80       |  75 |          90          |       85       |  Freemium     |
+| Velocity7  |        98         |      94       |  92 |          99          |       99       |  Pay Once     |
+| Velocity.Vanilla |  94         |      99       |  90 |          98          |       97       |  Pay Once     |
+| Shopify   |         92         |      80       |  88 |          99          |       86       |  $1260/yr     |
+| Squarespace |       81         |      70       |  80 |          87          |       76       |  $408/yr      |
+| WordPress |         68         |      60       |  65 |          76          |       58       |  Free  Paid   |
+| Wix       |         54         |      40       |  60 |          72          |       39       |  Free / Paid  |
 
 
 Velocity7 is a web development framework that stands out with its exceptional performance, top-notch SEO features, and unparalleled extendability. It offers lightning-fast load times and smooth interactions, making it a go-to solution for building high-performance web applications. The framework is built with optimization in mind and is designed to reduce the overall page weight, enabling quick loading times. Additionally, Velocity7 comes packed with SEO optimization features, including custom metadata, clean URLs, and structured data markup, giving your website the best chance to rank high in search engine results pages.
