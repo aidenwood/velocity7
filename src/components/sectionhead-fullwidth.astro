@@ -1,7 +1,5 @@
 ---
-import Velocitycover from 'assets/bal-bg.webp';
 
-const { align = "center" } = Astro.props;
 ---
 <div id="containerFlex" class="flex justify-start items-center">
 <div id="leftContainer" class="w-full lg:w-1/2 mt-16 mb-8">
@@ -13,6 +11,6 @@ const { align = "center" } = Astro.props;
   </p>
 </div>
 <div id="rightContainer" class="w-full lg:w-1/2 flex items-center justify-center">
-    <slot class="bg-grey-700" name="cover"><img src={Velocitycover} class="w-full h-full bg-cover" /></slot>
+    <slot class="bg-grey-700" name="cover">Import for Cover Photo</slot>
 </div>
 </div>
