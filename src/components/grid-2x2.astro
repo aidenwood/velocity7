@@ -1,6 +1,7 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
 import GraphicDesign from '../assets/graph-des.png';
 import WebDesign from '../assets/web-dev.png';
@@ -15,6 +16,9 @@ const features = [
       "Developed as 'guardrails' to help your business stay on track to create a beautiful, high converting website.",
     imgsrc: GraphicDesign,
     imgalt: "Brand Design and strategy direction for the age of social marketing.",
+    link: "/design",
+    style: "outline",
+    btntxt: "Brand Design",
   },
   {
     title: "Web Dev & Automation.",
@@ -22,6 +26,9 @@ const features = [
       "Velocity7 is made to stay fast over the lifetime of your brand's development. Improving user experience, SEO and other vitals.",
     imgsrc: WebDesign,
     imgalt: "Gold Coast's best web design and development agency with over 10 years experience.",
+    link: "/develop",
+    style: "outline",
+    btntxt: "Web Development",
   },
   {
     title: "Ad Strategy & Management.",
@@ -29,6 +36,9 @@ const features = [
       "Built in conversion tracking to run highly successful ads instantly with Pixel-friendly code, automatic sitemaps and social tags.",
     imgsrc: Marketing,
     imgalt: "Ad strategy management on the Gold Coast without the giant fees.",
+    link: "/leadgen",
+    style: "outline",
+    btntxt: "Lead Generation",
   },
   {
     title: "Videography & 3D Design.",
@@ -36,6 +46,9 @@ const features = [
       "Reduce developer costs with 30+ commonly used components built-in with high performance, from image sliders / galleries to product cards and grids.",
     imgsrc: VideoProd,
     imgalt: "3D Video Design and Videography Production for Marketing",
+    link: "/video",
+    style: "outline",
+    btntxt: "Video Production",
   },
 ];
 ---
@@ -68,6 +81,12 @@ const features = [
         <div>
           <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <Link
+            href={item.link || "#"}
+            block
+            style={item.style ? "primary" : "outline"}>
+            {item.btntxt || "Get Started"}
+          </Link>
         </div>
       </div>
     ))
