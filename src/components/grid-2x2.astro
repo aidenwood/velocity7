@@ -1,6 +1,8 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+
 
 const features = [
   {
@@ -44,7 +46,16 @@ const features = [
     features.map((item) => (
       <div class="flex gap-4 items-start">
         <div class="mt-1 bg-black rounded-full  p-2 w-64 h-64 shrink-0">
-          <img class="text-white" src={item.imgsrc} />
+          <Picture
+                src={item.imgsrc}
+                sizes="(max-width: 800px) 100vw, 400px"
+                widths={[200, 400]}
+                aspectRatio="1:1"
+                background="#f2f2f2"
+                fit="cover"
+                position="center"
+                class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+              />
         </div>
         <div>
           <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
