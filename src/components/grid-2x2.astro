@@ -3,6 +3,9 @@
 import { Icon } from "astro-icon";
 import { Picture } from "@astrojs/image/components";
 import GraphicDesign from '../assets/graph-des.png';
+import WebDesign from '../assets/web-dev.png';
+import Marketing from '../assets/dig-mark.png';
+import VideoProd from '../assets/3d-video.png';
 
 
 const features = [
@@ -11,29 +14,33 @@ const features = [
     description:
       "Developed as 'guardrails' to help your business stay on track to create a beautiful, high converting website.",
     imgsrc: GraphicDesign,
+    imgalt: "Brand Design and strategy direction for the age of social marketing.",
   },
   {
     title: "Web Dev & Automation.",
     description:
       "Velocity7 is made to stay fast over the lifetime of your brand's development. Improving user experience, SEO and other vitals.",
-    imgsrc: "src/assets/web-dev.png",
+    imgsrc: WebDesign,
+    imgalt: "Gold Coast's best web design and development agency with over 10 years experience.",
   },
   {
     title: "Ad Strategy & Management.",
     description:
       "Built in conversion tracking to run highly successful ads instantly with Pixel-friendly code, automatic sitemaps and social tags.",
-    imgsrc: "src/assets/dig-mark.png",
+    imgsrc: Marketing,
+    imgalt: "Ad strategy management on the Gold Coast without the giant fees.",
   },
   {
     title: "Videography & 3D Design.",
     description:
       "Reduce developer costs with 30+ commonly used components built-in with high performance, from image sliders / galleries to product cards and grids.",
-    imgsrc: "src/assets/3d-video.png",
+    imgsrc: VideoProd,
+    imgalt: "3D Video Design and Videography Production for Marketing",
   },
 ];
 ---
 
-<div class="my-16 md:mt-0">
+<div class="my-16">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     Design, Develop. Market, Moonshot.
   </h2>
