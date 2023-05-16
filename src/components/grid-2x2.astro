@@ -7,25 +7,25 @@ const features = [
     title: "Brand Design & Direction.",
     description:
       "Developed as 'guardrails' to help your business stay on track to create a beautiful, high converting website.",
-    icon: "carbon:asset",
+    imgsrc: "src/assets/graph-des.png",
   },
   {
     title: "Web Dev & Automation.",
     description:
       "Velocity7 is made to stay fast over the lifetime of your brand's development. Improving user experience, SEO and other vitals.",
-    icon: "ph:hard-drives",
+    imgsrc: "src/assets/web-dev.png",
   },
   {
     title: "Ad Strategy & Management.",
     description:
       "Built in conversion tracking to run highly successful ads instantly with Pixel-friendly code, automatic sitemaps and social tags.",
-    icon: "ph:git-branch",
+    imgsrc: "src/assets/dig-mark.png",
   },
   {
     title: "Videography & 3D Design.",
     description:
       "Reduce developer costs with 30+ commonly used components built-in with high performance, from image sliders / galleries to product cards and grids.",
-    icon: "carbon:cube",
+    imgsrc: "src/assets/3d-video.png",
   },
 ];
 ---
@@ -39,12 +39,12 @@ const features = [
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid md:grid-cols-2 mt-16 gap-16">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-32 h-32 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+        <div class="mt-1 bg-black rounded-full  p-2 w-64 h-64 shrink-0">
+          <img class="text-white" src={item.imgsrc} />
         </div>
         <div>
           <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
