@@ -11,20 +11,35 @@ const menuitems = [
     path: "/about",
   },
   {
-    title: "Velocity 7",
+    title: "Velocity7",
     path: "/velocity7",
+  },
+  {
+    title: "Products",
+    path: "/products",
+    children: [
+      { title: "Velocity7", path: "/velocity7" },
+      { title: "Velocity.Vanilla", path: "velocity7/vanilla" },
+      { title: "Velocity for E-Commerce", path: "velocity7/ecommerce" },
+      { title: "Velocity Docs", path: "velocity7/docs" },
+    ],
+  },
+  {
+    title: "Services",
+    path: "/services",
+    children: [
+      { title: "Brand Design", path: "/design" },
+      { title: "Web Development", path: "/develop" },
+      { title: "Lead Generation", path: "/leadgen" },
+      { title: "Video Production", path: "/video" },
+    ],
   },
   {
     title: "Pricing",
     path: "/pricing",
-    children: [
-      { title: "Startup", path: "/velocity7#startup" },
-      { title: "E-Commerce", path: "/velocity7#ecommerce" },
-      { title: "Enterprise", path: "/velocity7#enterprise" },
-    ],
   },
   {
-    title: "Dev & Design",
+    title: "Blog",
     path: "/blog",
   },
   {
