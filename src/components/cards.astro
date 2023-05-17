@@ -69,16 +69,7 @@ const features = [
       <div class="flex gap-4 items-start">
         <div id="card" class="bg-gray-100 rounded px-4 py-8">
           <div class="mt-1 w-48 h-48 shrink-0">
-            <Picture
-                  src={item.imgsrc}
-                  sizes="(max-width: 800px) 100vw, 400px"
-                  widths={[200, 400]}
-                  aspectRatio="1:1"
-                  background="#f2f2f2"
-                  fit="cover"
-                  position="center"
-                  class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-                />
+            <img src={item.imgsrc} class="h-24 md:h-32" />
           </div>
           <div>
             <h3 class="font-semibold text-xl">{item.title}</h3>{" "}
