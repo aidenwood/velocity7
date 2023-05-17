@@ -3,10 +3,10 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
-import BoogieCollective from '../assets/theboogiecollective-logo-greyed.svg';
+import BoogieCollective from '../assets/tbc-logo-greyed.svg';
 import BallRealty from '../assets/ball-realty-greyed.svg';
 import NWFunding from '../assets/nwfunding-logo-greyed.svg';
-import Estem from '../assets/estem-logo-greyed.webp';
+import RayWhite from '../assets/ray-white-greyed.webp';
 
 
 
@@ -14,7 +14,7 @@ const features = [
   {
     title: "32x improvement on SEO and $3.5 CPM Google Ads avg in the Real Estate Industry.",
     description:
-      "We worked with Ball Realty at the height of Covid's impact on business, helping them keep advertising costs under control while it sent competitors broke was an interesting time in marketing for sure.",
+      "We worked with Ball Realty at the height of Covid's impact on business, helping them keep advertising costs under control.",
     imgsrc: BallRealty,
     imgalt: "Brand Design and strategy direction for the age of social marketing.",
     link: "blog/ball-realty",
@@ -24,7 +24,7 @@ const features = [
   {
     title: "6x improvement on AOV, in the Financial Loans Industry. We're dead serious.",
     description:
-      "When NW Funding came to us, they had been getting absolutely mucked around by their previous marketers. A blend between highly detailed conversion tracking steps and tailored ads at each step saved this business at a time of need.",
+      "We took this client from 0 to Hero with a blend of detailed conversion tracking steps with tailored ads to the stages thinking.",
     imgsrc: NWFunding,
     imgalt: "Gold Coast's best web design and development agency with over 10 years experience.",
     link: "blog/nwfunding",
@@ -34,7 +34,7 @@ const features = [
   {
     title: "$50k in sales in one month, with $0 advertising, in the Outdoor Events Industry.",
     description:
-      "We work within the bounds of your business, and we don't need to see your quaterly budgets to understand what will work best for your brand. We did this even in the days of Wordpress, and why we are hungry for speed.",
+      "We don't need to see your quaterly budgets to understand what will work best for your brand. We did this even using Wordpress and why we care deeply about speed.",
     imgsrc: BoogieCollective,
     imgalt: "Ad strategy management on the Gold Coast without the giant fees.",
     link: "blog/theboogiecollective",
@@ -42,12 +42,12 @@ const features = [
     btntxt: "Read more",
   },
   {
-    title: "4.2 sec pageload to 1.9 sec pageload in 2 weeks of Wordpress Optimisation.",
+    title: "Animated Google Display Ad Designs that passed through Franchise Branding Guidelines.",
     description:
-      "We still work with Wordpress based websites, we understand your fustration and have spent many of our early years screaming at the same issues. We worked fast for Esteem Clinic, a 20 year old brand that can't escape WP.",
-    imgsrc: Estem,
+      "Creating ad designs that follow a larger brand formula can be a huge challenge. Using unique yet on brand, interactive animations to improve CTR's hugely.",
+    imgsrc: RayWhite,
     imgalt: "3D Video Design and Videography Production for Marketing",
-    link: "blog/video",
+    link: "blog/raywhite",
     style: "outline",
     btntxt: "Read more",
   },
@@ -63,7 +63,7 @@ const features = [
   </p>
 </div>
 
-<div class="grid md:grid-cols-4 mt-16 gap-16">
+<div class="grid grid-cols-2 lg:grid-cols-4 mt-16 gap-4">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
@@ -72,8 +72,8 @@ const features = [
             <img src={item.imgsrc} class="h-24 md:h-32" />
           </div>
           <div>
-            <h3 class="font-semibold text-xl text-white">{item.title}</h3>{" "}
-            <p class="text-slate-300 mt-2 mb-6 leading-relaxed">{item.description}</p>
+            <h3 class="font-semibold text-md lg:text-xl text-white">{item.title}</h3>{" "}
+            <p class="text-xs lg:text-sm text-slate-300 mt-2 mb-6 leading-relaxed">{item.description}</p>
             <Link
               href={item.link || "#"}
               block
