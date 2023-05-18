@@ -8,7 +8,7 @@ import Logos from "@components/logos.astro";
 import Velocitycta from "@components/velocity-cta.astro";
 import Velocitycases from "@components/velocity-casestudies.astro";
 
-import Velocitycover from 'assets/web-dev.png';
+import Velocitycover from "../assets/web-dev.png";
 
 
 const pricing = [
@@ -105,8 +105,17 @@ const pricing = [
       <Fragment slot="desc"
         >Migrate to Web3 with ease.
       </Fragment>
-      <Fragment slot="cover"
-        ><img src={Velocitycover} class="w-full h-full bg-cover" />
+      <Fragment slot="cover">
+        <Picture
+                  src={Velocitycover}
+                  sizes="(max-width: 800px) 100vw, 400px"
+                  widths={[200, 400]}
+                  aspectRatio="2:1"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                />
       </Fragment>
     </Sectionfw>
 
