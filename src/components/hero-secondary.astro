@@ -1,6 +1,8 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/hero.png";
+import Dash from "../assets/dashboard.png";
+import Chart from "../assets/chart.png";
+import Payment from "../assets/payment.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
@@ -43,10 +45,10 @@ import { Icon } from "astro-icon";
 
     <div class="relative flex items-center justify-center w-full h-full">
       <div class="relative w-3/4 h-auto max-h-48 lg:max-h-64 xl:max-h-96">
-        <img loading="eager" class="absolute right-0 z-10 object-cover object-center w-32 -mt-8 -mr-8 transition duration-300 transform rounded-md shadow-2xl md:w-40 lg:w-40 lg:top-0 lg:-mt-16 md:-mr-16 lg:-mr-6 md:rounded-lg lg:rounded-xl group-hover:scale-105" src="../assets/payment.png" alt="image">
-        <img loading="eager" class="absolute bottom-0 left-0 z-10 object-cover object-center w-24 -mb-12 -ml-4 transition duration-300 transform rounded-md shadow-2xl md:w-32 lg:w-32 xl:w-40 md:-ml-12 md:rounded-lg lg:rounded-xl group-hover:scale-95" src="../assets/chart.png" alt="image">
+        <img loading="eager" class="absolute right-0 z-10 object-cover object-center w-32 -mt-8 -mr-8 transition duration-300 transform rounded-md shadow-2xl md:w-40 lg:w-40 lg:top-0 lg:-mt-16 md:-mr-16 lg:-mr-6 md:rounded-lg lg:rounded-xl group-hover:scale-105" src="Payment" alt="image">
+        <img loading="eager" class="absolute bottom-0 left-0 z-10 object-cover object-center w-24 -mb-12 -ml-4 transition duration-300 transform rounded-md shadow-2xl md:w-32 lg:w-32 xl:w-40 md:-ml-12 md:rounded-lg lg:rounded-xl group-hover:scale-95" src="Chart" alt="image">
         <div class="relative w-full h-auto max-h-48 lg:max-h-64 xl:max-h-96 overflow-hidden transition duration-300 transform shadow-lg rounded-xl group-hover:scale-95">
-          <img loading="eager" class="w-full" src="../assets/chart.png" alt="image">
+          <img loading="eager" class="w-full" src="Dash" alt="image">
         </div>
       </div>
     </div>
