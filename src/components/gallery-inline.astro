@@ -1,0 +1,119 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+import { Picture } from "@astrojs/image/components";
+import GraphicDesign from '../assets/graph-des.png';
+import WebDesign from '../assets/web-dev.png';
+import Marketing from '../assets/dig-mark.png';
+import VideoProd from '../assets/3d-video.png';
+
+
+const features = [
+  {
+    title: "Google Search Ads.",
+    description:
+      "Best used for high-intent marketing capture, we've created some of the best CPC / CPM results seen for high-cost industries.",
+    imgsrc: GraphicDesign,
+    imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
+    link: "blog/when-to-use-paid-search",
+    style: "muted",
+    btntxt: "Google Search",
+  },
+  {
+    title: "Meta Ads.",
+    description:
+      "Facebook and Instagram ads can reach huge amounts of people with visual advertising, but lack manipulatable targeting data and can be costly.",
+    imgsrc: WebDesign,
+    imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
+    link: "blog/when-to-use-paid-meta-ads",
+    style: "muted",
+    btntxt: "Meta Ads",
+  },
+  {
+    title: "Google Display Network.",
+    description:
+      "GDN is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
+    imgsrc: Marketing,
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "blog/when-to-use-google-display-ads",
+    style: "muted",
+    btntxt: "Google Display Network",
+  },
+  {
+    title: "Youtube Ads.",
+    description:
+      "If your business can promote itself well in a slightly longer format of video, or look to have a multistep video marketing strategy, there is no comparison.",
+    imgsrc: VideoProd,
+    imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
+    link: "blog/how-to-maximise-youtube-advertising",
+    style: "muted",
+    btntxt: "Youtube Advertising",
+  },
+  {
+    title: "Video Production.",
+    description:
+      "We can create a multistep video marketing strategy, completely cover the video filming and produ tion, and have 3 deliverables back to you within a week.",
+    imgsrc: VideoProd,
+    imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
+    link: "blog/how-to-use-video-advertising-effectively",
+    style: "muted",
+    btntxt: "Video Ad Strategy",
+  },
+  {
+    title: "SEO Marketing.",
+    description:
+      "Until Google goes away, SEO will always be valuable to your business. Free lead generation can be created easily in small niches. Hugely effective to outgrow compeition.",
+    imgsrc: VideoProd,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+    link: "blog/how-to-maximise-your-websites-seo-performance",
+    style: "muted",
+    btntxt: "Youtube Advertising",
+  },
+];
+---
+
+<div class="mt-16 mb-8">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Some of our Work.
+  </h2>
+  <p class="text-lg max-w-4xl mt-4 text-slate-600">
+    We dive deep on your business model and target market to create brands that simply just work with their target audience.
+  </p>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div id="container" class="px-4 py-8">
+          <div class="mt-1 p-2 w-full h-full shrink-0">
+            <Picture
+                  src={item.imgsrc}
+                  sizes="(max-width: 800px) 100vw, 400px"
+                  widths={[200, 400]}
+                  aspectRatio="1:1"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                />
+          </div>
+          <div>
+            <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
+            <p class="text-slate-500 mt-2 mb-6 leading-relaxed">{item.description}</p>
+            <p class="text-slate-500 mt-2 mb-6 leading-relaxed">
+              Platform:
+              <Link 
+                class="mr-4"
+                href={item.link || "#"}
+                block
+                style={item.style ? "primary" : "outline"}>
+                {item.btntxt || "Get Started"}
+              </Link>
+            </p>
+        </div>
+      </div>
+    ))
+  }
+</div>
