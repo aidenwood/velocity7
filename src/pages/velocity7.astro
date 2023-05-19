@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Containerfw from "@components/container-fullwidth.astro";
 import Container from "@components/container.astro";
+import Containerxl from "@components/container-xl.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Sectionfw from "@components/sectionhead-fullwidth.astro";
 import Galleryinline from "@components/gallery-inline.astro";
@@ -99,32 +100,30 @@ const pricing = [
 
 <Layout title="Velocity7">
   <Containerfw>
-    <Sectionfw>
 
+    <Sectionfw>
       <Fragment slot="title">
-        Edge Web Performance.
-        Conversion-Focused Design.
+        Conversion and Web Performance Focused Website Theme.
       </Fragment>
       <Fragment slot="desc">
-        The perfect balance of performance and integrations to rapidly build successful websites for Australian businesses.
+        The perfect balance between website template and custom code. Created to rapidly build successful websites for Australian businesses.
       </Fragment>
-
       <Fragment slot="cover">
         <Picture
                   src={Pagecover}
                   sizes="(max-width: 2000px) 100vw, 1000px"
                   widths={[500, 1000]}
-                  aspectRatio="3:1"
+                  aspectRatio="3:2"
                   background="#f2f2f2"
                   fit="cover"
                   position="center"
                   class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
                 />
       </Fragment>
-
-      <Galleryinline />
-
     </Sectionfw>
+
+    <Galleryinline />
+
   </Containerfw>
 
   <Container>
@@ -136,10 +135,7 @@ const pricing = [
         </Fragment>
       </Sectionhead>
 
-      <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
-        {pricing.map((item) => <Pricing plan={item} />)}
-      </div>  
-      
+      <Velocitycases />
       
       <Sectionhead>
         <Fragment slot="title">Out-of-the-Box Everything.</Fragment>
@@ -162,9 +158,11 @@ const pricing = [
       <Logos />
 
   </Container>
-  <Containerfw>
-
-    <Velocitycases />
+  <Containerxl>
     
-  </Containerfw>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+
+  </Containerxl>
 </Layout>
