@@ -122,11 +122,19 @@ const pricing = [
       </Fragment>
     </Sectionfw>
 
+  </Containerfw>
+
+  <Containerxl>
+    <Sectionhead>
+      <Fragment slot="title">Ready to fit any business size.</Fragment>
+      <Fragment slot="desc" class="max-w-4xl"
+        >Depending on where you are in the lifecycle of your online business, we are here to help.
+      </Fragment>
+    </Sectionhead>
     <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
-
-  </Containerfw>
+  </Containerxl>
 
   <Container>
       <Sectionhead>
