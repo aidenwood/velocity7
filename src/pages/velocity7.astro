@@ -8,7 +8,7 @@ import Sectionfw from "@components/sectionhead-fullwidth.astro";
 import Galleryinline from "@components/gallery-inline.astro";
 import Pricing from "@components/pricing.astro";
 import Logos from "@components/logos.astro";
-import Velocitycta from "@components/velocity-cta.astro";
+import Clientscta from "@components/cta-clients.astro";
 import Velocitycases from "@components/velocity-casestudies.astro";
 import { Picture } from "@astrojs/image/components";
 import Pagecover from '../assets/bal-bg.webp';
@@ -103,7 +103,7 @@ const pricing = [
 
     <Sectionfw>
       <Fragment slot="title">
-        Conversion and Web Performance Focused Website Theme.
+        Conversion-Focused, High Performance Website Theme.
       </Fragment>
       <Fragment slot="desc">
         The perfect balance between website template and custom code. Created to rapidly build successful websites for Australian businesses.
@@ -111,8 +111,8 @@ const pricing = [
       <Fragment slot="cover">
         <Picture
                   src={Pagecover}
-                  sizes="(max-width: 2000px) 100vw, 1000px"
-                  widths={[500, 1000]}
+                  sizes="(max-width: 750px) 100vw, 750px"
+                  widths={[500, 750]}
                   aspectRatio="3:2"
                   background="#f2f2f2"
                   fit="cover"
@@ -122,11 +122,13 @@ const pricing = [
       </Fragment>
     </Sectionfw>
 
-    <Galleryinline />
+    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
 
   </Containerfw>
 
-  <Container>
+  <Containerxl>
       <Sectionhead>
         <Fragment slot="title">Light as a Feather.</Fragment>
         <Fragment slot="desc" class="max-w-4xl"
@@ -145,7 +147,7 @@ const pricing = [
         </Fragment>
       </Sectionhead>
 
-      <Velocitycta />
+      <Clientscta />
 
       <Sectionhead>
         <Fragment slot="title">Turn Around in 21 Days.</Fragment>
@@ -157,12 +159,10 @@ const pricing = [
       
       <Logos />
 
-  </Container>
-  <Containerxl>
-    
-    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
-
   </Containerxl>
+  <Containerfw>
+    
+    <Galleryinline />
+
+  </Containerfw>
 </Layout>
