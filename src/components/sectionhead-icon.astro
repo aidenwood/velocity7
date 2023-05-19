@@ -1,0 +1,16 @@
+---
+const { align = "center" } = Astro.props;
+import { Icon } from "astro-icon";
+---
+
+<div class:list={["mt-16", align === "center" && "text-center"]}>
+  <div class="mt-1 bg-black rounded-full p-4 w-16 h-16 shrink-0">
+    <Icon class="text-white" name="icon" />
+  </div>
+  <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    <slot name="title">Title</slot>
+  </h1>
+  <p class="text-lg mt-4 text-slate-600">
+    <slot name="desc">Some description goes here</slot>
+  </p>
+</div>
