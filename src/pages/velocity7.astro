@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Containerfw from "@components/container-fullwidth.astro";
+import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Sectionfw from "@components/sectionhead-fullwidth.astro";
 import Galleryinline from "@components/gallery-inline.astro";
@@ -98,7 +99,6 @@ const pricing = [
 
 <Layout title="Velocity7">
   <Containerfw>
-
     <Sectionfw>
 
       <Fragment slot="title" class="max-w-6xl">
@@ -122,43 +122,45 @@ const pricing = [
                 />
       </Fragment>
     
-      <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
-        {pricing.map((item) => <Pricing plan={item} />)}
-      </div>  
+      <Galleryinline />  
 
     </Sectionfw>
+    <Container>
 
-    <Sectionhead>
-      <Fragment slot="title">Light as a Feather.</Fragment>
-      <Fragment slot="desc" class="max-w-4xl"
-        >We've spent 5 years developing Velocity into the one of the fastest website foundations available. 
-        V7 comes in at a feather-weight 68kb pageload for a full website ready for rapid branding, infinitly extendable.
-      </Fragment>
-    </Sectionhead>
+      <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+        {pricing.map((item) => <Pricing plan={item} />)}
+      </div>
+      
+      <Sectionhead>
+        <Fragment slot="title">Light as a Feather.</Fragment>
+        <Fragment slot="desc" class="max-w-4xl"
+          >We've spent 5 years developing Velocity into the one of the fastest website foundations available. 
+          V7 comes in at a feather-weight 68kb pageload for a full website ready for rapid branding, infinitly extendable.
+        </Fragment>
+      </Sectionhead>
+      
+      <Sectionhead>
+        <Fragment slot="title">Out-of-the-Box Everything.</Fragment>
+        <Fragment slot="desc" class="max-w-4xl">
+          30+ components and 20+ integrations so your business can start from lvl 100, not ground 0. 
+          Saving huge time delays and developer costs.
+        </Fragment>
+      </Sectionhead>
 
-    <Galleryinline />
-    
-    <Sectionhead>
-      <Fragment slot="title">Out-of-the-Box Everything.</Fragment>
-      <Fragment slot="desc" class="max-w-4xl">
-        30+ components and 20+ integrations so your business can start from lvl 100, not ground 0. 
-        Saving huge time delays and developer costs.
-      </Fragment>
-    </Sectionhead>
+      <Velocitycta />
 
-    <Velocitycta />
+      <Sectionhead>
+        <Fragment slot="title">Turn Around in 21 Days.</Fragment>
+        <Fragment slot="desc">
+          All components are styled to your brand and pages duplicated from your old site by our team during initial deployment. 
+          Watch our development live on the fly to help us move faster or use your multiple design revisions.
+        </Fragment>
+      </Sectionhead>
+      
+      <Velocitycases />
 
-    <Sectionhead>
-      <Fragment slot="title">Turn Around in 21 Days.</Fragment>
-      <Fragment slot="desc">
-        All components are styled to your brand and pages duplicated from your old site by our team during initial deployment. 
-        Watch our development live on the fly to help us move faster or use your multiple design revisions.
-      </Fragment>
-    </Sectionhead>
-    
-    <Velocitycases />
+      <Logos />
 
-    <Logos />
-    
+    </Container>
   </Containerfw>
 </Layout>
