@@ -101,19 +101,20 @@ const pricing = [
 
     <Sectionfw>
 
-      <Fragment slot="title">
+      <Fragment slot="title" class="max-w-6xl">
         Edge Web Performance.
         Conversion-Focused Design.
       </Fragment>
-      <Fragment slot="desc"
-        >The perfect balance of performance and integrations to rapidly build successful websites for Australian businesses.
+      <Fragment slot="desc" class="max-w-4xl">
+        The perfect balance of performance and integrations to rapidly build successful websites for Australian businesses.
       </Fragment>
+
       <Fragment slot="cover">
         <Picture
                   src={Pagecover}
-                  sizes="(max-width: 900px) 100vw, 450px"
-                  widths={[200, 400]}
-                  aspectRatio="2:1"
+                  sizes="(max-width: 2000px) 100vw, 1000px"
+                  widths={[500, 1000]}
+                  aspectRatio="3:1"
                   background="#f2f2f2"
                   fit="cover"
                   position="center"
@@ -129,7 +130,7 @@ const pricing = [
 
     <Sectionhead>
       <Fragment slot="title">Light as a Feather.</Fragment>
-      <Fragment slot="desc"
+      <Fragment slot="desc" class="max-w-4xl"
         >We've spent 5 years developing Velocity into the one of the fastest website foundations available. 
         V7 comes in at a feather-weight 68kb pageload for a full website ready for rapid branding, infinitly extendable.
       </Fragment>
@@ -137,25 +138,25 @@ const pricing = [
 
     <Galleryinline />
     
-    <Velocitycases />
-
     <Sectionhead>
       <Fragment slot="title">Out-of-the-Box Everything.</Fragment>
-      <Fragment slot="desc">
+      <Fragment slot="desc" class="max-w-4xl">
         30+ components and 20+ integrations so your business can start from lvl 100, not ground 0. 
         Saving huge time delays and developer costs.
       </Fragment>
     </Sectionhead>
-    
+
     <Velocitycta />
-    
+
     <Sectionhead>
       <Fragment slot="title">Turn Around in 21 Days.</Fragment>
       <Fragment slot="desc">
         All components are styled to your brand and pages duplicated from your old site by our team during initial deployment. 
         Watch our development live on the fly to help us move faster or use your multiple design revisions.
       </Fragment>
-    </Sectionhead>]
+    </Sectionhead>
+    
+    <Velocitycases />
 
     <Logos />
     
