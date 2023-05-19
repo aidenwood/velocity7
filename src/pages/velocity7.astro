@@ -122,18 +122,12 @@ const pricing = [
                 />
       </Fragment>
 
-    </Sectionfw>
-
-    <Sectionfw>
       <Galleryinline />
+
     </Sectionfw>
+  </Containerfw>
 
-    <Container>
-
-      <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
-        {pricing.map((item) => <Pricing plan={item} />)}
-      </div>  
-      
+  <Container>
       <Sectionhead>
         <Fragment slot="title">Light as a Feather.</Fragment>
         <Fragment slot="desc" class="max-w-4xl"
@@ -141,6 +135,11 @@ const pricing = [
           V7 comes in at a feather-weight 68kb pageload for a full website ready for rapid branding, infinitly extendable.
         </Fragment>
       </Sectionhead>
+
+      <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+        {pricing.map((item) => <Pricing plan={item} />)}
+      </div>  
+      
       
       <Sectionhead>
         <Fragment slot="title">Out-of-the-Box Everything.</Fragment>
@@ -160,10 +159,12 @@ const pricing = [
         </Fragment>
       </Sectionhead>
       
-      <Velocitycases />
-
       <Logos />
 
-    </Container>
+  </Container>
+  <Containerfw>
+
+    <Velocitycases />
+    
   </Containerfw>
 </Layout>
