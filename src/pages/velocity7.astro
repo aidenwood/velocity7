@@ -128,7 +128,7 @@ const pricing = [
 
   </Containerfw>
 
-  <Containerxl>
+  <Container>
       <Sectionhead>
         <Fragment slot="title">Light as a Feather.</Fragment>
         <Fragment slot="desc" class="max-w-4xl"
@@ -136,9 +136,13 @@ const pricing = [
           V7 comes in at a feather-weight 68kb pageload for a full website ready for rapid branding, infinitly extendable.
         </Fragment>
       </Sectionhead>
+  </Container>
 
-      <Velocitycases />
-      
+  <Containerxl>
+    <Galleryinline />
+  </Containerxl>
+
+  <Container>
       <Sectionhead>
         <Fragment slot="title">Out-of-the-Box Everything.</Fragment>
         <Fragment slot="desc" class="max-w-4xl">
@@ -147,6 +151,7 @@ const pricing = [
         </Fragment>
       </Sectionhead>
 
+      <Logos />
       <Clientscta />
 
       <Sectionhead>
@@ -157,12 +162,8 @@ const pricing = [
         </Fragment>
       </Sectionhead>
       
-      <Logos />
+      <Velocitycases />
 
-  </Containerxl>
-  <Containerfw>
-    
-    <Galleryinline />
-
-  </Containerfw>
+  </Container>
+  
 </Layout>
