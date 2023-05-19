@@ -125,12 +125,16 @@ const pricing = [
 
     <Galleryinline />
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
+    
 
     <Velocitycases />
     
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+    
+
     <Sectionhead>
       <Fragment slot="title">Out-of-the-Box Everything</Fragment>
       <Fragment slot="desc"
