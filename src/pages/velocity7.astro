@@ -100,6 +100,7 @@ const pricing = [
   <Containerfw>
 
     <Sectionfw>
+
       <Fragment slot="title">
         Velocity7
       </Fragment>
@@ -118,15 +119,17 @@ const pricing = [
                   class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
                 />
       </Fragment>
-    </Sectionfw>
-    <Galleryinline />
-    <Velocitycases />
+      <Velocitycta />
 
-    <Velocitycta />
+    </Sectionfw>
+
+    <Galleryinline />
 
     <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
+
+    <Velocitycases />
     
     <Sectionhead>
       <Fragment slot="title">Out-of-the-Box Everything</Fragment>
