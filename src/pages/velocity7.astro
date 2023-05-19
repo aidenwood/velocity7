@@ -11,7 +11,7 @@ import Logos from "@components/logos.astro";
 import Clientscta from "@components/cta-clients.astro";
 import Velocitycases from "@components/velocity-casestudies.astro";
 import { Picture } from "@astrojs/image/components";
-import Pagecover from '../assets/bal-bg.webp';
+import Pagecover from '../assets/backgrounds/balance.webp';
 
 
 const pricing = [
@@ -111,9 +111,9 @@ const pricing = [
       <Fragment slot="cover">
         <Picture
                   src={Pagecover}
-                  sizes="(max-width: 750px) 100vw, 750px"
-                  widths={[500, 750]}
-                  aspectRatio="3:2"
+                  sizes="(max-width: 1000px) 100vw, 1000px"
+                  widths={[500, 750, 1000]}
+                  aspectRatio="3:1"
                   background="#f2f2f2"
                   fit="cover"
                   position="center"
