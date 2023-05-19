@@ -49,7 +49,7 @@ import { Icon } from "astro-icon";
       <div class="relative w-3/4 h-auto max-h-48 lg:max-h-64 xl:max-h-96">
         <div id="imgContainer" class="">
           <Picture
-                src={Payment}
+                src={Chart}
                 sizes="(max-width: 400px) 200px, 200px"
                 widths={[200, 200]}
                 loading="eager"
@@ -62,7 +62,7 @@ import { Icon } from "astro-icon";
         </div>
         <div id="imgContainer" class="">
           <Picture
-                src={Chart}
+                src={Payment}
                 sizes="(max-width: 400px) 200px, 200px"
                 widths={[200, 200]}
                 loading="eager"
@@ -76,14 +76,14 @@ import { Icon } from "astro-icon";
         <div id="ImgContainer" class="relative w-full h-auto max-h-48 lg:max-h-64 xl:max-h-96 overflow-hidden transition duration-300 transform shadow-lg rounded-xl group-hover:scale-95">
           <Picture
                 src={Dash}
-                sizes="(max-width: 800px) 100vw, 400px"
-                widths={[200, 400]}
+                sizes="(max-width: 800px) 100vw, 800px"
+                widths={[400, 800]}
                 loading="eager"
                 aspectRatio="1:1"
                 background="#f2f2f2"
                 fit="contain"
                 position="center"
-                class="w-full"
+                class="w-full z-4"
               />
         </div>
         
