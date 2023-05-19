@@ -101,11 +101,11 @@ const pricing = [
   <Containerfw>
     <Sectionfw>
 
-      <Fragment slot="title" class="max-w-6xl">
+      <Fragment slot="title">
         Edge Web Performance.
         Conversion-Focused Design.
       </Fragment>
-      <Fragment slot="desc" class="max-w-4xl">
+      <Fragment slot="desc">
         The perfect balance of performance and integrations to rapidly build successful websites for Australian businesses.
       </Fragment>
 
@@ -121,17 +121,15 @@ const pricing = [
                   class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
                 />
       </Fragment>
-    
-      <Galleryinline />  
+
+      <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+        {pricing.map((item) => <Pricing plan={item} />)}
+      </div>  
 
     </Sectionfw>
     <Container>
 
       <Galleryinline />
-
-      <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
-        {pricing.map((item) => <Pricing plan={item} />)}
-      </div>
       
       <Sectionhead>
         <Fragment slot="title">Light as a Feather.</Fragment>
