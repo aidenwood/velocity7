@@ -20,7 +20,7 @@ const services = [
     imgsrc: CPCmarketing,
     imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
     link: "blog/when-to-use-paid-search",
-    style: "muted",
+    style: "outline",
     btntxt: "Google Search",
   },
   {
@@ -30,7 +30,7 @@ const services = [
     imgsrc: MetaAds,
     imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
     link: "blog/when-to-use-paid-meta-ads",
-    style: "muted",
+    style: "outline",
     btntxt: "Meta Ads",
   },
   {
@@ -40,7 +40,7 @@ const services = [
     imgsrc: DisplayMarketing,
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
     link: "blog/when-to-use-google-display-ads",
-    style: "muted",
+    style: "outline",
     btntxt: "Google Display Network",
   },
   {
@@ -50,7 +50,7 @@ const services = [
     imgsrc: PrintAds,
     imgalt: "Advertising with Billboards, managed locally to know your best oppurtunities.",
     link: "blog/how-to-maximise-youtube-advertising",
-    style: "muted",
+    style: "outline",
     btntxt: "Youtube Advertising",
   },
   {
@@ -60,7 +60,7 @@ const services = [
     imgsrc: BusAds,
     imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
     link: "blog/how-to-use-video-advertising-effectively",
-    style: "muted",
+    style: "outline",
     btntxt: "Video Ad Strategy",
   },
   {
@@ -70,7 +70,7 @@ const services = [
     imgsrc: SEOmarketing,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
     link: "blog/how-to-maximise-your-websites-seo-performance",
-    style: "muted",
+    style: "outline",
     btntxt: "Youtube Advertising",
   },
   {
@@ -80,7 +80,7 @@ const services = [
     imgsrc: WebPerformance,
     imgalt: "Improving conversion across the board through web performance improvements.",
     link: "blog/how-to-improve-website-conversion-rates",
-    style: "muted",
+    style: "outline",
     btntxt: "Conversion Improvement",
   },
 ];
@@ -95,19 +95,19 @@ const services = [
   </p>
 </div>
 
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-16 gap-16">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-16 gap-16">
   {
     services.map((item) => (
       <div class="flex gap-4 items-start">
-        <div id="container" class="px-4 py-8">
+        <div id="container" class="px-4 py-8 rounded bg-gray-100">
           <div class="mt-1 p-2 w-full h-full shrink-0">
             <Picture
                   src={item.imgsrc}
-                  sizes="(max-width: 800px) 100vw, 400px"
+                  sizes="(max-width: 900px) 100vw, 450px"
                   widths={[200, 400]}
                   aspectRatio="1:1"
                   background="#f2f2f2"
-                  fit="cover"
+                  fit="contain"
                   position="center"
                   class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
                 />
@@ -115,7 +115,7 @@ const services = [
           <div>
             <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
             <p class="text-slate-500 mt-2 mb-6 leading-relaxed">{item.description}</p>
-            <p class="text-slate-500 mt-2 mb-6 leading-relaxed">
+            <p class="text-slate-500 mt-2 mb-6 mr-2 leading-relaxed">
               Platform:
               <Link 
                 class="mr-4"
