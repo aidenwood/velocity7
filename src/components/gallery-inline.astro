@@ -15,9 +15,9 @@ import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improv
 
 const services = [
   {
-    title: "Google Search Ads.",
+    title: "Google Search.",
     description:
-      "Best used for high-intent marketing capture, we've created some of the best CPC / CPM results seen for high-cost industries.",
+      "Best used for high-intent marketing capture, paid CPC marketing can produce the fastest results. Our specialty is keeping the cost of aquisition down across all G-Search Campaigns.",
     imgsrc: CPCmarketing,
     imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
     link: "blog/when-to-use-paid-search",
@@ -45,9 +45,9 @@ const services = [
     btntxt: "Google Display",
   },
   {
-    title: "Google Display Network.",
+    title: "Google Display.",
     description:
-      "GDN is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
+      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
     imgsrc: DisplayMarketing,
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
     link: "blog/when-to-use-google-display-ads",
@@ -99,10 +99,10 @@ const services = [
 
 <div class="mt-16 mb-8">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Some of our Work.
+    We're no one trick pony.
   </h2>
   <p class="text-lg max-w-4xl mt-4 text-slate-600">
-    We dive deep on your business model and target market to create brands that simply just work with their target audience.
+    We dive deep to learn exactly where your business model succeeds most with your target market to drilldown and iterate improvements towards this goal from all directions.
   </p>
 </div>
 
@@ -110,8 +110,8 @@ const services = [
   {
     services.map((item) => (
       <div class="flex gap-4 items-start">
-        <div id="container" class="px-4 py-8 rounded bg-gray-100">
-          <div class="mt-1 p-2 w-full h-full shrink-0">
+        <div id="card" class="hover:bg-gray-100 duration-200 px-4 py-8 rounded">
+          <div id="container" class="mt-1 p-2 w-full h-full shrink-0">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 900px) 100vw, 450px"
@@ -125,7 +125,7 @@ const services = [
           </div>
           <div>
             <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
-            <p class="text-slate-500 mt-2 mb-6 leading-relaxed">{item.description}</p>
+            <p class="text-sm text-slate-500 mt-2 mb-6 leading-relaxed">{item.description}</p>
             <p class="text-slate-500 mt-2 mb-6 mr-2 leading-relaxed">
               Platform:
               <Link 
