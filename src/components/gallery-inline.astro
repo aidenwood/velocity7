@@ -9,7 +9,7 @@ import Marketing from '../assets/dig-mark.png';
 import VideoProd from '../assets/3d-video.png';
 
 
-const features = [
+const services = [
   {
     title: "Google Search Ads.",
     description:
@@ -84,7 +84,7 @@ const features = [
 
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-16 gap-16">
   {
-    features.map((item) => (
+    services.map((item) => (
       <div class="flex gap-4 items-start">
         <div id="container" class="px-4 py-8">
           <div class="mt-1 p-2 w-full h-full shrink-0">
@@ -112,6 +112,7 @@ const features = [
                 {item.btntxt || "Get Started"}
               </Link>
             </p>
+          </div>
         </div>
       </div>
     ))
