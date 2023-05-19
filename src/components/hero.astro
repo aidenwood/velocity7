@@ -3,13 +3,54 @@ import { Picture } from "@astrojs/image/components";
 import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Conversion-Focused Design.",
+    description:
+      "Developed as 'guardrails' to help your business stay on track to create a beautiful, high converting website.",
+    icon: "carbon:asset",
+  },
+  {
+    title: "Edge Web Performance.",
+    description:
+      "Velocity7 is made to stay fast over the lifetime of your brand's development. Improving user experience, SEO and other vitals.",
+    icon: "ph:hard-drives",
+  },
+  {
+    title: "Ad Tracking Built-In.",
+    description:
+      "Built in conversion tracking to run highly successful ads instantly with Pixel-friendly code, automatic sitemaps and social tags.",
+    icon: "ph:git-branch",
+  },
+  {
+    title: "30+ Components.",
+    description:
+      "Reduce developer costs with 30+ commonly used components built-in with high performance, from image sliders / galleries to product cards and grids.",
+    icon: "carbon:cube",
+  },
+  {
+    title: "20+ Integrations.",
+    description:
+      "Handle payments with Stripe. Users with Google 0Auth. Large media with Velocity's File Compression. No need to pay for plugins.",
+    icon: "ph:stack",
+  },
+  {
+    title: "Extend/Automate.",
+    description:
+      "Integrate API's to meet any need of your business or reduce costs with AI Automation using Zapier and ChatGPT directly in your website.",
+    icon: "ph:graph",
+  },
+];
 ---
+
+
 <style>
   svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
   #heroTagline{font-size: 5vw;}
 </style>
 
-<main id="heroSection" class="flex flex-col sm:flex-row place-items-center pb-8 md:pt-12 md:pb-24">
+<div id="heroSection" class="flex flex-col sm:flex-row place-items-center pb-8 md:pt-12 md:pb-24">
   
   <div class="w-full lg:w-3/5 py-6">
 
@@ -60,4 +101,19 @@ import { Icon } from "astro-icon";
     </div>
 
   </div>
-</main>
+</div>
+<div class="grid sm:grid-cols-4 md:grid-cols-8 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full p-4 w-16 h-16 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-xl">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
