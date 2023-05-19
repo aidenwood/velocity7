@@ -1,5 +1,6 @@
 ---
 import Container from "@components/container.astro";
+import ContainerFW from "@components/container-fullwidth.astro";
 import Cta from "@components/cta.astro";
 import Grid from "@components/grid-2x2.astro";
 import Cards from "@components/cards.astro";
@@ -13,9 +14,11 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="">
-  <Container>
+  <ContainerFW>
     <Hero />
     <HeroSecondary />
+  </ContainerFW>
+  <Container>
     <Grid />
     <Cards />
     <GalleryInline />
