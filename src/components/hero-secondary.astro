@@ -5,10 +5,23 @@ import Chart from "../assets/chart.png";
 import Payment from "../assets/payment.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
-import BusAd from "../assets/marketing-results/bus-side-sml.webp";
-import CPCmarketing from "../assets/marketing-results/cpc-marketing-results-real-estate-high-competitive-term.png";
-import SEOmarketing from "../assets/marketing-results/Ball-Realty-Traffic-Improvement-through-SEO-by-aidxn-design.webp";
-import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
+import RayWhite from "../assets/ray-white-greyed.svg";
+import BallRealty from "../assets/ball-realty-greyed.svg";
+import BoogieCollective from "../assets/tbc-logo-greyed.svg";
+import CobraClub from "../assets/cobra-car-club-greyed.svg";
+import SocialDandelion from "../assets/social-dandelion-greyed.svg";
+import ImmersiveStructures from "../assets/immersive-structures-logo-greyed.svg";
+import BrieHair from "../assets/brie-logo-greyed.svg";
+import NwFunding from "../assets/nwfunding-logo-greyed.svg";
+import SnacksPhoto from "../assets/snacks-photography-logo-greyed.svg";
+import DrTS from "../assets/dr-ts-greyed.webp";
+import Estem from "../assets/estem-logo-greyed.webp";
+
+
+
+
+
+
 ---
 <style>
   svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
@@ -21,14 +34,14 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
 
 <style>
   .carousel-cell {
-  width: 32vw;
+  background: black;
+  width: 32%;
   min-width: 300px;
   max-width: 450px;
   height: 100%;
   margin-right: 10px;
   margin-bottom: 45px;
   padding: 20px, 40px;
-  background: #e3e3e3;
   min-height: 300px !important;
   height: 375px !important;
   max-height: 450px !important;
@@ -118,72 +131,157 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
 
 
 <h2 style="sliderfullHeader" class="text-5xl w-full lg:max-w-4xl font-bold lg:tracking-tight xl:tracking-tighter">
-  Design, Develop. Market, Moonshot.
+  Proven Results in the Toughest Industries.
 </h2>
 <p class="text-lg mt-6 mb-8 text-slate-700 w-full lg:max-w-4xl">
   Almost a natural law of marketing is that your customers judge you on your worst performers. Because of this we prefer to provide a cover-all solution for most clients. Truly leaving no stoned unturned.
 </p>
 
-<div class="carousel max-w-screen-2xl mx-auto" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+<div class="carousel max-w-screen-2xl mx-auto" data-flickity='{ "wrapAround": true, "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
   <div class="carousel-cell" class="rounded m-4">
     <Picture src={WebDesign}
     sizes="(max-width: 1200px) 450px, 600px"
     alt="Highly rated web design on the Gold Coast. Over 200 websites developed and over 10 years of experience coding for the web."
     widths={[600, 1200]}
     loading="eager"
-    aspectRatio="5:3"
+    aspectRatio="3:2"
     background="#f2f2f200"
     fit="contain"
     position="center"
-    class="min-h-32 py-4" />
-    <h3 style="SlideHeader" class="text-xl py-4 px-2 w-full lg:max-w-6xl font-normal lg:tracking-tight xl:tracking-tighter">
-      Web design that actually move the needle.
-    </h3>
+    class="w-full h-full" />
   </div>
   <div class="carousel-cell" class="rounded m-4">
-    <Picture src={BusAd}
+    <Picture src={RayWhite}
     sizes="(max-width: 1200px) 450px, 600px"
     alt="bus advertising design by Aiden Wood for Ball Realty. Real Estate marketing management on the Gold Coast"
     widths={[600, 1200]}
     loading="eager"
-    aspectRatio="5:3"
+    aspectRatio="3:2"
     background="#f2f2f200"
     fit="contain"
     position="center"
-    class="min-h-32 py-4" />
-    <h3 style="SlideHeader" class="text-xl py-4 px-2 w-full lg:max-w-6xl font-normal lg:tracking-tight xl:tracking-tighter">
-      Deploy marketing campaigns in any format.
-    </h3>
+    class="w-full h-full" />
   </div>
   <div class="carousel-cell" class="rounded m-4">
-    <Picture src={SEOmarketing}
+    <Picture src={BallRealty}
     sizes="(max-width: 1200px) 450px, 600px"
     alt="SEO improvement and SEO marketing management on the Gold Coast. With over 10 years of experience in web design we deeply understand ranking algorithms."
     widths={[600, 1200]}
     loading="eager"
-    aspectRatio="5:3"
+    aspectRatio="3:2"
     background="#f2f2f200"
     fit="contain"
     position="center"
-    class="min-h-32 py-4" />
-    <h3 style="SlideHeader" class="text-xl py-4 px-2 w-full lg:max-w-6xl font-normal lg:tracking-tight xl:tracking-tighter">
-      We start with organic marketing to find your winning customer.
-    </h3>
+    class="w-full h-full" />
   </div>
   <div class="carousel-cell" class="rounded m-4">
-    <Picture src={CPCmarketing}
+    <Picture src={NwFunding}
+    sizes="(max-width: 1200px) 450px, 600px"
+    alt="SEO improvement and SEO marketing management on the Gold Coast. With over 10 years of experience in web design we deeply understand ranking algorithms."
+    widths={[600, 1200]}
+    loading="eager"
+    aspectRatio="3:2"
+    background="#f2f2f200"
+    fit="contain"
+    position="center"
+    class="w-full h-full" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4">
+    <Picture src={SocialDandelion}
     sizes="(max-width: 1200px) 450px, 600px"
     alt="CPC marketing management on the Gold Coast. Creating some of the best results with low cpm focus through tracking conversion managment"
     widths={[600, 1200]}
     loading="eager"
-    aspectRatio="5:3"
+    aspectRatio="3:2"
     background="#f2f2f200"
     fit="contain"
     position="center"
-    class="w-full py-4" />
-    <h3 style="SlideHeader" class="text-xl py-4 px-2 w-full lg:max-w-6xl font-normal lg:tracking-tight xl:tracking-tighter">
-      Before we deep dive with paid form of digital marketing.
-    </h3>
+    class="w-full h-full" />
   </div>
+  <div class="carousel-cell" class="rounded m-4">
+    <Picture src={CobraClub}
+    sizes="(max-width: 1200px) 450px, 600px"
+    alt="CPC marketing management on the Gold Coast. Creating some of the best results with low cpm focus through tracking conversion managment"
+    widths={[600, 1200]}
+    loading="eager"
+    aspectRatio="3:2"
+    background="#f2f2f200"
+    fit="contain"
+    position="center"
+    class="w-full h-full" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4">
+    <Picture src={BrieHair}
+    sizes="(max-width: 1200px) 450px, 600px"
+    alt="SEO improvement and SEO marketing management on the Gold Coast. With over 10 years of experience in web design we deeply understand ranking algorithms."
+    widths={[600, 1200]}
+    loading="eager"
+    aspectRatio="3:2"
+    background="#f2f2f200"
+    fit="contain"
+    position="center"
+    class="w-full h-full" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4">
+    <Picture src={ImmersiveStructures}
+    sizes="(max-width: 1200px) 450px, 600px"
+    alt="CPC marketing management on the Gold Coast. Creating some of the best results with low cpm focus through tracking conversion managment"
+    widths={[600, 1200]}
+    loading="eager"
+    aspectRatio="3:2"
+    background="#f2f2f200"
+    fit="contain"
+    position="center"
+    class="w-full h-full" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4">
+    <Picture src={BoogieCollective}
+    sizes="(max-width: 1200px) 450px, 600px"
+    alt="CPC marketing management on the Gold Coast. Creating some of the best results with low cpm focus through tracking conversion managment"
+    widths={[600, 1200]}
+    loading="eager"
+    aspectRatio="3:2"
+    background="#f2f2f200"
+    fit="contain"
+    position="center"
+    class="w-full h-full" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4">
+    <Picture src={DrTS}
+    sizes="(max-width: 1200px) 450px, 600px"
+    alt="CPC marketing management on the Gold Coast. Creating some of the best results with low cpm focus through tracking conversion managment"
+    widths={[600, 1200]}
+    loading="eager"
+    aspectRatio="3:2"
+    background="#f2f2f200"
+    fit="contain"
+    position="center"
+    class="w-full h-full" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4">
+    <Picture src={Estem}
+    sizes="(max-width: 1200px) 450px, 600px"
+    alt="CPC marketing management on the Gold Coast. Creating some of the best results with low cpm focus through tracking conversion managment"
+    widths={[600, 1200]}
+    loading="eager"
+    aspectRatio="3:2"
+    background="#f2f2f200"
+    fit="contain"
+    position="center"
+    class="w-full h-full" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4">
+    <Picture src={SnacksPhoto}
+    sizes="(max-width: 1200px) 450px, 600px"
+    alt="CPC marketing management on the Gold Coast. Creating some of the best results with low cpm focus through tracking conversion managment"
+    widths={[600, 1200]}
+    loading="eager"
+    aspectRatio="3:2"
+    background="#f2f2f200"
+    fit="contain"
+    position="center"
+    class="w-full h-full" />
+  </div>
+
 </div>
 </main>
