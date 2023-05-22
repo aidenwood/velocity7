@@ -8,37 +8,37 @@ const features = [
   {
     title: "Conversion-Focused.",
     description:
-      "Developed over 5 years.",
+      "Code developed over 5 years, now at version 7.4.",
     icon: "carbon:asset",
   },
   {
     title: "High Performance.",
     description:
-      "0.2 second pageload.",
+      "0.2 second pageload & 100/100 GTMetrix scores.",
     icon: "ph:hard-drives",
   },
   {
     title: "Ad Tracking Built-In.",
     description:
-      "Cookie-less authentication.",
+      "Cookie-less tracking and conversion tracking.",
     icon: "ph:git-branch",
   },
   {
     title: "30+ Components.",
     description:
-      "Build custom pages, fast.",
+      "Build custom pages fast with pre-made components.",
     icon: "carbon:cube",
   },
   {
     title: "20+ Integrations.",
     description:
-      "Generate real sales and leads.",
+      "Integrated with popular platforms in your business.",
     icon: "ph:stack",
   },
   {
     title: "Extend/Automate.",
     description:
-      "Infinitely extendable.",
+      "Infinitely extendable. Easily add any API or AI.",
     icon: "ph:graph",
   },
 ];
@@ -102,10 +102,10 @@ const features = [
 
   </div>
 </div>
-<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 mt-4 mb-24 gap-8">
+<div class="grid md:grid-cols-2 xl:grid-cols-3 mt-4 mb-24 gap-8">
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
+      <div id="card" class="hover:bg-gray-100 duration-200 flex gap-4 items-start">
         <div class="mt-1 bg-black rounded-full p-4 w-16 h-16 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
