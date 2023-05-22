@@ -105,11 +105,11 @@ const clients = [
                 sizes="(max-width: 800px) 800px, 400px"
                 widths={[400, 800]}
                 loading="eager"
-                aspectRatio="3:2"
+                aspectRatio="2:3"
                 background="#f2f2f2"
                 fit="contain"
                 position="center"
-                class="absolute left-0 z-10 object-cover object-center w-48 h-64 -mt-32 -ml-8 transition duration-300 transform rounded-md shadow-2xl md:w-40 lg:w-40 lg:top-0 lg:-mt-16 md:-mr-16 lg:-mr-6 md:rounded-lg lg:rounded-xl group-hover:scale-105"
+                class="absolute left-0 z-10 object-cover object-center w-48 h-64 -mb-32 -ml-8 transition duration-300 transform rounded-md shadow-2xl md:w-40 lg:w-40 lg:top-0 lg:-mt-16 md:-mr-16 lg:-mr-6 md:rounded-lg lg:rounded-xl group-hover:scale-105"
               />
         </div>
         <div id="imgContainer" class="">
@@ -118,7 +118,7 @@ const clients = [
                 sizes="(max-width: 800px) 800px, 400px"
                 widths={[400, 800]}
                 loading="eager"
-                aspectRatio="2:3"
+                aspectRatio="3:2"
                 background="#f2f2f2"
                 fit="contain"
                 position="center"
@@ -153,13 +153,13 @@ const clients = [
 </p>
 
 
-<div class="grid md:grid-cols-2 xl:grid-cols-3 mt-4 mb-24 gap-8 gap-y-12">
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-4 mb-24 gap-4 md:gap-8 gap-y-12">
   {
     clients.map((logo) => (
     <div id="container" class="relative group">
       <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
       <div id="cardInner" class="relative bg-white ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
-        <div class="bg-black rounded py-4 px-8">
+        <div class="bg-black rounded py-2 px-4">
           <img src={logo.src} class="w-full h-36 p-4" />
         </div>
       </div>
