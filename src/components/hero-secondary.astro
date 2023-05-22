@@ -20,6 +20,21 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
 <!-- JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
+<style>
+  .carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #e3e3e3;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+.main-carosel {
+  min-height: 400px;
+  max-height: 65vh;
+}
+</style>
+
 
 <div id="heroSection" class="flex flex-col sm:flex-row place-items-center mt-8 pt-16 pb-8 md:pt-12 md:pb-24">
   
@@ -107,7 +122,7 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
   style="min-height: 450px; max-height: 70vh;"
   >
 
-  <div class="carousel-cell" class="w-full lg:w-1/2 rounded m-4">
+  <div class="carousel-cell" class="w-full lg:w-1/2 rounded m-4 bg-black p-4">
     <Picture src={WebDesign}
     sizes="(max-width: 1200px) 100vw, 1200px"
     alt="Highly rated web design on the Gold Coast. Over 200 websites developed and over 10 years of experience coding for the web."
@@ -118,7 +133,7 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
     fit="cover"
     position="center"
     class="w-full z-4" />
-    <h3 style="SlideHeader" class="text-3xl w-full lg:max-w-6xl font-bold lg:tracking-tight xl:tracking-tighter">
+    <h3 style="SlideHeader" class="text-3xl text-white w-full lg:max-w-6xl font-bold lg:tracking-tight xl:tracking-tighter">
       Web design that actually move the needle.
     </h3>
   </div>
