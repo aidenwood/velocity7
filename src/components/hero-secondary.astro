@@ -5,7 +5,7 @@ import Chart from "../assets/chart.png";
 import Payment from "../assets/payment.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
-import Flickity from '../flickity';
+import * as Flickity from '../flickity';
 ---
 <style>
   svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
