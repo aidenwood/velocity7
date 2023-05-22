@@ -18,41 +18,7 @@ import DrTS from "../assets/dr-ts.svg";
 import Estem from "../assets/academy-esteem.svg";
 
 
-const clients = [
-  {
-    src: RayWhite,
-  },
-  {
-    src: BallRealty,
-  },
-  {
-    src: NwFunding,
-  },
-  {
-    src: CobraClub,
-  },
-  {
-    src: BoogieCollective,
-  },
-  {
-    src: ImmersiveStructures,
-  },
-  {
-    src: SnacksPhoto,
-  },
-  {
-    src: SocialDandelion,
-  },
-  {
-    src: Estem,
-  },
-  {
-    src: DrTS,
-  },
-  {
-    src: BrieHair,
-  },
-];
+
 
 
 
@@ -62,6 +28,20 @@ const clients = [
   #heroTagline{font-size: 5vw;}
 </style>
 
+<!-- Flickity -->
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<style>
+  .carousel-cell {
+  background: black !important;
+  height: 100%;
+  max-height: 200px;
+  margin-right: 10px;
+  margin-bottom: 45px;
+  padding: 20px, 40px;
+}
+</style>
 
 <main class="max-w-screen-2xl mx-auto">
 <div id="heroSection" class="flex flex-col sm:flex-row place-items-center mt-8 pt-16 pb-8 md:pt-12 md:pb-24">
@@ -152,19 +132,41 @@ const clients = [
   Almost a natural law of marketing is that your customers judge you on your worst performers. Because of this we prefer to provide a cover-all solution for most clients. Truly leaving no stoned unturned.
 </p>
 
+<div class="carousel max-w-screen-2xl mx-auto" data-flickity='{ "wrapAround": true, "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+  
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={NwFunding} class="w-full h-36 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={RayWhite} class="w-full h-24 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={BallRealty} class="w-full h-24 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={CobraClub} class="w-full h-24 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={DrTS} class="w-full h-36 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={Estem} class="w-full h-36 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={SocialDandelion} class="w-full h-36 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={BrieHair} class="w-full h-24 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={BoogieCollective} class="w-full h-36 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={ImmersiveStructures} class="w-full h-36 p-4" />
+  </div>
+  <div class="carousel-cell" class="rounded m-4 flex justify-center items-center">
+    <img src={SnacksPhoto} class="w-full h-24 p-4" />
+  </div>
 
-<div class="grid md:grid-cols-2 xl:grid-cols-3 mt-4 mb-24 gap-8 gap-y-12">
-  {
-    clients.map((logo) => (
-    <div id="container" class="relative group">
-      <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-      <div id="cardInner" class="relative px-7 py-6 bg-white ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
-        <div class="mt-1 bg-black rounded py-4 px-8 shrink-0">
-          <img src={logo.src} class="w-full h-36 p-4" />
-        </div>
-      </div>
-    </div>
-    ))
-  }
 </div>
 </main>
