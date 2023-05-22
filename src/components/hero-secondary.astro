@@ -116,12 +116,7 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
   </div>
 </div>
 
-<div 
-  class="main-carousel" 
-  data-flickity='{ "cellAlign": "centre", "contain": true, "freeScroll": true, "autoPlay": 2000 }'
-  style="min-height: 450px; max-height: 70vh;"
-  >
-
+<div class="main-carousel" data-flickity='{ "wrapAround": true, "contain": true, "freeScroll": true, "autoPlay": 2000 }'>
   <div class="carousel-cell" class="w-full lg:w-1/2 rounded m-4 bg-black p-4">
     <Picture src={WebDesign}
     sizes="(max-width: 1200px) 100vw, 1200px"
