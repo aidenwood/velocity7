@@ -23,20 +23,19 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
   .carousel-cell {
   width: 32vw;
   min-width: 300px;
-  max-width: 85vw;
+  max-width: 450px;
   height: 100%;
   margin-right: 10px;
   margin-bottom: 45px;
   padding: 20px, 40px;
   background: #e3e3e3;
-  counter-increment: carousel-cell;
   min-height: 300px !important;
   height: 375px !important;
   max-height: 450px !important;
 }
 </style>
 
-<main>
+<main class="max-w-screen-2xl mx-auto">
 <div id="heroSection" class="flex flex-col sm:flex-row place-items-center mt-8 pt-16 pb-8 md:pt-12 md:pb-24">
   
   <div class="w-full lg:w-3/5 py-6">
@@ -125,7 +124,7 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
   Almost a natural law of marketing is that your customers judge you on your worst performers. Because of this we prefer to provide a cover-all solution for most clients. Truly leaving no stoned unturned.
 </p>
 
-<div class="carousel mb-16 max-w-screen-2xl mx-auto" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+<div class="carousel max-w-screen-2xl mx-auto" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
   <div class="carousel-cell" class="rounded m-4">
     <Picture src={WebDesign}
     sizes="(max-width: 1200px) 450px, 600px"
