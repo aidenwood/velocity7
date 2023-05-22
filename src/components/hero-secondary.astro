@@ -23,15 +23,18 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
 <style>
   .carousel-cell {
   width: 66%;
-  height: 200px;
+  height: 100%;
   margin-right: 10px;
-  background: #e3e3e3;
+  background: #000;
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
 .main-carosel {
   min-height: 400px;
   max-height: 65vh;
+}
+.flickity-viewport {
+  height: fit-content;
 }
 </style>
 
@@ -117,7 +120,7 @@ import WebDesign from "../assets/marketing-results/br-mac-render-med.webp";
 </div>
 
 <div class="main-carousel" data-flickity='{ "wrapAround": true, "contain": true, "freeScroll": true, "autoPlay": 2000 }'>
-  <div class="carousel-cell" class="w-full lg:w-1/2 rounded m-4 bg-black p-4">
+  <div class="carousel-cell" class="block w-full lg:w-1/2 rounded m-4 bg-black p-4">
     <Picture src={WebDesign}
     sizes="(max-width: 1200px) 100vw, 1200px"
     alt="Highly rated web design on the Gold Coast. Over 200 websites developed and over 10 years of experience coding for the web."
