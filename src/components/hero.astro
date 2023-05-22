@@ -20,7 +20,7 @@ const features = [
   {
     title: "Ad Tracking Built-In.",
     description:
-      "Cookie-less tracking and conversion tracking.",
+      "User identity and conversion tracking.",
     icon: "ph:git-branch",
   },
   {
@@ -33,13 +33,25 @@ const features = [
     title: "20+ Integrations.",
     description:
       "Integrated with popular platforms in your business.",
-    icon: "ph:stack",
+    icon: "ph:codesandbox-logo-light",
+  },
+  {
+    title: "MDX Blog Language.",
+    description:
+      "Write blog posts with styling and tables easily.",
+    icon: "ph:pen-nib",
   },
   {
     title: "Extend/Automate.",
     description:
-      "Infinitely extendable. Easily add any API or AI.",
-    icon: "ph:graph",
+      "Infinitely extendable. Ready for your plug-ins.",
+    icon: "ph:stack",
+  },
+  {
+    title: "Own your Code Forever.",
+    description:
+      "Pay once. No subscriptions or hidden costs.",
+    icon: "ion:infinite",
   },
 ];
 ---
@@ -107,13 +119,13 @@ const features = [
     features.map((item) => (
     <div id="container" class="relative group">
       <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-      <div id="cardInner" class="relative px-7 py-6 bg-white ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
-        <div class="mt-1 bg-black rounded-full p-4 w-16 h-16 shrink-0">
+      <div id="cardInner" class="relative p-4 bg-white ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-xl">{item.title}</h3>{" "}
-          <p class="text-slate-500 group-hover:text-slate-800 mt-2 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
+          <p class="text-slate-700 group-hover:text-slate-800 mt-2 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
         </div>
       </div>
     </div>
