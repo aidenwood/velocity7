@@ -102,7 +102,7 @@ const features = [
 
   </div>
 </div>
-<div class="grid md:grid-cols-2 xl:grid-cols-3 mt-4 mb-24 gap-8">
+<div class="grid md:grid-cols-2 xl:grid-cols-3 mt-4 mb-24 gap-8 gap-y-12">
   {
     features.map((item) => (
     <div id="container" class="relative group">
@@ -113,7 +113,7 @@ const features = [
         </div>
         <div>
           <h3 class="font-semibold text-xl">{item.title}</h3>{" "}
-          <p class="text-slate-500 group-hover:text-slate-800 mt-2 leading-relaxed">{item.description}</p>
+          <p class="text-slate-500 group-hover:text-slate-800 mt-2 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
         </div>
       </div>
     </div>
