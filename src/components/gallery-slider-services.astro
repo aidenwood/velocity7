@@ -17,13 +17,14 @@ import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improv
 const services = [
   {
     title: "Velocity7",
+    category: "Web Development",
     description:
       "Before anything online, you need a website that seriously succeeds. Not just half works. We're talking ready for scaling infinitely once we get to the grit.",
     imgsrc: VelocityLogo,
     imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
     link: "blog/how-velocity7-works-with-your-brand",
     style: "outline",
-    btntxt: "Website Funnel",
+    btntxt: "Website Development",
     price: "4445",
     saleprice: "3445",
     paytype: "once-off",
@@ -31,6 +32,7 @@ const services = [
   },
   {
     title: "Brand Strategy Development",
+    category: "Brand Design",
     description:
       "The best way to start developing a winning marketing strategy without burning a handfull of cash. Our team will deep dive on what strategies work with your customer, designed 4 releases per week, and quickly improving marketing across all mediums.",
     imgsrc: PrintAds,
@@ -45,6 +47,7 @@ const services = [
   },
   {
     title: "Google Search Management",
+    category: "Marketing",
     description:
       "Best used for high-intent marketing capture, paid CPC marketing can produce the fastest results. Our specialty is keeping the cost of aquisition down across all G-Search Campaigns.",
     imgsrc: CPCmarketing,
@@ -59,6 +62,7 @@ const services = [
   },
   {
     title: "Meta Ad Management",
+    category: "Marketing",
     description:
       "Facebook and Instagram ads can reach huge amounts of people with visual advertising, but lack manipulatable targeting data and can be costly if campaigns are not proven winners.",
     imgsrc: MetaAds,
@@ -73,6 +77,7 @@ const services = [
   },
   {
     title: "Video Ad Strategy Pack - 12 releases",
+    category: "Brand Design",
     description:
       "Our team will develop a marketing strategy plan, prove it's strength, then film and produce a round of ads for covering all major platforms. Minimum 12 design releases including 3 videos and 9 social / GDN designs.",
     imgsrc: MetaAds,
@@ -87,6 +92,7 @@ const services = [
   },
   {
     title: "Google Display Network Ad Management.",
+    category: "Marketing",
     description:
       "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
     imgsrc: DisplayMarketing,
@@ -101,6 +107,7 @@ const services = [
   },
   {
     title: "Animated Ad Pack - Large, 24 sizes",
+    category: "Brand Design",
     description:
       "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
     imgsrc: AnimatedAds,
@@ -115,6 +122,7 @@ const services = [
   },
   {
     title: "Bus Advertising Design & Deploy",
+    category: "Brand Design",
     description:
       "Our team will handle the entire process of getting your business on buses that are actually in your customers area. We provide the care necessary to only advertise in bus routes that matter to you. Our business even offers a great industry rate with Gold Coast bus services.",
     imgsrc: BusAds,
@@ -129,6 +137,7 @@ const services = [
   },
   {
     title: "SEO Marketing.",
+    category: "Web Development",
     description:
       "Until Google goes away, SEO will always be valuable to your business. Free lead generation can be created easily in small niches. Hugely effective to outgrow compeition.",
     imgsrc: SEOmarketing,
@@ -143,6 +152,7 @@ const services = [
   },
   {
     title: "Website Optimisation.",
+    category: "Web Development",
     description:
       "Improving conversion has been proven by maths to improve conversion rates across the board. One of the easiest ways to improve revenue quickly.",
     imgsrc: WebPerformance,
@@ -205,9 +215,9 @@ const services = [
                 />
           </div>
           <div class="px-4 py-3">
-            <span class="text-gray-400 mr-3 uppercase text-xs">Header</span>
+            <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
-            <p class="text-sm text-slate-500 mt-2 mb-6 leading-relaxed">{item.description}</p>
+            <p class="text-sm text-slate-500 mt-2 mb-6 leading-relaxed h-36">{item.description}</p>
 
             <p class="text-slate-500 mt-2 mb-6 mr-2 leading-relaxed">
               Learn more:
