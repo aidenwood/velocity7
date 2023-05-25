@@ -192,16 +192,16 @@ const services = [
     services.map((item) => (
       <div id="productCard" class="carousel-cell py-8 px-4 h-fit bg-white rounded-xl shadow-sm hover:shadow-md duration-200">
         <a href="#">
-          <div id="imgContainer" class="mt-2 p-2 w-full h-32">
+          <div id="imgContainer" class="mt-2 p-2">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 900px) 100vw, 450px"
-                  widths={[200, 400]}
+                  height={200}
                   aspectRatio="3:2"
                   background="#f2f2f2"
                   fit="cover"
                   position="center"
-                  class="w-full h-32 rounded mb-2"
+                  class="w-3/4 h-52 rounded mb-2"
                 />
           </div>
           <div class="px-4 py-3">
