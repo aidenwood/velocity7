@@ -3,6 +3,7 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
+import VelocityLogo from '../assets/aidxn/velocity7-logo-black-v1.svg';
 import CPCmarketing from '../assets/marketing-results/cpc-marketing-results-real-estate-high-competitive-term.png';
 import MetaAds from '../assets/marketing-results/br-facebook-carousel-ad.png';
 import AnimatedAds from '../assets/marketing-results/aidxn-mobile-google-display-ads-hero-hd.webp';
@@ -15,7 +16,35 @@ import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improv
 
 const services = [
   {
-    title: "Google Search.",
+    title: "Velocity7",
+    description:
+      "Before anything online, you need a website that seriously succeeds. Not just half works. We're talking ready for scaling infinitely once we get to the grit.",
+    imgsrc: VelocityLogo,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Website Funnel",
+    price: "4445",
+    saleprice: "3445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
+  },
+  {
+    title: "Brand Strategy Development",
+    description:
+      "The best way to start developing a winning marketing strategy without burning a handfull of cash. Our team will deep dive on what strategies work with your customer, designed 4 releases per week, and quickly improving marketing across all mediums.",
+    imgsrc: PrintAds,
+    imgalt: "Advertising with Billboards, Buses, Facebook, Instagram, and anything else, managed locally to know your best oppurtunities and marketing strategy improved monthly.",
+    link: "blog/how-to-maximise-youtube-advertising",
+    style: "outline",
+    btntxt: "Strategy Development",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "month-to-month",
+    buylink: "https://buy.stripe.com/3cs4hP7vd3138fe00d",
+  },
+  {
+    title: "Google Search Management",
     description:
       "Best used for high-intent marketing capture, paid CPC marketing can produce the fastest results. Our specialty is keeping the cost of aquisition down across all G-Search Campaigns.",
     imgsrc: CPCmarketing,
@@ -29,7 +58,7 @@ const services = [
     buylink: "https://buy.stripe.com/9AQ8y59Dlbxz6766op",
   },
   {
-    title: "Meta Ads.",
+    title: "Meta Ad Management",
     description:
       "Facebook and Instagram ads can reach huge amounts of people with visual advertising, but lack manipulatable targeting data and can be costly if campaigns are not proven winners.",
     imgsrc: MetaAds,
@@ -43,60 +72,60 @@ const services = [
     buylink: "https://buy.stripe.com/bIY9C97vd313dzydQS",
   },
   {
-    title: "Complete Ad Pack.",
+    title: "Video Ad Strategy Pack - 12 releases",
     description:
       "Our team will develop a marketing strategy plan, prove it's strength, then film and produce a round of ads for covering all major platforms. Minimum 12 design releases including 3 videos and 9 social / GDN designs.",
-    imgsrc: AnimatedAds,
+    imgsrc: MetaAds,
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
     link: "blog/when-to-use-google-display-ads",
     style: "outline",
-    btntxt: "GDN Ad Design",
+    btntxt: "Google Display Network",
     price: "4445",
     saleprice: "3445",
     paytype: "once-off",
     buylink: "https://buy.stripe.com/aEU6pX6r91WZ5328wB",
   },
   {
-    title: "Google Display.",
+    title: "Google Display Network Ad Management.",
     description:
       "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
     imgsrc: DisplayMarketing,
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
     link: "blog/when-to-use-google-display-ads",
     style: "outline",
-    btntxt: "Google Display",
-    price: "945",
-    saleprice: "745",
+    btntxt: "Google Display Network",
+    price: "1745",
+    saleprice: "1445",
     paytype: "month-to-month",
-    buylink: "",
+    buylink: "https://buy.stripe.com/aEU9C97vd0SVdzy14i",
   },
   {
-    title: "Print Advertising.",
+    title: "Animated Ad Pack - Large, 24 sizes",
     description:
-      "If your business can promote itself well in a slightly longer format of video, or look to have a multistep video marketing strategy, there is no comparison.",
-    imgsrc: PrintAds,
-    imgalt: "Advertising with Billboards, managed locally to know your best oppurtunities.",
-    link: "blog/how-to-maximise-youtube-advertising",
+      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
+    imgsrc: AnimatedAds,
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "blog/when-to-use-google-display-ads",
     style: "outline",
-    btntxt: "Youtube Ad Design",
-    price: "945",
-    saleprice: "745",
+    btntxt: "Google Display Network",
+    price: "2445",
+    saleprice: "1745",
     paytype: "once-off",
-    buylink: "",
+    buylink: "https://buy.stripe.com/cN2cOl4j10SV0MMfZd",
   },
   {
-    title: "Bus Advertising.",
+    title: "Bus Advertising Design & Deploy",
     description:
-      "We can create a multistep video marketing strategy, completely cover the video filming and produ tion, and have 3 deliverables back to you within a week.",
+      "Our team will handle the entire process of getting your business on buses that are actually in your customers area. We provide the care necessary to only advertise in bus routes that matter to you. Our business even offers a great industry rate with Gold Coast bus services.",
     imgsrc: BusAds,
     imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
     link: "blog/how-to-use-video-advertising-effectively",
     style: "outline",
-    btntxt: "Bus Ad Design",
-    price: "945",
-    saleprice: "745",
+    btntxt: "Gold Coast Bus Ads",
+    price: "2445",
+    saleprice: "1745",
     paytype: "once-off",
-    buylink: "",
+    buylink: "https://buy.stripe.com/bIY01zaHp4573YYeVa",
   },
   {
     title: "SEO Marketing.",
@@ -106,11 +135,11 @@ const services = [
     imgalt: "Advertising with Google for free through organic SEO improvements.",
     link: "blog/how-to-maximise-your-websites-seo-performance",
     style: "outline",
-    btntxt: "SEO",
-    price: "1445",
-    saleprice: "1745",
+    btntxt: "SEO Marketing",
+    price: "1745",
+    saleprice: "1445",
     paytype: "once-off",
-    buylink: "",
+    buylink: "https://buy.stripe.com/fZe5lT7vddFHanm5kw",
   },
   {
     title: "Website Optimisation.",
@@ -120,7 +149,7 @@ const services = [
     imgalt: "Improving conversion across the board through web performance improvements.",
     link: "blog/how-to-improve-website-conversion-rates",
     style: "outline",
-    btntxt: "Performance",
+    btntxt: "Web Performance",
     price: "945",
     saleprice: "745",
     paytype: "month-to-month",
@@ -181,7 +210,7 @@ const services = [
             <p class="text-sm text-slate-500 mt-2 mb-6 leading-relaxed">{item.description}</p>
 
             <p class="text-slate-500 mt-2 mb-6 mr-2 leading-relaxed">
-              Platform:
+              Learn more:
               <Link 
                 class="mr-4"
                 href={item.link || "#"}
