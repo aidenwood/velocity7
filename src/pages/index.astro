@@ -5,7 +5,6 @@ import Hero from "@components/hero.astro";
 import HeroSecondary from "@components/hero-secondary.astro";
 import Cta from "@components/cta.astro";
 import Grid from "@components/grid-2x2.astro";
-import Cards from "@components/cards.astro";
 import BlogSlider from "@components/slider-content.astro";
 import GallerySlider from "@components/slider-services.astro";
 import ContactSimple from "@components/contactform-simple.astro";
@@ -20,13 +19,12 @@ import Layout from "@layouts/Layout.astro";
   </ContainerXL>
   <Container>
     <Grid />
-    <Logos />
-    <BlogSlider />    
+    <Logos /> 
     <GallerySlider />
     <Cta />
   </Container>
   <ContainerXL>
-    <Cards />
     <ContactSimple />
+    <BlogSlider />   
   </ContainerXL>
 </Layout>
