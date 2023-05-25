@@ -128,7 +128,6 @@ const services = [
 <!-- Flickity Custom Styles -->
 <style>
   .carousel-cell {
-  background: black !important;
   min-width: 300px;
   width: 33vw;
   max-width: 550px;
@@ -151,7 +150,7 @@ const services = [
 <div id="sliderContainer" class="main-carousel h-fit mb-16 pb-16">
   {
     services.map((item) => (
-      <div id="productCard" class="carousel-cell h-fit bg-white rounded-xl shadow-sm hover:shadow-md duration-200">
+      <div id="productCard" class="carousel-cell py-8 px-4 h-fit bg-white rounded-xl shadow-sm hover:shadow-md duration-200">
         <a href="#">
           <div id="imgContainer" class="mt-2 p-2 w-full h-fit">
             <Picture
