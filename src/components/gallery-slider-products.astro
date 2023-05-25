@@ -132,8 +132,7 @@ const services = [
   min-width: 300px;
   width: 33vw;
   max-width: 550px;
-  height: 100%;
-  max-height: 200px;
+  min-height: 220px;
   margin-right: 10px;
   margin-bottom: 45px;
   padding: 20px, 40px;
@@ -152,7 +151,7 @@ const services = [
 <div id="sliderContainer" class="main-carousel h-fit mb-16 pb-16">
   {
     services.map((item) => (
-      <div id="productCard" class="carousel-cell h-fit bg-white shadow-md rounded-xl">
+      <div id="productCard" class="carousel-cell h-fit bg-white rounded-xl shadow-sm hover:shadow-md duration-200">
         <a href="#">
           <div id="imgContainer" class="mt-2 p-2 w-full h-fit">
             <Picture
