@@ -1,0 +1,443 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Conversion-Focused Design.",
+    description:
+      "Developed as 'guardrails' to help your business stay on track to create a beautiful, high converting website.",
+    icon: "carbon:asset",
+  },
+  {
+    title: "Edge Web Performance.",
+    description:
+      "Velocity7 is made to stay fast over the lifetime of your brand's development. Improving user experience, SEO and other vitals.",
+    icon: "ph:hard-drives",
+  },
+  {
+    title: "Ad Tracking Built-In.",
+    description:
+      "Built in conversion tracking to run highly successful ads instantly with Pixel-friendly code, automatic sitemaps and social tags.",
+    icon: "ph:git-branch",
+  },
+  {
+    title: "30+ Components.",
+    description:
+      "Reduce developer costs with 30+ commonly used components built-in with high performance, from image sliders / galleries to product cards and grids.",
+    icon: "carbon:cube",
+  },
+  {
+    title: "20+ Integrations.",
+    description:
+      "Handle payments with Stripe. Users with Google 0Auth. Large media with Velocity's File Compression. No need to pay for plugins.",
+    icon: "ph:stack",
+  },
+  {
+    title: "Extend/Automate.",
+    description:
+      "Integrate API's to meet any need of your business or reduce costs with AI Automation using Zapier and ChatGPT directly in your website.",
+    icon: "ph:graph",
+  },
+  {
+    title: "Mobile Responsive Design.",
+    description: "Optimized for mobile devices and different screen sizes.",
+    icon: "ph:phone",
+  },
+  {
+  title: "Pre-made Design Layouts.",
+  description: "Choose from a wide range of responsive design templates for different industries.",
+  icon: "ph:grid-four-up",
+  },
+  {
+    title: "Web-Experience Ready.",
+    description: "Incorporate gamification elements to increase user engagement and loyalty.",
+    icon: "ph:game-controller",
+  },
+  {
+    title: "SEO Friendly.",
+    description: "Built-in SEO features to improve search engine visibility.",
+    icon: "ph:search",
+  },
+  {
+    title: "One-Click Checkout.",
+    description: "Enable customers to complete purchases with a single click.",
+    icon: "ph:payment",
+  },
+  {
+  title: "Well-Structured Code.",
+  description: "One of the pillars of Velocity7's design is well-structured code.",
+  icon: "ph:structure",
+  },
+  {
+    title: "Email Marketing.",
+    description: "Integrate with popular email marketing platforms for customer engagement.",
+    icon: "fa-brands:mailchimp",
+  },
+  {
+    title: "Social Media Integration.",
+    description: "Connect and share products/services on social media platforms.",
+    icon: "fa-brands:facebook-square",
+  },
+  {
+    title: "Multi-Language Support.",
+    description: "Translate and localize your website into multiple languages.",
+    icon: "fa-solid:globe",
+  },
+  {
+  title: "Advanced Analytics.",
+  description: "Track and analyze website performance, conversion rates, and user behavior.",
+  icon: "ph:chart-pie",
+  },
+  {
+  title: "User Dashboard Integration.",
+  description: "Provide a personalized dashboard for customers to manage their orders and information.",
+  icon: "ph:user-circle",
+  },
+  {
+  title: "Live Chat Integration.",
+  description: "Offer real-time assistance to customers through live chat functionality.",
+  icon: "ph:message-circle",
+  },
+  {
+  title: "Guest Checkout Option.",
+  description: "Allow customers to make purchases without creating an account.",
+  icon: "ph:user",
+  },
+  {
+  title: "Automatic Inventory Sync.",
+  description: "Automatically update product inventory across multiple sales channels.",
+  icon: "ph:sync",
+  },
+  {
+    title: "Advanced Search Functionality.",
+    description: "Enhanced search features with filters, suggestions, and autocomplete.",
+    icon: "ph:magnifying-glass",
+  },
+  {
+    title: "Product Filtering and Sorting.",
+    description: "Enable customers to filter and sort products based on various criteria.",
+    icon: "ph:funnel",
+  },
+  {
+    title: "Static Site Generation (SSG).",
+    description: "Generate static HTML files for faster and more secure websites.",
+    icon: "ph:code-simple",
+  },
+  {
+    title: "Performance Optimization.",
+    description: "Optimize web performance with minimal JavaScript and efficient code splitting.",
+    icon: "ph:rocket",
+  },
+  {
+    title: "SEO-Friendly.",
+    description: "Improve search engine visibility with server-rendered content and optimized meta tags.",
+    icon: "ph:search",
+  },
+  {
+    title: "Simplified Development Workflow.",
+    description: "Streamline development with a component-based architecture and declarative syntax.",
+    icon: "ph:flow",
+  },
+  {
+    title: "Developer Experience (DX).",
+    description: "Enhance productivity with hot reloading, fast builds, and intuitive tooling.",
+    icon: "ph:keyboard",
+  },
+  {
+    title: "Code Reusability.",
+    description: "Reuse components across multiple pages and projects for efficient development.",
+    icon: "ph:recycle",
+  },
+  {
+    title: "Themability and Customization.",
+    description: "Create custom themes and easily customize the website's appearance and styles.",
+    icon: "ph:palette",
+  },
+  {
+    title: "Static Asset Optimization.",
+    description: "Optimize and compress static assets like images, CSS, and fonts for better performance.",
+    icon: "ph:image",
+  },
+  {
+    title: "Advanced Data Fetching.",
+    description: "Fetch data from various sources, including APIs and Markdown files, during build time.",
+    icon: "ph:cloud-download",
+  },
+  {
+    title: "Content Localization.",
+    description: "Easily localize website content to cater to different languages and regions.",
+    icon: "ph:globe",
+  },
+  {
+    title: "Serverless Architecture.",
+    description: "Deploy websites as serverless functions, reducing infrastructure and maintenance costs.",
+    icon: "ph:server",
+  },
+  {
+    title: "Flexible Deployment Options.",
+    description: "Deploy to various hosting platforms, including Netlify, Vercel, and AWS S3.",
+    icon: "ph:cloud-upload",
+  },
+  {
+    title: "Markdown Support.",
+    description: "Write content using Markdown syntax for a simplified and standardized authoring experience.",
+    icon: "ph:markdown",
+  },
+  {
+    title: "Optimized Time to First Byte (TTFB).",
+    description: "Achieve faster TTFB with server-rendered content and efficient resource handling.",
+    icon: "ph:timer",
+  },
+  {
+    title: "Type Safety with TypeScript.",
+    description: "Leverage TypeScript's static typing to catch errors early and improve code quality.",
+    icon: "ph:typescript",
+  },
+  {
+    title: "Built-in Component Library.",
+    description: "Leverage a rich set of pre-built components for faster development and consistent UI.",
+    icon: "ph:puzzle",
+  },
+  {
+    title: "Accessibility (A11y) Support.",
+    description: "Ensure your website is accessible to all users with built-in accessibility features.",
+    icon: "ph:accessibility",
+  },
+  {
+    title: "Incremental Static Regeneration (ISR).",
+    description: "Automatically update and regenerate pages without rebuilding the entire site.",
+    icon: "ph:refresh",
+  },
+  {
+    title: "Minification and Compression.",
+    description: "Reduce file sizes by minifying and compressing CSS, JavaScript, and HTML.",
+    icon: "ph:file-zip",
+  },
+  {
+    title: "HTTP/2 Support.",
+    description: "Utilize the latest version of the HTTP protocol for faster website loading.",
+    icon: "ph:cloud",
+  },
+  {
+    title: "Browser Caching.",
+    description: "Store static website assets in the browser cache for quicker subsequent page loads.",
+    icon: "ph:cube",
+  },
+  {
+    title: "Progressive Web App (PWA) Support.",
+    description: "Transform the website into a PWA for offline access and app-like experience.",
+    icon: "ph:phone-partial",
+  },
+  {
+    title: "WebAssembly Integration.",
+    description: "Incorporate WebAssembly for high-performance, low-level code execution in the browser.",
+    icon: "ph:infinity",
+  },
+  {
+    title: "Service Worker Implementation.",
+    description: "Use service workers to cache assets and provide offline functionality.",
+    icon: "ph:shield-check",
+  },
+  {
+    title: "WebP Image Format Support.",
+    description: "Optimize image loading speed by utilizing the WebP image format.",
+    icon: "ph:image-squares",
+  },
+  {
+    title: "SVG Image Format Support.",
+    description: "Optimize image loading speed by utilizing the SVG image format.",
+    icon: "ph:image-squares",
+  },
+  {
+    title: "Preconnect and Prefetch.",
+    description: "Preconnect to required third-party domains and prefetch critical assets for faster loading.",
+    icon: "ph:chain",
+  },
+  {
+    title: "Web Performance Monitoring.",
+    description: "Track and analyze website performance metrics to identify and optimize bottlenecks.",
+    icon: "ph:line-chart",
+  },
+  {
+    title: "Web3 Integration.",
+    description: "Leverage Web3 technologies for decentralized and blockchain-powered features.",
+    icon: "ph:ethereum",
+  },
+  {
+    title: "Decentralized File Storage.",
+    description: "Store website assets and media files on decentralized storage networks.",
+    icon: "ph:cloud-haze",
+  },
+  {
+    title: "Smart Contract Integration.",
+    description: "Integrate smart contracts for secure and automated transactions and agreements.",
+    icon: "ph:contract",
+  },
+  {
+    title: "Cryptocurrency Payment Integration.",
+    description: "Accept payments in various cryptocurrencies using blockchain wallets.",
+    icon: "ph:bitcoin",
+  },
+  {
+    title: "Decentralized Identity Management.",
+    description: "Implement decentralized identity solutions for secure user authentication and data privacy.",
+    icon: "ph:users",
+  },
+  {
+    title: "Interoperability with Blockchain Networks.",
+    description: "Connect and interact with different blockchain networks and protocols.",
+    icon: "ph:arrows-in-out",
+  },
+  {
+    title: "Immutable Content Storage.",
+    description: "Store website content on blockchain for permanent and tamper-proof data storage.",
+    icon: "ph:cube",
+  },
+  {
+    title: "Tokenization and NFT Support.",
+    description: "Enable tokenization of digital assets and support for non-fungible tokens (NFTs).",
+    icon: "ph:stamp",
+  },
+  {
+    title: "Product Bundling.",
+    description: "Offer product bundles or packages for upselling and cross-selling.",
+    icon: "ph:package",
+  },
+  {
+    title: "Multi-Channel Selling.",
+    description: "Sell products across multiple online marketplaces and social media platforms.",
+    icon: "ph:shopping-bag",
+  },
+  {
+    title: "Customer Segmentation.",
+    description: "Segment customers based on their behavior and purchase history for targeted marketing.",
+    icon: "ph:pie-chart",
+  },
+  {
+    title: "Product Import/Export.",
+    description: "Import and export product data in bulk using CSV or Excel files.",
+    icon: "ph:file-import",
+  },
+  {
+    title: "Product Reviews Moderation.",
+    description: "Moderate and manage customer reviews to maintain quality and credibility.",
+    icon: "ph:flag",
+  },
+  {
+    title: "Multiple Currency Support.",
+    description: "Display prices and accept payments in different currencies.",
+    icon: "ph:currency-dollar",
+  },
+  {
+    title: "Product Availability Notifications.",
+    description: "Notify customers when out-of-stock products become available again.",
+    icon: "ph:flag",
+  },
+  {
+    title: "Pre-made Design Layouts.",
+    description: "Choose from a wide range of responsive design templates for different industries.",
+    icon: "ph:grid-four-up",
+  },
+  {
+    title: "Free Form Handling.",
+    description: "Allow customers to ask questions about products and receive answers.",
+    icon: "ph:question",
+  },
+  {
+    title: "Subscription Management.",
+    description: "Offer subscription-based services and manage recurring billing.",
+    icon: "ph:credit-card",
+  },
+  {
+    title: "Wholesale Selling.",
+    description: "Set up special pricing tiers for wholesale customers.",
+    icon: "ph:cash",
+  },
+  {
+    title: "Product Customization.",
+    description: "Allow customers to personalize products with custom options and designs.",
+    icon: "ph:brush",
+  },
+  {
+    title: "Customer Loyalty Programs.",
+    description: "Implement a loyalty program to reward and incentivize repeat customers.",
+    icon: "ph:badge",
+  },
+  {
+    title: "AI-Powered Web Development.",
+    description: "Utilize artificial intelligence algorithms to suggest personalized product recommendations.",
+    icon: "ph:robot",
+  },
+  {
+    title: "In-Depth Sales Reporting.",
+    description: "Generate detailed sales reports with insights into revenue, profit, and trends.",
+    icon: "ph:bar-chart",
+  },
+  {
+    title: "Product Availability Calendar.",
+    description: "Display product availability based on dates and time slots.",
+    icon: "ph:calendar",
+  },
+  {
+    title: "Tiered Pricing.",
+    description: "Set different pricing levels based on quantity or customer groups.",
+    icon: "ph:layers",
+  },
+  {
+    title: "Sales Promotions and Discounts.",
+    description: "Run limited-time promotions and apply discounts automatically.",
+    icon: "ph:percent-circle",
+  },
+  {
+    title: "Dynamic Pricing.",
+    description: "Adjust product prices in real-time based on demand and inventory levels.",
+    icon: "ph:chart-line",
+  },
+  {
+  title: "Social Proof.",
+  description: "Display customer testimonials and reviews as social proof of product quality.",
+  icon: "ph:thumbs-up",
+  },
+  {
+  title: "Real-Time Shipping Rates.",
+  description: "Calculate shipping rates dynamically based on carrier and destination.",
+  icon: "ph:truck-fast",
+  },
+  {
+    title: "Git CL/CI.",
+    description: "Developer-friendly code editing and integration securely.",
+    icon: "ph:git",
+  },
+  {
+    title: "Completely Customizable Checkout.",
+    description: "Create a platform for multiple vendors to sell products in one place.",
+    icon: "ph:storefront",
+  },
+];
+---
+
+<div class="mt-16 mb-8 pt-16">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Out-of-the-Box Everything.
+  </h2>
+  <p class="text-lg max-w-4xl mt-4 text-slate-600">
+    Stop fighting with your slow website or paying forever through subscriptions. Velocity7 comes complete with everything you need to rapidly develop high-conversion websites, while always maintaining A+ website performance and SEO.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full p-4 w-16 h-16 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-xl">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

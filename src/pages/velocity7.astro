@@ -5,7 +5,7 @@ import Container from "@components/container.astro";
 import Containerxl from "@components/container-xl.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Sectionfw from "@components/sectionhead-fullwidth.astro";
-import Features from "@components/features.astro";
+import Features from "@components/features-fullwidth.astro";
 import Pricing from "@components/pricing.astro";
 import Logos from "@components/logos.astro";
 import Clientscta from "@components/cta-clients.astro";
@@ -122,6 +122,8 @@ const pricing = [
       </Fragment>
     </Sectionfw>
 
+    <Features />
+
   </Containerfw>
 
   <Containerxl>
@@ -145,10 +147,6 @@ const pricing = [
         </Fragment>
       </Sectionhead>
   </Container>
-
-  <Containerxl>
-    <Features />
-  </Containerxl>
 
   <Container>
       <Sectionhead>
