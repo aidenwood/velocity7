@@ -124,7 +124,7 @@ const services = [
   </p>
 </div>
 
-<div id="sliderContainer" class="main-carousel h-fit mb-16">
+<div id="sliderContainer" class="blog-carousel h-fit mb-16">
   {
     services.map((item) => (
       <div id="productCard" class="carousel-cell flex py-8 px-4 h-fit bg-white rounded-xl shadow-sm hover:shadow-md duration-200">
@@ -147,7 +147,6 @@ const services = [
             <p class="text-sm text-slate-500 mt-2 mb-6 leading-relaxed h-36">{item.description}</p>
 
             <p class="text-slate-500 mt-2 mb-6 mr-2 leading-relaxed">
-              Learn more:
               <Link 
                 class="mr-4"
                 href={item.link || "#"}
@@ -167,7 +166,7 @@ const services = [
 <script>
   // element argument can be a selector string
   //   for an individual element
-  var flkty = new Flickity( '.main-carousel', {
+  var flkty = new Flickity( '.blog-carousel', {
   cellAlign: 'left',
   contain: true,
   autoPlay: 2500,
