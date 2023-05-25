@@ -1,0 +1,202 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+import { Picture } from "@astrojs/image/components";
+import CPCmarketing from '../assets/marketing-results/cpc-marketing-results-real-estate-high-competitive-term.png';
+import MetaAds from '../assets/marketing-results/br-facebook-carousel-ad.png';
+import AnimatedAds from '../assets/marketing-results/aidxn-mobile-google-display-ads-hero-hd.webp';
+import DisplayMarketing from '../assets/marketing-results/re-placement.webp';
+import PrintAds from '../assets/marketing-results/print-advertising-managed-on-the-goldcoast.webp';
+import BusAds from '../assets/marketing-results/bus-side-sml.webp';
+import WebPerformance from '../assets/marketing-results/br-mac-render-med.webp';
+import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improvement-through-SEO-by-aidxn-design.webp';
+
+
+const services = [
+  {
+    title: "Google Search.",
+    description:
+      "Best used for high-intent marketing capture, paid CPC marketing can produce the fastest results. Our specialty is keeping the cost of aquisition down across all G-Search Campaigns.",
+    imgsrc: CPCmarketing,
+    imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
+    link: "blog/when-to-use-paid-search",
+    style: "outline",
+    btntxt: "Google Search",
+    price: "945",
+    saleprice: "745",
+    paytype: "month-to-month",
+  },
+  {
+    title: "Meta Ads.",
+    description:
+      "Facebook and Instagram ads can reach huge amounts of people with visual advertising, but lack manipulatable targeting data and can be costly if campaigns are not proven winners.",
+    imgsrc: MetaAds,
+    imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
+    link: "blog/when-to-use-paid-meta-ads",
+    style: "outline",
+    btntxt: "Meta Ads",
+    price: "945",
+    saleprice: "745",
+    paytype: "month-to-month",
+  },
+  {
+    title: "Animated Ads.",
+    description:
+      "If you need to stay within a franchise's brand guidelines, these can be the most effective forms of marketing. Designed to contrast beautifully for the site you are looking to target.",
+    imgsrc: AnimatedAds,
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "blog/when-to-use-google-display-ads",
+    style: "outline",
+    btntxt: "GDN Ad Design",
+    price: "745",
+    saleprice: "445",
+    paytype: "once-off",
+  },
+  {
+    title: "Google Display.",
+    description:
+      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
+    imgsrc: DisplayMarketing,
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "blog/when-to-use-google-display-ads",
+    style: "outline",
+    btntxt: "Google Display",
+    price: "945",
+    saleprice: "745",
+    paytype: "month-to-month",
+  },
+  {
+    title: "Print Advertising.",
+    description:
+      "If your business can promote itself well in a slightly longer format of video, or look to have a multistep video marketing strategy, there is no comparison.",
+    imgsrc: PrintAds,
+    imgalt: "Advertising with Billboards, managed locally to know your best oppurtunities.",
+    link: "blog/how-to-maximise-youtube-advertising",
+    style: "outline",
+    btntxt: "Youtube Ad Design",
+    price: "945",
+    saleprice: "745",
+    paytype: "once-off",
+  },
+  {
+    title: "Bus Advertising.",
+    description:
+      "We can create a multistep video marketing strategy, completely cover the video filming and produ tion, and have 3 deliverables back to you within a week.",
+    imgsrc: BusAds,
+    imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
+    link: "blog/how-to-use-video-advertising-effectively",
+    style: "outline",
+    btntxt: "Bus Ad Design",
+    price: "945",
+    saleprice: "745",
+    paytype: "once-off",
+  },
+  {
+    title: "SEO Marketing.",
+    description:
+      "Until Google goes away, SEO will always be valuable to your business. Free lead generation can be created easily in small niches. Hugely effective to outgrow compeition.",
+    imgsrc: SEOmarketing,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+    link: "blog/how-to-maximise-your-websites-seo-performance",
+    style: "outline",
+    btntxt: "SEO",
+    price: "1445",
+    saleprice: "1745",
+    paytype: "once-off",
+  },
+  {
+    title: "Web Performance.",
+    description:
+      "Improving conversion has been proven by maths to improve conversion rates across the board. One of the easiest ways to improve revenue quickly.",
+    imgsrc: WebPerformance,
+    imgalt: "Improving conversion across the board through web performance improvements.",
+    link: "blog/how-to-improve-website-conversion-rates",
+    style: "outline",
+    btntxt: "Performance",
+    price: "945",
+    saleprice: "745",
+    paytype: "month-to-month",
+  },
+];
+---
+
+<!-- Flickity -->
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<!-- Flickity Custom Styles -->
+<style>
+  .carousel-cell {
+  background: black !important;
+  width: 300px;
+  height: 100%;
+  max-height: 200px;
+  margin-right: 10px;
+  margin-bottom: 45px;
+  padding: 20px, 40px;
+}
+</style>
+
+<div class="mt-16 pt-16 mb-8">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    We're no one trick pony.
+  </h2>
+  <p class="text-lg max-w-4xl mt-4 text-slate-600">
+    We dive deep to learn exactly where your business model succeeds most with your target market to drilldown and iterate improvements towards this goal from all directions.
+  </p>
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-16 gap-4 lg:gap-8">
+  {
+    services.map((item) => (
+      <div id="sliderContainer" class="main-carousel" class="flex gap-4 items-start">
+
+
+          <div id="productCard" class="carousel-cell w-72 bg-white shadow-md rounded-xl">
+            <a href="#">
+              <div id="imgContainer" class="mt-1 p-2 w-full h-full shrink-0">
+                <Picture
+                      src={item.imgsrc}
+                      sizes="(max-width: 900px) 100vw, 450px"
+                      widths={[200, 400]}
+                      aspectRatio="3:2"
+                      background="#f2f2f2"
+                      fit="cover"
+                      position="center"
+                      class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl min-h-1/2"
+                    />
+              </div>
+              <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">Header</span>
+                <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
+                <p class="text-sm text-slate-500 mt-2 mb-6 leading-relaxed">{item.description}</p>
+                <div class="flex items-center">
+                  <p class="text-lg font-semibold text-black cursor-auto my-3">${item.saleprice}</p>
+                  <del>
+                    <p class="text-sm text-gray-600 cursor-auto ml-2">${item.price}</p>
+                  </del>
+                  <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                      <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg></div>
+                </div>
+                <p class="text-slate-500 mt-2 mb-6 mr-2 leading-relaxed">
+                  Platform:
+                  <Link 
+                    class="mr-4"
+                    href={item.link || "#"}
+                    block
+                    style={item.style ? "primary" : "outline"}>
+                    {item.btntxt || "Get Started"}
+                  </Link>
+                </p>
+              </div>
+            </a>
+          </div>
+
+
+      </div>
+    ))
+  }
+</div>
