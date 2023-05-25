@@ -149,10 +149,9 @@ const services = [
   </p>
 </div>
 
-<div class="mt-16 pt-16 mb-8">
+<div id="sliderContainer" data-flickity='{ "cellAlign": "left", "contain": true }' class="main-carousel mb-16 pb-16">
   {
     services.map((item) => (
-    <div id="sliderContainer" data-flickity='{ "cellAlign": "left", "contain": true }' class="main-carousel">
       <div id="productCard" class="carousel-cell bg-white shadow-md rounded-xl">
         <a href="#">
           <div id="imgContainer" class="mt-2 p-2 w-full h-full">
@@ -194,7 +193,6 @@ const services = [
           </div>
         </a>
       </div>
-    </div>
     ))
   }
 </div>
