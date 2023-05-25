@@ -197,7 +197,7 @@ const services = [
   </p>
 </div>
 
-<div id="sliderContainer" class="main-carousel h-fit">
+<div id="sliderContainer" class="main-carousel max-w-screen-2xl h-fit">
   {
     services.map((item) => (
       <div id="productCard" class="carousel-cell bg-gray-50 py-8 px-4 h-fit rounded-xl shadow-sm hover:shadow-md duration-200">
@@ -216,9 +216,9 @@ const services = [
           <div class="px-4 py-3">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
-            <p class="text-sm text-slate-500 mt-2 mb-6 leading-relaxed h-36">{item.description}</p>
+            <p class="text-sm text-slate-500 mt-2 mb-2 leading-relaxed">{item.description}</p>
 
-            <p class="text-slate-500 mt-2 mb-6 mr-2 leading-relaxed">
+            <p class="text-slate-500 mb-8 mr-2 leading-relaxed">
               Learn more:
               <Link 
                 class="mr-4"
@@ -230,9 +230,9 @@ const services = [
             </p>
 
             <div class="flex items-center">
-              <p class="text-lg font-semibold text-black cursor-auto my-3">${item.saleprice}</p>
+              <p class="text-2xl font-semibold text-black cursor-auto my-3">${item.saleprice}</p>
               <del>
-                <p class="text-sm text-gray-600 cursor-auto ml-2">${item.price}</p>
+                <p class="text-lg text-gray-600 cursor-auto ml-2">${item.price}</p>
               </del>
               <div class="ml-auto">
                 <a href={item.buylink}> 
