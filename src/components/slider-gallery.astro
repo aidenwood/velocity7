@@ -1,7 +1,6 @@
 ---
 // @ts-ignore
-import { Icon } from "astro-icon";
-import Link from "@components/ui/link.astro";
+≈import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
 import CompleteBrandPack from '../assets/previous-works/complete-brand-pack.webp';
 import ConversionOptimisation from '../assets/previous-works/website-conversion-optimisation.webp';
@@ -158,7 +157,6 @@ html, body, main {
   {
     services.map((item) => (
       <div id="productCard" class="carousel-cell h-96 bg-white rounded-xl shadow-md hover:shadow-lg duration-200">
-        <a href="#">
           <div id="imgContainer" class="w-full h-full">
             <Picture
                   src={item.imgsrc}
@@ -195,7 +193,6 @@ html, body, main {
               </div>
             </div>
           </div>
-        </a>
       </div>
     ))
   }
