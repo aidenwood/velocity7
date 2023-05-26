@@ -26,8 +26,8 @@ import Button from "./ui/button.astro";
         <input type="hidden" name="access_key" value="1e0ffadd-2f05-471b-bbc2-36fa32793837" />
         <!-- Create your free access key from https://web3forms.com/ -->
         <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
-        <div id="innerFormContainer" class="flex flex-col md:flex-row">
-          <div class="mb-5 w-full md:w-1/2">
+        <div id="innerFormContainer" class="flex flex-col lg:flex-row">
+          <div class="mb-5 w-full lg:w-1/2">
             <input
               type="text"
               placeholder="Full Name"
@@ -39,7 +39,7 @@ import Button from "./ui/button.astro";
               Please provide your full name.
             </div>
           </div>
-          <div class="mb-5 w-full md:w-1/2">
+          <div class="mb-5 w-full lg:w-1/2">
             <label for="email_address" class="sr-only">Email Address</label><input
               id="email_address"
               type="email"
@@ -48,12 +48,12 @@ import Button from "./ui/button.astro";
               required
               class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
             />
-          </div>
-          <div class="empty-feedback text-red-400 text-sm mt-1">
-            Please provide your email address.
-          </div>
-          <div class="invalid-feedback text-red-400 text-sm mt-1">
-            Please provide a valid email address.
+            <div class="empty-feedback text-red-400 text-sm mt-1">
+              Please provide your email address.
+            </div>
+            <div class="invalid-feedback text-red-400 text-sm mt-1">
+              Please provide a valid email address.
+            </div>
           </div>
         </div>
         <Button type="submit" size="lg" block>Submit</Button>
