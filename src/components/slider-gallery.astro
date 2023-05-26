@@ -3,124 +3,120 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
-import CPCmarketing from '../assets/marketing-results/cpc-marketing-results-real-estate-high-competitive-term.png';
-import MetaAds from '../assets/marketing-results/br-facebook-carousel-ad.png';
-import AnimatedAds from '../assets/marketing-results/aidxn-mobile-google-display-ads-hero-hd.webp';
-import DisplayMarketing from '../assets/marketing-results/re-placement.webp';
-import PrintAds from '../assets/marketing-results/print-advertising-managed-on-the-goldcoast.webp';
-import BusAds from '../assets/marketing-results/bus-side-sml.webp';
-import WebPerformance from '../assets/marketing-results/br-mac-render-med.webp';
-import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improvement-through-SEO-by-aidxn-design.webp';
+import CompleteBrandPack from '../assets/previous-works/complete-brand-pack.webp';
+import ConversionOptimisation from '../assets/previous-works/website-conversion-optimisation.webp';
+import Renders from '../assets/previous-works/3d-render.webp';
+import AppDesign from '../assets/previous-works/iphone-app-design.webp';
+import StoreFrontDesign from '../assets/previous-works/store-front-ad-design.webp';
+import WebMockup from '../assets/previous-works/website-mock-ups.webp';
+import ProductDesign from '../assets/previous-works/branded-product-design.webp';
+import PatternDesign from '../assets/previous-works/pattern-design.webp';
 
 
 const services = [
   {
-    title: "Google Search.",
+    title: "Storefront Ad Design.",
     description:
-      "Best used for high-intent marketing capture, paid CPC marketing can produce the fastest results. Our specialty is keeping the cost of aquisition down across all G-Search Campaigns.",
-    imgsrc: CPCmarketing,
-    imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
-    link: "blog/when-to-use-paid-search",
+      "If your business can promote itself well in a slightly longer format of video, or look to have a multistep video marketing strategy, there is no comparison.",
+    imgsrc: StoreFrontDesign,
+    imgalt: "Advertising with Billboards, managed locally to know your best oppurtunities.",
+    link: "/brand-strategy",
     style: "outline",
-    btntxt: "Google Search",
-    price: "1745",
-    saleprice: "1445",
-    paytype: "month-to-month",
-    buylink: "https://buy.stripe.com/9AQ8y59Dlbxz6766op",
+    btntxt: "Brand Strategy",
+    price: "945",
+    saleprice: "745",
+    paytype: "once-off",
+    buylink: "",
   },
   {
-    title: "Meta Ads.",
-    description:
-      "Facebook and Instagram ads can reach huge amounts of people with visual advertising, but lack manipulatable targeting data and can be costly if campaigns are not proven winners.",
-    imgsrc: MetaAds,
-    imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
-    link: "blog/when-to-use-paid-meta-ads",
-    style: "outline",
-    btntxt: "Meta Ads",
-    price: "1745",
-    saleprice: "1445",
-    paytype: "month-to-month",
-    buylink: "https://buy.stripe.com/bIY9C97vd313dzydQS",
-  },
-  {
-    title: "Complete Ad Pack.",
+    title: "Complete Brand & Ad Pack.",
     description:
       "Our team will develop a marketing strategy plan, prove it's strength, then film and produce a round of ads for covering all major platforms. Minimum 12 design releases including 3 videos and 9 social / GDN designs.",
-    imgsrc: AnimatedAds,
+    imgsrc: CompleteBrandPack,
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
-    link: "blog/when-to-use-google-display-ads",
+    link: "/brand-strategy",
     style: "outline",
-    btntxt: "GDN Ad Design",
+    btntxt: "Brand Strategy",
     price: "4445",
     saleprice: "3445",
     paytype: "once-off",
     buylink: "https://buy.stripe.com/aEU6pX6r91WZ5328wB",
   },
   {
-    title: "Google Display.",
-    description:
-      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
-    imgsrc: DisplayMarketing,
-    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
-    link: "blog/when-to-use-google-display-ads",
-    style: "outline",
-    btntxt: "Google Display",
-    price: "945",
-    saleprice: "745",
-    paytype: "month-to-month",
-    buylink: "",
-  },
-  {
-    title: "Print Advertising.",
-    description:
-      "If your business can promote itself well in a slightly longer format of video, or look to have a multistep video marketing strategy, there is no comparison.",
-    imgsrc: PrintAds,
-    imgalt: "Advertising with Billboards, managed locally to know your best oppurtunities.",
-    link: "blog/how-to-maximise-youtube-advertising",
-    style: "outline",
-    btntxt: "Youtube Ad Design",
-    price: "945",
-    saleprice: "745",
-    paytype: "once-off",
-    buylink: "",
-  },
-  {
-    title: "Bus Advertising.",
-    description:
-      "We can create a multistep video marketing strategy, completely cover the video filming and produ tion, and have 3 deliverables back to you within a week.",
-    imgsrc: BusAds,
-    imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
-    link: "blog/how-to-use-video-advertising-effectively",
-    style: "outline",
-    btntxt: "Bus Ad Design",
-    price: "945",
-    saleprice: "745",
-    paytype: "once-off",
-    buylink: "",
-  },
-  {
-    title: "SEO Marketing.",
+    title: "Product Design.",
     description:
       "Until Google goes away, SEO will always be valuable to your business. Free lead generation can be created easily in small niches. Hugely effective to outgrow compeition.",
-    imgsrc: SEOmarketing,
+    imgsrc: ProductDesign,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
-    link: "blog/how-to-maximise-your-websites-seo-performance",
+    link: "/brand-strategy",
     style: "outline",
-    btntxt: "SEO",
+    btntxt: "Brand Strategy",
     price: "1445",
     saleprice: "1745",
     paytype: "once-off",
     buylink: "",
   },
   {
-    title: "Website Optimisation.",
+    title: "2x Mockup Revisions included.",
+    description:
+      "We can create a multistep video marketing strategy, completely cover the video filming and produ tion, and have 3 deliverables back to you within a week.",
+    imgsrc: WebMockup,
+    imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
+    link: "/web-design",
+    style: "outline",
+    btntxt: "Web Design",
+    price: "945",
+    saleprice: "745",
+    paytype: "once-off",
+    buylink: "",
+  },
+  {
+    title: "High-Conversion Website Design.",
+    imgsrc: ConversionOptimisation,
+    imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
+    link: "/web-design",
+    style: "outline",
+    btntxt: "Web Design",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "month-to-month",
+    buylink: "https://buy.stripe.com/9AQ8y59Dlbxz6766op",
+  },
+  {
+    title: "3D Design and Renders.",
+    imgsrc: Renders,
+    imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
+    link: "/web-design",
+    style: "outline",
+    btntxt: "Brand Strategy",
+    price: "4445",
+    saleprice: "3445",
+    paytype: "month-to-month",
+    buylink: "https://buy.stripe.com/bIY9C97vd313dzydQS",
+  },
+  {
+    title: "App-based Websites (PWA / SPA).",
+    description:
+      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
+    imgsrc: AppDesign,
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "/web-design",
+    style: "outline",
+    btntxt: "Web Design",
+    price: "945",
+    saleprice: "745",
+    paytype: "month-to-month",
+    buylink: "",
+  },
+  {
+    title: "Web3 Experience Development.",
     description:
       "Improving conversion has been proven by maths to improve conversion rates across the board. One of the easiest ways to improve revenue quickly.",
-    imgsrc: WebPerformance,
+    imgsrc: PatternDesign,
     imgalt: "Improving conversion across the board through web performance improvements.",
-    link: "blog/how-to-improve-website-conversion-rates",
+    link: "/web-design",
     style: "outline",
-    btntxt: "Performance",
+    btntxt: "Web Design",
     price: "945",
     saleprice: "745",
     paytype: "month-to-month",
@@ -141,9 +137,8 @@ html, body, main {
 }
 
   .carousel-cell {
-  min-width: 300px;
-  width: 33vw;
-  max-width: 550px;
+  width: 80vw;
+  max-width: 650px;
   min-height: 220px;
   margin-right: 20px;
   padding: 20px, 40px;
