@@ -18,6 +18,7 @@ import Velocitycases from "@components/velocity-casestudies.astro";
 import { Picture } from "@astrojs/image/components";
 import Pagecover from '../assets/backgrounds/balance.webp';
 import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
+import PagecoverThird from '../assets/backgrounds/shadow.webp';
 import CoverTextarea from '../assets/backgrounds/cubed.webp';
 import { Icon } from "astro-icon";
 
@@ -164,9 +165,9 @@ const pricing = [
 
   <ContainerXL>
     <SectionTextarea>
-      <Fragment slot="title">Make business easier.</Fragment>
+      <Fragment slot="title">Making Business Simpler.</Fragment>
       <Fragment slot="desc" class="max-w-6xl">
-        See how Velocity7 works in the wild.
+        Velocity is the website framework that brings speed, functionality, and flexibility all into one, developed over 5 years with these 3 points in mind. Intuitive well-designed components that can be quickly rebranded. Velocity empowers developers to build high-performing websites with ease. Create websites that can grow with the demands of your business. With Velocity, you can unlock the full potential of your business and deliver exceptional service and experiences to your customer.
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -213,11 +214,11 @@ const pricing = [
         Crush your Competition with Ease.
       </Fragment>
       <Fragment slot="desc">
-        Are you looking at competitors around you with beautiful custom websites that are stealing your customers with ease? If so, Velocity is for you.
+        When it comes to website frameworks, Velocity stands out as a top choice for developers seeking a powerful and versatile solution. With Velocity, you can harness the latest web technologies and best practices to create websites that are not only visually stunning but also highly functional and performant. Its modular structure promotes code reusability, reducing development time and effort. Velocity's extensive documentation and active community support ensure that developers have access to the resources they need to overcome challenges and explore new possibilities. Whether you're building a personal blog or a complex web application, Velocity empowers you to create exceptional online experiences that captivate and engage your audience. With its solid foundation and continuous updates, Velocity remains at the forefront of website frameworks, driving innovation and enabling developers to bring their ideas to fruition.
       </Fragment>
       <Fragment slot="cover">
         <Picture
-                  src={PagecoverSecondary}
+                  src={PagecoverThird}
                   sizes="(max-width: 2000px) 2000px, 1000px"
                   widths={[1000, 1500, 2000]}
                   aspectRatio="3:2"
