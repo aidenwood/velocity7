@@ -292,19 +292,19 @@ html, body, main {
                   src={item.imgsrc}
                   sizes="(max-width: 900px) 100vw, 450px"
                   widths={[200, 400]}
-                  aspectRatio="5:3"
+                  aspectRatio="3:2"
                   background="#f2f2f2"
-                  fit="cover"
+                  fit="contain"
                   position="center"
-                  class="w-3/4 h-36 rounded mb-2"
+                  class="w-3/4 rounded mb-2"
                 />
           </div>
           <div class="px-4 py-3">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
-            <p class="text-sm text-slate-700 mt-2 mb-2 leading-relaxed">{item.description}</p>
+            <p class="text-sm text-slate-700 mt-2 mb-4 leading-relaxed">{item.description}</p>
 
-            <ul>
+            <ul class="mb-4">
               {item.inclusions.map((inclusion) => (
                 <li class="text-sm text-slate-700 cursor-auto ml-2">{inclusion}</li>
               ))}
