@@ -128,13 +128,16 @@ const pricing = [
       </Fragment>
     </Sectionfw>
 
-    <Features />
+    <GallerySlider />
 
   </ContainerFW>
 
 
 
   <Container>
+
+    <Features />
+
       <Sectionhead>
         <Fragment slot="title">Light as a Feather.</Fragment>
         <Fragment slot="desc" class="max-w-4xl"
@@ -162,10 +165,6 @@ const pricing = [
 
   </Container>
 
-  <ContainerFW>
-    <GallerySlider />
-  </ContainerFW>
-
   <Container>
     <Sectionhead>
       <Fragment slot="title">Ready to fit any business size.</Fragment>
@@ -177,12 +176,6 @@ const pricing = [
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
   </Container>
-
-
-
-  <ContainerFW>
-    <Velocitycases />
-  </ContainerFW>
 
 
 
@@ -200,11 +193,9 @@ const pricing = [
   </Container>
 
 
-
+  
   <ContainerFW>
-
-    <ContactSimple />
-
+    <Velocitycases />
   </ContainerFW>
   
 </Layout>
