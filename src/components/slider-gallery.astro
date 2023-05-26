@@ -158,7 +158,7 @@ html, body, main {
 <div id="sliderContainer" class="main-carousel max-w-screen-2xl h-fit mb-16">
   {
     services.map((item) => (
-      <div id="productCard" class="carousel-cell py-8 px-4 h-fit bg-white rounded-xl shadow-sm hover:shadow-md duration-200">
+      <div id="productCard" class="carousel-cell h-fit bg-white rounded-xl shadow-md hover:shadow-lg duration-200">
         <a href="#">
           <div id="imgContainer" class="w-full h-96">
             <Picture
@@ -169,10 +169,10 @@ html, body, main {
                   background="#f2f2f2"
                   fit="cover"
                   position="center"
-                  class="w-full h-fit rounded mb-2"
+                  class="w-full h-fit rounded"
                 />
           </div>
-          <div class="absolute bottom-0 w-full bg-black rounded px-4 py-8">
+          <div class="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-0 duration-200 rounded px-4 py-8">
             <h3 class="font-semibold text-2xl text-white">{item.title}</h3>{" "}
 
             <div class="flex items-center">
