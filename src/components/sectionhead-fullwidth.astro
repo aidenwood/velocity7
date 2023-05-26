@@ -7,7 +7,7 @@ import Button from "./ui/button.astro";
     <h1 class="text-6xl lg:text-7xl max-w-3xl font-bold lg:tracking-tight">
       <slot name="title">Title</slot>
     </h1>
-    <p class="text-lg max-w-2xl mt-4 mb-8 text-slate-600">
+    <p class="text-lg max-w-2xl mt-4 mb-16 text-slate-600">
       <slot name="desc">Some description goes here</slot>
     </p>
     <div id="formContainer" class="w-full lg:w-3/4">
@@ -26,8 +26,8 @@ import Button from "./ui/button.astro";
         <input type="hidden" name="access_key" value="1e0ffadd-2f05-471b-bbc2-36fa32793837" />
         <!-- Create your free access key from https://web3forms.com/ -->
         <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
-        <div id="innerFormContainer" class="flex flex-col lg:flex-row">
-          <div class="m-4 w-full lg:w-1/2">
+        <div id="innerFormContainer" class="flex flex-col lg:flex-row gap-4">
+          <div class="my-4 w-full lg:w-1/2">
             <input
               type="text"
               placeholder="Full Name"
@@ -39,7 +39,7 @@ import Button from "./ui/button.astro";
               Please provide your full name.
             </div>
           </div>
-          <div class="m-4 w-full lg:w-1/2">
+          <div class="my-4 w-full lg:w-1/2">
             <label for="email_address" class="sr-only">Email Address</label><input
               id="email_address"
               type="email"
