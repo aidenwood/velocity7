@@ -17,7 +17,8 @@ import Clientscta from "@components/cta-clients.astro";
 import Velocitycases from "@components/velocity-casestudies.astro";
 import { Picture } from "@astrojs/image/components";
 import Pagecover from '../assets/backgrounds/balance.webp';
-import PagecoverSecondary from '../assets/backgrounds/cubed.webp';
+import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
+import CoverTextarea from '../assets/backgrounds/cubed.webp';
 import { Icon } from "astro-icon";
 
 
@@ -161,6 +162,22 @@ const pricing = [
 
   <ContainerXL>
     <SectionTextarea>
+      <Fragment slot="title">Make business easier.</Fragment>
+      <Fragment slot="desc" class="max-w-6xl">
+        See how Velocity7 works in the wild.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={CoverTextarea}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
       <Fragment slot="iconleft">
         <Icon class="w-16 h-16" name="simple-icons:zapier" />
       </Fragment>
@@ -171,6 +188,18 @@ const pricing = [
         <Icon class="w-16 h-16" name="simple-icons:netlify" />
       </Fragment>
       <Fragment slot="textright">
+        Unlock the true potential of your website by integrating Velocity7 using Netlify's robust API capabilities. Seamlessly incorporate Velocity7 into your web development workflow and enhance your website's performance. With Netlify's simple and flexible API, you can easily access Velocity7's features and leverage its power to create dynamic, personalized experiences for your users. Take control of your website's velocity and elevate your online presence with the seamless integration of Velocity7 through Netlify's API.
+      </Fragment>
+      <Fragment slot="iconleft2">
+        <Icon class="w-16 h-16" name="simple-icons:zapier" />
+      </Fragment>
+      <Fragment slot="textleft2">
+        Integrate Velocity7 seamlessly into your workflows with Zapier's powerful automation platform. Connect Velocity7 to your favorite apps and streamline your processes effortlessly. With Zapier's extensive library of triggers and actions, you can automate tasks, synchronize data, and trigger events in Velocity7 with just a few clicks. Boost your productivity and efficiency by harnessing the full potential of Velocity7 through Zapier's intuitive interface.
+      </Fragment>
+      <Fragment slot="iconright2">
+        <Icon class="w-16 h-16" name="simple-icons:netlify" />
+      </Fragment>
+      <Fragment slot="textright2">
         Unlock the true potential of your website by integrating Velocity7 using Netlify's robust API capabilities. Seamlessly incorporate Velocity7 into your web development workflow and enhance your website's performance. With Netlify's simple and flexible API, you can easily access Velocity7's features and leverage its power to create dynamic, personalized experiences for your users. Take control of your website's velocity and elevate your online presence with the seamless integration of Velocity7 through Netlify's API.
       </Fragment>
       
