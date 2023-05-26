@@ -259,7 +259,7 @@ html, body, main {
     overflow-x: hidden;
 }
 
-main { overflow-y: hidden; }
+main { overflow-y: hidden; min-height: fit-content !important; }
 
   .carousel-cell {
     min-width: 300px;
@@ -269,7 +269,7 @@ main { overflow-y: hidden; }
     margin-right: 20px;
     padding: 20px, 40px;
   }
-  .flickity-viewport { min-height: fit-content; }
+  .flickity-viewport { min-height: fit-content !important; }
   .main-carousel, .flickity-viewport { max-width: 1536px !important; margin: 0 auto; }
   .main-carousel { max-width: 1536px !important; margin: 0 auto; }
   
@@ -306,7 +306,7 @@ main { overflow-y: hidden; }
             <h3 class="font-semibold text-lg md:text-2xl">{item.title}</h3>{" "}
             <p class="text-xs text-slate-700 mt-2 mb-4 leading-relaxed">{item.description}</p>
 
-            <h4 class="text-lg md:text-2xl">Includes:</h4>
+            <h4 class="text-sm md:text-md font-semibold">Includes:</h4>
             <ul class="mb-4 px-4">
               {item.inclusions.map((inclusion) => (
                 <li class="text-xs text-slate-700 cursor-auto ml-2">{inclusion}</li>
