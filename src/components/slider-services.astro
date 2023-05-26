@@ -270,9 +270,8 @@ main { min-height: fit-content !important; }
     margin-right: 20px;
     padding: 20px, 40px;
   }
-  .flickity-viewport { min-height: fit-content !important; }
+  .flickity-viewport { min-height: fit-content; }
   .main-carousel, .flickity-viewport { max-width: 1536px !important; margin: 0 auto; }
-  .main-carousel { max-width: 1536px !important; margin: 0 auto; }
   
   </style>
 
@@ -287,7 +286,7 @@ main { min-height: fit-content !important; }
 </div>
 
 <main>
-<div id="sliderContainer" class="main-carousel max-w-screen-2xl h-fit pb-4">
+<div id="sliderContainer" class="main-carousel h-fit pb-4">
   {
     services.map((item) => (
       <div id="productCard" class="carousel-cell bg-gray-50 py-8 px-4 h-fit rounded-xl shadow-sm hover:shadow-md duration-200">
