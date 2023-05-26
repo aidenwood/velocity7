@@ -25,7 +25,33 @@ import { Icon } from "astro-icon";
 
 const pricing = [
   {
-    name: "Startup.V7",
+    name: "Velocity - Single Page App",
+    price: "$2445",
+    popular: false,
+    features: [
+      "2x 15-min video-call brand sessions",
+      "2x design revisions",
+      "3x web pages w/ 0.2 sec load time avg.",
+      "High conversion landing pages with purposeful marketing",
+      "Simple social conversion tracking",
+      "Social brand pack w/ 2x design releases",
+      "30+ Velocity.V7 components",
+      "Out-of-the-box SEO performance",
+      "Cookie-less social user tracking",
+      "Domain & DNS optimisation",
+      "Email forwarding setup",
+      "2x lead gen funnels",
+      "Stripe payment processing",
+      "Infitely extendable, ultra-light codebase",
+      "Lifetime ownership of your website with no subscription",
+    ],
+    button: {
+      text: "Purchase",
+      link: "https://buy.stripe.com/7sIcOleXFgRTbrq4gg",
+    },
+  }, 
+  {
+    name: "Single Page Application (SPA)",
     price: "$2445",
     popular: false,
     features: [
@@ -51,9 +77,9 @@ const pricing = [
     },
   },
   {
-    name: "Expansion.V7",
+    name: "Velocity - Medium",
     price: 
-      "$4445",
+      "$3445",
     popular: true,
     features: [
       "3x 15-min video-call brand sessions",
@@ -79,7 +105,7 @@ const pricing = [
   },
   {
     name: "E-Commerce.V7",
-    price: "$8445",
+    price: "$6445",
     popular: false,
     features: [
       "4x 15-min video-call brand sessions",
@@ -140,6 +166,18 @@ const pricing = [
     <FeaturesFW />
   </ContainerFW>
 
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Ready to Launch?</Fragment>
+      <Fragment slot="desc" class="max-w-4xl">
+        With a size for every business, we're here to help!
+      </Fragment>
+    </Sectionhead>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </Container>
+
   <ContainerXL>
     <SectionExplain>
       <Fragment slot="title">
@@ -151,6 +189,29 @@ const pricing = [
       <Fragment slot="cover">
         <Picture
                   src={PagecoverSecondary}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionExplain>
+  </ContainerXL>
+
+  <ContainerXL>
+    <SectionExplain>
+      <Fragment slot="title">
+        Built on Web3.
+      </Fragment>
+      <Fragment slot="desc">
+        Velocity is a top choice for powerful and versatile website frameworks. It leverages the latest web technologies and best practices, enabling developers to create visually stunning, functional, and performant websites. Its modular structure promotes code reusability, reducing development time. With extensive documentation, active community support, and a solid foundation, Velocity empowers developers to build exceptional online experiences. Its continuous updates drive innovation, making Velocity the forefront of website frameworks, including Astro architecture.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={PagecoverThird}
                   sizes="(max-width: 2000px) 2000px, 1000px"
                   widths={[1000, 1500, 2000]}
                   aspectRatio="3:2"
@@ -208,29 +269,6 @@ const pricing = [
     </SectionTextarea>
   </ContainerXL>
 
-  <ContainerXL>
-    <SectionExplain>
-      <Fragment slot="title">
-        Built on Web3.
-      </Fragment>
-      <Fragment slot="desc">
-        Velocity is a top choice for powerful and versatile website frameworks. It leverages the latest web technologies and best practices, enabling developers to create visually stunning, functional, and performant websites. Its modular structure promotes code reusability, reducing development time. With extensive documentation, active community support, and a solid foundation, Velocity empowers developers to build exceptional online experiences. Its continuous updates drive innovation, making Velocity the forefront of website frameworks, including Astro architecture.
-      </Fragment>
-      <Fragment slot="cover">
-        <Picture
-                  src={PagecoverThird}
-                  sizes="(max-width: 2000px) 2000px, 1000px"
-                  widths={[1000, 1500, 2000]}
-                  aspectRatio="3:2"
-                  background="#f2f2f2"
-                  fit="cover"
-                  position="center"
-                  class="w-full rounded duration-200 hover:shadow-sm"
-                />
-      </Fragment>
-    </SectionExplain>
-  </ContainerXL>
-
   <Container>
 
       <Sectionhead>
@@ -261,18 +299,6 @@ const pricing = [
 
       <Logos />
 
-  </Container>
-
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">Ready to Launch?</Fragment>
-      <Fragment slot="desc" class="max-w-4xl">
-        With a size for every business, we're here to help!
-      </Fragment>
-    </Sectionhead>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
   </Container>
   
 </Layout>
