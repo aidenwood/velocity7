@@ -88,21 +88,6 @@ const features = [
     icon: "ph:medium-logo-light",
   },
   {
-    title: "Responsive Design.",
-    description: "Completely responsive to 4 screen sizes.",
-    icon: "ph:medium-logo-light",
-  },
-  {
-    title: "Responsive Design.",
-    description: "Completely responsive to 4 screen sizes.",
-    icon: "ph:medium-logo-light",
-  },
-  {
-    title: "Responsive Design.",
-    description: "Completely responsive to 4 screen sizes.",
-    icon: "ph:medium-logo-light",
-  },
-  {
     title: "Lifetime License.",
     description:
       "Pay once for Velocity. No hidden costs.",
@@ -178,12 +163,12 @@ const features = [
     <div id="container" class="relative group">
       <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
       <div id="cardInner" class="relative px-4 py-8 bg-gray-50 hover:bg-gray-100 duration-200 ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
-        <div class="mt-1 bg-black rounded-full p-2 w-12 h-12 shrink-0">
+        <div class="mt-1 bg-black rounded-full p-2 w-16 h-16 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-xl">{item.title}</h3>{" "}
-          <p class="text-slate-700 group-hover:text-slate-800 mt-2 h-auto md:h-16 pr-2 leading-relaxed">{item.description}</p>
+          <p class="text-slate-700 group-hover:text-slate-800 mt-2 pr-2 leading-relaxed">{item.description}</p>
         </div>
       </div>
     </div>
