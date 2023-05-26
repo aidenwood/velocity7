@@ -1,8 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Containerfw from "@components/container-fullwidth.astro";
+import ContainerFW from "@components/container-fullwidth.astro";
 import Container from "@components/container.astro";
-import Containerxl from "@components/container-xl.astro";
+import ContainerXL from "@components/container-xl.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Sectionfw from "@components/sectionhead-fullwidth.astro";
 import Features from "@components/features-fullwidth.astro";
@@ -13,7 +13,6 @@ import Clientscta from "@components/cta-clients.astro";
 import Velocitycases from "@components/velocity-casestudies.astro";
 import { Picture } from "@astrojs/image/components";
 import Pagecover from '../assets/backgrounds/balance.webp';
-import ContainerXl from "@components/container-xl.astro";
 
 
 const pricing = [
@@ -104,7 +103,7 @@ const pricing = [
 
 
 
-  <Containerfw>
+  <ContainerFW>
 
     <Sectionfw>
       <Fragment slot="title">
@@ -122,14 +121,14 @@ const pricing = [
                   background="#f2f2f2"
                   fit="cover"
                   position="center"
-                  class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                  class="w-full rounded duration-200 hover:shadow-sm"
                 />
       </Fragment>
     </Sectionfw>
 
     <Features />
 
-  </Containerfw>
+  </ContainerFW>
 
 
 
@@ -159,7 +158,7 @@ const pricing = [
   </Container>
 
 
-  <Container>
+  <ContainerXL>
     <Sectionhead>
       <Fragment slot="title">Ready to fit any business size.</Fragment>
       <Fragment slot="desc" class="max-w-4xl"
@@ -169,13 +168,13 @@ const pricing = [
     <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
-  </Container>
-  
+  </ContainerXL>
 
 
-  <ContainerXl>
+
+  <ContainerFW>
     <Velocitycases />
-  </ContainerXl>
+  </ContainerFW>
 
 
 
@@ -194,10 +193,10 @@ const pricing = [
 
 
 
-  <Containerfw>
+  <ContainerFW>
 
     <ContactSimple />
 
-  </Containerfw>
+  </ContainerFW>
   
 </Layout>
