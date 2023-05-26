@@ -235,7 +235,9 @@ html, body, main {
             <p class="text-sm text-slate-700 mt-2 mb-2 leading-relaxed">{item.description}</p>
 
             <ul>
-                <li class="text-sm text-slate-700 cursor-auto ml-2">${item.inclusions}</li>
+              {item.inclusions.map((inclusion) => (
+                <li class="text-sm text-slate-700 cursor-auto ml-2">{inclusion}</li>
+              ))}
             </ul>
 
             <p class="text-slate-500 mb-8 mr-2 leading-relaxed">
