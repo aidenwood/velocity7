@@ -166,17 +166,17 @@ const pricing = [
     <FeaturesFW />
   </ContainerFW>
 
-  <Container>
+  <ContainerXL>
     <Sectionhead>
       <Fragment slot="title">Ready to Launch?</Fragment>
       <Fragment slot="desc" class="max-w-4xl">
         With a size for every business, we're here to help!
       </Fragment>
     </Sectionhead>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
-  </Container>
+  </ContainerXL>
 
   <ContainerXL>
     <SectionExplain>
