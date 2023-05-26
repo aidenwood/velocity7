@@ -5,6 +5,7 @@ import Container from "@components/container.astro";
 import ContainerXL from "@components/container-xl.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Sectionfw from "@components/sectionhead-fullwidth.astro";
+import SectionExplain from "@components/sectionhead-explainer.astro";
 import Features from "@components/features-fullwidth.astro";
 import Pricing from "@components/pricing.astro";
 import ContactSimple from "@components/contactform-simple.astro";
@@ -15,6 +16,7 @@ import Clientscta from "@components/cta-clients.astro";
 import Velocitycases from "@components/velocity-casestudies.astro";
 import { Picture } from "@astrojs/image/components";
 import Pagecover from '../assets/backgrounds/balance.webp';
+import PagecoverSecondary from '../assets/backgrounds/cubed.webp';
 
 
 const pricing = [
@@ -109,7 +111,7 @@ const pricing = [
 
     <Sectionfw>
       <Fragment slot="title">
-        Conversion-Focused, High Performance Website Theme.
+        Our Conversion-Focused, High Performance Theme.
       </Fragment>
       <Fragment slot="desc">
         The perfect balance between website template and custom code. Created to rapidly build successful websites for Australian businesses.
@@ -129,6 +131,27 @@ const pricing = [
     </Sectionfw>
 
     <GallerySlider />
+
+    <SectionExplain>
+      <Fragment slot="title">
+        Crush your Competition with Ease.
+      </Fragment>
+      <Fragment slot="desc">
+        Are you looking at competitors around you with beautiful custom websites that are stealing your customers with ease? If so, Velocity is for you.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={PagecoverSecondary}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionExplain>
 
   </ContainerFW>
 
