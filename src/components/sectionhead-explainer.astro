@@ -1,0 +1,17 @@
+---
+const { align = "center" } = Astro.props;
+---
+
+<div class="my-16 flex flex-col md:flex-row">
+  <div id="leftContainer" class="w-full md:w-3/5">
+    <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      <slot name="title">Title</slot>
+    </h1>
+    <p class="text-lg max-w-3xl mx-auto mt-4 text-slate-700">
+      <slot name="desc">Some description goes here</slot>
+    </p>
+  </div>
+  <div id="rightContainer" class="w-full md:w-2/5">
+    <slot class="bg-grey-700 rounded" name="cover"></slot>
+  </div>
+</div>
