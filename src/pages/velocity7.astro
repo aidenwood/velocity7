@@ -110,7 +110,7 @@ const pricing = [
 
 
 
-  <ContainerFW>
+  <ContainerXL>
 
     <SectionEmail>
       <Fragment slot="title">
@@ -133,8 +133,13 @@ const pricing = [
       </Fragment>
     </SectionEmail>
 
-    <GallerySlider />
+  </ContainerXL>
 
+  <ContainerFW>
+    <GallerySlider />
+  </ContainerFW>
+
+  <ContainerXL>
     <SectionExplain>
       <Fragment slot="title">
         Crush your Competition with Ease.
@@ -155,8 +160,7 @@ const pricing = [
                 />
       </Fragment>
     </SectionExplain>
-
-  </ContainerFW>
+  </ContainerXL>
 
   <ContainerXL>
     <SectionTextarea>
@@ -203,7 +207,7 @@ const pricing = [
     </SectionTextarea>
   </ContainerXL>
 
-  <ContainerXL>
+  <Container>
 
       <Sectionhead>
         <Fragment slot="title">Light as a Feather.</Fragment>
@@ -215,13 +219,13 @@ const pricing = [
 
       <Integrations />
 
-  </ContainerXL>
+  </Container>
 
-
-
-  <ContainerXL>
-
+  <ContainerFW>
     <Features />
+  </ContainerFW>
+
+  <Container>
 
       <Sectionhead>
         <Fragment slot="title">Turn Around in 21 Days.</Fragment>
@@ -237,9 +241,9 @@ const pricing = [
 
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Ready to fit any business size.</Fragment>
+      <Fragment slot="title">Ready to Launch?</Fragment>
       <Fragment slot="desc" class="max-w-4xl">
-        Depending on where you are in the lifecycle of your online business, we are here to help.
+        With a size for every business, we're here to help!
       </Fragment>
     </Sectionhead>
     <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
