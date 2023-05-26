@@ -5,6 +5,7 @@ import Container from "@components/container.astro";
 import ContainerXL from "@components/container-xl.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import SectionEmail from "@components/sectionhead-email.astro";
+import Cta from "@components/cta.astro";
 import SectionExplain from "@components/sectionhead-explainer.astro";
 import SectionTextarea from "@components/section-textarea.astro";
 import FeaturesFW from "@components/features-fullwidth.astro";
@@ -182,6 +183,10 @@ const pricing = [
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
   </ContainerXL>
+  
+  <Container>
+    <Cta />
+  </Container>
 
   <ContainerXL>
     <SectionExplain>
@@ -206,6 +211,20 @@ const pricing = [
     </SectionExplain>
   </ContainerXL>
 
+  <Container>
+
+    <Sectionhead>
+      <Fragment slot="title">Light as a Feather.</Fragment>
+      <Fragment slot="desc" class="max-w-4xl"
+        >We've spent 5 years developing Velocity into the one of the fastest website foundations available. 
+        V7 comes in at a feather-weight 68kb pageload for a full website ready for rapid branding, infinitly extendable.
+      </Fragment>
+    </Sectionhead>
+
+    <Integrations />
+
+</Container>
+
   <ContainerXL>
     <SectionExplain>
       <Fragment slot="title">
@@ -228,6 +247,20 @@ const pricing = [
       </Fragment>
     </SectionExplain>
   </ContainerXL>
+
+  <Container>
+
+    <Sectionhead>
+      <Fragment slot="title">Turn Around in 21 Days.</Fragment>
+      <Fragment slot="desc">
+        All components are styled to your brand and pages duplicated from your old site by our team during initial deployment. 
+        Watch our development live on the fly to help us move faster or use your multiple design revisions.
+      </Fragment>
+    </Sectionhead>
+
+    <Logos />
+
+</Container>
 
   <ContainerXL>
     <SectionTextarea>
@@ -274,32 +307,9 @@ const pricing = [
     </SectionTextarea>
   </ContainerXL>
 
-  <Container>
-
-      <Sectionhead>
-        <Fragment slot="title">Light as a Feather.</Fragment>
-        <Fragment slot="desc" class="max-w-4xl"
-          >We've spent 5 years developing Velocity into the one of the fastest website foundations available. 
-          V7 comes in at a feather-weight 68kb pageload for a full website ready for rapid branding, infinitly extendable.
-        </Fragment>
-      </Sectionhead>
-
-      <Integrations />
-
-  </Container>
-
-  <Container>
-
-      <Sectionhead>
-        <Fragment slot="title">Turn Around in 21 Days.</Fragment>
-        <Fragment slot="desc">
-          All components are styled to your brand and pages duplicated from your old site by our team during initial deployment. 
-          Watch our development live on the fly to help us move faster or use your multiple design revisions.
-        </Fragment>
-      </Sectionhead>
-
-      <Logos />
-
-  </Container>
+  <ContainerFW>
+    <Velocitycases />
+  </ContainerFW>
+  
   
 </Layout>
