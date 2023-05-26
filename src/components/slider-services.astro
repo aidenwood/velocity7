@@ -16,10 +16,11 @@ import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improv
 
 const services = [
   {
-    title: "Velocity7",
+    title: "Velocity7 Design & Deploy.",
     category: "Web Development",
     description:
-      "Before anything online, you need a website that seriously succeeds. Not just half works. We're talking ready for scaling infinitely once we get to the grit.",
+      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
+    inclusions: ["x", "y", "z"],
     imgsrc: VelocityLogo,
     imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
     link: "blog/how-velocity7-works-with-your-brand",
@@ -31,11 +32,12 @@ const services = [
     buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
   },
   {
-    title: "Brand Strategy Development",
+    title: "Brand Strategy Development.",
     category: "Brand Design",
     description:
       "The best way to start developing a winning marketing strategy without burning a handfull of cash. Our team will deep dive on what strategies work with your customer, designed 4 releases per week, and quickly improving marketing across all mediums.",
     imgsrc: PrintAds,
+    inclusions: ["x", "y", "z"],
     imgalt: "Advertising with Billboards, Buses, Facebook, Instagram, and anything else, managed locally to know your best oppurtunities and marketing strategy improved monthly.",
     link: "blog/how-to-maximise-youtube-advertising",
     style: "outline",
@@ -46,11 +48,12 @@ const services = [
     buylink: "https://buy.stripe.com/3cs4hP7vd3138fe00d",
   },
   {
-    title: "Google Search Management",
+    title: "Google Search Management.",
     category: "Marketing",
     description:
       "Best used for high-intent marketing capture, paid CPC marketing can produce the fastest results. Our specialty is keeping the cost of aquisition down across all G-Search Campaigns.",
     imgsrc: CPCmarketing,
+    inclusions: ["x", "y", "z"],
     imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
     link: "blog/when-to-use-paid-search",
     style: "outline",
@@ -61,11 +64,12 @@ const services = [
     buylink: "https://buy.stripe.com/9AQ8y59Dlbxz6766op",
   },
   {
-    title: "Meta Ad Management",
+    title: "Meta (FB/IG) Ad Management.",
     category: "Marketing",
     description:
       "Facebook and Instagram ads can reach huge amounts of people with visual advertising, but lack manipulatable targeting data and can be costly if campaigns are not proven winners.",
     imgsrc: MetaAds,
+    inclusions: ["x", "y", "z"],
     imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
     link: "blog/when-to-use-paid-meta-ads",
     style: "outline",
@@ -76,11 +80,12 @@ const services = [
     buylink: "https://buy.stripe.com/bIY9C97vd313dzydQS",
   },
   {
-    title: "Video Ad Strategy Pack - 12 releases",
+    title: "Brand Launch Ad Pack - 12 Releases.",
     category: "Brand Design",
     description:
       "Our team will develop a marketing strategy plan, prove it's strength, then film and produce a round of ads for covering all major platforms. Minimum 12 design releases including 3 videos and 9 social / GDN designs.",
     imgsrc: MetaAds,
+    inclusions: ["x", "y", "z"],
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
     link: "blog/when-to-use-google-display-ads",
     style: "outline",
@@ -96,6 +101,7 @@ const services = [
     description:
       "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
     imgsrc: DisplayMarketing,
+    inclusions: ["x", "y", "z"],
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
     link: "blog/when-to-use-google-display-ads",
     style: "outline",
@@ -111,6 +117,7 @@ const services = [
     description:
       "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
     imgsrc: AnimatedAds,
+    inclusions: ["x", "y", "z"],
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
     link: "blog/when-to-use-google-display-ads",
     style: "outline",
@@ -121,11 +128,12 @@ const services = [
     buylink: "https://buy.stripe.com/cN2cOl4j10SV0MMfZd",
   },
   {
-    title: "Bus Advertising Design & Deploy",
+    title: "Bus Advertising Design & Deploy.",
     category: "Brand Design",
     description:
       "Our team will handle the entire process of getting your business on buses that are actually in your customers area. We provide the care necessary to only advertise in bus routes that matter to you. Our business even offers a great industry rate with Gold Coast bus services.",
     imgsrc: BusAds,
+    inclusions: ["x", "y", "z"],
     imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
     link: "blog/how-to-use-video-advertising-effectively",
     style: "outline",
@@ -136,11 +144,12 @@ const services = [
     buylink: "https://buy.stripe.com/bIY01zaHp4573YYeVa",
   },
   {
-    title: "SEO Marketing.",
+    title: "SEO Optimisation.",
     category: "Web Development",
     description:
       "Until Google goes away, SEO will always be valuable to your business. Free lead generation can be created easily in small niches. Hugely effective to outgrow compeition.",
     imgsrc: SEOmarketing,
+    inclusions: ["x", "y", "z"],
     imgalt: "Advertising with Google for free through organic SEO improvements.",
     link: "blog/how-to-maximise-your-websites-seo-performance",
     style: "outline",
@@ -151,11 +160,12 @@ const services = [
     buylink: "https://buy.stripe.com/fZe5lT7vddFHanm5kw",
   },
   {
-    title: "Website Optimisation.",
+    title: "Performance Optimisation.",
     category: "Web Development",
     description:
       "Improving conversion has been proven by maths to improve conversion rates across the board. One of the easiest ways to improve revenue quickly.",
     imgsrc: WebPerformance,
+    inclusions: ["x", "y", "z"],
     imgalt: "Improving conversion across the board through web performance improvements.",
     link: "blog/how-to-improve-website-conversion-rates",
     style: "outline",
@@ -216,13 +226,17 @@ html, body, main {
                   background="#f2f2f2"
                   fit="cover"
                   position="center"
-                  class="w-3/4 h-52 rounded mb-2"
+                  class="w-3/4 h-36 rounded mb-2"
                 />
           </div>
           <div class="px-4 py-3">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
-            <p class="text-sm text-slate-500 mt-2 mb-2 leading-relaxed">{item.description}</p>
+            <p class="text-sm text-slate-700 mt-2 mb-2 leading-relaxed">{item.description}</p>
+
+            <ul>
+                <li class="text-sm text-slate-700 cursor-auto ml-2">${item.inclusions}</li>
+            </ul>
 
             <p class="text-slate-500 mb-8 mr-2 leading-relaxed">
               Learn more:
@@ -238,7 +252,7 @@ html, body, main {
             <div class="flex items-center">
               <p class="text-2xl font-semibold text-black cursor-auto my-3">${item.saleprice}</p>
               <del>
-                <p class="text-lg text-gray-600 cursor-auto ml-2">${item.price}</p>
+                <p class="text-lg text-slate-500 cursor-auto ml-2">${item.price}</p>
               </del>
               <div class="ml-auto">
                 <a href={item.buylink}> 
