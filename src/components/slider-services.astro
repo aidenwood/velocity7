@@ -285,7 +285,7 @@ main { min-height: fit-content !important; overflow-y: visible; }
   </p>
 </div>
 
-<div id="sliderContainer" class="main-carousel max-w-screen-2xl h-fit">
+<div id="sliderContainer" class="main-carousel max-w-screen-2xl h-fit pb-4">
   {
     services.map((item) => (
       <div id="productCard" class="carousel-cell bg-gray-50 py-8 px-4 h-fit rounded-xl shadow-sm hover:shadow-md duration-200">
@@ -294,17 +294,17 @@ main { min-height: fit-content !important; overflow-y: visible; }
                   src={item.imgsrc}
                   sizes="(max-width: 900px) 100vw, 450px"
                   widths={[200, 400]}
-                  aspectRatio="3:2"
-                  background="#f2f2f2"
+                  aspectRatio="5:3"
+                  background="#f2f2f200"
                   fit="contain"
                   position="center"
-                  class="w-3/4 rounded mb-2"
+                  class="w-full rounded mb-2"
                 />
           </div>
           <div class="px-4 py-3">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-lg md:text-2xl">{item.title}</h3>{" "}
-            <p class="text-xs text-slate-700 mt-2 mb-4 leading-relaxed">{item.description}</p>
+            <p class="text-xs text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
 
             <h4 class="text-sm md:text-md font-semibold">Includes:</h4>
             <ul class="mb-4 px-4">
@@ -331,7 +331,7 @@ main { min-height: fit-content !important; overflow-y: visible; }
               </del>
               <div class="ml-auto">
                 <a href={item.buylink}> 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
                     <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                   </svg>
