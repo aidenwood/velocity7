@@ -10,6 +10,7 @@ import Pricing from "@components/pricing.astro";
 import ContactSimple from "@components/contactform-simple.astro";
 import Logos from "@components/logos.astro";
 import Integrations from "@components/logos-integrations.astro";
+import GallerySlider from "@components/slider-gallery.astro";
 import Clientscta from "@components/cta-clients.astro";
 import Velocitycases from "@components/velocity-casestudies.astro";
 import { Picture } from "@astrojs/image/components";
@@ -143,7 +144,7 @@ const pricing = [
       </Sectionhead>
 
       <Integrations />
-      
+
   </Container>
 
 
@@ -161,8 +162,11 @@ const pricing = [
 
   </Container>
 
+  <ContainerFW>
+    <GallerySlider />
+  </ContainerFW>
 
-  <ContainerXL>
+  <Container>
     <Sectionhead>
       <Fragment slot="title">Ready to fit any business size.</Fragment>
       <Fragment slot="desc" class="max-w-4xl"
@@ -172,7 +176,7 @@ const pricing = [
     <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
-  </ContainerXL>
+  </Container>
 
 
 
