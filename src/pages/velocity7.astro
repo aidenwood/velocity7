@@ -13,6 +13,7 @@ import Clientscta from "@components/cta-clients.astro";
 import Velocitycases from "@components/velocity-casestudies.astro";
 import { Picture } from "@astrojs/image/components";
 import Pagecover from '../assets/backgrounds/balance.webp';
+import ContainerXl from "@components/container-xl.astro";
 
 
 const pricing = [
@@ -102,7 +103,7 @@ const pricing = [
 <Layout title="Velocity7">
 
 
-  
+
   <Containerfw>
 
     <Sectionfw>
@@ -131,19 +132,6 @@ const pricing = [
   </Containerfw>
 
 
-  <Containerxl>
-    <Sectionhead>
-      <Fragment slot="title">Ready to fit any business size.</Fragment>
-      <Fragment slot="desc" class="max-w-4xl"
-        >Depending on where you are in the lifecycle of your online business, we are here to help.
-      </Fragment>
-    </Sectionhead>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
-  </Containerxl>
-
-
 
   <Container>
       <Sectionhead>
@@ -153,9 +141,6 @@ const pricing = [
           V7 comes in at a feather-weight 68kb pageload for a full website ready for rapid branding, infinitly extendable.
         </Fragment>
       </Sectionhead>
-
-      <Velocitycases />
-
   </Container>
 
 
@@ -171,10 +156,32 @@ const pricing = [
 
       <Logos />
 
+  </Container>
 
 
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Ready to fit any business size.</Fragment>
+      <Fragment slot="desc" class="max-w-4xl"
+        >Depending on where you are in the lifecycle of your online business, we are here to help.
+      </Fragment>
+    </Sectionhead>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </Container>
+  
+
+
+  <ContainerXl>
+    <Velocitycases />
+  </ContainerXl>
+
+
+
+  <Container>
       <Sectionhead>
-        <Fragment slot="title">Crush it in competitive industries.</Fragment>
+        <Fragment slot="title">Crush competitive industries.</Fragment>
         <Fragment slot="desc">
           With over 10 years experience improving websites in South East Queensland with a hands on, deep dive approach.
           We've learned a thing or two about why certain brands succeed online and over 97% of all others fail. Don't be the later.
