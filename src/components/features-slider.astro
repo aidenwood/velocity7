@@ -105,6 +105,17 @@ const features = [
   margin-right: 10px;
   padding: 20px, 40px;
 }
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -22px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
 </style>
 
 <div class="features-carousel grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-16 pb-16">
@@ -134,5 +145,6 @@ const features = [
   contain: true,
   autoPlay: 1500,
   groupCells: 4,
+  prevNextButtons: false,
   });
 </script>
