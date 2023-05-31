@@ -3,10 +3,11 @@ import Layout from "@layouts/Layout.astro";
 import ContainerFW from "@components/container-fullwidth.astro";
 import Container from "@components/container.astro";
 import ContainerXL from "@components/container-xl.astro";
-import Sectionhead from "@components/sectionhead.astro";
+import Sectionhead from "@components/sectionmid.astro";
 import SectionEmail from "@components/sectionhead-email.astro";
 import Cta from "@components/cta.astro";
-import SectionExplain from "@components/sectionhead-explainer.astro";
+import SectionHeadImg from "@components/sectionhead-img.astro";
+import SectionHeadSecImg from "@components/sectionheadsecondary-img.astro";
 import SectionTextarea from "@components/sectionmid-textarea.astro";
 import FeaturesFW from "@components/features-slider.astro";
 import Pricing from "@components/pricing.astro";
@@ -137,7 +138,7 @@ const pricing = [
 
   <ContainerFW>
 
-    <SectionEmail>
+    <SectionHeadImg>
       <Fragment slot="title">
         Introducing Velocity7
       </Fragment>
@@ -156,7 +157,7 @@ const pricing = [
                   class="w-full rounded duration-200 hover:shadow-sm"
                 />
       </Fragment>
-    </SectionEmail>
+    </SectionHeadImg>
 
   </ContainerFW>
 
@@ -165,9 +166,9 @@ const pricing = [
   </ContainerFW>
 
   <ContainerXL>
-    <SectionExplain>
+    <SectionHeadSecImg>
       <Fragment slot="title">
-        Crush Competitive Niches.
+        Build High-Conversion Funnels.
       </Fragment>
       <Fragment slot="desc">
         Velocity's outstanding performance places businesses in a favorable position for SEO and social algorithms. With faster load times and improved user experience, Velocity websites rank higher in search engine results, leading to increased organic traffic. Additionally, social algorithms favor websites that provide seamless browsing experiences, enhancing the visibility and reach of businesses on various social media platforms. Velocity's performance optimization directly contributes to better online visibility and digital success.
@@ -184,16 +185,16 @@ const pricing = [
                   class="w-full rounded duration-200 hover:shadow-sm"
                 />
       </Fragment>
-    </SectionExplain>
+    </SectionHeadSecImg>
   </ContainerXL>
 
   <Container>
 
     <Sectionhead>
       <Fragment slot="title">Light as a Feather.</Fragment>
-      <Fragment slot="desc" class="max-w-4xl"
-        >We've spent 5 years developing Velocity into the one of the fastest website foundations available. 
-        V7 comes in at a feather-weight 68kb pageload for a full website ready for rapid branding, infinitly extendable.
+      <Fragment slot="desc"
+        >We've spent 5 years building Velocity into what it is today: One of fastest complete website frameworks available. 
+        With feather-weight pageloads and 0kbs in render-blocking JS.
       </Fragment>
     </Sectionhead>
 
