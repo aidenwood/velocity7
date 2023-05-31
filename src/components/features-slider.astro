@@ -88,21 +88,6 @@ const features = [
     icon: "ph:medium-logo-light",
   },
   {
-    title: "Responsive Design.",
-    description: "Completely responsive to 4 screen sizes.",
-    icon: "ph:medium-logo-light",
-  },
-  {
-    title: "Responsive Design.",
-    description: "Completely responsive to 4 screen sizes.",
-    icon: "ph:medium-logo-light",
-  },
-  {
-    title: "Responsive Design.",
-    description: "Completely responsive to 4 screen sizes.",
-    icon: "ph:medium-logo-light",
-  },
-  {
     title: "Lifetime License.",
     description:
       "Pay once for Velocity. No hidden costs.",
@@ -110,12 +95,24 @@ const features = [
   },
 ];
 ---
+<!-- Flickity -->
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
+<!-- Flickity Custom Styles -->
+<style>
+  .carousel-cell {
+  max-width: 85vw;
+  margin-right: 10px;
+  margin-bottom: 45px;
+  padding: 20px, 40px;
+}
+</style>
 
-<div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 mt-4 mb-32 gap-4 md:gap-8 gap-y-12">
+<div class="features-carousel grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 mt-4 mb-32 gap-4 md:gap-8 gap-y-12">
   {
     features.map((item) => (
-    <div id="container" class="relative group">
+    <div id="container" class="carousel-cell relative group">
       <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
       <div id="cardInner" class="relative px-4 py-8 bg-gray-50 hover:bg-gray-100 duration-200 ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
         <div class="mt-1 bg-black rounded-full p-2 w-12 h-12 shrink-0">
@@ -130,3 +127,13 @@ const features = [
     ))
   }
 </div>
+
+<script>
+  // element argument can be a selector string
+  //   for an individual element
+  var flkty = new Flickity( '.features-carousel', {
+  cellAlign: 'left',
+  contain: true,  
+  freeScroll: true,
+  });
+</script>
