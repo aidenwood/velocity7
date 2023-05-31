@@ -102,15 +102,12 @@ const features = [
 <!-- Flickity Custom Styles -->
 <style>
   .carousel-cell {
-  max-width: 450px;
-  min-width: 85vw;
-  width: 25%;
   margin-right: 10px;
   padding: 20px, 40px;
 }
 </style>
 
-<div class="features-carousel my-16 pb-16">
+<div class="features-carousel grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-16 pb-16">
   {
     features.map((item) => (
     <div id="container" class="carousel-cell relative group">
