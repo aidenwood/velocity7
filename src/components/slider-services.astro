@@ -4,8 +4,10 @@ import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
 import VelocityLogo from '../assets/aidxn/velocity-social-landscape.png';
+import VelocityLrg from '../assets/previous-works/iphone-app-design.webp';
+import BrandLaunch from '../assets/previous-works/website-mock-ups.webp';
 import CPCmarketing from '../assets/marketing-results/cpc-marketing-results-real-estate-high-competitive-term.png';
-import MetaAds from '../assets/marketing-results/br-facebook-carousel-ad.png';
+import MetaAds from '../assets/marketing-results/facebook-marketing-results.png';
 import AnimatedAds from '../assets/marketing-results/aidxn-mobile-google-display-ads-hero-hd.webp';
 import DisplayMarketing from '../assets/marketing-results/re-placement.webp';
 import PrintAds from '../assets/marketing-results/print-advertising-managed-on-the-goldcoast.webp';
@@ -16,7 +18,30 @@ import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improv
 
 const services = [
   {
-    title: "Velocity7 Design & Deploy.",
+    title: "Velocity7 - Single Page.",
+    category: "Web Development",
+    description:
+      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
+    inclusions: [
+      "Responsive Website Design",
+      "Lead Generation Focused",
+      "Website Deployment",
+      "SEO Optimization",
+      "Automated Emails",
+      "Custom Web Development",
+    ],
+    imgsrc: WebPerformance,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Website Development",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
+  },
+  {
+    title: "Velocity7 - E-Commerce.",
     category: "Web Development",
     description:
       "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
@@ -28,13 +53,13 @@ const services = [
       "Content Management System",
       "Custom Web Development",
     ],
-    imgsrc: WebPerformance,
+    imgsrc: VelocityLrg,
     imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
     link: "blog/how-velocity7-works-with-your-brand",
     style: "outline",
     btntxt: "Website Development",
-    price: "4445",
-    saleprice: "3445",
+    price: "8445",
+    saleprice: "6445",
     paytype: "once-off",
     buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
   },
@@ -43,7 +68,7 @@ const services = [
     category: "Brand Design",
     description:
       "Our team will develop a marketing strategy plan, prove it's strength, then film and produce a round of ads for covering all major platforms. Minimum 12 design releases including 3 videos and 9 social / GDN designs.",
-    imgsrc: AnimatedAds,
+    imgsrc: BrandLaunch,
     inclusions: [
       "Marketing Strategy Planning",
       "Video Production",
