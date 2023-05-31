@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { Picture } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionmid-important.astro";
+import Sectionhead from "@components/sectionhead-simple.astro";
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
