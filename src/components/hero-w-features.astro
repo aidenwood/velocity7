@@ -1,0 +1,179 @@
+---
+import { Picture } from "@astrojs/image/components";
+import heroImage from "assets/hero.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "High Performance.",
+    description:
+      "0.2 second pageload & A+ GTMetrix scores.",
+    icon: "carbon:asset",
+  },
+  {
+    title: "Conversion-Focused.",
+    description:
+      "Code developed over 5 years. (v7.4)",
+    icon: "ph:crosshair-light",
+  },
+  {
+    title: "Ad Tracking Built-In.",
+    description:
+      "User identity, ad and conversion tracking.",
+    icon: "ph:git-branch",
+  },
+  {
+  title: "20+ Layouts.",
+  description: "Faster development with pre-made layouts.",
+  icon: "carbon:cube",
+  },
+  {
+    title: "30+ Integrations.",
+    description:
+      "Integrate any NPM package.",
+    icon: "ph:package-light",
+  },
+  {
+    title: "50+ Components.",
+    description:
+      "Build custom pages faster with components.",
+    icon: "ph:codesandbox-logo-light",
+  },
+  {
+    title: "Extend/Automate.",
+    description:
+      "Infinitely extendable. Ready for any extension.",
+    icon: "ph:stack",
+  },
+  {
+    title: "One-Click Checkout.",
+    description: "Sell more with simplified purchase flow.",
+    icon: "ph:number-circle-one-light",
+  },
+  {
+    title: "3D Experience Ready.",
+    description: "Build beautiful, branded web experiences.",
+    icon: "ph:game-controller",
+  },
+  {
+    title: "Custom Brand Blog.",
+    description:
+      "Write highly informative blog posts easily.",
+    icon: "ph:pen-nib",
+  },
+  {
+    title: "SEO Friendly.",
+    description: "Automatically push content to Search.",
+    icon: "ph:app-window",
+  },
+  {
+    title: "Email Marketing.",
+    description: "Integrate with popular email marketing API's.",
+    icon: "ph:megaphone-simple",
+  },
+  {
+    title: "Built-in CRM.",
+    description: "Serve content from your database.",
+    icon: "ph:intersect",
+  },
+  {
+    title: "Advanced Analytics.",
+    description: "Track user flow without losing performance.",
+    icon: "ph:chart-pie",
+  },
+  {
+    title: "Responsive Design.",
+    description: "Completely responsive to 4 screen sizes.",
+    icon: "ph:medium-logo-light",
+  },
+  {
+    title: "Lifetime License.",
+    description:
+      "Pay once for Velocity. No hidden costs.",
+    icon: "ion:infinite",
+  },
+];
+---
+
+
+<style>
+  svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
+  #heroTagline{font-size: 5vw;}
+</style>
+
+<main class="pt-8 mb-16 pb-16">
+<div id="heroSection" class="flex flex-col sm:flex-row place-items-center mb-8">
+  
+  <div class="w-full lg:w-3/5 py-6">
+
+    <div class="py-6">
+      <h1 style="heroTagline" class="text-6xl lg:text-7xl w-full lg:max-w-6xl font-bold lg:tracking-tight xl:tracking-tighter">
+        Conversion-Focused Design.<br/>
+        High-Performance Development.
+      </h1>
+      <p class="text-lg mt-6 text-slate-700 w-full lg:max-w-4xl">
+        10+ years experience designing and developing websites and 6+ years improving marketing strategies makes for one of the most reliable Gold Coast web designers around.
+        <wbr>
+      </p>
+      <div class="mt-12 flex flex-col sm:flex-row gap-3">
+        <a href="https://aidxn.com/services" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-black text-white hover:bg-gray-800 border-2 border-transparent flex gap-1 items-center justify-center">
+          <svg viewBox="0 0 24 24" class="text-black w-4 h-4">
+            <Icon class="text-white" name="ph:table" />
+          </svg>
+
+          Services
+
+        </a>
+        <a href="https://aidxn.com/velocity7" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white border-2 border-black hover:bg-gray-100 text-black flex gap-1 items-center justify-center">
+          <svg viewBox="0 0 24 24" class="text-black w-4 h-4">
+            <Icon class="text-black" name="ph:lightning-fill" />
+          </svg>
+          
+          Velocity7
+
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="w-full lg:w-2/5 py-6 block">
+    <div id="animationWrapper" translate="no">
+      <svg viewBox="-500 -500 1000 1000" class="mx-auto sm:w-full w-3/4">
+        <circle r="450"></circle>
+        <circle class="equator" r="450"></circle>
+        <circle class="meridian" r="450" style="--start:165deg; --end:180deg"></circle>
+        <circle class="meridian" r="450" style="--start:150deg; --end:165deg"></circle>
+        <circle class="meridian" r="450" style="--start:135deg; --end:150deg"></circle>
+        <circle class="meridian" r="450" style="--start:120deg; --end:135deg"></circle>
+        <circle class="meridian" r="450" style="--start:105deg; --end:120deg"></circle>
+        <circle class="meridian" r="450" style="--start:90deg; --end:105deg"></circle>
+        <circle class="meridian" r="450" style="--start:75deg; --end:90deg"></circle>
+        <circle class="meridian" r="450" style="--start:60deg; --end:75deg"></circle>
+        <circle class="meridian" r="450" style="--start:45deg; --end:60deg"></circle>
+        <circle class="meridian" r="450" style="--start:30deg; --end:45deg"></circle>
+        <circle class="meridian" r="450" style="--start:15deg; --end:30deg"></circle>
+        <circle class="meridian" r="450" style="--start:0deg; --end:15deg"></circle>
+      </svg>
+    </div>
+
+  </div>
+</div>
+<div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 mt-4 mb-32 gap-4 md:gap-8 gap-y-12">
+  {
+    features.map((item) => (
+    <div id="container" class="relative group">
+      <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+      <div id="cardInner" class="relative px-4 py-8 bg-gray-50 hover:bg-gray-100 duration-200 ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
+        <div class="mt-1 bg-black rounded-full p-2 w-16 h-16 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-xl">{item.title}</h3>{" "}
+          <p class="text-slate-700 group-hover:text-slate-800 mt-2 pr-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    </div>
+    ))
+  }
+</div>
+</main>
