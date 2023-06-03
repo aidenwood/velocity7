@@ -7,6 +7,9 @@ import Cta from "@components/cta.astro";
 import Grid from "@components/grid-2x2.astro";
 import SectionHeadImg from "@components/sectionhead-img.astro";
 import SectionHeadSecImg from "@components/sectionhead-img-reverse.astro";
+import Pagecover from '../assets/marketing-results/print-advertising-managed-on-the-goldcoast.webp';
+import PagecoverSecondary from '../assets/marketing-results/br-mac-render-med.webp';
+import PagecoverThird from '../assets/marketing-results/aidxn-mobile-google-display-ads-hero-hd.webp';
 import BlogSlider from "@components/slider-content.astro";
 import GallerySlider from "@components/slider-services.astro";
 import Logos from "@components/logos.astro";
@@ -22,15 +25,39 @@ import Layout from "@layouts/Layout.astro";
   <Container>
     <Grid />
 
-    <SectionHeadSecImg>
+    <SectionHeadImg>
       <Fragment slot="title">
         Brand strategy development.
       </Fragment>
       <Fragment slot="desc">
-        Aidxn Design excels at crafting compelling brand strategies that resonate with your target audience. 
+        In the world of e-commerce, it all starts with crafting a compelling brand strategies that resonate with your target audience. 
         Through in-depth research and analysis, we help you define your brand identity, messaging, and positioning, 
         setting the stage for success in the digital landscape. Our strategic approach ensures that every aspect of 
-        your brand communicates a consistent and captivating story, building strong connections and driving business growth..
+        your brand communicates directly and effectively with your target market, making converting those users a breeze.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={Pagecover}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded"
+                />
+      </Fragment>
+    </SectionHeadImg>
+
+    <SectionHeadSecImg>
+      <Fragment slot="title">
+        Web design optimisation.
+      </Fragment>
+      <Fragment slot="desc">
+        We take your vision and turn it into a stunning reality. Our expert team of designers and developers creates 
+        visually appealing, user-friendly websites tailored to your specific needs. With a focus on responsive design, 
+        seamless navigation, and optimized performance, we deliver websites that leave a lasting impression. 
+        From intuitive interfaces to smooth functionality, we ensure your online presence stands out and captivates your audience.
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -45,6 +72,30 @@ import Layout from "@layouts/Layout.astro";
                 />
       </Fragment>
     </SectionHeadSecImg>
+
+    <SectionHeadImg>
+      <Fragment slot="title">
+        Marketing and Automation
+      </Fragment>
+      <Fragment slot="desc">
+        We go beyond design and development; empowering businesses with proven and reliable marketing strategies 
+        that can be scaled with high automation, reducing costs drastically. Through marketing automation, we streamline 
+        repetitive tasks and nurture leads without the labour cost. Enabling you to focus on your business while we scale results
+        as fast as you can handle it. We love the power of digital marketing, but we love to see cost effective marketing even more.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={PagecoverThird}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded"
+                />
+      </Fragment>
+    </SectionHeadImg>
 
     <Cta />
   </Container>
