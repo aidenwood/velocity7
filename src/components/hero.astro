@@ -9,7 +9,6 @@ import { Icon } from "astro-icon";
 <style>
   svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
   #heroTagline{font-size: 5vw;}
-  #animationWrapper{max-height: 450px;}
 </style>
 
 <main class="pt-8 pb-16">
@@ -47,7 +46,7 @@ import { Icon } from "astro-icon";
     </div>
     <div class="w-full lg:w-2/5 py-6 block">
       <div id="animationWrapper" translate="no">
-        <svg viewBox="-500 -500 1000 1000" class="mx-auto sm:w-full w-3/4">
+        <svg viewBox="-500 -500 1000 1000" class="mx-auto sm:w-full w-3/5">
           <circle r="450"></circle>
           <circle class="equator" r="450"></circle>
           <circle class="meridian" r="450" style="--start:165deg; --end:180deg"></circle>
