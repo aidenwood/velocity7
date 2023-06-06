@@ -1,0 +1,108 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Dash from "../assets/dashboard.png";
+import Chart from "../assets/chart.png";
+import Payment from "../assets/payment.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+import RayWhite from "../assets/client-logos/ray-white.svg";
+import BallRealty from "../assets/client-logos/ball-realty.svg";
+import BoogieCollective from "../assets/client-logos/boogie-collective.svg";
+import CobraClub from "../assets/client-logos/cobra-club.svg";
+import SocialDandelion from "../assets/client-logos/social-dandelion.svg";
+import ImmersiveStructures from "../assets/client-logos/immersive-structures.svg";
+import BrieHair from "../assets/client-logos/brie-hair.svg";
+import NwFunding from "../assets/client-logos/nw-funding.svg";
+import SnacksPhoto from "../assets/client-logos/snacks.svg";
+import DrTS from "../assets/client-logos/ts.svg";
+import EstemAcad from "../assets/client-logos/academy.svg";
+import Estem from "../assets/client-logos/estem.svg";
+
+
+const clients = [
+  {
+    src: RayWhite,
+    alt: "Digital marketing management by Aidxn for the Aspley Brisbane branch of Ray White. Using animated ad design to stand out within branding guidelines.",
+  },
+  {
+    src: BallRealty,
+    alt: "Complete digital marketing and web design on the Gold Coast for Ball Realty by Aidxn Design.",
+  },
+  {
+    src: NwFunding,
+    alt: "Digital marketing and web design on the Gold Coast for finance companies.",
+  },
+  {
+    src: CobraClub,
+    alt: "Web design and brand strategy for Cobra Car Club of QLD",
+  },
+  {
+    src: BoogieCollective,
+    alt: "The Boogie Collective asked Aidxn Design to help manage their facebook ads and facebook organic strategy, with great results.",
+  },
+  {
+    src: ImmersiveStructures,
+    alt: "Immersive Structures chose Aidxn Design to do their graphic design and logo design lockdown for print formats.",
+  },
+  {
+    src: SnacksPhoto,
+    alt: "Web design and development for photographers, creating unique websites that display high definition images.",
+  },
+  {
+    src: SocialDandelion,
+    alt: "Web design and graphic design for another digital marketing agency.",
+  },
+  {
+    src: Estem,
+    alt: "Gold Coast Web Design and Brand Design for a local Gold Coast business.",
+  },
+  {
+    src: EstemAcad,
+    alt: "Digital marketing for e-commerce stores on the Gold Coast.",
+  },
+  {
+    src: DrTS,
+    alt: "Brand refresh for a 30 year old brand in the doctors and health industry.",
+  },
+  {
+    src: BrieHair,
+    alt: "Web Designers for hairdressers. Using bookings platform Fresha to add online booking directly in Google Maps.",
+  },
+];
+
+
+
+---
+<style>
+  svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
+  #heroTagline{font-size: 5vw;}
+</style>
+
+
+<main class="my-32 mx-auto">
+  <div class="pb-16">
+    <h2 style="sliderfullHeader" class="text-5xl w-full lg:max-w-4xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Effective marketing is simply no accident.
+    </h2>
+    <p class="text-lg mt-6 mb-8 text-slate-700 w-full lg:max-w-4xl">
+      Aidxn Design has worked with some of Australia's best performing brand strategies. 
+      Through in-depth research and analysis, we help you define your brand identity, tone, and positioning, 
+      setting the stage for success in all marketing landscapes, with ease and low-churn. Strategic approaches ensure results.
+    </p>
+  </div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-4 mb-24 gap-4 md:gap-8 gap-y-12">
+  {
+    clients.map((logo) => (
+    <div id="container" class="relative group">
+      <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+      <div id="cardInner" class="relative bg-gray-50 hover:bg-gray-100 ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
+        <div id="imgContainer" class="hover:bg-gray-100 duration-200 w-full rounded py-2 px-4">
+          <img src={logo.src} alt={logo.alt} class="w-full h-36" />
+        </div>
+      </div>
+    </div>
+    ))
+  }
+</div>
+</main>
