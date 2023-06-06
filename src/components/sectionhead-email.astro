@@ -2,24 +2,24 @@
 import Button from "./ui/button.astro";
 ---
 
-<div id="containerFlex" class="flex flex-col md:flex-row justify-start items-center">
-  <div id="leftContainer" class="w-full md:w-3/5 mt-16 mb-8">
-    <h1 class="text-6xl lg:text-7xl max-w-4xl font-bold lg:tracking-tight">
+<div id="containerFlex" class="flex flex-col md:flex-row justify-start items-center py-32">
+  <div id="leftContainer" class="w-full lg:w-3/5 mt-16 mb-8">
+    <h1 class="text-6xl lg:text-7xl max-w-6xl font-bold lg:tracking-tight">
       <slot name="title">Title</slot>
     </h1>
-    <p class="sm:text-lg text-xl max-w-2xl mt-4 mb-16 text-slate-600">
+    <p class="sm:text-lg text-xl max-w-2xl mt-8 mb-16 text-slate-600">
       <slot name="desc">Some description goes here</slot>
     </p>
-    <div id="formContainer" class="w-full lg:w-3/4">
+    <div id="formContainer" class="w-full lg:max-w-2xl">
       <h3 class="text-black text-lg md:text-2xl font-semibold mb-4">
-        Hear directly from Aiden how Velocity7 can help your business.
+        Hear directly from Aiden how Velocity7 can work with your business.
       </h3>
           <!-- To make this contact form work, create your free access key from https://web3forms.com/
           Then you will get all form submissions in your email inbox. -->
       <form netlify
         action="https://api.web3forms.com/submit"
         method="POST"
-        id="short-form-20hacks"
+        id="short-form-V7"
         class="needs-validation"
         novalidate>
 
@@ -27,7 +27,7 @@ import Button from "./ui/button.astro";
         <!-- Create your free access key from https://web3forms.com/ -->
         <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
         <div id="innerFormContainer" class="flex flex-col lg:flex-row gap-4">
-          <div class="my-4 w-full lg:w-2/5">
+          <div class="my-4 w-full lg:w-1/2">
             <input
               type="text"
               placeholder="Full Name"
@@ -61,7 +61,7 @@ import Button from "./ui/button.astro";
       </form>
     </div>
   </div>
-  <div id="rightContainer" class="w-full md:w-1/2 flex items-center justify-center">
+  <div id="rightContainer" class="w-full lg:w-2/5 flex items-center justify-center">
       <slot class="bg-grey-700 rounded" name="cover"></slot>
   </div>
 </div>
