@@ -137,7 +137,8 @@ const pricing = [
 
 
   <ContainerFW>
-    <SectionEmail>
+
+    <SectionHeadImg>
       <Fragment slot="title">
         Introducing Velocity7
       </Fragment>
@@ -145,25 +146,6 @@ const pricing = [
         The 7th version of our in-house framework, combining everything we know about good web design. 
         Developed over 5 years with these 3 points in mind. Conversion-focused design, performance-focused 
         code, to empower Aussie business with a serious online marketing precense for less. 
-      </Fragment>
-    </SectionEmail>
-
-  </ContainerFW>
-
-  <ContainerFW>
-    <FeaturesGrid />
-  </ContainerFW>
-
-  <ContainerXL>
-    <SectionHeadImg>
-      <Fragment slot="title">
-        Performance-focused code.
-      </Fragment>
-      <Fragment slot="desc">
-        Velocity is one of the most powerful and versatile website frameworks available. Version 7 built on the best of Web3 languages, AstroJS (in our humble opinion).
-        Completely accessible, seo-friendly code. Pre-integrated with the necessities, without losing any pageload performance.
-        Visually stunning, TailwindCSS styling, with codelinting and postcss preconfigured. 50+ user-friendly components worth of truly beautiful code.
-        Completely owned by your business with a lifetime license, so you don't need to worry about subscription traps again.
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -178,8 +160,13 @@ const pricing = [
                 />
       </Fragment>
     </SectionHeadImg>
-  </ContainerXL>
-  
+
+  </ContainerFW>
+
+  <ContainerFW>
+    <FeaturesGrid />
+  </ContainerFW>
+
   <ContainerXL>
     <SectionHeadSecImg>
       <Fragment slot="title">
@@ -202,6 +189,32 @@ const pricing = [
                 />
       </Fragment>
     </SectionHeadSecImg>
+  </ContainerXL>
+
+  <ContainerXL>
+    <SectionHeadImg>
+      <Fragment slot="title">
+        Performance-focused code.
+      </Fragment>
+      <Fragment slot="desc">
+        Velocity is one of the most powerful and versatile website frameworks available. Version 7 built on the best of Web3 languages, AstroJS (in our humble opinion).
+        Completely accessible, seo-friendly code. Pre-integrated with the necessities, without losing any pageload performance.
+        Visually stunning, TailwindCSS styling, with codelinting and postcss preconfigured. 50+ user-friendly components worth of truly beautiful code.
+        Completely owned by your business with a lifetime license, so you don't need to worry about subscription traps again.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={PagecoverThird}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadImg>
   </ContainerXL>
 
   <ContainerXL>
@@ -312,6 +325,10 @@ const pricing = [
   <Container>
     <Cta />
   </Container>
+
+  <ContainerXL>
+    <SectionEmail />
+  </ContainerXL>
 
   <ContainerFW>
     <GallerySlider />
