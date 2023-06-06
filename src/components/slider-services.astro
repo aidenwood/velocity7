@@ -288,9 +288,9 @@ main { min-height: fit-content !important; }
 
   .carousel-cell {
     min-width: 300px;
-    width: 33vw;
+    width: 85vw;
     margin-bottom: 20px;
-    max-width: 550px;
+    max-width: 95vw;
     min-height: 220px;
     margin-right: 20px;
     padding: 20px, 40px;
@@ -314,7 +314,7 @@ main { min-height: fit-content !important; }
 <div id="sliderContainer" class="main-carousel h-fit pb-4">
   {
     services.map((item) => (
-      <div id="productCard" class="carousel-cell bg-gray-50 py-8 px-4 h-fit rounded-xl shadow-sm hover:shadow-md duration-200">
+      <div id="productCard" class="carousel-cell flex md:flex-col flex-row bg-gray-50 py-8 px-4 h-fit rounded-xl shadow-sm hover:shadow-md duration-200">
           <div id="imgContainer" class="mt-2 p-2">
             <Picture
                   src={item.imgsrc}
@@ -330,10 +330,10 @@ main { min-height: fit-content !important; }
           <div class="px-4 py-3">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-lg md:text-2xl">{item.title}</h3>{" "}
-            <p class="text-xs text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
+            <p class="text-sm md:text-md text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
 
             <h4 class="text-sm md:text-md font-semibold">Includes:</h4>
-            <ul class="mb-4 px-4">
+            <ul class="mb-4">
               {item.inclusions.map((inclusion) => (
                 <li class="text-xs text-slate-700 mb-4">{inclusion}</li>
               ))}
