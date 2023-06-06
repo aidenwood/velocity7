@@ -1,6 +1,7 @@
 ---
 import Container from "@components/container.astro";
 import ContainerFW from "@components/container-fullwidth.astro";
+import ContainerXL from "@components/container-xl.astro";
 import Hero from "@components/hero.astro";
 import HeroSecondary from "@components/hero-secondary.astro";
 import Cta from "@components/cta.astro";
@@ -16,13 +17,13 @@ import Layout from "@layouts/Layout.astro";
     <Hero />
     <HeroSecondary />
   </ContainerFW>
-  <Container>
+  <ContainerXL>
     <Grid />
+    <Logos /> 
     <Cta />
-  </Container>
+  </ContainerXL>
   <ContainerFW>
     <GallerySlider />
     <BlogSlider />
-    <Logos /> 
   </ContainerFW>
 </Layout>
