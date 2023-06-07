@@ -11,105 +11,106 @@ import VideoProd from '../assets/3d-video.png';
 
 const features = [
   {
-    title: "Brand Design & Direction.",
+    title: "Brand Strategy.",
     description:
-      "Developed as 'guardrails' to help your business stay on track to create a beautiful, high converting website.",
+      "We create data-driven brand strategies that align with your target market naturally, avoiding huge marketing costs and churn in the future.",
     imgsrc: GraphicDesign,
     imgalt: "Brand Design and strategy direction for the age of social marketing.",
     link: "/design",
     style: "outline",
-    btntxt: "Brand Design",
+    btntxt: "Brand Strategy",
     buylink: "/stripelink",
     buystyle: "primary",
     buybtntxt: "Purchase",
   },
   {
-    title: "Web Dev & Automation.",
+    title: "Web Design.",
     description:
-      "Velocity7 is made to stay fast over the lifetime of your brand's development. Improving user experience, SEO and other vitals.",
+      "We've designed and developed over 200 websites over 10 years in the industry. Wordpress, Shopify or Velocity7, we've got you covered.",
     imgsrc: WebDesign,
     imgalt: "Gold Coast's best web design and development agency with over 10 years experience.",
     link: "/develop",
     style: "outline",
-    btntxt: "Web Development",
+    btntxt: "Web Design",
     buylink: "/stripelink",
     buystyle: "primary",
     buybtntxt: "Purchase",
   },
   {
-    title: "Ad Strategy & Management.",
+    title: "Marketing.",
     description:
-      "Built in conversion tracking to run highly successful ads instantly with Pixel-friendly code, automatic sitemaps and social tags.",
+      "We design and manage complete marketing strategies, from animated ad sets for Google Display Network to Lead Gen automation setup.",
     imgsrc: Marketing,
     imgalt: "Ad strategy management on the Gold Coast without the giant fees.",
     link: "/leadgen",
     style: "outline",
-    btntxt: "Lead Generation",
+    btntxt: "Marketing",
     buylink: "/stripelink",
     buystyle: "primary",
     buybtntxt: "Purchase",
   },
   {
-    title: "Videography & 3D Design.",
+    title: "Videography.",
     description:
-      "Reduce developer costs with 30+ commonly used components built-in with high performance, from image sliders / galleries to product cards and grids.",
+      "Let our team come in for a highly structured day of professional video production, resulting in months worth of video content for your business.",
     imgsrc: VideoProd,
     imgalt: "3D Video Design and Videography Production for Marketing",
     link: "/video",
     style: "outline",
-    btntxt: "Video Production",
+    btntxt: "Videography",
     buylink: "/stripelink",
     buystyle: "primary",
     buybtntxt: "Purchase",
   },
 ];
 ---
+<main class="my-48 md:my-32">
+  <div class="mb-8">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      Design, Develop. Market, Moonshot.
+    </h2>
+    <p class="text-lg max-w-4xl mt-4 text-slate-600">
+      We've got you covered from A-Z of online business development, backed by over 10+ years of developer experience and 6+ years of marketing strategy management experience.
+    </p>
+  </div>
 
-<div class="mt-16 mb-8">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Design, Develop. Market, Moonshot.
-  </h2>
-  <p class="text-lg max-w-4xl mt-4 text-slate-600">
-    We've got you covered from A-Z of online business development, backed by over 10+ years of developer experience and 6+ years of marketing strategy management experience.
-  </p>
-</div>
-
-<div class="grid md:grid-cols-2 my-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div id="card" class="w-full h-full bg-gray-50 hover:bg-gray-100 shadow-sm hover:shadow-lg duration-200 rounded px-8 py-16">
-          <div id="imgContainer" class="mt-1 p-2 w-48 h-48">
-            <Picture
-                  src={item.imgsrc}
-                  sizes="(max-width: 1000px) 1000px, 500px"
-                  widths={[500, 1000]}
-                  aspectRatio="1:1"
-                  background="#f2f2f2"
-                  fit="cover"
-                  position="center"
-                  class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-                />
-          </div>
-          <div>
-            <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
-            <p class="text-slate-500 max-w-3xl mt-2 mb-6 leading-relaxed">{item.description}</p>
-            <Link 
-              class="mr-4"
-              href={item.link || "#"}
-              block
-              style={item.style ? "primary" : "outline"}>
-              {item.btntxt || "Get Started"}
-            </Link>
-            <Link
-              href={item.buylink || "#"}
-              inlineblock
-              style={item.buystyle ? "primary" : "outline"}>
-              {item.buybtntxt || "Get Started"}
-            </Link>
+  <div class="grid md:grid-cols-2 my-16 gap-16">
+    {
+      features.map((item) => (
+        <div class="flex gap-4 items-start">
+          <div id="card" class="w-full h-full bg-gray-50 hover:bg-gray-100 shadow-sm hover:shadow-lg duration-200 rounded px-8 py-16">
+            <div id="imgContainer" class="mt-1 p-2 w-48 h-48">
+              <Picture
+                    src={item.imgsrc}
+                    sizes="(max-width: 1000px) 1000px, 500px"
+                    widths={[500, 1000]}
+                    aspectRatio="1:1"
+                    background="#f2f2f2"
+                    fit="cover"
+                    position="center"
+                    class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                  />
+            </div>
+            <div>
+              <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
+              <p class="text-slate-500 max-w-3xl mt-2 mb-6 leading-relaxed">{item.description}</p>
+              <Link 
+                class="mr-4"
+                href={item.link || "#"}
+                block
+                style={item.style ? "primary" : "outline"}>
+                {item.btntxt || "Get Started"}
+              </Link>
+              <Link
+                href={item.buylink || "#"}
+                inlineblock
+                style={item.buystyle ? "primary" : "outline"}>
+                {item.buybtntxt || "Get Started"}
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    ))
-  }
-</div>
+      ))
+    }
+  </div>
+</main>
