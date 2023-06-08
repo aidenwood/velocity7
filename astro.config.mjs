@@ -8,7 +8,13 @@ import alpinejs from "@astrojs/alpinejs";
 // https://astro.build/config
 export default defineConfig({
   site: "https://astroship.web3templates.com",
-  integrations: [tailwind(), image({
+  integrations: [tailwind(
+    {
+      config: {
+        applyBaseStyles: false,
+      },
+    }
+  ), image({
     serviceEntryPoint: "@astrojs/image/sharp"
   }), mdx(), sitemap(), alpinejs()]
 });
