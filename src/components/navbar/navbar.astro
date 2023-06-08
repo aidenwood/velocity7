@@ -7,31 +7,28 @@ import aidxnLogo from 'assets/aidxn-logo-meridian.svg';
 
 const menuitems = [
   {
-    title: "About",
-    path: "/about",
+    title: "Brand Strategy",
+    path: "/brand-strategy",
   },
   {
-    title: "Velocity7",
+    title: "Web Design",
     path: "/velocity7",
   },
   {
-    title: "Services",
-    path: "/services",
-    children: [
-      { title: "Brand Strategy", path: "/brand-strategy" },
-      { title: "Web Design", path: "/web-design" },
-      { title: "Web Development", path: "/web-development" },
-      { title: "Ad Production", path: "/ad-production" },
-      { title: "Services Info", path: "/services-info" },
-    ],
-  },
-  {
-    title: "Pricing",
-    path: "/pricing",
+    title: "Marketing",
+    path: "/marketing",
   },
   {
     title: "Blog",
     path: "/blog",
+    children: [
+      { title: "All Posts", path: "/blog" },
+      { title: "Brand Strategy", path: "/blog#brand-strategy" },
+      { title: "Web Design", path: "/blog#web-design" },
+      { title: "Marketing", path: "/blog#marketing" },
+      { title: "Automation", path: "/blog#automation" },
+      { title: "What do we do?", path: "/about" },
+    ],
   },
 ];
 ---
