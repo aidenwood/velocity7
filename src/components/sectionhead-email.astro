@@ -2,14 +2,15 @@
 import Button from "./ui/button.astro";
 ---
 
-<div id="containerFlex" class="flex flex-col md:flex-row justify-start items-center py-32">
+<div id="containerFlex" class="flex flex-col md:flex-row justify-start items-center py-32 md:py-16">
   <div id="leftContainer" class="w-full lg:w-3/5 mt-16 mb-8">
     <h1 class="text-6xl lg:text-7xl max-w-6xl font-bold lg:tracking-tight">
       <slot name="title">Title</slot>
     </h1>
-    <p class="sm:text-lg text-xl max-w-2xl mt-8 mb-16 text-slate-600">
+    <p class="sm:text-lg text-xl max-w-4xl mt-8 mb-16 text-slate-600">
       <slot name="desc">Some description goes here</slot>
     </p>
+    
     <div id="formContainer" class="w-full lg:max-w-2xl">
       <h3 class="text-black text-lg md:text-2xl font-semibold mb-4">
         Hear directly from Aiden how Velocity7 can work with your business.

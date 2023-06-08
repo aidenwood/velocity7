@@ -8,24 +8,22 @@ import Clients from "@components/grid-3x3-clients.astro";
 import Cta from "@components/cta.astro";
 import Grid from "@components/grid-2x2.astro";
 import BlogSlider from "@components/slider-content.astro";
-import GallerySlider from "@components/slider-services.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Aidxn Code & Design">
-  <ContainerFW>
+  <ContainerXL>
     <Hero />
     <HeroSecondary />
-  </ContainerFW>
+  </ContainerXL>
   <Container>
     <Grid />
     <Cta />
     <Clients />
     <Logos /> 
   </Container>
-  <ContainerXL>
-    <GallerySlider />
+  <ContainerFW>
     <BlogSlider />
-  </ContainerXL>
+  </ContainerFW>
 </Layout>
