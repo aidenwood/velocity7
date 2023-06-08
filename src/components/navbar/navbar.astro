@@ -4,6 +4,7 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import aidxnLogo from 'assets/aidxn-logo-meridian.svg';
+import { on } from 'astro';
 
 const menuitems = [
   {
@@ -32,21 +33,18 @@ const menuitems = [
   },
 ];
 ---
+
 <style>
   #navLogo {height: 90px; max-width: 55vw;} 
   header {position: sticky; top: 0;}
 </style>
 
-  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-  
-  
 <Container>
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class=""
-          ><img id="navLogo" src={aidxnLogo} alt="Aidxn Design - Code by Aiden Wood"/>
+        <a href="/" class="">
+          <img id="navLogo" src={aidxnLogo} alt="Aidxn Design - Code by Aiden Wood"/>
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -69,7 +67,8 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"
+                    >
                       {item.title}
                     </a>
                   </li>
@@ -78,10 +77,10 @@ const menuitems = [
             ))
           }
         </ul>
-        
-        
+
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link style="inverted" data-netlify-identity-button block size="md"></Link>
+          <Link id="dashboard-button" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900" style="display: none;">Dashboard</Link>
           <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md" block>Book</Link>
         </div>
       </MenuItems>
@@ -89,10 +88,33 @@ const menuitems = [
     <div>
       <div class="hidden lg:flex items-center gap-4">
         <Link style="inverted" data-netlify-identity-button size="md"></Link>
+        <Link id="dashboard-button" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900" style="display: none;">Dashboard</Link>
         <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md">Book</Link>
       </div>
     </div>
   </header>
 </Container>
 
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+<script type="text/javascript">
+  on.mounted(() => {
+    const netlifyIdentity = window.netlifyIdentity;
+    netlifyIdentity.init();
+
+    function showDashboardButton() {
+      const user = netlifyIdentity.currentUser();
+      const dashboardButton = document.getElementById('dashboard-button');
+
+      if (user) {
+        dashboardButton.style.display = 'flex';
+      } else {
+        dashboardButton.style.display = 'none';
+      }
+    }
+
+    showDashboardButton();
+    netlifyIdentity.on('login', showDashboardButton);
+    netlifyIdentity.on('logout', showDashboardButton);
+  });
+</script>
