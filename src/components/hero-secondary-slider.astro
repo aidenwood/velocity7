@@ -7,6 +7,32 @@ import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 
 ---
+
+<!-- Flickity -->
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<!-- Flickity Custom Styles -->
+<style>
+  .heroSecondary-carousel {
+  margin-right: 10px;
+  padding: 20px, 40px;
+  width: 575px;
+  max-width: 85vw;
+}
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -22px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
+</style>
+
 <style>
   svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
   #heroTagline{font-size: 5vw;}
@@ -47,8 +73,8 @@ import { Icon } from "astro-icon";
 
   <div id="rightContainer" class="w-full md:w-2/5 lg:w-1/4">
 
-    <div class="fullSliderContainer">
-      <div class="singleSlideContainer">
+    <div class="heroSecondary-carousel">
+      <div class="carousel-cell">
           <div class="flex flex-row md:flex-col rounded-lg shadow-2xl overflow-hidden">
             <div class="h-56 sm:w-auto lg:w-full relative flex  items-center justify-center">
               <Icon class="h-16 md:h-24" name="simple-icons:stripe" />
@@ -94,3 +120,15 @@ import { Icon } from "astro-icon";
 </div>
 
 </main>
+
+<script>
+  // element argument can be a selector string
+  //   for an individual element
+  var flkty = new Flickity( '.heroSecondary-carousel', {
+  cellAlign: 'left',
+  contain: true,
+  autoPlay: 1500,
+  groupCells: 4,
+  prevNextButtons: false,
+  });
+</script>
