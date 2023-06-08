@@ -1,0 +1,133 @@
+---
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+import GraphicDesign from '../assets/graph-des.png';
+import WebDesign from '../assets/web-dev.png';
+import Marketing from '../assets/dig-mark.png';
+import VideoProd from '../assets/3d-video.png';
+
+const features = [
+  {
+    title: "Brand Strategy.",
+    description:
+      "We create data-driven brand strategies that align with your target market naturally, avoiding huge marketing costs and churn in the future.",
+    imgsrc: GraphicDesign,
+    imgalt: "Brand Design and strategy direction for the age of social marketing.",
+    link: "/design",
+    style: "outline",
+    icon: "ph:intersect",
+    btntxt: "Brand Strategy",
+    buylink: "/stripelink",
+    buystyle: "primary",
+    buybtntxt: "Purchase",
+  },
+  {
+    title: "Web Design.",
+    description:
+      "We've designed and developed over 200 websites over 10 years in the industry. Wordpress, Shopify or Velocity7, we've got you covered.",
+    imgsrc: WebDesign,
+    imgalt: "Gold Coast's best web design and development agency with over 10 years experience.",
+    link: "/develop",
+    style: "outline",
+    icon: "ph:intersect",
+    btntxt: "Web Design",
+    buylink: "/stripelink",
+    buystyle: "primary",
+    buybtntxt: "Purchase",
+  },
+  {
+    title: "Marketing.",
+    description:
+      "We design and manage complete marketing strategies, from animated ad sets for Google Display Network to Lead Gen automation setup.",
+    imgsrc: Marketing,
+    imgalt: "Ad strategy management on the Gold Coast without the giant fees.",
+    link: "/leadgen",
+    style: "outline",
+    icon: "ph:intersect",
+    btntxt: "Marketing",
+    buylink: "/stripelink",
+    buystyle: "primary",
+    buybtntxt: "Purchase",
+  },
+  {
+    title: "Videography.",
+    description:
+      "Let our team come in for a highly structured day of professional video production, resulting in months worth of video content for your business.",
+    imgsrc: VideoProd,
+    imgalt: "3D Video Design and Videography Production for Marketing",
+    link: "/video",
+    style: "outline",
+    icon: "ph:intersect",
+    btntxt: "Videography",
+    buylink: "/stripelink",
+    buystyle: "primary",
+    buybtntxt: "Purchase",
+  },
+];
+---
+<!-- Flickity -->
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<!-- Flickity Custom Styles -->
+<style>
+  .carousel-cell {
+  margin-right: 10px;
+  padding: 20px, 40px;
+  width: 575px;
+  max-width: 85vw;
+}
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -22px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
+</style>
+
+<main class="my-48 md:my-32">
+    <div class="mb-8">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+        Design, Develop. Market, Moonshot.
+      </h2>
+      <p class="text-lg max-w-4xl mt-4 text-slate-600">
+        We've got you covered from A-Z of online business development, backed by over 10+ years of developer experience and 6+ years of marketing strategy management experience.
+      </p>
+    </div>
+  <div class="features-carousel grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-16 pb-16">
+    {
+      features.map((item) => (
+      <div id="container" class="carousel-cell relative group">
+        <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+        <div id="cardInner" class="relative px-4 py-8 bg-gray-50 hover:bg-gray-100 duration-200 ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
+          <div class="mt-1 bg-black rounded-full p-2 w-12 h-12 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h3 class="font-semibold text-xl">{item.title}</h3>{" "}
+            <p class="text-slate-700 group-hover:text-slate-800 mt-2 pr-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      </div>
+      ))
+    }
+  </div>
+</main>
+
+<script>
+  // element argument can be a selector string
+  //   for an individual element
+  var flkty = new Flickity( '.features-carousel', {
+  cellAlign: 'left',
+  contain: true,
+  autoPlay: 1500,
+  groupCells: 4,
+  prevNextButtons: false,
+  });
+</script>
