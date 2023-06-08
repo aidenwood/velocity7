@@ -80,7 +80,7 @@ const menuitems = [
 
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link style="inverted" data-netlify-identity-button block size="md"></Link>
-          <Link href="https://aidxn.com/dashboard" id="dashboard-button" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900" style="display: none;">Dashboard</Link>
+          <Link class="dashboard-button flex lg:px-3 py-2 text-gray-600 hover:text-gray-900" style="display: none;">Dashboard</Link>
           <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md" block>Book</Link>
         </div>
       </MenuItems>
@@ -88,7 +88,7 @@ const menuitems = [
     <div>
       <div class="hidden lg:flex items-center gap-4">
         <Link style="inverted" data-netlify-identity-button size="md"></Link>
-        <Link href="https://aidxn.com/dashboard" id="dashboard-button" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900" style="display: none;">Dashboard</Link>
+        <Link class="dashboard-button flex lg:px-3 py-2 text-gray-600 hover:text-gray-900" style="display: none;">Dashboard</Link>
         <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md">Book</Link>
       </div>
     </div>
@@ -104,12 +104,16 @@ const menuitems = [
 
     function showDashboardButton() {
       const user = netlifyIdentity.currentUser();
-      const dashboardButton = document.getElementById('dashboard-button');
+      const dashboardButtons = document.querySelectorAll('.dashboard-button');
 
       if (user) {
-        dashboardButton.style.display = 'flex';
+        dashboardButtons.forEach(button => {
+          button.style.display = 'flex';
+        });
       } else {
-        dashboardButton.style.display = 'none';
+        dashboardButtons.forEach(button => {
+          button.style.display = 'none';
+        });
       }
     }
 
