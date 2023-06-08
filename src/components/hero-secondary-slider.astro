@@ -39,26 +39,21 @@ import { Icon } from "astro-icon";
 }
 
 body {
-  background: #1488cc;
-  /* fallback for old browsers */
-  background: linear-gradient(to left, #283593, #1976d2);
   height: 100vh;
   font-family: "Josefin Sans", sans-serif;
 }
 
 /* Background circles start */
 .circle {
-  position: absolute;
+  position: relative;
   border-radius: 50%;
-  background: radial-gradient(#006db3, #29b6f6);
 }
 .circles {
-  position: absolute;
+  position: relative;
   height: 270px;
   width: 450px;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,50%);
 }
 .circle-1 {
   height: 180px;
@@ -76,7 +71,7 @@ body {
 /* Background circles end */
 
 .card-group {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
