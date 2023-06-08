@@ -5,9 +5,23 @@
 @layer base {
   @font-face {
     font-family: 'wotfard';
-    font-style: semi-bold;
-    font-weight: 600;
+    font-style: normal;
+    font-weight: 500;
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
     src: url('/fonts/wotfard-semibold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'wotfard';
+    font-style: bold;
+    font-weight: 700;
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/wotfard-bold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'wotfard-light';
+    font-style: thin;
+    font-weight: 300;
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/wotfard-bold.woff2') format('woff2');
   }
 }
