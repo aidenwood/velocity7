@@ -34,7 +34,7 @@ const menuitems = [
 ---
 
 <style>
-  #navLogo {height: 90px; max-width: 55vw;} 
+  #navLogo {height: 75px; max-width: 55vw;} 
   header {position: sticky; top: 0;}
 </style>
 
@@ -50,7 +50,7 @@ const menuitems = [
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
+        <ul class="flex flex-col lg:flex-row lg:gap-4">
           {
             menuitems.map((item, index) => (
               <>
@@ -79,7 +79,7 @@ const menuitems = [
 
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link style="inverted" data-netlify-identity-button block size="md"></Link>
-          <Link href="https://aidxn.com/dashboard" class="dashboard-button lg:px-3 py-2 text-gray-600 hover:text-gray-900 hidden">Dashboard</Link>
+          <Link href="https://aidxn.com/dashboard" class="dashboard-button hidden">Dashboard</Link>
           <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md" block>Book</Link>
         </div>
       </MenuItems>
@@ -87,7 +87,7 @@ const menuitems = [
     <div>
       <div class="hidden lg:flex items-center gap-4">
         <Link style="inverted" data-netlify-identity-button size="md"></Link>
-        <Link href="https://aidxn.com/dashboard" class="dashboard-button lg:px-3 py-2 text-gray-600 hover:text-gray-900 hidden">Dashboard</Link>
+        <Link href="https://aidxn.com/dashboard" class="dashboard-button hidden">Dashboard</Link>
         <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md">Book</Link>
       </div>
     </div>
