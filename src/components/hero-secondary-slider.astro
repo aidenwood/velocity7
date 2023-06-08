@@ -1,0 +1,96 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Dash from "../assets/dashboard.png";
+import Chart from "../assets/chart.png";
+import Payment from "../assets/payment.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+
+---
+<style>
+  svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
+  #heroTagline{font-size: 5vw;}
+</style>
+
+
+<main class="my-32 md:my-16">
+<div id="heroSection" class="flex flex-col sm:flex-row items-center">
+  
+  <div id="leftContainer" class="w-full md:w-3/5 lg:w-4/5 pt-8 md:pt-16 md:pr-16">
+
+    <div class="py-6">
+      <h2 style="heroTagline" class="text-5xl lg:text-7xl w-full font-bold tracking-tighter">
+        Launch your business to the edge.
+      </h2>
+      <p class="text-lg mt-6 text-slate-700 w-full lg:max-w-4xl">
+        If you're trying to run a business in the land of "has anyone got any service?", you'll want your site blazin'.
+        That's exactly what we designed Velocity7 for, integrated with everything you need without lacking performance.
+        Out-performing some of the biggest names in the industry to migrate to the edge for less. Infinitely extendable.
+      </p>
+      <div class="mt-12 flex flex-col sm:flex-row gap-3">
+        <a href="https://aidxn.com/velocity7" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-black text-white hover:bg-gray-800 border-2 border-transparent flex gap-1 items-center justify-center"><svg viewBox="0 0 24 24" class="text-white w-5 h-5" astro-icon="ph:lightning-fill">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M9.94 2.512a20.75 20.75 0 0 1 4.692 0l1.596.182a.75.75 0 0 1 .62 1.003l-2.203 6.016H17a.75.75 0 0 1 .702 1.014l-.19.507a35.749 35.749 0 0 1-5.535 9.745l-.391.49A.75.75 0 0 1 10.25 21v-7.152H8.429a.75.75 0 0 1-.748-.684l-.122-1.382a39.75 39.75 0 0 1 0-7.027l.122-1.382a.75.75 0 0 1 .663-.68l1.595-.18Zm4.523 1.49a19.25 19.25 0 0 0-4.354 0l-.987.113l-.069.772c-.2 2.25-.2 4.513 0 6.763l.062.698H11a.75.75 0 0 1 .75.75v5.704a34.251 34.251 0 0 0 4.163-7.589H13.57a.75.75 0 0 1-.704-1.007l2.244-6.13l-.648-.073Z" clip-rule="evenodd"/></svg>          </svg>
+
+          Velocity7
+
+        </a>
+        <a href="https://aidxn.com/about" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white border-2 border-black hover:bg-gray-100 text-black flex gap-1 items-center justify-center"><svg viewBox="0 0 24 24" class="text-black w-4 h-4" astro-icon="ph:table">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="evenOdd" d="M14.604 2.76a20.5 20.5 0 0 0-4.637 0l-1.595.182a.5.5 0 0 0-.441.453l-.123 1.382a39.5 39.5 0 0 0 0 6.983l.123 1.382a.5.5 0 0 0 .498.456H10.5V21a.5.5 0 0 0 .89.312l.391-.49a35.5 35.5 0 0 0 5.497-9.676l.19-.507A.5.5 0 0 0 17 9.963h-2.713l2.325-6.352a.5.5 0 0 0-.413-.669l-1.595-.181Z"/></svg>
+        </svg>
+          
+          Performance Comparisions
+
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="rightContainer" class="relative px-8 lg:px-16 pb-32 my-16 h-full w-full md:w-2/5 lg:w-1/5 lg:pb-0 lg:mt-0 group">
+
+    <div class="bg-gray-200 min-h-screen">
+      <div class="max-w-6xl mx-auto px-8 py-16">
+        <div class="relative">
+          <div class="relative lg:flex rounded-lg shadow-2xl overflow-hidden">
+            <div class="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center">
+              <img class="absolute h-full w-full object-cover" src="https://stripe.com/img/v3/payments/overview/photos/slack.jpg" alt="" />
+              <div class="absolute inset-0 bg-indigo-900 opacity-75"></div>
+              <svg class="relative" width="200" height="120" viewBox="0 0 200 120">
+              <path fill="#fff" fill-rule="evenodd" d="M63.75 75.24l2.5-5.93c2.7 2.05 6.3 3.13 9.85 3.13 2.61 0 4.27-1.03 4.27-2.6-.04-4.37-15.7-.95-15.82-11.9-.04-5.58 4.8-9.86 11.66-9.86 4.08 0 8.16 1.03 11.06 3.38l-2.34 6.05c-2.66-1.73-5.97-2.97-9.12-2.97-2.13 0-3.55 1.03-3.55 2.36.04 4.28 15.82 1.94 15.98 12.4 0 5.7-4.72 9.69-11.5 9.69-4.96 0-9.52-1.2-12.99-3.75zm96.01-8.08a7.16 7.16 0 0 1-8.11 3.5 7.35 7.35 0 0 1-5.38-7.13c0-3.34 2.2-6.27 5.38-7.12 3.16-.85 6.5.58 8.11 3.5l6.9-3.93a15.02 15.02 0 0 0-17.03-7.42 15.42 15.42 0 0 0-11.33 14.97c0 7.04 4.66 13.2 11.33 14.97a15.02 15.02 0 0 0 17.04-7.43l-6.9-3.9zM91.71 35.25h8.64v43.16h-8.64V35.25zm78.34 0v43.16h8.65V65.48l10.25 12.93H200l-13.03-15.37 12.06-14.34h-10.58l-9.76 11.9V35.25h-8.64zm-43.82 31.1a8.14 8.14 0 0 1-6.83 3.56 7.24 7.24 0 0 1-7.33-7.16 7.24 7.24 0 0 1 7.33-7.15 8.1 8.1 0 0 1 6.83 3.67v7.08zm0-18v3.4c-1.43-2.36-5-4-8.72-4-7.7 0-13.76 6.64-13.76 14.96 0 8.33 6.07 15.04 13.76 15.04 3.73 0 7.3-1.63 8.72-4v3.4H135v-28.8h-8.77zM10.53 66.4A5.32 5.32 0 0 1 5.3 71.8 5.32 5.32 0 0 1 .04 66.4a5.32 5.32 0 0 1 5.25-5.38h5.25v5.38zm2.63 0a5.32 5.32 0 0 1 5.25-5.38c2.9 0 5.25 2.4 5.25 5.38v13.46a5.32 5.32 0 0 1-5.25 5.39 5.32 5.32 0 0 1-5.25-5.39V66.4zm5.26-21.63a5.32 5.32 0 0 1-5.25-5.38A5.32 5.32 0 0 1 18.42 34c2.9 0 5.25 2.41 5.25 5.39v5.38h-5.25zm0 2.74c2.9 0 5.25 2.41 5.25 5.39a5.32 5.32 0 0 1-5.25 5.38H5.25A5.32 5.32 0 0 1 0 52.9a5.32 5.32 0 0 1 5.25-5.39h13.17zm21.03 5.39a5.32 5.32 0 0 1 5.25-5.39c2.9 0 5.25 2.41 5.25 5.39a5.32 5.32 0 0 1-5.25 5.38h-5.25V52.9zm-2.62 0a5.32 5.32 0 0 1-5.25 5.38 5.32 5.32 0 0 1-5.25-5.38V39.39A5.32 5.32 0 0 1 31.58 34c2.9 0 5.25 2.41 5.25 5.39v13.5zm-5.25 21.58c2.9 0 5.25 2.41 5.25 5.38a5.32 5.32 0 0 1-5.25 5.39 5.32 5.32 0 0 1-5.25-5.39v-5.38h5.25zm0-2.7a5.32 5.32 0 0 1-5.25-5.38 5.32 5.32 0 0 1 5.25-5.38h13.17c2.9 0 5.25 2.4 5.25 5.38a5.32 5.32 0 0 1-5.25 5.39H31.58z"/>
+            </svg>
+            </div>
+            <div class="relative lg:w-7/12 bg-white">
+              <svg class="absolute h-full text-white w-24 -ml-12" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon points="50,0 100,0 50,100 0,100"/>
+            </svg>
+              <div class="relative py-12 lg:py-24 px-8 lg:px-16 text-gray-700 leading-relaxed">
+                <p>
+                  As <strong class="text-gray-900 font-medium">Slack</strong> grows rapidly, using Stripe helps them scale payments easily &mdash; supporting everything from getting paid by users around the world to enabling ACH payments for corporate customers.
+                </p>
+                <p class="mt-6">
+                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-900">Learn more about our users &rarr;</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-y-0 left-0 lg:flex lg:items-center">
+            <button class="mt-24 lg:mt-0 -ml-6 h-12 w-12 rounded-full bg-white p-3 shadow-lg">
+            <svg class="h-full w-full text-indigo-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5.41 11H21a1 1 0 0 1 0 2H5.41l5.3 5.3a1 1 0 0 1-1.42 1.4l-7-7a1 1 0 0 1 0-1.4l7-7a1 1 0 0 1 1.42 1.4L5.4 11z"/>
+            </svg>
+          </button>
+          </div>
+          <div class="absolute inset-y-0 right-0 lg:flex lg:items-center">
+            <button class="mt-24 lg:mt-0 -mr-6 h-12 w-12 rounded-full bg-white p-3 shadow-lg">
+            <svg class="h-full w-full text-indigo-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z"/>
+            </svg>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+</main>
