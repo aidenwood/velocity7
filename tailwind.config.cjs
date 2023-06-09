@@ -5,9 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        h1, h2, h3: ["wotfard", "InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
-        h4: ["wotfard-bold", "InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
-        p: ["wotfard-thin", "InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["wotfard", "InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
     },
   },
