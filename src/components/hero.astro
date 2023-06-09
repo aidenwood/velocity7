@@ -5,15 +5,27 @@ import { Icon } from "astro-icon";
 
 <!-- SVG CSS and Animate for Aidxn Moving Logo -->
 <style>
+.glassCard {     
+    background: rgba(255,255,255,.2);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255,255,255,.1);
+    box-shadow: 0 0 80px #0003;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 45px 15px;
+    margin: 45px 15px; 
+}
+
   svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
 </style>
 
 <main class="my-32 md:my-16">
   <div id="heroSection" class="flex flex-col-reverse md:flex-row place-items-center mb-8">
     
-    <div id="glassCard" class="w-full md:w-3/5 lg:w-3/4 py-6">
+    <div class="w-full md:w-3/5 lg:w-3/4 py-6">
 
-      <div class="py-6">
+      <div id="glassCard">
         <h1 style="heroTagline" class="text-5xl lg:text-7xl w-full pt-8 md:pt-16 md:pr-16 font-bold tracking-tighter">
           Where code meets design.
         </h1>
