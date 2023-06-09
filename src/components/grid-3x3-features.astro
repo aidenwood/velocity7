@@ -95,13 +95,13 @@ const features = [
 
 <main class="pt-8 mb-16 pb-16">
 
-  <div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 mt-4 gap-4 md:gap-8 gap-y-12">
+  <div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 mt-4 gap-4 md:gap-8 gap-y-4">
     {
       features.map((item) => (
       <div id="container" class="relative group">
         <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-        <div id="cardInner" class="relative px-4 py-8 bg-gray-50 hover:bg-gray-100 duration-200 ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-6">
-          <div class="mt-1 bg-black rounded-full p-2 w-16 h-16 shrink-0">
+        <div id="cardInner" class="relative px-4 py-8 bg-gray-50 hover:bg-gray-100 duration-200 ring-1 ring-gray-300 rounded-lg leading-none flex items-top justify-start space-x-4">
+          <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 lg:w-16 lg:h-16 shrink-0">
             <Icon class="text-white" name={item.icon} />
           </div>
           <div>

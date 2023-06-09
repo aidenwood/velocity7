@@ -25,3 +25,18 @@
     src: url('/fonts/wotfard-bold.woff2') format('woff2');
   }
 }
+
+.glassCard {     
+    background: rgba(255,255,255,.2);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255,255,255,.1);
+    box-shadow: 0 0 80px #0003;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 45px 15px;
+    margin: 45px 15px; 
+}
+
+/* Small SVG CSS and Animate for Aidxn Moving Logo - Secondary element for icon use of WEB DESIGN PRODUCTS */
+  svg{width:64px;height:64px;perspective:50px}circle{stroke:#420065;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}

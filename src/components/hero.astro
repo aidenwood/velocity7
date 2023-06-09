@@ -3,23 +3,22 @@ import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
 
-
+<!-- SVG CSS and Animate for Aidxn Moving Logo -->
 <style>
   svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
-  #heroTagline{font-size: 5vw;}
 </style>
 
 <main class="my-32 md:my-16">
   <div id="heroSection" class="flex flex-col-reverse md:flex-row place-items-center mb-8">
     
-    <div class="w-full md:w-3/5 lg:w-3/4 py-6">
+    <div id="glassCard" class="w-full md:w-3/5 lg:w-3/4 py-6">
 
       <div class="py-6">
         <h1 style="heroTagline" class="text-5xl lg:text-7xl w-full pt-8 md:pt-16 md:pr-16 font-bold tracking-tighter">
           Where code meets design.
         </h1>
         <p class="text-lg mt-6 text-slate-700 w-full lg:max-w-3xl">
-          10+ years designing & developing websites, plus 6+ years creating & managing marketing strategies, all in a single point of contact. Ditch the hot potato responsibility of agencies and come back to earth. Then buckle up for launch, we build websites that live on the edge.
+          10+ years designing & developing websites, plus 6+ years creating & managing marketing strategies, creates a single point of contact for digital growth. Buckle up for launch space-cowboy, we're going to the edge.
           <wbr>
         </p>
         <div class="mt-12 flex flex-col sm:flex-row gap-3">

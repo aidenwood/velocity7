@@ -2,7 +2,7 @@
 import Button from "./ui/button.astro";
 ---
 
-<div id="containerFlex" class="flex flex-col md:flex-row justify-start items-center py-32 md:py-16">
+<div id="containerFlex" class="flex flex-col-reverse md:flex-row justify-start items-center py-16 md:py-8">
   <div id="leftContainer" class="w-full lg:w-3/5 mt-16 mb-8">
     <h1 class="text-6xl lg:text-7xl max-w-6xl font-bold lg:tracking-tight">
       <slot name="title">Title</slot>
@@ -12,8 +12,8 @@ import Button from "./ui/button.astro";
     </p>
     
     <div id="formContainer" class="w-full lg:max-w-2xl">
-      <h3 class="text-black text-lg md:text-2xl font-semibold mb-4">
-        Hear directly from Aiden how Velocity7 can work with your business.
+      <h3 name="emailTitle" class="text-black text-xl md:text-3xl font-semibold mb-4">
+        Let's quickly chat about what you want from your website.
       </h3>
           <!-- To make this contact form work, create your free access key from https://web3forms.com/
           Then you will get all form submissions in your email inbox. -->
@@ -27,8 +27,8 @@ import Button from "./ui/button.astro";
         <input type="hidden" name="access_key" value="1e0ffadd-2f05-471b-bbc2-36fa32793837" />
         <!-- Create your free access key from https://web3forms.com/ -->
         <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
-        <div id="innerFormContainer" class="flex flex-col lg:flex-row gap-4">
-          <div class="my-4 w-full lg:w-1/2">
+        <div id="innerFormContainer" class="flex flex-col lg:flex-row gap-4 my-4">
+          <div class="my-2 w-full lg:w-1/2">
             <input
               type="text"
               placeholder="Full Name"
@@ -40,7 +40,7 @@ import Button from "./ui/button.astro";
               Please provide your full name.
             </div>
           </div>
-          <div class="my-4 w-full lg:w-1/2">
+          <div class="my-2 w-full lg:w-1/2">
             <label for="email_address" class="sr-only">Email Address</label><input
               id="email_address"
               type="email"
@@ -62,7 +62,7 @@ import Button from "./ui/button.astro";
       </form>
     </div>
   </div>
-  <div id="rightContainer" class="w-full lg:w-2/5 flex items-center justify-center">
+  <div id="rightContainer" class="w-3/4 lg:w-2/5 flex items-center justify-center">
       <slot class="bg-grey-700 rounded" name="cover"></slot>
   </div>
 </div>
