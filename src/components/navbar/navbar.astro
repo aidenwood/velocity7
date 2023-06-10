@@ -112,7 +112,9 @@ const menuitems = [
         });
       } else {
         dashboardButtons.forEach(button => {
-          button.style.display = 'none';
+          dashboardButtons.forEach(button => {
+            button.style.display = 'none';
+          });
         });
       }
     }
