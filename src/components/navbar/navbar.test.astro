@@ -1,0 +1,19 @@
+import { render } from "@astrojs/testing";
+import Navbar from "./navbar.astro";
+
+describe("Navbar", () => {
+  it("should show dashboard button when user logs in", async () => {
+    // Mock the netlifyIdentity object
+    window.netlifyIdentity = {
+      init: jest.fn(),
+      currentUser: jest.fn(() => ({ email: "test@example.com" })),
+      on: jest.fn(),
+    };
+
+    // Render the Navbar component
+    const { getByText } = await render(<Navbar />);
+
+    // Expect the dashboard button to be visible
+    expect(getByText("Dashboard")).toBeVisible();
+  });
+});
