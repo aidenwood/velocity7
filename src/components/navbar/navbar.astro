@@ -16,8 +16,8 @@ const menuitems = [
     path: "/web-design",
     children: [
         { title: "Web Design", path: "/web-design" },
-        { title: "Shopify Web Design", path: "/web-design#shopify" },
-        { title: "Wordpress Web Design", path: "/web-design#wordpress" },
+        { title: "Shopify", path: "/web-design#shopify" },
+        { title: "Wordpress", path: "/web-design#wordpress" },
         { title: "Velocity7", path: "https://velocity.aidxn.com/" },
         { title: "Velocity.vanilla", path: "https://vanilla.aidxn.com/" },
       ],
@@ -103,6 +103,7 @@ const menuitems = [
     netlifyIdentity.init();
 
     function showDashboardButton() {
+      console.log('showDashboardButton is running');
       const user = netlifyIdentity.currentUser();
       const dashboardButtons = document.querySelectorAll('.dashboard-button');
 
