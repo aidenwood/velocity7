@@ -83,15 +83,15 @@ p { font-family: "wotfard-thin", sans-serif; }
   </head>
   
   <body>
-    <Navbar client:load />
+    <Navbar />
     <slot />
     <Detailedfooter />
     <style is:global>
       /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ 
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
         content-visibility: auto;
-      } */
+      }
     </style>
   </body>
 </html>
