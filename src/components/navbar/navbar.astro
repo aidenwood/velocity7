@@ -3,7 +3,7 @@ import Container from "@components/container-fullwidth.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import aidxnLogo from 'assets/aidxn/aidxn-23-logo-v2-flat.svg';
+import aidxnLogo from '../assets/aidxn/aidxn-23-logo.svg'; 
 
 
 const menuitems = [
@@ -80,7 +80,7 @@ const menuitems = [
 
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link style="inverted" data-netlify-identity-button block size="md"></Link>
-          <a href="https://aidxn.com/dashboard" class="dashboard-button">Dashboard</a>
+          <a href="https://aidxn.com/dashboard" class="dashboard-button hidden">Dashboard</a>
           <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md" block>Book</Link>
         </div>
       </MenuItems>
@@ -88,7 +88,7 @@ const menuitems = [
     <div>
       <div class="hidden lg:flex items-center gap-4">
         <Link style="inverted" data-netlify-identity-button size="md"></Link>
-        <a href="https://aidxn.com/dashboard" class="dashboard-button">Dashboard</a>
+        <a href="https://aidxn.com/dashboard" class="dashboard-button hidden">Dashboard</a>
         <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" size="md">Book</Link>
       </div>
     </div>
