@@ -137,27 +137,7 @@ html, body, main {
     max-width: 100%;
     overflow-x: hidden;
 }
-#glass-card {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(10.5px);
-  -webkit-backdrop-filter: blur(10.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-}
   .carousel-cell {
   width: 80vw;
   max-width: 650px;
@@ -179,13 +159,13 @@ html, body, main {
 <div id="sliderContainer" class="main-carousel w-full h-fit mb-16">
   {
     services.map((item) => (
-      <div id="productCard" class="glass-card carousel-cell h-96 rounded-xl shadow-md hover:shadow-lg duration-200">
+      <div id="productCard" class="carousel-cell h-96 rounded-xl backdrop-blur-lg p-4 md:p-8 lg:p-16 bg-gradient-to-b from-white/60 to-white/30 border-[1px] border-solid border-white border-opacity-30 shadow-black/70 shadow-2xl duration-200">
           <div id="imgContainer" class="w-full h-full">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1600px) 800px, 400px"
                   widths={[400, 800]}
-                  aspectRatio="5:3"
+                  aspectRatio="3:5"
                   background="#f2f2f2"
                   fit="fill"
                   position="center"
