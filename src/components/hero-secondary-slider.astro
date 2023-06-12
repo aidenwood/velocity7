@@ -50,24 +50,19 @@ const sliderContent = [
   margin-right: 10px;
   padding: 20px, 40px;
   max-width: 85vw;
-}
+  }
   .carousel-cell { min-height: 220px; }
-/* position dots up a bit */
-.flickity-page-dots {
-  bottom: -22px;
-}
-/* dots are lines */
-.flickity-page-dots .dot {
-  height: 4px;
-  width: 40px;
-  margin: 0;
-  border-radius: 0;
-}
-</style>
 
-<style>
+  .flickity-button { max-width: 30px; }
+  /* dots are lines */
+  .flickity-page-dots .dot {
+    height: 4px;
+    width: 40px;
+    margin: 0;
+    border-radius: 0;
+  }
 
-/* Background circles end */
+  /* Glass-card effect dial in, needs a moving background css only if possible */
 
 #glass-card {
   
@@ -78,6 +73,7 @@ const sliderContent = [
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
   padding: 30px 15px;
 }
+
 
 </style>
 
@@ -117,7 +113,7 @@ const sliderContent = [
   <div id="rightContainer" class="w-full md:w-2/5 lg:w-1/4">
 
     <!-- START flickity slider for Case Studies -->
-    <div class="product-carousel grid grid-cols-1">
+    <div class="product-carousel w-full">
       { sliderContent.map((item) => (
           <div id="glass-card" class="carousel-cell flex flex-col shadow-sm hover:shadow-md duration-200">
             <div id="imgContainer" class="lg:w-1/3 mt-2 p-2">
