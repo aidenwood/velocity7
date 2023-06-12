@@ -46,14 +46,14 @@ const sliderContent = [
 
 <!-- Flickity Custom Styles -->
 <style>
-  .product-carousel {
-  margin-right: 10px;
-  padding: 20px, 40px;
-  max-width: 85vw;
-  }
+  .product-carousel { margin: 10px; max-width: 100%; }
   .carousel-cell { min-height: 220px; }
-
   .flickity-button { max-width: 30px; }
+
+  /* accessibility */
+  .flickity-enabled:focus .flickity-viewport { outline: thin dotted; outline: 2px auto -webkit-focus-ring-color; }
+
+
   /* dots are lines */
   .flickity-page-dots .dot {
     height: 4px;
@@ -63,16 +63,14 @@ const sliderContent = [
   }
 
   /* Glass-card effect dial in, needs a moving background css only if possible */
-
-#glass-card {
-  
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(30px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
-  padding: 30px 15px;
-}
+  #glass-card {
+    border-radius: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    padding: 30px 15px;
+  }
 
 
 </style>
