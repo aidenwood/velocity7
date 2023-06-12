@@ -8,13 +8,13 @@ import { Icon } from "astro-icon";
 
 ---
 
+
 <!-- Flickity -->
 <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <!-- Flickity Custom Styles -->
 <style>
-  .heroSecondary-carousel {
+  .product-carousel {
   margin-right: 10px;
   padding: 20px, 40px;
   max-width: 85vw;
@@ -35,139 +35,19 @@ import { Icon } from "astro-icon";
 
 <style>
 
-/* Background circles start */
-.circle {
-  position: relative;
-  background-color: #a600ff;
-  border-radius: 50%;
-}
-.circles {
-  position: relative;
-  height: 270px;
-  width: 450px;
-  left: 50%;
-  transform: translate(-50%,50%);
-}
-.circle-1 {
-  height: 180px;
-  width: 180px;
-  top: -50px;
-  left: -60px;
-}
-.circle-2 {
-  height: 100px;
-  width: 100px;
-  right: -90px;
-}
 /* Background circles end */
 
-.card-group {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.card {
-  position: relative;
-  height: 270px;
-  width: 450px;
+#glass-card {
+  
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(30px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.logo img,
-.chip img,
-.number,
-.name,
-.from,
-.to,
-.ring {
-  position: absolute; /* All items inside card should have absolute position */
-}
-
-.logo img {
-  top: 35px;
-  right: 40px;
-  width: 80px;
-  height: auto;
-  opacity: 0.8;
-}
-
-.chip img {
-  top: 120px;
-  left: 40px;
-  width: 50px;
-  height: auto;
-  opacity: 0.8;
-}
-
-.number,
-.name,
-.from,
-.to {
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-}
-
-.number {
-  left: 40px;
-  bottom: 65px;
-  font-family: "Nunito", sans-serif;
-}
-
-.name {
-  font-size: 0.5rem;
-  left: 40px;
-  bottom: 35px;
-}
-
-.from {
-  font-size: 0.5rem;
-  bottom: 35px;
-  right: 110px;
-}
-
-.to {
-  font-size: 0.5rem;
-  bottom: 35px;
-  right: 40px;
-}
-
-/* The two rings on the card background */
-.ring {
-  height: 500px;
-  width: 500px;
-  border-radius: 50%;
-  background: transparent;
-  border: 50px solid #a600ff;
-  bottom: -250px;
-  right: -250px;
-  box-sizing: border-box;
-}
-
-.ring::after {
-  content: "";
-  position: absolute;
-  height: 600px;
-  width: 600px;
-  border-radius: 50%;
-  background: transparent;
-  border: 30px solid #a600ff30;
-  bottom: -80px;
-  right: -110px;
-  box-sizing: border-box;
+  
 }
 
 </style>
-
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
 
 
 <main class="my-32 md:my-16">
@@ -204,36 +84,27 @@ import { Icon } from "astro-icon";
 
   <div id="rightContainer" class="w-full md:w-2/5 lg:w-1/4">
 
-<div class="circles">
-  <div class="circle circle-1"></div>
-  <div class="circle circle-2"></div>
-</div>
-
-<div class="card-group">
-  <div class="card">
-    <div class="logo"><img src="https://raw.githubusercontent.com/dasShounak/freeUseImages/main/Visa-Logo-PNG-Image.png" alt="Visa"></div>
-    <div class="chip"><img src="https://raw.githubusercontent.com/dasShounak/freeUseImages/main/chip.png" alt="chip"></div>
-    <div class="number">1234 5678 9012 3456</div>
-    <div class="name">Aiden Wood</div>
-    <div class="from">10/19</div>
-    <div class="to">06/21</div>
-    <div class="ring"></div>
-  </div>
-</div>
+    <!-- flickity slider -->
+    <div class="product-carousel grid">
+      <div id="glass-card" class="carousel-cell">Slide 1</div>
+      <div id="glass-card" class="carousel-cell">Slide 2</div>
+      <div id="glass-card" class="carousel-cell">Slide 3</div>
+    </div>
 
   </div>
 </div>
 
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
 
 <script>
   // element argument can be a selector string
   //   for an individual element
-  var flkty = new Flickity( '.heroSecondary-carousel', {
+  var flkty = new Flickity( '.product-carousel', {
   cellAlign: 'left',
   contain: true,
   autoPlay: 1500,
-  groupCells: 4,
+  groupCells: 2,
   prevNextButtons: false,
   });
 </script>
