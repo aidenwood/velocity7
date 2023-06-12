@@ -13,7 +13,8 @@ import FeaturesGrid from "@components/grid-3x3-features.astro";
 import Pricing from "@components/pricing.astro";
 import Logos from "@components/logos.astro";
 import Integrations from "@components/logos-integrations.astro";
-import GallerySlider from "@components/slider-gallery-branding.astro";
+import GallerySlider from "@components/slider-services.astro";
+import BlogSlider from "@components/slider-content.astro";
 import { Picture } from "@astrojs/image/components";
 import PagecoverHero from '../assets/previous-works/website-conversion-optimisation.webp';
 import Pagecover from '../assets/backgrounds/balance.webp';
@@ -216,9 +217,13 @@ const pricing = [
     </SectionHeadSecImg>
   </ContainerXL>
 
+  <ContainerFW>
+    <GallerySlider />
+  </ContainerFW>
+
   <ContainerXL>
     <SectionTextarea>
-      <Fragment slot="title">Rock-solid integrations.</Fragment>
+      <Fragment slot="title">Out-of-the-box everything.</Fragment>
       <Fragment slot="desc">
         Velocity7 is writen in AstroJS and ready to be extended endlessly. But we've taken the liberty of
         pre-integrating, in the most perfomant way, the best web technologies we know of. All of our secrets, 
@@ -265,7 +270,7 @@ const pricing = [
         <Icon class="w-16 h-16" name="simple-icons:googleads" />
       </Fragment>
       <Fragment slot="titleleft2">
-        GTM Conversion Tracking
+        Cookie-less Conversion tracking
       </Fragment>
       <Fragment slot="textleft2">
         Maximize your advertising effectiveness with Google Ads' 
@@ -280,7 +285,7 @@ const pricing = [
         <Icon class="w-16 h-16" name="simple-icons:stripe" />
       </Fragment>
       <Fragment slot="titleright2">
-        Stripe Payments
+        Stripe payments
       </Fragment>
       <Fragment slot="textright2">
         Streamline your payment process and boost sales with Stripe's 
@@ -296,7 +301,7 @@ const pricing = [
   <Container>
 
     <Sectionhead>
-      <Fragment slot="title">Turn Around in 21 Days.</Fragment>
+      <Fragment slot="title">Turn around in 21 days.</Fragment>
       <Fragment slot="desc"
         >We get straight to work when you're ready, just order below. I'll come directly to your businesses anywhere in South East Queensland 
         before any designs are started, to see your current position and learn your future goals. From here, a 21 day turn around will be 
@@ -311,7 +316,7 @@ const pricing = [
 
   <ContainerXL>
     <Sectionhead>
-      <Fragment slot="title">Ready to Launch?</Fragment>
+      <Fragment slot="title">Ready to launch?</Fragment>
       <Fragment slot="desc" class="max-w-4xl">
         Move your business to Velocity7 with Aidxn Design and start crushing it with ease in your industry. Leave the world of churn web design.
       </Fragment>
@@ -324,9 +329,5 @@ const pricing = [
   <Container>
     <Cta />
   </Container>
-
-  <ContainerFW>
-    <GallerySlider />
-  </ContainerFW>
   
 </Layout>

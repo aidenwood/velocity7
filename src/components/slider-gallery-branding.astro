@@ -1,0 +1,213 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+import { Picture } from "@astrojs/image/components";
+import VelocityLogo from '../assets/aidxn/velocity-social-landscape.png';
+import CPCmarketing from '../assets/marketing-results/cpc-marketing-results-real-estate-high-competitive-term.png';
+import MetaAds from '../assets/marketing-results/br-facebook-carousel-ad.png';
+import AnimatedAds from '../assets/marketing-results/aidxn-mobile-google-display-ads-hero-hd.webp';
+import DisplayMarketing from '../assets/marketing-results/re-placement.webp';
+import PrintAds from '../assets/marketing-results/print-advertising-managed-on-the-goldcoast.webp';
+import BusAds from '../assets/marketing-results/bus-side-sml.webp';
+import WebPerformance from '../assets/marketing-results/br-mac-render-med.webp';
+import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improvement-through-SEO-by-aidxn-design.webp';
+
+const services = [
+  {
+    title: "Google Search Management.",
+    description:
+      "Google Search Ad Management by Global brand managers. If your search conversion values aren't adding up, let's chat.",
+    imgsrc: CPCmarketing,
+    imgalt: "Advertising with Google Search, digital marketing managed locally on the Gold Coast to know your best oppurtunities by Aidxn Design. Over 10 years experience.",
+    link: "/brand-strategy",
+    style: "outline",
+    btntxt: "Brand Strategy",
+    price: "2445",
+    saleprice: "1945",
+    paytype: "monthly",
+    buylink: "",
+  },
+  {
+    title: "Meta Ad Management.",
+    description:
+      "Our team will develop a marketing strategy plan, prove it's strength, then film and produce a round of ads for covering all major platforms. Minimum 12 design releases including 3 videos and 9 social / GDN designs.",
+    imgsrc: MetaAds,
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "/brand-strategy",
+    style: "outline",
+    btntxt: "Brand Strategy",
+    price: "2445",
+    saleprice: "1945",
+    paytype: "monthly",
+    buylink: "",
+  },
+  {
+    title: "Animated Ad Development.",
+    description:
+      "We design and develop high-quality, high-performance ads that make targeting your necessary online giants a breeze. Includes 24 individually sized design assets for use with Google Display Ad Management and campaigns with any other agency.",
+    imgsrc: AnimatedAds,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+    link: "/brand-strategy",
+    style: "outline",
+    btntxt: "Display",
+    price: "2445",
+    saleprice: "1945",
+    paytype: "one-off",
+    buylink: "",
+  },
+  {
+    title: "Google Display Management.",
+    description:
+      "We can create a multistep video marketing strategy, completely cover the video filming and produ tion, and have 3 deliverables back to you within a week.",
+    imgsrc: DisplayMarketing,
+    imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
+    link: "/web-design",
+    style: "outline",
+    btntxt: "Web Design",
+    price: "2445",
+    saleprice: "1945",
+    paytype: "monthly",
+    buylink: "",
+  },
+  {
+    title: "Billboard Advertising Design.",
+    imgsrc: PrintAds,
+    imgalt: "Advertising on billboards and buses. Designed and and managed strategies directly on the Gold Coast by Aidxn Design.",
+    link: "/web-design",
+    style: "outline",
+    btntxt: "Web Design",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "monthly",
+    buylink: "",
+  },
+  {
+    title: "Bus Ad Design and Deploy.",
+    description:
+      "Our team will create and revise both front and back designs, and deploy them to the bus network of your choice. Handling everything from finding the best and closest bus routes for advertising on and securing them at a fair price. ",
+    imgsrc: BusAds,
+    imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
+    link: "/web-design",
+    style: "outline",
+    btntxt: "Brand Strategy",
+    price: "2445",
+    saleprice: "1945",
+    paytype: "one off",
+    buylink: "",
+  },
+  {
+    title: "Website Optimisation.",
+    description:
+      "Completely optimising how your website is placed on the internet to arrive on customers devices blazingly-fast, no matter their location or network. businesses that cannot afford to migrate from legacy stacks like Wordpress.",
+    imgsrc: WebPerformance,
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "/web-design",
+    style: "outline",
+    btntxt: "Web Design",
+    price: "1445",
+    saleprice: "1245",
+    paytype: "monthly",
+    buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
+  },
+  {
+    title: "SEO Optimisation.",
+    description:
+      "Improving SEO and CTR's over 2 weeks through everything we know about Google's algorithm, working to make improvements that will always be valid for years to come.",
+    imgsrc: SEOmarketing,
+    imgalt: "Improving conversion across the board through web performance improvements.",
+    link: "/web-design",
+    style: "outline",
+    btntxt: "Web Design",
+    price: "1445",
+    saleprice: "1245",
+    paytype: "monthly",
+    buylink: "",
+  },
+];
+---
+
+<!-- Flickity -->
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<!-- Flickity Custom Styles -->
+<style>
+html, body, main {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+  .carousel-cell {
+  width: 80vw;
+  max-width: 650px;
+  min-height: 220px;
+  margin-right: 20px;
+  padding: 20px, 40px;
+}
+  .flickity-viewport { min-height: fit-content; }
+
+
+</style>
+<main class="my-16">
+<div class="mb-8">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Branding that performs well, anywhere.
+  </h2>
+</div>
+
+<div id="sliderContainer" class="main-carousel w-full h-fit mb-16">
+  {
+    services.map((item) => (
+      <div id="productCard" class="carousel-cell h-96 bg-white rounded-xl shadow-md hover:shadow-lg duration-200">
+          <div id="imgContainer" class="w-full h-full">
+            <Picture
+                  src={item.imgsrc}
+                  sizes="(max-width: 1600px) 800px, 400px"
+                  widths={[400, 800]}
+                  aspectRatio="5:3"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full h-fit rounded"
+                />
+          </div>
+          <div class="absolute bottom-0 w-full bg-black bg-opacity-90 sm:bg-opacity-60 hover:bg-opacity-90 duration-200 rounded px-4 py-8">
+            <h3 class="font-normal text-xl my-4 text-white">{item.title}</h3>{" "}
+
+            <div class="flex items-center">
+              <p class="text-slate-300 my-4 mr-2 leading-relaxed">
+              Platform:
+                <Link 
+                  class="mr-4"
+                  href={item.link || "#"}
+                  block
+                  style={item.style ? "primary" : "outline"}>
+                  {item.btntxt || "Get Started"}
+                </Link>
+              </p>
+              <div class="ml-auto">
+                <a href={item.buylink}> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+    ))
+  }
+</div>
+</main>
+
+<script>
+  // element argument can be a selector string
+  //   for an individual element
+  var flkty = new Flickity( '.main-carousel', {
+  cellAlign: 'left',
+  contain: true,  
+  freeScroll: true,
+  });
+</script>

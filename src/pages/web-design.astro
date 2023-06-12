@@ -13,7 +13,7 @@ import FeaturesGrid from "@components/grid-3x3-features.astro";
 import Pricing from "@components/pricing.astro";
 import Logos from "@components/logos.astro";
 import Integrations from "@components/logos-integrations.astro";
-import GallerySlider from "@components/slider-gallery.astro";
+import GallerySlider from "@components/slider-services.astro";
 import BlogSlider from "@components/slider-content.astro";
 import { Picture } from "@astrojs/image/components";
 import PagecoverHero from '../assets/previous-works/website-conversion-optimisation.webp';
@@ -140,12 +140,10 @@ const pricing = [
   <ContainerXL>
     <SectionEmail>
       <Fragment slot="title">
-        Introducing Velocity7
+        Web Design by Aidxn
       </Fragment>
       <Fragment slot="desc">
-        The 7th version of our in-house framework, combining everything we know about good web design. 
-        Developed over 5 years with these 3 points in mind. Conversion-focused design, performance-focused 
-        code, to empower Aussie business with a serious online marketing precense for less. 
+        Highly awarded web designer on the Gold Coast. From Wordpress to Shopify to Web3 JS languages, we have you covered. Specialising in building blazing-fast, custom web experiences that drive sales through unique creative marketing. 
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -170,13 +168,13 @@ const pricing = [
   <ContainerXL>
     <SectionHeadImg>
       <Fragment slot="title">
-        Performance-focused code.
+        Shopify Plus management
       </Fragment>
       <Fragment slot="desc">
-        Velocity is one of the most powerful and versatile website frameworks available. Version 7 built on the best of Web3 languages, AstroJS (in our humble opinion).
-        Completely accessible, seo-friendly code. Pre-integrated with the necessities, without losing any pageload performance.
-        Visually stunning, TailwindCSS styling, with codelinting and postcss preconfigured. 50+ user-friendly components worth of truly beautiful code.
-        Completely owned by your business with a lifetime license, so you don't need to worry about subscription traps again.
+        We've worked in web design and development for over 10 years, if you're 
+        looking for someone you can honestly trust with your Shopify Plus store, 
+        we're worth giving a call. Velocity even comes in RubyonRails for use as 
+        a Shopify theme. (Shopify theme available to Moonshot customers only)
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -196,11 +194,13 @@ const pricing = [
   <ContainerXL>
     <SectionHeadSecImg>
       <Fragment slot="title">
-        Conversion-focused design.
+        SEO and Performance Optimisation.
       </Fragment>
       <Fragment slot="desc">
-        Velocity7's conversion-focused component and layout design optimizes user-flow for your business with ease. 
-        Quickly building web pages for your business that showcase a beautiful user journey to sales and conversions.
+        We're absolutely nuts about perfect web performance, after all, it's what the customer demands. 
+        If your business is locked into a Web2 stack like Wordpress we have plenty of experience optimising 
+        these sites with great results. From code structure improvement to waterfall optimisation, 
+        we comb through your site constantly as new content arrives, always keeping your site fast and ranking well.
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -217,13 +217,18 @@ const pricing = [
     </SectionHeadSecImg>
   </ContainerXL>
 
+  <ContainerFW>
+    <GallerySlider />
+  </ContainerFW>
+
   <ContainerXL>
     <SectionTextarea>
-      <Fragment slot="title">Rock-solid integrations.</Fragment>
+      <Fragment slot="title">Custom Branded Web Experiences.</Fragment>
       <Fragment slot="desc">
-        Velocity7 is writen in AstroJS and ready to be extended endlessly. But we've taken the liberty of
-        pre-integrating, in the most perfomant way, the best web technologies we know of. All of our secrets, 
-        with a helping hand from our team and some good laughs along the way.
+        Our favourite thing to hear is a brand that wants to go truly "Banksy" on their online prescence. 
+        Trust us when we say we've seen creative e-commerce design pay off time and time again. 
+        We've worked with a number of international market, global brands to create true digital art, 
+        that truly drives sales. Using game theory and 3D interation to hook your customer with ease.
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -238,50 +243,43 @@ const pricing = [
                 />
       </Fragment>
       <Fragment slot="iconleft">
-        <Icon class="w-16 h-16" name="simple-icons:zapier" />
+        <Icon class="w-16 h-16" name="simple-icons:threedotjs" />
       </Fragment>
       <Fragment slot="titleleft">
-        Zapier API
+        Three.JS
       </Fragment>
       <Fragment slot="textleft">
-        Zapier's powerful automation platform works directly
-        with Velocity7. Automate tasks, synchronize data, 
-        and reduce costs. All made simple with Velocity7 
-        API connection.
+        Our absolute favourite website framework when it comes to getting creative is Three.JS.
+        If you've got 3D assets within your brand already that aren't being put to use online, 
+        you and your customer are missing out big time!
       </Fragment>
       <Fragment slot="iconright">
-        <Icon class="w-16 h-16" name="simple-icons:netlify" />
+        <Icon class="w-16 h-16" name="simple-icons:astro" />
       </Fragment>
       <Fragment slot="titleright">
-        Netlify DNS & CDN
+        Astro.JS
       </Fragment>
       <Fragment slot="textright">
-        All our Velocity sites are powered by Netlify's powerful, 
-        load-balancing network of servers to deliver your content 
-        to the end user faster than anyone else. Absolutely necessary
-        with the cell networks available in Australia. Take back control 
-        of your website's velocity with the speed of Velocity7 on Netlify's network.
+        We write all our code within an Astro-based framework to ensure the fastest possible pageload times, 
+        while also giving us to almost magical ability to work with any framework or code language you need.
+        Integrate a React or Vue component? No problemo. Back-end API's in any language? Already sorted.
       </Fragment>
       <Fragment slot="iconleft2">
-        <Icon class="w-16 h-16" name="simple-icons:googleads" />
+        <Icon class="w-16 h-16" name="simple-icons:cinema4d" />
       </Fragment>
       <Fragment slot="titleleft2">
-        GTM Conversion Tracking
+        Cinema4D
       </Fragment>
       <Fragment slot="textleft2">
-        Maximize your advertising effectiveness with Google Ads' 
-        conversion tracking built deeply into Velocity7. Easily 
-        track and measure conversions that matter most to your 
-        business. Gain valuable insights into customer behavior 
-        and optimize your ad strategy accordingly. With Google Ads' 
-        comprehensive conversion tracking, you can make data-driven 
-        decisions and drive higher ROI for your advertising efforts.
+        Taking your custom experience further towards the metaverse with 
+        high-quality 3D asset creation using Cinema4D, the industry leader 
+        in rendering and 3D design. Made even more powerful with code.
       </Fragment>
       <Fragment slot="iconright2">
         <Icon class="w-16 h-16" name="simple-icons:stripe" />
       </Fragment>
       <Fragment slot="titleright2">
-        Stripe Payments
+        Stripe payments
       </Fragment>
       <Fragment slot="textright2">
         Streamline your payment process and boost sales with Stripe's 
@@ -297,7 +295,7 @@ const pricing = [
   <Container>
 
     <Sectionhead>
-      <Fragment slot="title">Turn Around in 21 Days.</Fragment>
+      <Fragment slot="title">Turn around in 21 days.</Fragment>
       <Fragment slot="desc"
         >We get straight to work when you're ready, just order below. I'll come directly to your businesses anywhere in South East Queensland 
         before any designs are started, to see your current position and learn your future goals. From here, a 21 day turn around will be 
@@ -312,7 +310,7 @@ const pricing = [
 
   <ContainerXL>
     <Sectionhead>
-      <Fragment slot="title">Ready to Launch?</Fragment>
+      <Fragment slot="title">Ready to launch?</Fragment>
       <Fragment slot="desc" class="max-w-4xl">
         Move your business to Velocity7 with Aidxn Design and start crushing it with ease in your industry. Leave the world of churn web design.
       </Fragment>
@@ -325,9 +323,5 @@ const pricing = [
   <Container>
     <Cta />
   </Container>
-
-  <ContainerFW>
-    <GallerySlider />
-  </ContainerFW>
   
 </Layout>
