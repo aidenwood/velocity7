@@ -8,11 +8,11 @@ import aidxnLogo from 'assets/aidxn/aidxn-23-logo.svg';
 
 const menuitems = [
   {
-    title: "Brand Strategy",
+    title: "Design",
     path: "/brand-strategy",
   },
   {
-    title: "Web Design",
+    title: "Develop",
     path: "/web-design",
     children: [
         { title: "Web Design", path: "/web-design" },
@@ -23,18 +23,20 @@ const menuitems = [
       ],
   },
   {
-    title: "Marketing",
-    path: "/marketing",
-  },
-  {
-    title: "Automation",
+    title: "Automate",
     path: "/automation",
+    children: [
+        { title: "Marketing", path: "/marketing" },
+        { title: "Videography", path: "/marketing#video" },
+        { title: "Interactive Ads", path: "/marketing#interactiveads" },
+        { title: "Automation", path: "/marketing#automation" },
+      ],
   },
 ];
 ---
 
 <style>
-  #navLogo {height: 75px; max-width: 55vw; margin: 20px auto;} 
+  #navLogo {height: 65px; max-width: 21vw; min-width: 200px; margin: 20px auto;} 
   header {position: sticky; top: 0;}
   .dashboard-button {display: none;}
 </style>

@@ -6,6 +6,38 @@ import Payment from "../assets/payment.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 
+const sliderContent = [
+  {
+    icon: "ph:codesandbox-logo-thin",
+    category: "Marketing / Automation",
+    title: "$50k in sales, 3 months after launch, $0 total ad spend.",
+    paragraph:
+      "We helped the small team at The Boogie Collective create one of the most successful small business launches we've seen. Not giving in to the numerous companies taking a % on revenue in the events industry.",
+    btntxt: "Read more",
+    style: "outline",
+    link: "https://aidxn.com/blog/theboogiecollective-marketing-strategy-case-study/",
+  },
+  {
+    icon: "ph:intersect-light",
+    category: "Brand Strategy + Direction",
+    title: "Versatile complete brand package for real estate marketing.",
+    paragraph:
+      "Working with real estate companies over Covid-19's most impactful months on marketing were an interesting time. One that proved you can't put all your eggs in one (marketing) basket.",
+    btntxt: "Read more",
+    style: "outline",
+    link: "https://aidxn.com/blog/theboogiecollective-marketing-strategy-case-study/",
+  },
+  {
+    icon: "ph:codepen-logo-light",
+    category: "Web Design / Development",
+    title: "Pageload optimisation from 5.2 sec to 1.2 sec, with Wordpress.",
+    paragraph:
+      "Working with a large family-owned brand on the Gold Coast that had been using Wordpress for 15 years was a challenge. Reducing pageload speed across all pages by 4 seconds, adding a huge increase to their SEO score of 20% in the first week.",
+    btntxt: "Read more",
+    style: "outline",
+    link: "https://aidxn.com/blog/theboogiecollective-marketing-strategy-case-study/",
+  },
+]
 ---
 
 
@@ -44,7 +76,7 @@ import { Icon } from "astro-icon";
   backdrop-filter: blur(30px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
-  
+  padding: 30px 15px;
 }
 
 </style>
@@ -84,12 +116,33 @@ import { Icon } from "astro-icon";
 
   <div id="rightContainer" class="w-full md:w-2/5 lg:w-1/4">
 
-    <!-- flickity slider -->
-    <div class="product-carousel grid">
-      <div id="glass-card" class="carousel-cell">Slide 1</div>
-      <div id="glass-card" class="carousel-cell">Slide 2</div>
-      <div id="glass-card" class="carousel-cell">Slide 3</div>
+    <!-- START flickity slider for Case Studies -->
+    <div class="product-carousel grid grid-cols-1">
+      { sliderContent.map((item) => (
+          <div id="glass-card" class="carousel-cell flex flex-col shadow-sm hover:shadow-md duration-200">
+            <div id="imgContainer" class="lg:w-1/3 mt-2 p-2">
+              <Icon class="h-8 md:h-12" name={item.icon} />
+            </div>  
+            <div id="textContainer" class="w-full px-4 py-3">
+                <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
+                <h3 class="font-semibold text-2xl pr-4">{item.title}</h3>{" "}
+                <p class="text-sm text-slate-500 mt-2 mb-6 leading-relaxed">{item.paragraph}</p>
+    
+                <p class="text-slate-500 mt-2 mb-6 mr-2 leading-relaxed">
+                  <Link 
+                    class="mr-4"
+                    href={item.link || "#"}
+                    block
+                    style={item.style ? "primary" : "outline"}>
+                    {item.btntxt || "Get Started"}
+                  </Link>
+                </p>
+              </div>
+          </div>
+        ))
+      }
     </div>
+    <!-- END flickity slider for Case Studies -->
 
   </div>
 </div>
