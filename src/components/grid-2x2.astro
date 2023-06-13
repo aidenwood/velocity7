@@ -82,7 +82,7 @@ const features = [
   }
 </style>
 
-<main class="my-48 md:my-32">
+<main class="my-16 md:my-32">
   <div class="mb-8">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
       Design, Develop. Market, Moonshot.
@@ -92,12 +92,12 @@ const features = [
     </p>
   </div>
 
-  <div class="grid md:grid-cols-2 my-16 gap-16">
+  <div class="grid md:grid-cols-2 my-16 gap-8">
     {
       features.map((item) => (
         <div class="flex gap-4 items-start">
           <div id="glass-card" class="w-full h-full">
-            <div id="imgContainer" class="mt-1 p-2 w-48 h-48">
+            <div id="imgContainer" class="mt-1 w-48 h-48">
               <Picture
                     src={item.imgsrc}
                     sizes="(max-width: 1000px) 1000px, 500px"
