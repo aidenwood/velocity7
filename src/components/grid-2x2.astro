@@ -64,6 +64,20 @@ const features = [
   },
 ];
 ---
+
+<style>
+    /* Glass-card effect dial in, needs a moving background css only if possible */
+    #glass-card {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    padding: 30px 15px;
+    margin: 0 10px;
+  }
+</style>
+
 <main class="my-48 md:my-32">
   <div class="mb-8">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
@@ -78,7 +92,7 @@ const features = [
     {
       features.map((item) => (
         <div class="flex gap-4 items-start">
-          <div id="card" class="w-full h-full bg-gray-50 hover:bg-gray-100 shadow-sm hover:shadow-lg duration-200 rounded px-8 py-16">
+          <div id="glass-card" class="w-full h-full bg-gray-50 hover:bg-gray-100 shadow-sm hover:shadow-lg duration-200 rounded px-8 py-16">
             <div id="imgContainer" class="mt-1 p-2 w-48 h-48">
               <Picture
                     src={item.imgsrc}
