@@ -46,7 +46,7 @@ const sliderContent = [
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <!-- Flickity Custom Styles -->
 <style>
-  .product-carousel { margin: 10px; max-width: 100%; width: fit-content; }
+  .product-carousel { margin: 30px 60px; min-height: 450px: margin: 0 auto; max-width: 100%; width: fit-content; }
   .carousel-cell { min-height: 220px; }
   .flickity-button { max-width: 30px; }
 
@@ -61,6 +61,7 @@ const sliderContent = [
     margin: 0;
     border-radius: 0;
   }
+  
 
   /* Glass-card effect dial in, needs a moving background css only if possible */
   #glass-card {
@@ -119,7 +120,7 @@ const sliderContent = [
       { sliderContent.map((item) => (
           
           
-              <div id="glass-card" class="carousel-cell w-full h-full">
+              <div id="glass-card" class="carousel-cell w-full h-fit">
                 <div id="slideContainer" class="block">
                   <div id="imgContainer" class="lg:w-1/3 mt-2 p-2">
                     <Icon class="h-8 md:h-12" name={item.icon} />
@@ -159,6 +160,6 @@ const sliderContent = [
   //   for an individual element
   var flkty = new Flickity( '.product-carousel', {
   contain: true,
-  autoPlay: 1500,
+  autoPlay: 3200,
   });
 </script>
