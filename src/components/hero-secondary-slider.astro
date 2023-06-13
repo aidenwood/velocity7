@@ -107,7 +107,7 @@ const sliderContent = [
   <div id="rightContainer" class="w-full lg:w-2/5 z-5">
 
     <!-- START flickity slider for Case Studies -->
-    <div class="product-carousel h-full">
+    <div class="product-carousel w-full h-full">
       { sliderContent.map((item) => (
           
           
@@ -116,7 +116,7 @@ const sliderContent = [
                   <div id="imgContainer" class="lg:w-1/3">
                     <Icon class="h-8 md:h-12" name={item.icon} />
                   </div>  
-                  <div id="textContainer" class="w-full">
+                  <div id="textContainer" class="w-full flex flex-col gap-y-8">
                     <span class="text-gray-400 mr-3 font-thin uppercase text-lg">{item.category}</span>
                     <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
                     <p class="text-xs md:text-sm font-regular text-slate-500 pr-8 leading-relaxed">{item.paragraph}</p>
