@@ -139,7 +139,7 @@ html, body, main {
 }
 
   .carousel-cell {
-  width: 80vw;
+  width: 50vw;
   max-width: 650px;
   min-height: 220px;
   margin-right: 20px;
@@ -159,13 +159,13 @@ html, body, main {
 <div id="sliderContainer" class="main-carousel w-full h-fit mb-16">
   {
     services.map((item) => (
-      <div id="productCard" class="carousel-cell h-96 rounded-xl backdrop-blur-lg bg-gradient-to-b from-white/60 to-white/30 border-[1px] border-solid border-white border-opacity-30 shadow-black/70 shadow-2xl duration-200">
+      <div id="productCard" class="carousel-cell rounded-xl backdrop-blur-lg bg-gradient-to-b from-white/60 to-white/30 border-[1px] border-solid border-white border-opacity-30 shadow-black/70 shadow-2xl duration-200">
           <div id="imgContainer" class="w-full h-full">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1600px) 800px, 400px"
                   widths={[400, 800]}
-                  aspectRatio="5:3"
+                  aspectRatio="1:1"
                   background="#f2f2f2"
                   fit="cover"
                   position="center"
