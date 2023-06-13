@@ -75,6 +75,10 @@ const features = [
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
     padding: 30px 15px;
     margin: 0 10px;
+    transition-duration: 200ms;
+  }
+  #glass-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 </style>
 
@@ -92,7 +96,7 @@ const features = [
     {
       features.map((item) => (
         <div class="flex gap-4 items-start">
-          <div id="glass-card" class="w-full h-full bg-gray-50 hover:bg-gray-100 shadow-sm hover:shadow-lg duration-200 rounded px-8 py-16">
+          <div id="glass-card" class="w-full h-full">
             <div id="imgContainer" class="mt-1 p-2 w-48 h-48">
               <Picture
                     src={item.imgsrc}
