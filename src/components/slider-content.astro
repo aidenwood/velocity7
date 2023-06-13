@@ -10,6 +10,7 @@ import VelocityLogo from '../assets/aidxn/velocity-social-landscape.png';
 const services = [
   {
     title: "Velocity Dev Notes: v7.4",
+    icon: "ph:codesandbox-logo-thin",
     category: "Development Notes",
     description:
       "In the most recent Velocity update, we've added product cards for e-commerce components",
@@ -22,6 +23,7 @@ const services = [
   {
     title: "10 Reasons to Leave Web2 Stacks like Wordpress.",
     category: "Web Development",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "Your website stack is will become the bottleneck to your business quickly, here's some reasons we believe Wordpress simply doesn't cut it to sell online.",
     imgsrc: VelocityLogo,
@@ -33,6 +35,7 @@ const services = [
   {
     title: "Conversion-Focused Design for your Customer.",
     category: "Web Development",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "Before anything online, you need a website that seriously succeeds. Not just half works. We're talking ready for scaling infinitely once we get to the grit.",
     imgsrc: VelocityLogo,
@@ -44,6 +47,7 @@ const services = [
   {
     title: "Optimising Pageload for Australian Customers.",
     category: "Web Development",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "Before anything online, you need a website that seriously succeeds. Not just half works. We're talking ready for scaling infinitely once we get to the grit.",
     imgsrc: VelocityLogo,
@@ -55,6 +59,7 @@ const services = [
   {
     title: "Wordpress Pageload from 4.2 sec to 1.9 sec in 1 week.",
     category: "Web Development",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "Learn some great free tips, on us, if you run a Wordpress site that you're trying to optimise. This is the WP optimisation cheat sheet you've been looking for.",
     imgsrc: VelocityLogo,
@@ -66,6 +71,7 @@ const services = [
   {
     title: "How to Create an SEO-Friendly, Organic Marketing Strategy.",
     category: "Marketing",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "Learn some great free tips, on us, if you run a Wordpress site that you're trying to optimise. This is the WP optimisation cheat sheet you've been looking for.",
     imgsrc: VelocityLogo,
@@ -77,6 +83,7 @@ const services = [
   {
     title: "Generating $50k+ in Sales for a Brand with $0 in Ad Spend.",
     category: "Brand Strategy",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "Learn some great free tips, on us, if you run a Wordpress site that you're trying to optimise. This is the WP optimisation cheat sheet you've been looking for.",
     imgsrc: VelocityLogo,
@@ -88,6 +95,7 @@ const services = [
   {
     title: "Velocity Dev Notes: v7.3",
     category: "Development Notes",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "In the most recent Velocity update, we've added highly user-tested galleries and grids.",
     imgsrc: VelocityLogo,
@@ -99,6 +107,7 @@ const services = [
   {
     title: "How to reduce Cost-Per-Aquisition in High-Cost Niches.",
     category: "Brand Strategy",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "Learn some great free tips, on us, if you run a Wordpress site that you're trying to optimise. This is the WP optimisation cheat sheet you've been looking for.",
     imgsrc: VelocityLogo,
@@ -110,6 +119,7 @@ const services = [
   {
     title: "E-Commerce Frameworks without Subscriptions in 2023.",
     category: "Web Development",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "From e-commerce to service based business lead generation, Shopify has taken the popular opinion of the global web design space, but are they the best or even close?",
     imgsrc: VelocityLogo,
@@ -121,6 +131,7 @@ const services = [
   {
     title: "Velocity Dev Notes: v7.2",
     category: "Development Notes",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "What's new in the most recent Velocity update, now available to all Velocity7 customers.",
     imgsrc: VelocityLogo,
@@ -132,6 +143,7 @@ const services = [
   {
     title: "Comparing Shopify, Wordpress, Squarespace, against Velocity7.",
     category: "Web Development",
+    icon: "ph:codesandbox-logo-thin",
     description:
       "From e-commerce to service based business lead generation, Shopify has taken the popular opinion of the global web design space, but are they the best or even close?",
     imgsrc: VelocityLogo,
@@ -180,7 +192,7 @@ html, body, main {
   #glass-card:hover {
     box-shadow: 0 20px 30px -9px rgba(0, 0, 0, 0.1), 0 8px 12px -6px rgba(0, 0, 0, 0.05);
   }
-  
+
 </style>
 <main>
 <div class="mt-16 pt-16 mb-8">
@@ -195,9 +207,9 @@ html, body, main {
 <div id="sliderContainer" class="blog-carousel h-fit mb-16">
   {
     services.map((item) => (
-      <div id="glass-card" class="carousel-cell flex flex-col bg-gray-50 py-8 px-4 h-fit rounded-xl shadow-sm hover:shadow-md duration-200">
+      <div id="glass-card" class="carousel-cell flex flex-col py-8 px-4 h-fit">
         <div id="imgContainer" class="lg:w-1/3 mt-2 p-2">
-          
+          <Icon class="h-8 md:h-12" name={item.icon} />
         </div>  
         <div id="textContainer" class="w-full px-4 py-3">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
