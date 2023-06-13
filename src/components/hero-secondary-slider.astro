@@ -42,8 +42,8 @@ const sliderContent = [
 
 
 <!-- Flickity -->
-<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
-
+<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <!-- Flickity Custom Styles -->
 <style>
   .product-carousel { margin: 10px; max-width: 100%; width: fit-content; }
@@ -159,10 +159,7 @@ const sliderContent = [
   // element argument can be a selector string
   //   for an individual element
   var flkty = new Flickity( '.product-carousel', {
-  cellAlign: 'center',
   contain: true,
-  wrapAround: true,
-  fade: true,
   autoPlay: 1500,
   });
 </script>
