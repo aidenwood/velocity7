@@ -68,6 +68,11 @@ const sliderContent = [
   #glass-card:hover {
     box-shadow: 0 20px 30px -9px rgba(0, 0, 0, 0.1), 0 8px 12px -6px rgba(0, 0, 0, 0.05);
   }
+  
+  [astro-icon="bgIcon"] {
+        color: #a600ff30;
+        /* OR */
+        fill: #a600ff30;
 
 </style>
 
@@ -114,7 +119,7 @@ const sliderContent = [
               <div id="glass-card" class="carousel-cell w-full h-full px-16 py-32">
                 <div id="slideContainer" class="flex flex-col gap-y-4">
                   <div id="iconContainer" class="absolute px-4 right-0 bottom-0 -z-10 w-2/3">
-                    <Icon class="h-8 md:h-12" fill="#a600FF60" name={item.icon} />
+                    <Icon name="bgIcon" class="h-full" name={item.icon} />
                   </div>  
                   <div id="textContainer" class="w-full flex flex-col gap-y-4">
                     <span class="text-gray-400 mr-3 font-thin uppercase text-lg">{item.category}</span>
