@@ -7,8 +7,8 @@ import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
-  integrations: [tailwind(
+  site: 'https://aidxn.com',
+  integrations: [sitemap()], [tailwind(
     {
       config: {
         applyBaseStyles: false,
