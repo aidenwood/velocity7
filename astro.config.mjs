@@ -13,7 +13,7 @@ export default defineConfig({
       config: {
         applyBaseStyles: false,
       },
-    }
+    } [sitemap()],
   ), image({
     serviceEntryPoint: "@astrojs/image/sharp"
   }), mdx(), sitemap(), alpinejs()]
