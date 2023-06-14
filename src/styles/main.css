@@ -4,6 +4,11 @@
 
 @layer base {
   @font-face {
+    font-family: 'inconsolata';
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/Inconsolata-Variable.ttf') format('ttf');
+  }
+  @font-face {
     font-family: 'wotfard';
     font-style: normal;
     font-weight: 500;
@@ -26,6 +31,3 @@
   }
 }
 
-h1, h2, h3 { font-family: 'wotfard', sans-serif; font-weight: 500; }
-h4, h5, h6 { font-family: 'wotfard', sans-serif; font-weight: 700; }
-p { font-family: 'wotfard', sans-serif; font-weight: 300; }
