@@ -46,8 +46,8 @@ const sliderContent = [
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <!-- Flickity Custom Styles -->
 <style>
-  .product-carousel .flickity-viewport { padding: 60px 90px; min-height: 320px; display: flex; justify-content: center; align-items: center; width: 100% !important; }
-  .carousel-cell { min-height: 320px; width: 85%; }
+  .product-carousel .flickity-viewport { padding: 60px 90px; min-height: 220px; display: flex; justify-content: center; align-items: center; width: 100% !important; }
+  .carousel-cell { min-height: 220px; width: 85%; }
   .flickity-button { max-width: 20px; }
 
   /* accessibility */
@@ -116,7 +116,7 @@ const sliderContent = [
       { sliderContent.map((item) => (
           
           
-              <div id="glass-card" class="carousel-cell w-full h-full px-16 py-32">
+              <div id="glass-card" class="carousel-cell w-full px-16 py-32">
                 <div id="slideContainer" class="flex flex-col gap-y-4">
                   <div id="iconContainer" class="absolute px-4 right-0 bottom-0 -z-10 w-1/4">
                     <Icon name="bgIcon" class="h-full bg-gray-50" style="opacity: 10%;" name={item.icon} />
