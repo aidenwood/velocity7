@@ -1,0 +1,381 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+import { Picture } from "@astrojs/image/components";
+import VelocityLogo from '../assets/aidxn/velocity-social-landscape.png';
+import VelocityLrg from '../assets/previous-works/iphone-app-design.webp';
+import BrandLaunch from '../assets/previous-works/website-mock-ups.webp';
+import CPCmarketing from '../assets/marketing-results/cpc-marketing-results-real-estate-high-competitive-term.png';
+import MetaAds from '../assets/marketing-results/facebook-marketing-results.png';
+import AnimatedAds from '../assets/marketing-results/aidxn-mobile-google-display-ads-hero-hd.webp';
+import DisplayMarketing from '../assets/marketing-results/re-placement.webp';
+import PrintAds from '../assets/marketing-results/print-advertising-managed-on-the-goldcoast.webp';
+import BusAds from '../assets/marketing-results/bus-side-sml.webp';
+import WebPerformance from '../assets/marketing-results/br-mac-render-med.webp';
+import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improvement-through-SEO-by-aidxn-design.webp';
+
+
+const services = [
+  {
+    title: "Velocity7 - Single Page.",
+    category: "Web Development",
+    description:
+      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
+    inclusions: [
+      "Responsive Website Design",
+      "Lead Generation Focused",
+      "Website Deployment",
+      "SEO Optimization",
+      "Automated Emails",
+      "Custom Web Development",
+    ],
+    imgsrc: WebPerformance,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Website Development",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
+  },
+  {
+    title: "Velocity7 - E-Commerce.",
+    category: "Web Development",
+    description:
+      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
+    inclusions: [
+      "Responsive Website Design",
+      "E-commerce Functionality",
+      "Website Deployment",
+      "SEO Optimization",
+      "Content Management System",
+      "Custom Web Development",
+    ],
+    imgsrc: VelocityLrg,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Website Development",
+    price: "8445",
+    saleprice: "6445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
+  },
+  {
+    title: "Brand Launch Ad Pack - 12 Releases.",
+    category: "Brand Design",
+    description:
+      "Our team will develop a marketing strategy plan, prove it's strength, then film and produce a round of ads for covering all major platforms. Minimum 12 design releases including 3 videos and 9 social / GDN designs.",
+    imgsrc: BrandLaunch,
+    inclusions: [
+      "Marketing Strategy Planning",
+      "Video Production",
+      "Graphic Design",
+      "Social Media Advertising",
+      "Print Advertising",
+      "Brand Collateral Development",
+    ],
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "blog/when-to-use-google-display-ads",
+    style: "outline",
+    btntxt: "Google Display Network",
+    price: "4445",
+    saleprice: "3445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/aEU6pX6r91WZ5328wB",
+  },
+  {
+    title: "Brand Strategy Development.",
+    category: "Brand Design",
+    description:
+      "The best way to start developing a winning marketing strategy without burning a handfull of cash. Our team will deep dive on what strategies work with your customer, designed 4 releases per week, and quickly improving marketing across all mediums.",
+    imgsrc: PrintAds,
+    inclusions: [
+      "Market Research",
+      "Marketing Strategy Planning",
+      "Campaign Execution",
+      "Social Media Management",
+      "Competitor Analysis",
+      "Brand Identity Development",
+    ],
+    imgalt: "Advertising with Billboards, Buses, Facebook, Instagram, and anything else, managed locally to know your best oppurtunities and marketing strategy improved monthly.",
+    link: "blog/how-to-maximise-youtube-advertising",
+    style: "outline",
+    btntxt: "Strategy Development",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "month-to-month",
+    buylink: "https://buy.stripe.com/3cs4hP7vd3138fe00d",
+  },
+  {
+    title: "Google Search Management.",
+    category: "Marketing",
+    description:
+      "Best used for high-intent marketing capture, paid CPC marketing can produce the fastest results. Our specialty is keeping the cost of aquisition down across all G-Search Campaigns.",
+    imgsrc: CPCmarketing,
+    inclusions: [
+      "Google Ads Management",
+      "Keyword Research",
+      "Ad Copywriting",
+      "Conversion Tracking",
+      "Remarketing Campaigns",
+      "Performance Monitoring",
+    ],
+    imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
+    link: "blog/when-to-use-paid-search",
+    style: "outline",
+    btntxt: "Google Search",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "month-to-month",
+    buylink: "https://buy.stripe.com/9AQ8y59Dlbxz6766op",
+  },
+  {
+    title: "Meta (FB/IG) Ad Management.",
+    category: "Marketing",
+    description:
+      "Facebook and Instagram ads can reach huge amounts of people with visual advertising, but lack manipulatable targeting data and can be costly if campaigns are not proven winners.",
+    imgsrc: MetaAds,
+    inclusions: [
+      "Facebook Ads Management",
+      "Instagram Ads Management",
+      "Ad Audience Targeting",
+      "Ad Campaign Optimization",
+      "Ad Creative Design",
+      "ROI Tracking and Analysis",
+    ],
+    imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
+    link: "blog/when-to-use-paid-meta-ads",
+    style: "outline",
+    btntxt: "Meta Ads",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "month-to-month",
+    buylink: "https://buy.stripe.com/bIY9C97vd313dzydQS",
+  },
+  {
+    title: "Google Display Ad Management.",
+    category: "Marketing",
+    description:
+      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
+    imgsrc: DisplayMarketing,
+    inclusions: [
+      "Google Display Network Campaigns",
+      "Banner Ad Design",
+      "Audience Targeting",
+      "Campaign Optimization",
+      "Display Ad Remarketing",
+      "Performance Reporting",
+    ],
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "blog/when-to-use-google-display-ads",
+    style: "outline",
+    btntxt: "Google Display Network",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "month-to-month",
+    buylink: "https://buy.stripe.com/aEU9C97vd0SVdzy14i",
+  },
+  {
+    title: "Animated Ad Pack - Large, 24 sizes.",
+    category: "Brand Design",
+    description:
+      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
+    imgsrc: AnimatedAds,
+    inclusions: [
+      "Animated Ad Design",
+      "Large Ad Format (24 sizes)",
+      "Creative Concept Development",
+      "Customized Ad Campaign",
+      "Performance Tracking and Optimization",
+      "Ad Delivery and Reporting",
+    ],
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "blog/when-to-use-google-display-ads",
+    style: "outline",
+    btntxt: "Google Display Network",
+    price: "2445",
+    saleprice: "1745",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/cN2cOl4j10SV0MMfZd",
+  },
+  {
+    title: "Bus Advertising Design & Deploy.",
+    category: "Brand Design",
+    description:
+      "Our team will handle the entire process of getting your business on buses that are actually in your customers area. We provide the care necessary to only advertise in bus routes that matter to you. Our business even offers a great industry rate with Gold Coast bus services.",
+    imgsrc: BusAds,
+    inclusions: [
+      "Bus Advertising Design",
+      "Route Planning and Optimization",
+      "Graphic Design for Bus Ads",
+      "Bus Ad Deployment",
+      "Localized Targeting",
+      "Industry Rate with Gold Coast bus services",
+    ],
+    imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
+    link: "blog/how-to-use-video-advertising-effectively",
+    style: "outline",
+    btntxt: "Gold Coast Bus Ads",
+    price: "2445",
+    saleprice: "1745",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/bIY01zaHp4573YYeVa",
+  },
+  {
+    title: "SEO Optimisation.",
+    category: "Web Development",
+    description:
+      "Until Google goes away, SEO will always be valuable to your business. Free lead generation can be created easily in small niches. Hugely effective to outgrow compeition.",
+    imgsrc: SEOmarketing,
+    inclusions: [
+      "Website Audit and Analysis",
+      "Keyword Research and Analysis",
+      "On-Page SEO Optimization",
+      "Content Optimization",
+      "Technical SEO Improvements",
+      "SEO Performance Tracking and Reporting",
+    ],
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+    link: "blog/how-to-maximise-your-websites-seo-performance",
+    style: "outline",
+    btntxt: "SEO Marketing",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/fZe5lT7vddFHanm5kw",
+  },
+  {
+    title: "Performance Optimisation.",
+    category: "Web Development",
+    description:
+      "Improving conversion has been proven by maths to improve conversion rates across the board. One of the easiest ways to improve revenue quickly.",
+    imgsrc: WebPerformance,
+    inclusions: [
+      "Website Performance Audit",
+      "Page Speed Optimization",
+      "Caching and Compression",
+      "Image Optimization",
+      "Code Optimization",
+      "Performance Monitoring and Reporting",
+    ],
+    imgalt: "Improving conversion across the board through web performance improvements.",
+    link: "blog/how-to-improve-website-conversion-rates",
+    style: "outline",
+    btntxt: "Web Performance",
+    price: "945",
+    saleprice: "745",
+    paytype: "month-to-month",
+    buylink: "https://buy.stripe.com/7sI6pXdTBdFHgLKdR0",
+  },
+];
+---
+
+<!-- Flickity -->
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<!-- Flickity Custom Styles -->
+<style>
+html, body, main {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+main { min-height: fit-content !important; }
+
+  .carousel-cell {
+    min-width: 300px;
+    width: 60vw;
+    margin-bottom: 20px;
+    max-width: 65vw;
+    margin-right: 45px;
+    padding: 20px, 40px;
+  }
+  .flickity-viewport { min-height: fit-content; }
+  .main-carousel, .flickity-viewport { max-width: 1536px !important; margin: 0 auto; }
+  
+  </style>
+
+
+<div class="mt-16 pt-16 mb-8">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Ditch the agency BS.
+  </h2>
+  <p class="text-lg max-w-6xl mt-4 text-slate-600">
+    We dive deep to learn exactly where your business model succeeds most with your target market to drilldown and iterate improvements towards this goal from all directions.
+  </p>
+</div>
+
+<main>
+<div id="sliderContainer" class="main-carousel h-fit pb-4">
+  {
+    services.map((item) => (
+      <div id="productCard" class="carousel-cell flex flex-col md:flex-row bg-gray-50 py-8 px-4 h-fit rounded-xl shadow-sm hover:shadow-md duration-200">
+          <div id="imgContainer" class="w-full md:w-1/3 lg:w-2/5 px-4">
+            <Picture
+                  src={item.imgsrc}
+                  sizes="(max-width: 1200px) 1200px, 900px, 600px"
+                  widths={[600, 900, 1200]}
+                  aspectRatio="1:1"
+                  background="#f2f2f200"
+                  fit="contain"
+                  position="center"
+                  class="w-full rounded"
+                />
+          </div>
+          <div class="px-4 py-3 w-full md:w-2/3 lg:w-3/5">
+            <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
+            <h3 class="font-semibold text-lg md:text-2xl">{item.title}</h3>{" "}
+            <p class="text-sm md:text-md text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
+
+            <h4 class="text-sm md:text-md font-semibold">Includes:</h4>
+            <ul class="mb-8">
+              {item.inclusions.map((inclusion) => (
+                <li class="text-xs text-slate-700 mb-1">{inclusion}</li>
+              ))}
+            </ul>
+
+            <p class="text-slate-700 mb-8 mr-2 leading-relaxed">
+              
+              <Link 
+                class="mr-4"
+                href={item.link || "#"}
+                block
+                style={item.style ? "primary" : "outline"}>
+                {item.btntxt || "Get Started"}
+              </Link>
+            </p>
+
+            <div class="flex items-center">
+              <p class="text-3xl font-normal text-black cursor-auto my-3">${item.saleprice}</p>
+              <del>
+                <p class="text-lg text-gray-400 cursor-auto ml-2">${item.price}</p>
+              </del>
+              <div class="ml-auto">
+                <a href={item.buylink}> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+    ))
+  }
+</div>
+</main>
+
+<script>
+  // element argument can be a selector string
+  //   for an individual element
+  var flkty = new Flickity( '.main-carousel', {
+  cellAlign: 'left',
+  contain: true,
+  freeScroll: true,
+  });
+</script>
