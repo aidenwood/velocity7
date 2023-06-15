@@ -6,7 +6,7 @@ import { Picture } from "@astrojs/image/components";
 import VelocityEcomm from '../assets/products-sqr/velocity-ecommerce.webp';
 import VelocityLrg from '../assets/products-sqr/web-design-render.webp';
 import VelocitySml from '../assets/products-sqr/velocity-web-design.webp';
-import BrandLaunch from '../assets/products-sqr/brand-refresh.webp';
+import BrandPack from '../assets/products-sqr/brand-refresh.webp';
 import CPCmarketing from '../assets/products-sqr/google-search-ad-management.webp';
 import MetaAds from '../assets/products-sqr/fb-marketing-design.webp';
 import MetaAdManagement from '../assets/products-sqr/fb-marketing-management.webp';
@@ -19,6 +19,29 @@ import SEOmarketing from '../assets/products-sqr/bus-ad-management.webp';
 
 
 const services = [
+  {
+    title: "Animated Ad Design - 24 sizes.",
+    category: "Brand Design",
+    description:
+      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
+    imgsrc: AnimatedAds,
+    inclusions: [
+      "Animated Ad Design",
+      "Large Ad Format (24 sizes)",
+      "Creative Concept Development",
+      "Customized Ad Campaign",
+      "Performance Tracking and Optimization",
+      "Ad Delivery and Reporting",
+    ],
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "blog/when-to-use-google-display-ads",
+    style: "outline",
+    btntxt: "Google Display Network",
+    price: "2445",
+    saleprice: "1745",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/cN2cOl4j10SV0MMfZd",
+  },
   {
     title: "Velocity7 - Single Page",
     category: "Web Development",
@@ -93,7 +116,7 @@ const services = [
     category: "Brand Design",
     description:
       "Our team will develop a marketing strategy plan, prove it's strength, then film and produce a round of ads for covering all major platforms. Minimum 12 design releases including 3 videos and 9 social / GDN designs.",
-    imgsrc: BrandLaunch,
+    imgsrc: CompleteBrandPack,
     inclusions: [
       "Marketing Strategy Planning",
       "Video Production",
@@ -112,11 +135,11 @@ const services = [
     buylink: "https://buy.stripe.com/aEU6pX6r91WZ5328wB",
   },
   {
-    title: "Brand Strategy Development.",
+    title: "Branded Asset Pack.",
     category: "Brand Design",
     description:
       "The best way to start developing a winning marketing strategy without burning a handfull of cash. Our team will deep dive on what strategies work with your customer, designed 4 releases per week, and quickly improving marketing across all mediums.",
-    imgsrc: PrintAds,
+    imgsrc: BrandPack,
     inclusions: [
       "Market Research",
       "Marketing Strategy Planning",
@@ -133,6 +156,52 @@ const services = [
     saleprice: "1445",
     paytype: "month-to-month",
     buylink: "https://buy.stripe.com/3cs4hP7vd3138fe00d",
+  },
+  {
+    title: "Billboard Ads.",
+    category: "Brand Design",
+    description:
+      "Improving conversion has been proven by maths to improve conversion rates across the board. One of the easiest ways to improve revenue quickly.",
+    imgsrc: PrintAds,
+    inclusions: [
+      "Website Performance Audit",
+      "Page Speed Optimization",
+      "Caching and Compression",
+      "Image Optimization",
+      "Code Optimization",
+      "Performance Monitoring and Reporting",
+    ],
+    imgalt: "Improving conversion across the board through web performance improvements.",
+    link: "blog/how-to-improve-website-conversion-rates",
+    style: "outline",
+    btntxt: "Web Performance",
+    price: "945",
+    saleprice: "745",
+    paytype: "month-to-month",
+    buylink: "https://buy.stripe.com/7sI6pXdTBdFHgLKdR0",
+  },
+  {
+    title: "Bus Ad Design & Deploy.",
+    category: "Brand Design",
+    description:
+      "Our team will handle the entire process of getting your business on buses that are actually in your customers area. We provide the care necessary to only advertise in bus routes that matter to you. Our business even offers a great industry rate with Gold Coast bus services.",
+    imgsrc: BusAds,
+    inclusions: [
+      "Bus Advertising Design",
+      "Route Planning and Optimization",
+      "Graphic Design for Bus Ads",
+      "Bus Ad Deployment",
+      "Localized Targeting",
+      "Industry Rate with Gold Coast bus services",
+    ],
+    imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
+    link: "blog/how-to-use-video-advertising-effectively",
+    style: "outline",
+    btntxt: "Gold Coast Bus Ads",
+    price: "2445",
+    saleprice: "1745",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/bIY01zaHp4573YYeVa",
   },
   {
     title: "Google Search Management.",
@@ -162,7 +231,7 @@ const services = [
     category: "Marketing",
     description:
       "Facebook and Instagram ads can reach huge amounts of people with visual advertising, but lack manipulatable targeting data and can be costly if campaigns are not proven winners.",
-    imgsrc: MetaAds,
+    imgsrc: MetaAdManagement,
     inclusions: [
       "Facebook Ads Management",
       "Instagram Ads Management",
@@ -204,52 +273,6 @@ const services = [
     buylink: "https://buy.stripe.com/aEU9C97vd0SVdzy14i",
   },
   {
-    title: "Animated Ad Pack - Large, 24 sizes.",
-    category: "Brand Design",
-    description:
-      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
-    imgsrc: AnimatedAds,
-    inclusions: [
-      "Animated Ad Design",
-      "Large Ad Format (24 sizes)",
-      "Creative Concept Development",
-      "Customized Ad Campaign",
-      "Performance Tracking and Optimization",
-      "Ad Delivery and Reporting",
-    ],
-    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
-    link: "blog/when-to-use-google-display-ads",
-    style: "outline",
-    btntxt: "Google Display Network",
-    price: "2445",
-    saleprice: "1745",
-    paytype: "once-off",
-    buylink: "https://buy.stripe.com/cN2cOl4j10SV0MMfZd",
-  },
-  {
-    title: "Bus Advertising Design & Deploy.",
-    category: "Brand Design",
-    description:
-      "Our team will handle the entire process of getting your business on buses that are actually in your customers area. We provide the care necessary to only advertise in bus routes that matter to you. Our business even offers a great industry rate with Gold Coast bus services.",
-    imgsrc: BusAds,
-    inclusions: [
-      "Bus Advertising Design",
-      "Route Planning and Optimization",
-      "Graphic Design for Bus Ads",
-      "Bus Ad Deployment",
-      "Localized Targeting",
-      "Industry Rate with Gold Coast bus services",
-    ],
-    imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
-    link: "blog/how-to-use-video-advertising-effectively",
-    style: "outline",
-    btntxt: "Gold Coast Bus Ads",
-    price: "2445",
-    saleprice: "1745",
-    paytype: "once-off",
-    buylink: "https://buy.stripe.com/bIY01zaHp4573YYeVa",
-  },
-  {
     title: "SEO Optimisation.",
     category: "Web Development",
     description:
@@ -271,29 +294,6 @@ const services = [
     saleprice: "1445",
     paytype: "once-off",
     buylink: "https://buy.stripe.com/fZe5lT7vddFHanm5kw",
-  },
-  {
-    title: "Performance Optimisation.",
-    category: "Web Development",
-    description:
-      "Improving conversion has been proven by maths to improve conversion rates across the board. One of the easiest ways to improve revenue quickly.",
-    imgsrc: WebPerformance,
-    inclusions: [
-      "Website Performance Audit",
-      "Page Speed Optimization",
-      "Caching and Compression",
-      "Image Optimization",
-      "Code Optimization",
-      "Performance Monitoring and Reporting",
-    ],
-    imgalt: "Improving conversion across the board through web performance improvements.",
-    link: "blog/how-to-improve-website-conversion-rates",
-    style: "outline",
-    btntxt: "Web Performance",
-    price: "945",
-    saleprice: "745",
-    paytype: "month-to-month",
-    buylink: "https://buy.stripe.com/7sI6pXdTBdFHgLKdR0",
   },
 ];
 ---
