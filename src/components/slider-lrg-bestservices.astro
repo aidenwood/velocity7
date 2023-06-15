@@ -312,7 +312,7 @@ main { min-height: fit-content !important; }
 
   .carousel-cell {
     width: 90vw;
-    max-width: 768px;
+    max-width: 968px;
     margin-bottom: 20px;
     margin-right: 45px;
     padding: 30px 5px;
@@ -350,7 +350,7 @@ main { min-height: fit-content !important; }
 <div id="sliderContainer" class="main-carousel h-fit pb-4">
   {
     services.map((item) => (
-      <div id="glass-card" class="carousel-cell flex flex-col md:flex-row items-center">
+      <div id="glass-card" class="carousel-cell flex flex-col md:flex-row-reverse items-center">
           <div id="imgContainer" class="w-3/4 md:w-2/5 lg:w-1/2 px-4">
             <Picture
                   src={item.imgsrc}
