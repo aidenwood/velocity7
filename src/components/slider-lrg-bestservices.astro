@@ -3,22 +3,24 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
-import VelocityLogo from '../assets/aidxn/velocity-social-landscape.png';
-import VelocityLrg from '../assets/previous-works/iphone-app-design.webp';
-import BrandLaunch from '../assets/previous-works/website-mock-ups.webp';
-import CPCmarketing from '../assets/marketing-results/cpc-marketing-results-real-estate-high-competitive-term.png';
-import MetaAds from '../assets/marketing-results/facebook-marketing-results.png';
-import AnimatedAds from '../assets/marketing-results/aidxn-mobile-google-display-ads-hero-hd.webp';
-import DisplayMarketing from '../assets/marketing-results/re-placement.webp';
-import PrintAds from '../assets/marketing-results/print-advertising-managed-on-the-goldcoast.webp';
-import BusAds from '../assets/marketing-results/bus-side-sml.webp';
-import WebPerformance from '../assets/marketing-results/br-mac-render-med.webp';
-import SEOmarketing from '../assets/marketing-results/Ball-Realty-Traffic-Improvement-through-SEO-by-aidxn-design.webp';
+import VelocityEcomm from '../assets/products-sqr/velocity-ecommerce.webp';
+import VelocityLrg from '../assets/products-sqr/web-design-render.webp';
+import VelocitySml from '../assets/products-sqr/velocity-web-design.webp';
+import BrandLaunch from '../assets/products-sqr/brand-refresh.webp';
+import CPCmarketing from '../assets/products-sqr/google-search-ad-management.webp';
+import MetaAds from '../assets/products-sqr/fb-marketing-design.webp';
+import MetaAdManagement from '../assets/products-sqr/fb-marketing-management.webp';
+import AnimatedAds from '../assets/products-sqr/animated-ad-design.webp';
+import DisplayMarketing from '../assets/products-sqr/google-display-ad-management.webp';
+import PrintAds from '../assets/products-sqr/billboard-ad-design.webp';
+import BusAds from '../assets/products-sqr/bus-ad-management.webp';
+import CompleteBrandPack from '../assets/products-sqr/complete-brand-packages.webp';
+import SEOmarketing from '../assets/products-sqr/bus-ad-management.webp';
 
 
 const services = [
   {
-    title: "Velocity7 - Single Page.",
+    title: "Velocity7 - Single Page",
     category: "Web Development",
     description:
       "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
@@ -30,7 +32,7 @@ const services = [
       "Automated Emails",
       "Custom Web Development",
     ],
-    imgsrc: WebPerformance,
+    imgsrc: VelocitySml,
     imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
     link: "blog/how-velocity7-works-with-your-brand",
     style: "outline",
@@ -41,7 +43,7 @@ const services = [
     buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
   },
   {
-    title: "Velocity7 - E-Commerce.",
+    title: "Velocity7 - Medium",
     category: "Web Development",
     description:
       "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
@@ -58,13 +60,36 @@ const services = [
     link: "blog/how-velocity7-works-with-your-brand",
     style: "outline",
     btntxt: "Website Development",
+    price: "4445",
+    saleprice: "3445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/28o15Dg1JfNPcvufZ6",
+  },
+  {
+    title: "Velocity7 - E-Commerce",
+    category: "Web Development",
+    description:
+      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
+    inclusions: [
+      "Responsive Website Design",
+      "E-commerce Functionality",
+      "Website Deployment",
+      "SEO Optimization",
+      "Content Management System",
+      "Custom Web Development",
+    ],
+    imgsrc: VelocityEcomm,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Website Development",
     price: "8445",
     saleprice: "6445",
     paytype: "once-off",
     buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
   },
   {
-    title: "Brand Launch Ad Pack - 12 Releases.",
+    title: "Complete Brand Launch Pack",
     category: "Brand Design",
     description:
       "Our team will develop a marketing strategy plan, prove it's strength, then film and produce a round of ads for covering all major platforms. Minimum 12 design releases including 3 videos and 9 social / GDN designs.",
@@ -333,7 +358,7 @@ main { min-height: fit-content !important; }
             <p class="text-sm md:text-md max-w-3xl text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
 
             <h4 class="text-sm md:text-md font-semibold">Includes:</h4>
-            <ul class="mb-8">
+            <ul class="mb-8 grid grid-cols-3 gap-8">
               {item.inclusions.map((inclusion) => (
                 <li class="text-xs text-slate-700 mb-1">{inclusion}</li>
               ))}
