@@ -312,9 +312,8 @@ main { min-height: fit-content !important; }
 
   .carousel-cell {
     width: 90vw;
-    max-width: 568px;
+    max-width: 768px;
     margin-bottom: 20px;
-    max-width: 85vw;
     margin-right: 45px;
     padding: 30px 5px;
   }
@@ -339,7 +338,7 @@ main { min-height: fit-content !important; }
   {
     services.map((item) => (
       <div id="productCard" class="carousel-cell flex flex-col md:flex-row bg-gray-50 py-8 px-4 h-fit rounded-xl shadow-sm hover:shadow-md duration-200">
-          <div id="imgContainer" class="w-full md:w-2/5 lg:w-1/4 px-4">
+          <div id="imgContainer" class="mx-auto w-1/2 md:w-2/5 lg:w-3/5 px-4">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1200px) 1200px, 900px, 600px"
@@ -351,7 +350,7 @@ main { min-height: fit-content !important; }
                   class="w-full rounded"
                 />
           </div>
-          <div class="px-4 py-3 w-full md:w-3/5 lg:w-3/4">
+          <div class="px-4 py-3 w-full md:w-3/5 lg:w-2/5">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-xl md:text-3xl">{item.title}</h3>{" "}
             <p class="text-sm md:text-md max-w-3xl text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
