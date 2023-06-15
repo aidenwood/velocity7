@@ -311,12 +311,18 @@ html, body, main {
 main { min-height: fit-content !important; }
 
   .carousel-cell {
-    width: 90vw;
-    max-width: 968px;
+    width: 49%;
+    min-width: 85vw;
     margin-bottom: 20px;
-    margin-right: 45px;
+    margin-right: 15px;
     padding: 30px 5px;
   }
+  @media only screen and (max-width: 768px) {
+  .carousel-cell {
+    width: 95%;
+    min-width: 85vw;
+  }
+}
   .flickity-viewport { min-height: fit-content; }
   .main-carousel, .flickity-viewport { max-width: 1536px !important; margin: 0 auto; }
   
@@ -350,7 +356,7 @@ main { min-height: fit-content !important; }
 <div id="sliderContainer" class="main-carousel h-fit pb-4">
   {
     services.map((item) => (
-      <div id="glass-card" class="carousel-cell flex flex-col md:flex-row-reverse items-center">
+      <div id="glass-card" class="carousel-cell flex flex-col lg:flex-row-reverse items-center">
           <div id="imgContainer" class="w-3/4 md:w-2/5 lg:w-1/2 px-4">
             <Picture
                   src={item.imgsrc}
