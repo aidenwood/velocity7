@@ -30,7 +30,7 @@ const services = [
       "Large Ad Format (24 sizes)",
       "Creative Concept Development",
       "Customized Ad Campaign",
-      "Performance Tracking and Optimization",
+      "Performance Tracking",
       "Ad Delivery and Reporting",
     ],
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
@@ -169,7 +169,7 @@ const services = [
       "Caching and Compression",
       "Image Optimization",
       "Code Optimization",
-      "Performance Monitoring and Reporting",
+      "Performance Benchmarking",
     ],
     imgalt: "Improving conversion across the board through web performance improvements.",
     link: "blog/how-to-improve-website-conversion-rates",
@@ -188,11 +188,11 @@ const services = [
     imgsrc: BusAds,
     inclusions: [
       "Bus Advertising Design",
-      "Route Planning and Optimization",
+      "Route Optimization",
       "Graphic Design for Bus Ads",
       "Bus Ad Deployment",
       "Localized Targeting",
-      "Industry Rate with Gold Coast bus services",
+      "Finding the Best Ads Rates",
     ],
     imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
     link: "blog/how-to-use-video-advertising-effectively",
@@ -372,7 +372,7 @@ main { min-height: fit-content !important; }
 <div id="sliderContainer" class="main-carousel h-fit pb-4">
   {
     services.map((item) => (
-      <div id="glass-card" class="carousel-cell flex flex-col lg:flex-row justify-center h-fit w-full md:w-1/2">
+      <div id="glass-card" class="carousel-cell flex flex-col lg:flex-row justify-center items-center h-fit w-full md:w-1/2">
           <div id="imgContainer" class="w-full lg:w-2/5 px-4">
             <Picture
                   src={item.imgsrc}
@@ -397,7 +397,7 @@ main { min-height: fit-content !important; }
               ))}
             </ul>
 
-            <div class="flex items-center">
+            <div class="flex items-center mb-8">
               <p class="text-3xl font-normal text-black cursor-auto my-3">${item.saleprice}</p>
               <del>
                 <p class="text-lg text-gray-400 cursor-auto ml-2">${item.price}</p>
@@ -412,7 +412,7 @@ main { min-height: fit-content !important; }
               </div>
             </div>
 
-            <p class="text-slate-700 mb-8 mr-2 leading-relaxed">
+            <p class="text-slate-700 mr-2 leading-relaxed">
               
               <Link 
                 class="mr-4"
