@@ -13,7 +13,7 @@ import FeaturesGrid from "@components/grid-3x3-features.astro";
 import Pricing from "@components/pricing.astro";
 import Logos from "@components/logos.astro";
 import Integrations from "@components/logos-integrations.astro";
-import GallerySlider from "@components/slider-lrg-services.astro";
+import GallerySlider from "@components/slider-lrg-bestservices.astro";
 import { Picture } from "@astrojs/image/components";
 import PagecoverHero from '../assets/previous-works/website-conversion-optimisation.webp';
 import Pagecover from '../assets/backgrounds/balance.webp';
@@ -131,7 +131,10 @@ const pricing = [
                 />
       </Fragment>
     </SectionEmail>
+  </ContainerFW>
 
+  <ContainerFW>
+    <FeaturesGrid />
   </ContainerFW>
 
   <ContainerXL>
@@ -184,10 +187,6 @@ const pricing = [
                 />
       </Fragment>
     </SectionHeadSecImg>
-  </ContainerXL>
-
-  <ContainerXL>
-    <GallerySlider />
   </ContainerXL>
 
   <ContainerXL>
@@ -277,9 +276,7 @@ const pricing = [
     </Sectionhead>
   </Container>
 
-  <ContainerFW>
-    <FeaturesGrid />
-  </ContainerFW>
+  
 
   <ContainerXL>
     <Sectionhead>
@@ -288,7 +285,7 @@ const pricing = [
         Move to Velocity7 and start crushing competition with ease in even the most competitive industries. Leave the world of churn web design. Turn around in a blazing 21 days, perfect for your next brand launch.
       </Fragment>
     </Sectionhead>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mx-auto mt-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
   </ContainerXL>
@@ -296,5 +293,9 @@ const pricing = [
   <Container>
     <Cta />
   </Container>
+
+  <ContainerXL>
+    <GallerySlider />
+  </ContainerXL>
   
 </Layout>
