@@ -3,19 +3,10 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
-import VelocityEcomm from '../assets/products-sqr/velocity-ecommerce.webp';
-import VelocityLrg from '../assets/products-sqr/web-design-render.webp';
-import VelocitySml from '../assets/products-sqr/velocity-web-design.webp';
 import BrandPack from '../assets/products-sqr/brand-refresh.webp';
-import CPCmarketing from '../assets/products-sqr/google-search-ad-management.webp';
-import MetaAds from '../assets/products-sqr/fb-marketing-design.webp';
-import MetaAdManagement from '../assets/products-sqr/fb-marketing-management.webp';
 import AnimatedAds from '../assets/products-sqr/animated-ad-design.webp';
-import DisplayMarketing from '../assets/products-sqr/google-display-ad-management.webp';
-import PrintAds from '../assets/products-sqr/billboard-ad-design.webp';
-import BusAds from '../assets/products-sqr/bus-ad-management.webp';
+import BillboardAds from '../assets/products-sqr/sml-billboard-design.webp';
 import CompleteBrandPack from '../assets/products-sqr/complete-brand-packages.webp';
-import SEOmarketing from '../assets/products-sqr/bus-ad-management.webp';
 
 
 const services = [
@@ -43,73 +34,27 @@ const services = [
     buylink: "https://buy.stripe.com/cN2cOl4j10SV0MMfZd",
   },
   {
-    title: "Velocity7 Small",
-    category: "Web Development",
+    title: "Moonshot Plan",
+    category: "Brand Design",
     description:
-      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
+      "Google Display Network (GDN) is a great way to reach huge amounts of highly targeted people through visual soft-intent advertising, and one of our favourites.",
+    imgsrc: BillboardAds,
     inclusions: [
-      "Responsive Website Design",
-      "Lead Generation Focused",
-      "Website Deployment",
-      "SEO Optimization",
-      "Automated Emails",
-      "Custom Web Development",
+      "Brand Strategy",
+      "Web Design and Dev",
+      "Marketing Optimisation",
+      "Automation of tasks",
+      "Month to month imprv.",
+      "Monthly reporting",
     ],
-    imgsrc: VelocitySml,
-    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
-    link: "blog/how-velocity7-works-with-your-brand",
+    imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
+    link: "blog/when-to-use-google-display-ads",
     style: "outline",
     btntxt: "Purchase",
-    price: "1745",
-    saleprice: "1445",
-    paytype: "once-off",
-    buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
-  },
-  {
-    title: "Velocity7 Medium",
-    category: "Web Development",
-    description:
-      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
-    inclusions: [
-      "Responsive Website Design",
-      "E-commerce Functionality",
-      "Website Deployment",
-      "SEO Optimization",
-      "Content Management System",
-      "Custom Web Development",
-    ],
-    imgsrc: VelocityLrg,
-    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
-    link: "blog/how-velocity7-works-with-your-brand",
-    style: "outline",
-    btntxt: "Purchase",
-    price: "4445",
-    saleprice: "3445",
-    paytype: "once-off",
-    buylink: "https://buy.stripe.com/28o15Dg1JfNPcvufZ6",
-  },
-  {
-    title: "Velocity7 E-Commerce",
-    category: "Web Development",
-    description:
-      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
-    inclusions: [
-      "Responsive Website Design",
-      "E-commerce Functionality",
-      "Website Deployment",
-      "SEO Optimization",
-      "Content Management System",
-      "Custom Web Development",
-    ],
-    imgsrc: VelocityEcomm,
-    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
-    link: "blog/how-velocity7-works-with-your-brand",
-    style: "outline",
-    btntxt: "Purchase",
-    price: "8445",
-    saleprice: "6445",
-    paytype: "once-off",
-    buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
+    price: "3445",
+    saleprice: "2445",
+    paytype: "monthly",
+    buylink: "#",
   },
   {
     title: "Brand Launch Pack",

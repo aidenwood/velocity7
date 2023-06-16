@@ -5,6 +5,8 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead-simple.astro";
 import Button from "@components/ui/button.astro";
 import Contactform from "@components/contactform.astro";
+import Grid from "@components/grid-2x2.astro";
+import Blog from "@components/slider-content.astro";
 ---
 
 <Layout title="Contact">
@@ -14,33 +16,8 @@ import Contactform from "@components/contactform.astro";
       <Fragment slot="desc">If it helps, here are more of our details.</Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
-      <div>
-        <h2 class="font-medium text-2xl text-gray-800">Contact Aidxn Design</h2>
-        <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          Have something to say? We are here to help. Fill up the form or send
-          email or call phone. We are also open for in-person strategy sessions
-          at our Oxenford office by appointment.
-        </p>
-        <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>2 Carnarvon Court, Oxenford</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hi@aidxn.com"
-              >hi@aidxn.com</a
-            >
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+61 412 213 169">0412 213 169</a
-            >
-          </div>
-        </div>
-      </div>
-      <div>
-        <Contactform />
-      </div>
-    </div>
+    <Grid />
+    <Blog />
+    
   </Container>
 </Layout>
