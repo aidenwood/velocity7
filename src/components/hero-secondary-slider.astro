@@ -10,17 +10,17 @@ const sliderContent = [
   {
     icon: "ph:codesandbox-logo-thin",
     category: "Marketing / Automation",
-    title: "$50k in sales, 3 months after launch, $0 total ad spend.",
+    title: "$50k in sales for 3 months, with $0 ad spend.",
     paragraph:
       "We helped the small team at The Boogie Collective create one of the most successful small business launches we've seen. Saving them a huge % on revenue by using smarter integrations.",
     btntxt: "Read more",
     style: "outline",
-    link: "https://aidxn.com/blog/theboogiecollective-marketing-strategy-case-study/",
+    link: "https://aidxn.com/blog/viral-marketing-strategies/",
   },
   {
     icon: "ph:intersect-light",
     category: "Brand Strategy + Direction",
-    title: "Multi-modal brand package for the real estate industry.",
+    title: "Effective multi-modal brand design.",
     paragraph:
       "Working with real estate companies over Covid-19's most impactful months on marketing were an interesting time. One that proved you can't put all your eggs in one (marketing) basket.",
     btntxt: "Read more",
@@ -30,12 +30,12 @@ const sliderContent = [
   {
     icon: "ph:codepen-logo-light",
     category: "Web Design / Development",
-    title: "Wordpress Pageload optimisation: 5.2 sec to 1.2 sec.",
+    title: "Pageload optimisation: 5.2 sec to 1.2 sec.",
     paragraph:
       "A Gold Coast brand was looking at migrating from Wordpress to Shopify after using the framework for 15 years. We optimised their Wordpress loadtimes so much they didn't need to migrate.",
     btntxt: "Read more",
     style: "outline",
-    link: "https://aidxn.com/blog/theboogiecollective-marketing-strategy-case-study/",
+    link: "https://aidxn.com/blog/pageload-optimisation/",
   },
 ]
 ---
@@ -120,7 +120,7 @@ const sliderContent = [
       { sliderContent.map((item) => (
           
           
-              <div id="glass-card" class="carousel-cell w-full px-16 py-32">
+              <div id="glass-card" class="carousel-cell w-full px-8 py-32">
                 <div id="slideContainer" class="flex flex-col gap-y-4">
                   <div id="iconContainer" class="absolute px-4 right-0 bottom-0 -z-10 w-1/4">
                     <Icon name="bgIcon" class="h-full bg-gray-50" style="opacity: 10%;" name={item.icon} />
@@ -128,7 +128,7 @@ const sliderContent = [
                   <div id="textContainer" class="w-full flex flex-col gap-y-4">
                     <span class="text-gray-400 mr-3 font-thin uppercase text-lg">{item.category}</span>
                     <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
-                    <p class="text-xs md:text-sm max-w-3xl font-regular text-slate-500 pr-8 leading-relaxed">{item.paragraph}</p>
+                    <p class="text-xs max-w-3xl font-regular text-slate-500 pr-8 leading-relaxed">{item.paragraph}</p>
         
                     <p class="text-slate-500 mt-8 leading-relaxed">
                       <Link 
