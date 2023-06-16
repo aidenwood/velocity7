@@ -39,7 +39,7 @@ const features = [
   {
     title: "Marketing.",
     description:
-      "We design and manage complete marketing strategies, from animated ad sets for Google Display Network to Lead Gen automation setup.",
+      "Deploy + scale marketing campaigns for local businesses + global brands.",
     imgsrc: Marketing,
     imgalt: "Ad strategy management on the Gold Coast without the giant fees.",
     link: "/marketing",
@@ -50,9 +50,9 @@ const features = [
     buybtntxt: "Purchase",
   },
   {
-    title: "Ad Production.",
+    title: "Videography.",
     description:
-      "Let our team come in for a highly structured day of professional video production, resulting in months worth of video content for your business.",
+      "Capture cheaper attention early in the funnel with professional video ads.",
     imgsrc: VideoProd,
     imgalt: "3D Video Design and Videography Production for Marketing",
     link: "/videoads",
@@ -88,12 +88,12 @@ const features = [
       Design, Develop. Market, Moonshot.
     </h3>
     <div class="flex flex-col lg:flex-row">
-    <p class="w-full lg:w-1/2 text-md lg:text-lg mt-4 max-w-6xl text-slate-600"> 
+    <p class="w-full lg:w-1/2 text-md lg:text-lg pr-4 lg:pr-8 mt-4 max-w-6xl text-slate-600"> 
       We can't stand the way some digital marketing agencies burn ad spend for the sake of 'results'. 
       Here to take full responsibility of our any sector of your business we're managing. With experience 
       across the whole design, development + marketing lifecycle, we help businesse jump through the hurdles to launch faster.
     </p>
-    <p class="w-full lg:w-1/2 text-md lg:text-lg mt-4 max-w-6xl text-slate-600"> 
+    <p class="w-full lg:w-1/2 text-md lg:text-lg pr-4 lg:pr-8 mt-4 max-w-6xl text-slate-600"> 
       Covering businesses from A-Z of marketing brands in the toughest, most competitive spaces.
       We're excited by the challenge of achieving what feels impossible, and trust us when we say,
       this absolutely is't our first space-rodeo. Book a call today to see how we can help your business.
@@ -101,12 +101,12 @@ const features = [
     </div>
   </div>
 
-  <div class="grid grid-cols-2 lg:grid-cols-4 my-16 gap-8">
+  <div class="grid grid-cols-2 xl:grid-cols-4 my-16 gap-4">
     {
       features.map((item) => (
         <div class="flex gap-4 items-start">
-          <div id="glass-card" class="w-full h-full flex flex-col lg:flex-row">
-            <div id="imgContainer" class="mt-1 w-24 h-24 md:w-48 md:h-48">
+          <div id="glass-card" class="w-full h-full flex flex-col">
+            <div id="imgContainer" class="mt-1 w-24 h-24 md:w-36 md:h-36">
               <Picture
                     src={item.imgsrc}
                     sizes="(max-width: 1000px) 1000px, 500px"
@@ -120,7 +120,7 @@ const features = [
             </div>
             <div class="px-4 lg:px-8">
               <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
-              <p class="text-slate-700 text-xs md:text-sm max-w-3xl mt-2 mb-6 leading-relaxed">{item.description}</p>
+              <p class="text-slate-700 text-xs md:text-md max-w-3xl mt-2 mb-6 leading-relaxed">{item.description}</p>
               <Link 
                 class="mr-4"
                 href={item.link || "#"}
