@@ -13,9 +13,9 @@ import FeaturesGrid from "@components/grid-3x3-features.astro";
 import Pricing from "@components/pricing.astro";
 import Logos from "@components/logos.astro";
 import Integrations from "@components/logos-integrations.astro";
-import GallerySlider from "@components/slider-gallery-branding.astro";
+import GallerySlider from "@components/slider-lrg-bestservices.astro";
 import { Picture } from "@astrojs/image/components";
-import PagecoverHero from '../assets/previous-works/website-conversion-optimisation.webp';
+import PagecoverHero from '../assets/products-sqr/animated-ad-design.webp';
 import Pagecover from '../assets/backgrounds/balance.webp';
 import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
 import CoverTextarea from '../assets/backgrounds/cubed.webp';
@@ -136,7 +136,7 @@ const pricing = [
 
 
 
-  <ContainerFW>
+  <ContainerXL>
     <SectionEmail>
       <Fragment slot="title">
         Global scale Gold Coast digital marketing.
@@ -160,11 +160,7 @@ const pricing = [
       </Fragment>
     </SectionEmail>
 
-  </ContainerFW>
-
-  <ContainerFW>
-    <FeaturesGrid />
-  </ContainerFW>
+  </ContainerXL>
 
   <ContainerXL>
     <SectionHeadImg>
@@ -308,8 +304,6 @@ const pricing = [
         the reason and fix it fast. As people who have run our own businesses, we understand how quickly money can burn.
       </Fragment>
     </Sectionhead>
-
-    <Integrations />
 
   </Container>
 
