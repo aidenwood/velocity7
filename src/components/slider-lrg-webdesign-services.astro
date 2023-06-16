@@ -1,0 +1,316 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+import { Picture } from "@astrojs/image/components";
+import VelocityEcomm from '../assets/products-sqr/velocity-ecommerce.webp';
+import VelocityLrg from '../assets/products-sqr/web-design-render.webp';
+import VelocitySml from '../assets/products-sqr/velocity-web-design.webp';
+import BrandPack from '../assets/products-sqr/brand-refresh.webp';
+import CPCmarketing from '../assets/products-sqr/google-search-ad-management.webp';
+import MetaAds from '../assets/products-sqr/fb-marketing-design.webp';
+import MetaAdManagement from '../assets/products-sqr/fb-marketing-management.webp';
+import AnimatedAds from '../assets/products-sqr/animated-ad-design.webp';
+import DisplayMarketing from '../assets/products-sqr/google-display-ad-management.webp';
+import PrintAds from '../assets/products-sqr/billboard-ad-design.webp';
+import BusAds from '../assets/products-sqr/bus-ad-management.webp';
+import CompleteBrandPack from '../assets/products-sqr/complete-brand-packages.webp';
+import SEOmarketing from '../assets/products-sqr/bus-ad-management.webp';
+
+
+const services = [
+  {
+    title: "Shopify Setup + Design",
+    category: "Web Development",
+    description:
+      "Building your next Shopify website with an award-winning web design, based on the Gold Coast for easy ideation before cloud-based mockup revision.",
+    inclusions: [
+      "Responsive Website Design",
+      "Lead Generation Focused",
+      "Website Deployment",
+      "SEO Optimization",
+      "Automated Emails",
+      "Custom Web Development",
+    ],
+    imgsrc: VelocitySml,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Purchase",
+    price: "1445",
+    saleprice: "1245",
+    paytype: "once-off",
+    buylink: "#",
+  },
+  {
+    title: "Squarespace Setup + Design",
+    category: "Web Development",
+    description:
+      "Building your next Squarespace website with an award-winning web design, based on the Gold Coast for easy ideation before cloud-based mockup revision.",
+    inclusions: [
+      "Responsive Website Design",
+      "Lead Generation Focused",
+      "Website Deployment",
+      "SEO Optimization",
+      "Automated Emails",
+      "Custom Web Development",
+    ],
+    imgsrc: VelocitySml,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Purchase",
+    price: "1445",
+    saleprice: "1245",
+    paytype: "once-off",
+    buylink: "#",
+  },
+  {
+    title: "Velocity7 Small",
+    category: "Web Development",
+    description:
+      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
+    inclusions: [
+      "Responsive Website Design",
+      "Lead Generation Focused",
+      "Website Deployment",
+      "SEO Optimization",
+      "Automated Emails",
+      "Custom Web Development",
+    ],
+    imgsrc: VelocitySml,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Purchase",
+    price: "1745",
+    saleprice: "1445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
+  },
+  {
+    title: "Velocity7 Medium",
+    category: "Web Development",
+    description:
+      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
+    inclusions: [
+      "Responsive Website Design",
+      "E-commerce Functionality",
+      "Website Deployment",
+      "SEO Optimization",
+      "Content Management System",
+      "Custom Web Development",
+    ],
+    imgsrc: VelocityLrg,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Purchase",
+    price: "4445",
+    saleprice: "3445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/28o15Dg1JfNPcvufZ6",
+  },
+  {
+    title: "Velocity7 E-Commerce",
+    category: "Web Development",
+    description:
+      "Get your business online professionally and fast. Using Velocity to skip all the time wasters of selling online and skip straight to success.",
+    inclusions: [
+      "Responsive Website Design",
+      "E-commerce Functionality",
+      "Website Deployment",
+      "SEO Optimization",
+      "Content Management System",
+      "Custom Web Development",
+    ],
+    imgsrc: VelocityEcomm,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Purchase",
+    price: "8445",
+    saleprice: "6445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/aEUeWt5n5dFHbrq4gr",
+  },
+  {
+    title: "Webflow Setup + Design",
+    category: "Web Development",
+    description:
+      "Building your next Webflow website with an award-winning web design, based on the Gold Coast for easy ideation before cloud-based mockup revision.",
+    inclusions: [
+      "Responsive Website Design",
+      "Lead Generation Focused",
+      "Website Deployment",
+      "SEO Optimization",
+      "Automated Emails",
+      "Custom Web Development",
+    ],
+    imgsrc: VelocitySml,
+    imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
+    link: "blog/how-velocity7-works-with-your-brand",
+    style: "outline",
+    btntxt: "Purchase",
+    price: "1445",
+    saleprice: "1245",
+    paytype: "once-off",
+    buylink: "#",
+  },
+  {
+    title: "SEO Optimisation",
+    category: "Web Development",
+    description:
+      "SEO will always be valuable to any business. We aim to create reliable lead generation of value-interested customers, through informative content.",
+    imgsrc: VelocityLrg,
+    inclusions: [
+      "Website Audit and Analysis",
+      "Keyword Research and Analysis",
+      "On-Page SEO Optimization",
+      "Content Optimization",
+      "Technical SEO Improvements",
+      "SEO Performance Tracking and Reporting",
+    ],
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+    link: "blog/how-to-maximise-your-websites-seo-performance",
+    style: "outline",
+    btntxt: "Purchase",
+    price: "745",
+    saleprice: "445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/fZe5lT7vddFHanm5kw",
+  },
+  {
+    title: "Pageload Optimisation",
+    category: "Web Development",
+    description:
+      "Website with Wordpress or Squarespace and need to make it faster? This is where we started our love for performance. Improving CDN, HTTPS and DNS rules.",
+    imgsrc: VelocityEcomm,
+    inclusions: [
+      "Website Audit and Analysis",
+      "Waterfall Analysis.",
+      "Pageload Optimization",
+      "Content Optimization",
+      "DNS Improvements",
+      "Full Reporting",
+    ],
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+    link: "blog/how-to-maximise-your-websites-seo-performance",
+    style: "outline",
+    btntxt: "Purchase",
+    price: "745",
+    saleprice: "445",
+    paytype: "once-off",
+    buylink: "https://buy.stripe.com/fZe5lT7vddFHanm5kw",
+  },
+];
+---
+
+<!-- Flickity -->
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<!-- Flickity Custom Styles -->
+<style>
+html, body, main {
+    max-width: 100%;
+}
+
+main { min-height: fit-content !important; }
+
+  .carousel-cell {
+    margin-bottom: 20px;
+    margin-right: 15px;
+    padding: 30px 5px;
+  }
+
+  .flickity-viewport { min-height: fit-content; }
+  .main-carousel, .flickity-viewport { max-width: 1536px !important; margin: 0 auto; }
+  
+  /* Glass-card effect dial in, minimal */
+  #glass-card {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition-duration: 200ms;
+  }
+  #glass-card:hover {
+    box-shadow: 0 40px 60px 0px #0000001a, 0 20px 40px 0px #0000000d;
+  }
+
+  </style>
+
+
+<div class="mt-16 pt-16 mb-8">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Our most popular services.
+  </h2>
+  <p class="text-lg max-w-6xl mt-4 text-slate-600">
+    We offer full-suite, design to deployment marketing management under our Moonshot plan, but we don't expect you to fall in love straight away. 
+    Get to know our work and turn-around for deliverables + requests, we're sure you'll be asking for a key to the house in no time.
+  </p>
+</div>
+
+<main>
+<div id="sliderContainer" class="main-carousel h-fit pb-4">
+  {
+    services.map((item) => (
+      <div id="glass-card" class="carousel-cell flex flex-col lg:flex-row justify-center items-center h-fit w-full md:w-1/2">
+          <div id="imgContainer" class="w-full lg:w-2/5 px-4">
+            <Picture
+                  src={item.imgsrc}
+                  sizes="(max-width: 1200px) 1200px, 900px, 600px"
+                  widths={[600, 900, 1200]}
+                  aspectRatio="1:1"
+                  background="#f2f2f200"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded"
+                />
+          </div>
+          <div class="px-4 py-3 w-full lg:w-3/5">
+            <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
+            <h3 class="font-semibold text-xl md:text-3xl">{item.title}</h3>{" "}
+            <p class="text-xs md:text-sm md:text-md max-w-3xl text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
+
+            <h4 class="text-xs font-semibold">Includes:</h4>
+            <ul class="mb-8 grid grid-cols-2 gap-x-4 gap-y-2">
+              {item.inclusions.map((inclusion) => (
+                <li class="text-xs text-slate-700 mb-1">{inclusion}</li>
+              ))}
+            </ul>
+
+            <div class="flex items-center mb-8">
+              <p class="text-3xl font-normal text-black cursor-auto my-3">${item.saleprice}</p>
+              <del>
+                <p class="text-lg text-gray-400 cursor-auto ml-2">${item.price}</p>
+              </del>
+              <div class="ml-auto">
+                <Link 
+                  class="mr-4"
+                  href={item.link || "#"}
+                  block
+                  style={item.style ? "primary" : "outline"}>
+                  {item.btntxt || "Get Started"}
+                </Link>
+              </div>
+            </div>
+          </div>
+      </div>
+    ))
+  }
+</div>
+</main>
+
+<script>
+  // element argument can be a selector string
+  //   for an individual element
+  var flkty = new Flickity( '.main-carousel', {
+  cellAlign: 'left',
+  contain: true,
+  imagesLoaded: true,
+  adaptiveHeight: true,
+  });
+</script>
