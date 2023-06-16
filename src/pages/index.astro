@@ -14,18 +14,20 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Code & Design">
-  <ContainerXL>
+  <ContainerFW>
     <Hero />
+  </ContainerFW>
+  <ContainerXL>
     <Grid />
+    <Logos /> 
+    <ProductSlider />
   </ContainerXL>
   <Container>
     <HeroSecondary />
-    <Logos /> 
     <Clients />  
     <Cta />
   </Container>
-  <ContainerXL>
-    <ProductSlider />
+  <ContainerFW>
     <BlogSlider />
-  </ContainerXL>
+  </ContainerFW>
 </Layout>
