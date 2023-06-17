@@ -7,11 +7,11 @@ const { align = "center" } = Astro.props;
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
       <slot name="title">Title</slot>
     </h2>
-    <p class="text-lg max-w-3xl mt-4 text-slate-700">
+    <p class="text-md lg:text-lg max-w-3xl mt-4 text-slate-700">
       <slot name="desc">Some description goes here</slot>
     </p>
   </div>
-  <div id="rightContainer" class="w-full md:w-1/2 px-4 md:px-8">
+  <div id="rightContainer" class="w-full md:w-1/2 px-4 md:px-8 my-4">
     <slot class="bg-grey-700 rounded" name="cover"></slot>
   </div>
 </div>
