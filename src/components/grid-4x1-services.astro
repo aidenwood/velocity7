@@ -18,7 +18,7 @@ const features = [
     imgalt: "Brand Design and strategy direction for the age of social marketing.",
     link: "/brand-strategy",
     style: "outline",
-    btntxt: "Brand Strategy",
+    btntxt: "Branding",
     buylink: "/stripelink",
     buystyle: "primary",
     buybtntxt: "Purchase",
@@ -101,11 +101,11 @@ const features = [
     </div>
   </div>
 
-  <div class="grid grid-cols-2 xl:grid-cols-4 my-16 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 my-16 gap-4">
     {
       features.map((item) => (
         <div class="flex gap-4 items-start">
-          <div id="glass-card" class="w-full h-full flex flex-col">
+          <div id="glass-card" class="w-full h-full flex flex-row md:flex-col">
             <div id="imgContainer" class="mt-1 w-24 h-24 md:w-36 md:h-36">
               <Picture
                     src={item.imgsrc}
