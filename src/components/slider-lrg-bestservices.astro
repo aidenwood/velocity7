@@ -418,12 +418,13 @@ main { min-height: fit-content !important; }
   {
     services.map((item) => (
       <div id="glass-card" class="carousel-cell flex flex-col xl:flex-row justify-center items-center h-fit w-full md:w-1/2">
-          <div id="imgContainer" class="w-1/2 md:3/4 xl:w-2/5">
+          <div id="imgContainer" class="w-1/2 md:3/4 xl:w-2/5 h-24 lg:h-full">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1200px) 1200px, 900px, 600px"
                   widths={[600, 900, 1200]}
                   aspectRatio="1:1"
+                  loading="eager"
                   background="#f2f2f200"
                   fit="cover"
                   position="center"
