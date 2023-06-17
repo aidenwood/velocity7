@@ -23,7 +23,12 @@ const menuitems = [
 ---
 
 <style>
-  #navLogo {height: 65px; max-width: 21vw; min-width: 200px; margin: 20px auto;} 
+  #navLogo {height: 60px; max-width: 21vw; min-width: 200px; margin: 15px auto;} 
+  @media only screen and (max-width: 1199px) {
+    #navLogo {
+      height: 45px;
+    }
+  }
   header { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(30px); border: 2px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
   .dashboard-button {display: none;}
 </style>
@@ -116,3 +121,4 @@ const menuitems = [
     netlifyIdentity.on('logout', showDashboardButton);
   });
 </script>
+
