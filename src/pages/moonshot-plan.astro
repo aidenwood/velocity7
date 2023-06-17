@@ -81,10 +81,6 @@ const pricing = [
 
   </ContainerXL>
 
-  <ContainerFW>
-    <FeaturesGrid />
-  </ContainerFW>
-
   <ContainerXL>
     <SectionHeadImg>
       <Fragment slot="title">
@@ -222,12 +218,21 @@ const pricing = [
 
   </Container>
 
+  <ContainerXL>
+    <Sectionhead>
+      <Fragment slot="title">Ready for launch?</Fragment>
+      <Fragment slot="desc" class="max-w-4xl">
+        Its our goal to make you love marketing just as much as we do. The best way we know how, through raw results.
+      </Fragment>
+    </Sectionhead>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </ContainerXL>
+
   <Container>
     <Cta />
   </Container>
 
-  <ContainerFW>
-    <GallerySlider />
-  </ContainerFW>
   
 </Layout>
