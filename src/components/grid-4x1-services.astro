@@ -106,7 +106,7 @@ const features = [
       features.map((item) => (
         <div class="flex gap-4 items-start">
           <div id="glass-card" class="w-full h-full flex flex-row md:flex-col">
-            <div id="imgContainer" class="mt-1 w-24 h-24 md:w-36 md:h-36">
+            <div id="imgContainer" class="mt-1 w-24 h-24 md:w-48 md:h-48 lg:w-64 lg:h-64">
               <Picture
                     src={item.imgsrc}
                     sizes="(max-width: 1000px) 1000px, 500px"
@@ -118,7 +118,7 @@ const features = [
                     class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
                   />
             </div>
-            <div class="px-4 lg:px-8">
+            <div id="textContainer" class="">
               <h3 class="font-semibold text-2xl">{item.title}</h3>{" "}
               <p class="text-slate-700 text-xs md:text-md max-w-3xl mt-2 mb-6 leading-relaxed">{item.description}</p>
               <Link 
