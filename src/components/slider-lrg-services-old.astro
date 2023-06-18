@@ -279,11 +279,6 @@ const services = [
 
 <!-- Flickity Custom Styles -->
 <style>
-html, body, main {
-    max-width: 100%;
-}
-
-main { min-height: fit-content !important; }
 
   .carousel-cell {
     min-width: 300px;
@@ -293,8 +288,15 @@ main { min-height: fit-content !important; }
     margin-right: 45px;
     padding: 30px 10px;
   }
-  .flickity-viewport { min-height: fit-content; }
-  
+
+    /* Start Flickity viewport safeguards */
+    main {
+    max-width: 100%;
+  }
+  .flickity-viewport { min-height: fit-content ; }
+  .web-carousel, .flickity-viewport { max-width: 100vw !important; margin: 0 auto; }
+  /* End Flickity viewport safeguards */
+
   </style>
 
 

@@ -141,7 +141,14 @@ html, body, main {
   margin-right: 20px;
   padding: 20px, 40px;
 }
-  .flickity-viewport { min-height: fit-content; max-height: 450px; }
+
+  /* Start Flickity viewport safeguards */
+  main {
+    max-width: 100%;
+  }
+  .flickity-viewport { min-height: fit-content ; }
+  .gallery-carousel, .flickity-viewport { max-width: 100vw !important; margin: 0 auto; }
+  /* End Flickity viewport safeguards */
 
 
 </style>
@@ -152,7 +159,7 @@ html, body, main {
   </h2>
 </div>
 
-<div id="sliderContainer" class="main-carousel w-full mb-16">
+<div id="sliderContainer" class="gallery-carousel w-full mb-16">
   {
     services.map((item) => (
       <div id="productCard" class="carousel-cell h-96 bg-white rounded-xl shadow-md hover:shadow-lg duration-200">
@@ -201,7 +208,7 @@ html, body, main {
 <script>
   // element argument can be a selector string
   //   for an individual element
-  var flkty = new Flickity( '.main-carousel', {
+  var flkty = new Flickity( '.gallery-carousel', {
   cellAlign: 'left',
   contain: true,  
   freeScroll: true,
