@@ -365,14 +365,10 @@ const services = [
   }
 
   /* Start Flickity viewport safeguards */
-  main {
-    max-width: 100%;
-    overflow-x: hidden;
-    height: fit-content;
-  }
-  .flickity-viewport { max-height: 75vw; }
-  .services-carousel, .flickity-viewport { max-width: 100vw !important; margin: 0 auto; }
+  .flickity-viewport { max-height: 75vw; max-width: 100vw; }
   /* End Flickity viewport safeguards */
+  .services-carousel { margin: 20px auto; }
+
 
   /* Glass-card effect dial in, minimal */
   #glass-card {
