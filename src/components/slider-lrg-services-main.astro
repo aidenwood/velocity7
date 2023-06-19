@@ -34,7 +34,6 @@ const services = [
         "Monthly reporting",
       ],
       imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
-      link: "blog/when-to-use-google-display-ads",
       style: "outline",
       btntxt: "Purchase",
       price: "1445/mth",
@@ -57,7 +56,6 @@ const services = [
       "Ad Delivery and Reporting",
     ],
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
-    link: "blog/when-to-use-google-display-ads",
     style: "outline",
     btntxt: "Purchase",
     price: "2445",
@@ -80,7 +78,6 @@ const services = [
     ],
     imgsrc: VelocitySml,
     imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
-    link: "blog/how-velocity7-works-with-your-brand",
     style: "outline",
     btntxt: "Purchase",
     price: "1745",
@@ -103,7 +100,6 @@ const services = [
     ],
     imgsrc: VelocitySml,
     imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
-    link: "blog/how-velocity7-works-with-your-brand",
     style: "outline",
     btntxt: "Purchase",
     price: "2745",
@@ -126,7 +122,6 @@ const services = [
     ],
     imgsrc: VelocityLrg,
     imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
-    link: "blog/how-velocity7-works-with-your-brand",
     style: "outline",
     btntxt: "Purchase",
     price: "4445",
@@ -149,7 +144,6 @@ const services = [
     ],
     imgsrc: VelocityEcomm,
     imgalt: "How Velocity7 is one of the easiest website themes to use for your business. Upgrade from wordpress or shopify today.",
-    link: "blog/how-velocity7-works-with-your-brand",
     style: "outline",
     btntxt: "Purchase",
     price: "6445",
@@ -172,7 +166,6 @@ const services = [
       "Brand Collateral Development",
     ],
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
-    link: "blog/when-to-use-google-display-ads",
     style: "outline",
     btntxt: "Purchase",
     price: "4445",
@@ -195,7 +188,6 @@ const services = [
       "Brand Identity Development",
     ],
     imgalt: "Advertising with Billboards, Buses, Facebook, Instagram, and anything else, managed locally to know your best oppurtunities and marketing strategy improved monthly.",
-    link: "blog/how-to-maximise-youtube-advertising",
     style: "outline",
     btntxt: "Purchase",
     price: "1745",
@@ -218,7 +210,6 @@ const services = [
       "Performance Benchmarking",
     ],
     imgalt: "Improving conversion across the board through web performance improvements.",
-    link: "blog/how-to-improve-website-conversion-rates",
     style: "outline",
     btntxt: "Purchase",
     price: "945",
@@ -241,7 +232,6 @@ const services = [
       "Finding the Best Ads Rates",
     ],
     imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
-    link: "blog/how-to-use-video-advertising-effectively",
     style: "outline",
     btntxt: "Purchase",
     price: "2445",
@@ -264,7 +254,6 @@ const services = [
       "Performance Monitoring",
     ],
     imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
-    link: "blog/when-to-use-paid-search",
     style: "outline",
     btntxt: "Purchase",
     price: "1745",
@@ -287,7 +276,6 @@ const services = [
       "ROI Tracking and Analysis",
     ],
     imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
-    link: "blog/when-to-use-paid-meta-ads",
     style: "outline",
     btntxt: "Purchase",
     price: "1745",
@@ -310,7 +298,6 @@ const services = [
       "Performance Reporting",
     ],
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
-    link: "blog/when-to-use-google-display-ads",
     style: "outline",
     btntxt: "Purchase",
     price: "1745",
@@ -333,7 +320,6 @@ const services = [
       "SEO Performance Tracking and Reporting",
     ],
     imgalt: "Advertising with Google for free through organic SEO improvements.",
-    link: "blog/how-to-maximise-your-websites-seo-performance",
     style: "outline",
     btntxt: "Purchase",
     price: "745",
@@ -356,7 +342,6 @@ const services = [
       "Full Reporting",
     ],
     imgalt: "Advertising with Google for free through organic SEO improvements.",
-    link: "blog/how-to-maximise-your-websites-seo-performance",
     style: "outline",
     btntxt: "Purchase",
     price: "745",
@@ -435,14 +420,14 @@ const services = [
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-xl md:text-2xl">{item.title}</h3>{" "}
             <p class="text-xs md:text-sm md:text-md max-w-3xl text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
-
-            <h4 class="text-xs font-semibold">Includes:</h4>
-            <ul class="mb-8 grid grid-cols-2 gap-x-4 gap-y-2">
-              {item.inclusions.map((inclusion) => (
-                <li class="text-xs text-slate-700 mb-1">{inclusion}</li>
-              ))}
-            </ul>
-
+            <div class="hidden md:block">
+              <h4 class="text-xs font-semibold">Includes:</h4>
+              <ul class="mb-8 grid grid-cols-2 gap-x-4 gap-y-2">
+                {item.inclusions.map((inclusion) => (
+                  <li class="text-xs text-slate-700 mb-1">{inclusion}</li>
+                ))}
+              </ul>
+            </div>
             <div class="flex items-center mb-8">
               <p class="text-3xl font-normal text-black cursor-auto my-3">${item.saleprice}</p>
               <del>
@@ -451,7 +436,7 @@ const services = [
               <div class="ml-auto">
                 <Link 
                   class="mr-4"
-                  href={item.link || "#"}
+                  href={item.buylink || "#"}
                   block
                   style={item.style ? "primary" : "outline"}>
                   {item.btntxt || "Get Started"}
