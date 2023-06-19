@@ -9,127 +9,14 @@ import Cta from "@components/cta.astro";
 import SectionHeadImg from "@components/sectionhead-img.astro";
 import SectionHeadSecImg from "@components/sectionhead-img-rev.astro";
 import SectionTextarea from "@components/sectionmid-textarea.astro";
-import FeaturesGrid from "@components/grid-4x4-features.astro";
-import Pricing from "@components/pricing.astro";
-import Logos from "@components/logos.astro";
-import Integrations from "@components/logos-integrations.astro";
 import GallerySlider from "@components/slider-lrg-services-marketing.astro";
 import { Picture } from "@astrojs/image/components";
-import PagecoverHero from '../assets/products-sqr/animated-ad-design.webp';
+import PagecoverHero from '../assets/products-sqr/bus-side-sml.webp';
 import Pagecover from '../assets/backgrounds/balance.webp';
 import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
 import CoverTextarea from '../assets/backgrounds/cubed.webp';
 import { Icon } from "astro-icon";
 
-
-const pricing = [
-  {
-    name: "Velocity7 - Online Starter",
-    price: "$1445",
-    popular: false,
-    features: [
-      "2x 15-min video-call brand sessions",
-      "2x design revisions",
-      "3x web pages w/ 0.2 sec load time avg.",
-      "High conversion landing pages with purposeful marketing",
-      "Simple social conversion tracking",
-      "Social brand pack w/ 2x design releases",
-      "50+ Velocity7 components",
-      "Out-of-the-box SEO performance",
-      "Cookie-less social user tracking",
-      "Domain & DNS optimisation",
-      "Email forwarding setup",
-      "2x lead gen funnels",
-      "Stripe payment processing",
-      "Infitely extendable, ultra-light codebase",
-      "Lifetime license of your site",
-    ],
-    button: {
-      text: "Purchase",
-      link: "https://buy.stripe.com/4gwaGdg1JeJL0MM6oF",
-    },
-  }, 
-  {
-    name: "Velocity7 - Small",
-    price: "$2445",
-    popular: false,
-    features: [
-      "2x 15-min video-call brand sessions",
-      "2x design revisions",
-      "3x web pages w/ 0.2 sec load time avg.",
-      "High conversion landing pages with purposeful marketing",
-      "Simple social conversion tracking",
-      "Social brand pack w/ 2x design releases",
-      "50+ Velocity7 components",
-      "Out-of-the-box SEO performance",
-      "Cookie-less social user tracking",
-      "Domain & DNS optimisation",
-      "Email forwarding setup",
-      "2x lead gen funnels",
-      "Stripe payment processing",
-      "Infitely extendable, ultra-light codebase",
-      "Lifetime license of your site",
-    ],
-    button: {
-      text: "Purchase",
-      link: "https://buy.stripe.com/7sIcOleXFgRTbrq4gg",
-    },
-  },
-  {
-    name: "Velocity7 - Medium",
-    price: 
-      "$3445",
-    popular: true,
-    features: [
-      "3x 15-min video-call brand sessions",
-      "4x design revisions",
-      "6x web pages w/ 0.2 sec load time avg.",
-      "High conversion landing pages with purposeful marketing",
-      "Custom social conversion tracking",
-      "Social brand pack w/ 4x design releases",
-      "50+ Velocity7 components",
-      "Out-of-the-box SEO performance",
-      "Cookie-less social user tracking",
-      "Domain & DNS optimisation",
-      "Email forwarding setup",
-      "4x lead gen funnels",
-      "Stripe payment processing",
-      "Infitely extendable, ultra-light codebase",
-      "Lifetime license of your site",
-    ],
-    button: {
-      text: "Purchase",
-      link: "https://buy.stripe.com/28o15Dg1JfNPcvufZ6",
-    },
-  },
-  {
-    name: "Velocity7 - E-Commerce",
-    price: "$6445",
-    popular: false,
-    features: [
-      "4x 15-min video-call brand sessions",
-      "6x design revisions",
-      "12x web pages w/ 0.2 sec load time avg.",
-      "2x in-person strategy sessions",
-      "E-Commerce store extension on sub-domain",
-      "Custom social conversion tracking",
-      "Social brand pack w/ 8x design releases",
-      "50+ Velocity7 components",
-      "Out-of-the-box SEO performance",
-      "Cookie-less social user tracking",
-      "Domain & DNS optimisation",
-      "Email forwarding setup",
-      "2x lead gen funnels",
-      "Stripe payment processing",
-      "Infitely extendable, ultra-light codebase",
-      "Lifetime license of your site",
-    ],
-    button: {
-      text: "Purchase",
-      link: "https://buy.stripe.com/cN2eWtdTBdFH1QQ14d",
-    },
-  },
-];
 ---
 
 <Layout title="Complete Marketing Management">
