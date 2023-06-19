@@ -17,8 +17,8 @@ import { Icon } from "astro-icon";
 
     <div class="py-6">
       <h2 style="heroTagline" class="text-4xl lg:text-5xl w-full font-bold tracking-tight">
-        Interactive ads +
-        3D design
+        Interactive ads,
+        3D assets + renders.
       </h2>
       <p class="text-lg mt-6 pr-8 text-slate-700 w-full lg:max-w-3xl">
         We use Three.JS, Blender, Cinema4DS and Sketchup to create beautiful yet lightweight 3D assets. 
@@ -48,21 +48,10 @@ import { Icon } from "astro-icon";
   <div id="rightContainer" class="w-full lg:w-2/5 z-5">
 
     <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.369/build/spline-viewer.js"></script>
-<spline-viewer hint loading-anim url="https://prod.spline.design/W-D9GN4mRgANlfMe/scene.splinecode"></spline-viewer>
+    <spline-viewer hint loading-anim url="https://prod.spline.design/W-D9GN4mRgANlfMe/scene.splinecode"></spline-viewer>
 
   </div>
 </div>
 
 </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
 
-<script>
-  // element argument can be a selector string
-  //   for an individual element
-  var flkty = new Flickity( '.product-carousel', {
-  contain: true,
-  autoPlay: 3200,
-  imagesLoaded: true,
-  adaptiveHeight: true,
-  });
-</script>
