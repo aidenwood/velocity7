@@ -1,0 +1,56 @@
+---
+
+---
+
+<script>
+
+const { createRoot } = ReactDOM;
+const {  Tabs  } = antd;
+const onChange = (key) => {
+  console.log(key);
+};
+const items = [
+  {
+    key: '1',
+    label: `Tab 1`,
+    children: `Content of Tab Pane 1`,
+  },
+  {
+    key: '2',
+    label: `Tab 2`,
+    children: `Content of Tab Pane 2`,
+  },
+  {
+    key: '3',
+    label: `Tab 3`,
+    children: `Content of Tab Pane 3`,
+  },
+];
+const App = () => <Tabs defaultActiveKey="1" items={items} onChange={onChange} />;
+const ComponentDemo = App;
+
+
+createRoot(mountNode).render(<ComponentDemo />);
+
+</script>
+
+
+<main class="pb-16">
+<div id="titleContainer" class="mt-16 pb-8 flex flex-col md:flex-row justify-start items-center">
+  <div id="leftContainer" class="w-full md:w-1/2 px-4 md:px-8">
+    <h3 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      <slot name="title">Title</slot>
+    </h3>
+    <p class="text-md lg:text-lg max-w-3xl mt-4 text-slate-700">
+      <slot name="desc">Some description goes here</slot>
+    </p>
+  </div>
+  <div id="rightContainer" class="w-full md:w-1/2 px-4 md:px-8">
+    <slot class="bg-grey-700 rounded" name="cover"></slot>
+  </div>
+</div>
+<div class="my-8 flex flex-col md:flex-row">
+  <div id="container" style="padding: 24px" />
+          <script>const mountNode = document.getElementById('container');</script>
+</div>
+</main>
