@@ -48,7 +48,7 @@ import { Icon } from "astro-icon";
     </SectionEmail>
 
     <ClientLogos />
-    
+
   </ContainerXL>
 
   <ContainerXL>
@@ -75,6 +75,69 @@ import { Icon } from "astro-icon";
                 />
       </Fragment>
     </SectionHeadImg>
+  </ContainerXL>
+
+  <ContainerXL>
+    <SectionTextarea>
+      <Fragment slot="title">Get back to what you do best.</Fragment>
+      <Fragment slot="desc">
+        Our success system is built on developing high performance conversion focused designs 
+        quickly, with full approval from all eyes needed. Revisions can be quickly added 
+        using any device, allowing us to turn-around designs faster than you'd expect.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={CoverTextarea}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+      <Fragment slot="iconleft">
+        <Icon class="w-16 h-16" name="simple-icons:slack" />
+      </Fragment>
+      <Fragment slot="titleleft">
+        Slack
+      </Fragment>
+      <Fragment slot="textleft">
+        To reduce the need for phone calls, we use Slack to communicate. 
+        With an average reply speed of 4.15 minutes, during business hours in 2022.
+      </Fragment>
+      <Fragment slot="iconright">
+        <Icon class="w-16 h-16" name="simple-icons:figma" />
+      </Fragment>
+      <Fragment slot="titleright">
+        Figma
+      </Fragment>
+      <Fragment slot="textright">
+        We use Figma to design interactive, code like mockups. As a developer meets designer, 
+        we build realistic, high-performance designs. Add notes directly to our work from any device.
+      </Fragment>
+      <Fragment slot="iconleft2">
+        <Icon class="w-16 h-16" name="simple-icons:trello" />
+      </Fragment>
+      <Fragment slot="titleleft2">
+        Trello
+      </Fragment>
+      <Fragment slot="textleft2">
+        To keep complete clarity between approved ideas and designs, we use Trello. A simple card-based 
+        approval system that is an industry-standard for project management. Access from any device.
+      </Fragment>
+      <Fragment slot="iconright2">
+        <Icon class="w-16 h-16" name="simple-icons:googledrive" />
+      </Fragment>
+      <Fragment slot="titleright2">
+        Google Drive
+      </Fragment>
+      <Fragment slot="textright2">
+        We use Google Drive business to make your approved final releases available instantly to your team. 
+        Taken a step further by integrating automated uploads into CRM's such as Hubspot or Salesforce.
+      </Fragment>      
+    </SectionTextarea>
   </ContainerXL>
 
   <ContainerXL>
