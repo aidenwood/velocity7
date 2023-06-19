@@ -365,7 +365,7 @@ const services = [
   }
 
   /* Start Flickity viewport safeguards */
-  .flickity-viewport { max-height: 75vw; max-width: 100vw; }
+  .flickity-viewport { max-height: 75vw; max-width: 100vw; min-height: 450px; }
   /* End Flickity viewport safeguards */
   .services-carousel { margin: 20px auto; }
 
@@ -400,7 +400,7 @@ const services = [
   {
     services.map((item) => (
       <div id="glass-card" class="carousel-cell flex flex-col xl:flex-row justify-center md:items-center h-fit w-full md:w-1/2">
-          <div id="imgContainer" class="w-1/3 md:3/4 xl:w-2/5">
+          <div id="imgContainer" class="w-1/2 md:3/4 xl:w-2/5 px-2">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1200px) 1200px, 900px, 600px"
@@ -412,7 +412,7 @@ const services = [
                   class="w-full rounded"
                 />
           </div>
-          <div class="my-4 w-full xl:w-3/5">
+          <div class="my-4 w-full xl:w-3/5 px-2">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-xl md:text-2xl">{item.title}</h3>{" "}
             <p class="text-xs md:text-sm lg:text-md max-w-3xl text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>

@@ -205,10 +205,10 @@ max-width: 100%;
   {
     services.map((item) => (
       <div id="glass-card" class="carousel-cell flex flex-col py-8 px-4 h-fit">
-        <div id="imgContainer" class="lg:w-1/3 mt-2 p-2">
+        <div id="imgContainer" class="lg:w-1/3 mt-2 px-2">
           <Icon class="h-8 md:h-12" name={item.icon} />
         </div>  
-        <div id="textContainer" class="w-full px-4 py-3">
+        <div id="textContainer" class="w-full px-2 my-4">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-xl pr-4">{item.title}</h3>{" "}
             <p class="text-sm text-slate-500 mt-2 mb-6 leading-relaxed">{item.description}</p>
