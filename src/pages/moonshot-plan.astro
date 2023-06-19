@@ -9,9 +9,7 @@ import Cta from "@components/cta.astro";
 import SectionHeadImg from "@components/sectionhead-img.astro";
 import SectionHeadSecImg from "@components/sectionhead-img-rev.astro";
 import SectionTextarea from "@components/sectionmid-textarea.astro";
-import FeaturesGrid from "@components/grid-4x4-features.astro";
-import Pricing from "@components/pricing.astro";
-import Logos from "@components/logos.astro";
+import ClientLogos from "@components/grid-4x3-clients.astro";
 import Integrations from "@components/logos-integrations.astro";
 import GallerySlider from "@components/slider-gallery-branding.astro";
 import { Picture } from "@astrojs/image/components";
@@ -20,39 +18,9 @@ import Pagecover from '../assets/backgrounds/balance.webp';
 import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
 import CoverTextarea from '../assets/backgrounds/cubed.webp';
 import { Icon } from "astro-icon";
-
-
-const pricing = [
-  {
-    name: "Moonshot Plan",
-    price: "$3445",
-    popular: true,
-    features: [
-      "2x 15-min video-call brand sessions",
-      "2x design revisions",
-      "3x web pages w/ 0.2 sec load time avg.",
-      "High conversion landing pages with purposeful marketing",
-      "Simple social conversion tracking",
-      "Social brand pack w/ 2x design releases",
-      "50+ Velocity7 components",
-      "Out-of-the-box SEO performance",
-      "Cookie-less social user tracking",
-      "Domain & DNS optimisation",
-      "Email forwarding setup",
-      "2x lead gen funnels",
-      "Stripe payment processing",
-      "Infitely extendable, ultra-light codebase",
-      "Lifetime license of your site",
-    ],
-    button: {
-      text: "Purchase",
-      link: "https://buy.stripe.com/4gwaGdg1JeJL0MM6oF",
-    },
-  }, 
-];
 ---
 
-<Layout title="Marketing Management + Optimisation with the Moonshot Plan">
+<Layout title="Gold Coast Website + Marketing Management with our Moonshot Plan">
 
 
 
@@ -79,6 +47,8 @@ const pricing = [
       </Fragment>
     </SectionEmail>
 
+    <ClientLogos />
+    
   </ContainerXL>
 
   <ContainerXL>
@@ -217,17 +187,6 @@ const pricing = [
 
   </Container>
 
-  <ContainerXL>
-    <Sectionhead>
-      <Fragment slot="title">Ready for launch?</Fragment>
-      <Fragment slot="desc" class="max-w-4xl">
-        Its our goal to make you love marketing just as much as we do. The best way we know how, through raw results.
-      </Fragment>
-    </Sectionhead>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
-  </ContainerXL>
 
   <Container>
     <Cta />
