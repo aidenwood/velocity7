@@ -1,0 +1,68 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Dash from "../assets/dashboard.png";
+import Chart from "../assets/chart.png";
+import Payment from "../assets/payment.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+
+---
+
+
+
+<main class="my-32 md:my-16">
+<div id="heroSection" class="flex flex-col lg:flex-row justify-center items-center">
+  
+  <div id="leftContainer" class="w-full lg:w-3/5">
+
+    <div class="py-6">
+      <h2 style="heroTagline" class="text-4xl lg:text-5xl w-full font-bold tracking-tight">
+        Interactive ads +
+        3D design
+      </h2>
+      <p class="text-lg mt-6 pr-8 text-slate-700 w-full lg:max-w-3xl">
+        We use Three.JS, Blender, Cinema4DS and Sketchup to create beautiful yet lightweight 3D assets. 
+        Interactive ads for Google Display that outperform standard CPM's. 
+      </p>
+      
+      <div class="mt-12 flex flex-col sm:flex-row gap-3">
+        <a href="https://aidxn.com/video-ads" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-black text-white hover:bg-gray-800 border-2 border-transparent flex gap-1 items-center justify-center">
+          <svg viewBox="0 0 24 24" class="text-white w-5 h-5" astro-icon="ph:lightning-fill">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M9.94 2.512a20.75 20.75 0 0 1 4.692 0l1.596.182a.75.75 0 0 1 .62 1.003l-2.203 6.016H17a.75.75 0 0 1 .702 1.014l-.19.507a35.749 35.749 0 0 1-5.535 9.745l-.391.49A.75.75 0 0 1 10.25 21v-7.152H8.429a.75.75 0 0 1-.748-.684l-.122-1.382a39.75 39.75 0 0 1 0-7.027l.122-1.382a.75.75 0 0 1 .663-.68l1.595-.18Zm4.523 1.49a19.25 19.25 0 0 0-4.354 0l-.987.113l-.069.772c-.2 2.25-.2 4.513 0 6.763l.062.698H11a.75.75 0 0 1 .75.75v5.704a34.251 34.251 0 0 0 4.163-7.589H13.57a.75.75 0 0 1-.704-1.007l2.244-6.13l-.648-.073Z" clip-rule="evenodd"/></svg>
+          </svg>
+
+          3D Asset Design
+
+        </a>
+        <a href="https://aidxn.com/video-ads" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white border-2 border-black hover:bg-gray-100 text-black flex gap-1 items-center justify-center">
+          <svg viewBox="0 0 24 24" class="text-black w-5 h-5" astro-icon="ph:table-light">
+          </svg>
+          
+          Video Production
+
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="rightContainer" class="w-full lg:w-2/5 z-5">
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.369/build/spline-viewer.js"></script>
+<spline-viewer hint loading-anim url="https://prod.spline.design/W-D9GN4mRgANlfMe/scene.splinecode"></spline-viewer>
+
+  </div>
+</div>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
+
+<script>
+  // element argument can be a selector string
+  //   for an individual element
+  var flkty = new Flickity( '.product-carousel', {
+  contain: true,
+  autoPlay: 3200,
+  imagesLoaded: true,
+  adaptiveHeight: true,
+  });
+</script>
