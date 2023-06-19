@@ -57,7 +57,6 @@ const services = [
       "Ad Delivery and Reporting",
     ],
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
-    link: "blog/when-to-use-google-display-ads",
     style: "outline",
     btntxt: "Purchase",
     price: "2445",
@@ -80,7 +79,6 @@ const services = [
       "Performance Benchmarking",
     ],
     imgalt: "Improving conversion across the board through web performance improvements.",
-    link: "blog/how-to-improve-website-conversion-rates",
     style: "outline",
     btntxt: "Purchase",
     price: "945",
@@ -103,7 +101,6 @@ const services = [
       "Finding the Best Ads Rates",
     ],
     imgalt: "Advertising with Youtube. Managed on the Gold Coast.",
-    link: "blog/how-to-use-video-advertising-effectively",
     style: "outline",
     btntxt: "Purchase",
     price: "2445",
@@ -126,7 +123,6 @@ const services = [
       "Performance Monitoring",
     ],
     imgalt: "Advertising with Google Search. Managed on the Gold Coast.",
-    link: "blog/when-to-use-paid-search",
     style: "outline",
     btntxt: "Purchase",
     price: "1745",
@@ -149,7 +145,6 @@ const services = [
       "ROI Tracking and Analysis",
     ],
     imgalt: "Advertising with Facebook and Instagram (Meta Network). Managed on the Gold Coast.",
-    link: "blog/when-to-use-paid-meta-ads",
     style: "outline",
     btntxt: "Purchase",
     price: "1745",
@@ -172,7 +167,6 @@ const services = [
       "Performance Reporting",
     ],
     imgalt: "Advertising with Google Display ads. Managed on the Gold Coast.",
-    link: "blog/when-to-use-google-display-ads",
     style: "outline",
     btntxt: "Purchase",
     price: "1745",
@@ -196,12 +190,7 @@ const services = [
   }
 
   /* Start Flickity viewport safeguards */
-  main {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  .flickity-viewport { min-height: fit-content ; }
-  .marketing-carousel, .flickity-viewport { max-width: 100vw !important; margin: 0 auto; }
+  .flickity-viewport { max-height: 75vw; max-width: 100vw; min-height: 550px; }
   /* End Flickity viewport safeguards */
 
   /* Glass-card effect dial in, minimal */
@@ -235,7 +224,7 @@ const services = [
   {
     services.map((item) => (
       <div id="glass-card" class="carousel-cell flex flex-col lg:flex-row justify-center items-center h-fit w-full md:w-1/2">
-          <div id="imgContainer" class="w-full lg:w-2/5 px-4">
+          <div id="imgContainer" class="w-1/2 md:3/4 xl:w-2/5 px-4">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1200px) 1200px, 900px, 600px"
@@ -247,7 +236,7 @@ const services = [
                   class="w-full rounded"
                 />
           </div>
-          <div class="px-4 py-3 w-full lg:w-3/5">
+          <div class="px-4 py-3 w-full xl:w-3/5">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-xl md:text-2xl">{item.title}</h3>{" "}
             <p class="text-xs md:text-sm md:text-md max-w-3xl text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
