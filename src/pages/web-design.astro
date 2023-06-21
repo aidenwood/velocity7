@@ -138,13 +138,13 @@ const pricing = [
 
 
 
-  <ContainerFW>
+  <ContainerXL>
     <SectionEmail>
       <Fragment slot="title">
         Award-winning web design on the Gold Coast.
       </Fragment>
       <Fragment slot="desc">
-        Highly awarded web designer on the Gold Coast. From Wordpress to Shopify to Web3 JS languages, we have you covered. Specialising in building blazing-fast, custom web experiences that drive sales through unique creative marketing. 
+        Wordpress, Shopify + custom 3D web experiences, we have you covered. Specialising in building blazing-fast websites that drive sales with perfect SEO and common user experience. 
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -158,92 +158,35 @@ const pricing = [
                 />
       </Fragment>
     </SectionEmail>
-  </ContainerFW>
+  </ContainerXL>
 
   <ContainerFW>
     <GallerySlider />
   </ContainerFW>
 
   <Container>
-    <Integrations />
-  </Container>
-
-  <ContainerXL>
-    <SectionHeadImg>
-      <Fragment slot="title">
-        Shopify website design
-      </Fragment>
-      <Fragment slot="desc">
-        We've worked in web design and development for over 10 years, if you're 
-        looking for someone you can honestly trust with your Shopify Plus store, 
-        we're worth giving a call. Velocity even comes in RubyonRails for use as 
-        a Shopify theme. (Shopify theme available to Moonshot customers only)
-      </Fragment>
-      <Fragment slot="cover">
-        <Picture
-                  src={Pagecover}
-                  sizes="(max-width: 2000px) 2000px, 1000px"
-                  widths={[1000, 1500, 2000]}
-                  aspectRatio="3:2"
-                  background="#f2f2f2"
-                  fit="cover"
-                  position="center"
-                  class="w-full rounded duration-200 hover:shadow-sm"
-                />
-      </Fragment>
-    </SectionHeadImg>
-  </ContainerXL>
-
-  <ContainerXL>
-    <SectionHeadSecImg>
-      <Fragment slot="title">
-        Wordpress website design
-      </Fragment>
-      <Fragment slot="desc">
-        We're absolutely nuts about perfect web performance, after all, it's what the customer demands. 
-        If your business is locked into a Web2 stack like Wordpress we have plenty of experience optimising 
-        these sites with great results. From code structure improvement to waterfall optimisation, 
-        we comb through your site constantly as new content arrives, always keeping your site fast and ranking well.
-      </Fragment>
-      <Fragment slot="cover">
-        <Picture
-                  src={PagecoverSecondary}
-                  sizes="(max-width: 2000px) 2000px, 1000px"
-                  widths={[1000, 1500, 2000]}
-                  aspectRatio="3:2"
-                  background="#f2f2f2"
-                  fit="cover"
-                  position="center"
-                  class="w-full rounded duration-200 hover:shadow-sm"
-                />
-      </Fragment>
-    </SectionHeadSecImg>
-  </ContainerXL>
-
-  <Container>
     <Sectionhead>
       <Fragment slot="title">Introducing Velocity7.</Fragment>
       <Fragment slot="desc">
-        Helping businesses stay on the edge of competition in the most competitive industries. 
-        The fastest website framework developed specifically for Australian businesses, and the 
-        web performance issues we individually face. Out-performing some of the biggest names in 
-        tech in our <a href="#">pageload comparisons</a>. Works with any framework, infinitely extendable.
+        Helping businesses move to web3 for less. Our performance website framework, complete with everything needed to 
+        generate leads and sales online. Developed specifically for Australian businesses. Crush competition + SEO rankings 
+        with A+ web performance and web vitals. Works with any framework, infinitely extendable.
       </Fragment>
     </Sectionhead>
   </Container>
 
-  <ContainerFW>
-    <FeaturesGrid />
-  </ContainerFW>
+  <Container>
+    <Integrations />
+  </Container>
 
   <ContainerXL>
     <SectionTextarea>
-      <Fragment slot="title">Velocity7 web design.</Fragment>
+      <Fragment slot="title">Lowcode and limitless.</Fragment>
       <Fragment slot="desc">
-        Our favourite thing to hear is a brand that wants to go truly "Banksy" on their online prescence. 
-        Trust us when we say we've seen creative e-commerce design pay off time and time again. 
-        We've worked with a number of international market, global brands to create true digital art, 
-        that truly drives sales. Using game theory and 3D interation to hook your customer with ease.
+        Velocity 7 is a low-code framework that allows us to build websites faster than ever before. 
+        While maintaining high-performance and high-conversion rate through faster design iterations. 
+        Addressing the problems of website builders, while still feeling natural to use if you're experienced
+        with them. Pay once, own forever.
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -307,18 +250,72 @@ const pricing = [
     </SectionTextarea>
   </ContainerXL>
 
-  
+  <ContainerFW>
+    <FeaturesGrid />
+  </ContainerFW>
 
-  <ContainerXL>
+  <ContainerFW>
     <Sectionhead>
       <Fragment slot="title">Ready for launch?</Fragment>
       <Fragment slot="desc" class="max-w-4xl">
         Move to Velocity7 and start crushing competition with ease in even the most competitive industries. Leave the world of churn web design. Turn around in a blazing 21 days, perfect for your next brand launch.
       </Fragment>
     </Sectionhead>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
+  </ContainerFW>
+
+  <ContainerXL>
+    <SectionHeadImg>
+      <Fragment slot="title">
+        Shopify website design
+      </Fragment>
+      <Fragment slot="desc">
+        We've worked in web design and development for over 10 years, if you're 
+        looking for someone you can honestly trust with your Shopify Plus store, 
+        we're worth giving a call. Velocity even comes in RubyonRails for use as 
+        a Shopify theme. (Shopify theme available to Moonshot customers only)
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={Pagecover}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadImg>
+  </ContainerXL>
+
+  <ContainerXL>
+    <SectionHeadSecImg>
+      <Fragment slot="title">
+        Wordpress website design
+      </Fragment>
+      <Fragment slot="desc">
+        We're absolutely nuts about perfect web performance, after all, it's what the customer demands. 
+        If your business is locked into a Web2 stack like Wordpress we have plenty of experience optimising 
+        these sites with great results. From code structure improvement to waterfall optimisation, 
+        we comb through your site constantly as new content arrives, always keeping your site fast and ranking well.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={PagecoverSecondary}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadSecImg>
   </ContainerXL>
 
   <Container>
