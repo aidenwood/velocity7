@@ -433,6 +433,7 @@ const services = [
               </del>
               <div class="ml-auto">
                 <Link 
+                  onClick="onClick()"
                   class=""
                   href={item.buylink || "#"}
                   block
@@ -456,4 +457,10 @@ const services = [
   contain: true,
   imagesLoaded: true,
   });
+</script>
+
+<script>
+  function onClick() {
+  fbq('track', 'Purchase');
+  };
 </script>
