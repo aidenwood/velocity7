@@ -7,7 +7,7 @@ import Button from "./ui/button.astro";
     <h1 class="text-3xl md:text-4xl lg:text-6xl max-w-6xl font-bold lg:tracking-tight">
       <slot name="title">Title</slot>
     </h1>
-    <p class="sm:text-lg text-xl max-w-4xl md:pr-4 mt-8 mb-8 lg:mb-16 text-slate-600">
+    <p class="text-sm lg:text-lg max-w-4xl md:pr-4 mt-8 mb-8 lg:mb-16 text-slate-600">
       <slot name="desc">Some description goes here</slot>
     </p>
     
@@ -62,7 +62,7 @@ import Button from "./ui/button.astro";
       </form>
     </div>
   </div>
-  <div id="rightContainer" class="w-full lg:w-2/5 py-8 flex items-center justify-center">
+  <div id="rightContainer" class="w-full lg:w-2/5 py-4 lg:py-8 flex items-center justify-center">
       <slot class="rounded" name="cover"></slot>
   </div>
 </div>
