@@ -10,59 +10,20 @@ const sliderContent = [
   {
     icon: "ph:codesandbox-logo-thin",
     category: "Marketing / Automation",
-    title: "$50k in sales, 3 months from launch, with $0 ad spend.",
+    title: "Moonshot Plan",
     paragraph:
       "We helped the small team at The Boogie Collective create one of the most successful small business launches we've seen. Saving them a huge % on revenue by using smarter integrations.",
-    btntxt: "Read more",
+    btntxt: "More ino",
     style: "outline",
-    link: "https://aidxn.com/blog/viral-marketing-strategies/",
-  },
-  {
-    icon: "ph:intersect-light",
-    category: "Brand Strategy + Direction",
-    title: "Strategic brand for effective multi-modal marketing.",
-    paragraph:
-      "Working with real estate companies over Covid-19's most impactful months on marketing were an interesting time. One that proved you can't put all your eggs in one (marketing) basket.",
-    btntxt: "Read more",
-    style: "outline",
-    link: "https://aidxn.com/blog/multi-modal-marketing/",
-  },
-  {
-    icon: "ph:codesandbox-logo-thin",
-    category: "Marketing / Automation",
-    title: "CPA reduced by over $50/sale in first month of Moonshot.",
-    paragraph:
-      "Reduced CPA of a 3 year old, $8k / week campaign from $84 to $36.5 for a 20 year old Gold Coast business. Until we came and more than doubled the results of their ad spend after only one month of Moonshot.",
-    btntxt: "Read more",
-    style: "outline",
-    link: "https://aidxn.com/blog/conversion-focused-design/",
-  },
-  {
-    icon: "ph:codepen-logo-light",
-    category: "Web Design / Development",
-    title: "Wordpress Pageload optimisation: 5.2 to 1.2 sec.",
-    paragraph:
-      "A Gold Coast brand was looking at migrating from Wordpress to Shopify after using the framework for 15 years. We optimised their Wordpress loadtimes so much they didn't need to migrate.",
-    btntxt: "Read more",
-    style: "outline",
-    link: "https://aidxn.com/blog/website-pageload-optimisation/",
-  },
+    link: "https://aidxn.com/moonshot-plan/",
+  }
 ]
 ---
 
 
-<!-- Flickity -->
-<!-- CSS -->
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<!-- Flickity Custom Styles -->
-<style>
-  .product-carousel .flickity-viewport { padding: 60px 90px; min-height: 220px; display: flex; justify-content: center; align-items: center; width: 100% !important; }
-  .carousel-cell { min-height: 220px; width: 65%; margin: 40px 20px; padding: 10px 20px; }
-  .flickity-button { max-width: 20px; }
 
-  /* accessibility */
-  .flickity-enabled:focus .flickity-viewport { outline: thin dotted; outline: 2px auto -webkit-focus-ring-color; }
-  
+<style>
+  .carousel-cell { min-height: 220px; width: 65%; margin: 40px 20px; padding: 10px 20px; }
 
   /* Glass-card effect dial in, needs a moving background css only if possible */
   #glass-card {
@@ -126,8 +87,8 @@ const sliderContent = [
 
   <div id="rightContainer" class="w-full lg:w-2/5 z-5">
 
-    <!-- START flickity slider for Case Studies -->
-    <div class="product-carousel w-full h-full">
+
+    <div class="w-full h-full">
       { sliderContent.map((item) => (
           
           
@@ -158,21 +119,9 @@ const sliderContent = [
         ))
       }
     </div>
-    <!-- END flickity slider for Case Studies -->
+
 
   </div>
 </div>
 
 </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
-
-<script>
-  // element argument can be a selector string
-  //   for an individual element
-  var flkty = new Flickity( '.product-carousel', {
-  contain: true,
-  autoPlay: 3200,
-  imagesLoaded: true,
-  adaptiveHeight: true,
-  });
-</script>

@@ -14,6 +14,7 @@ import Pricing from "@components/pricing.astro";
 import Logos from "@components/logos.astro";
 import Integrations from "@components/logos-integrations.astro";
 import GallerySlider from "@components/slider-lrg-services-brand.astro";
+import MoonshotHero from "@components/hero-secondary-singleproduct-moonshot.astro";
 import BlogSlider from "@components/slider-content.astro";
 import { Picture } from "@astrojs/image/components";
 import PagecoverHero from '../assets/products-sqr/complete-brand-packages.webp';
@@ -104,7 +105,7 @@ const pricing = [
   <ContainerFW>
     <SectionEmail>
       <Fragment slot="title">
-        Brand design + strategy by global marketing managers.
+        Brand design + strategies for local business.
       </Fragment>
       <Fragment slot="desc">
         Effective marketing is simply no accident, not even close. We design brands that seemlessly 
@@ -280,5 +281,8 @@ const pricing = [
     <Cta />
   </Container>
 
-  
+  <ContainerFW>
+    <MoonshotHero />
+  </ContainerFW>
+
 </Layout>
