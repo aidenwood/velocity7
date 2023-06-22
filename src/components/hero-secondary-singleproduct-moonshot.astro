@@ -37,7 +37,7 @@ const sliderContent = [
     transition-duration: 200ms;
   }
   #glass-card:hover {
-    box-shadow: 0 40px 60px 0px #0000001a, 0 20px 40px 0px #0000000d;
+    box-shadow: 0 15px 20px #00000010, 0 15px 20px #00000010;;
   }
   
   [astro-icon="bgIcon"] {
@@ -55,13 +55,13 @@ const sliderContent = [
 
     <div class="py-6">
       <h2 style="heroTagline" class="text-2xl md:text-3xl lg:text-5xl w-full font-bold tracking-tight">
-        Scale your brand with <br/>
-        our Moonshot Plan.
+        Join the Moonshot Plan,<br/>
+        6/10 places available.
       </h2>
       <p class="text-sm lg:text-lg mt-6 pr-8 text-slate-700 w-full lg:max-w-3xl">
         Complete website + marketing management at a fixed price, pause anytime. 
-        Accounts managed by a real marketing expert, with experience managing over 
-        $18m in ad spend and global marketing strategies. 
+        Serious account management and fast-moving optimisation by a real expert you can trust, 
+        $18m+ in managed ad spend. 10+ years web design experience. 6+ years marketing experience.
       </p>
       
       <div class="mt-12 flex flex-col sm:flex-row gap-3">
@@ -99,7 +99,7 @@ const sliderContent = [
                     <span class="text-gray-700 mr-3 font-thin uppercase text-md">{item.category}</span>
                     <h3 class="font-semibold text-lg md:text-xl lg:text-2xl">{item.title}</h3>{" "}
                     <p class="text-xs lg:sm max-w-3xl font-regular text-slate-500 pr-8 leading-relaxed">{item.paragraph}</p>
-                    <p class="text-lg lg:text-xl font-normal text-black cursor-auto my-3">${item.price}</p>
+                    <p class="text-xl lg:text-3xl font-semibold text-black cursor-auto my-3">${item.price}<span class="text-lg lg:text-2xl font-normal">/mth</span></p>
                     <p class="text-slate-500 mt-8 leading-relaxed">
                       <Link 
                         class="mr-4"
