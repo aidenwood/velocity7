@@ -52,7 +52,7 @@ const sliderContent = [
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <!-- Flickity Custom Styles -->
 <style>
-  .product-carousel .flickity-viewport { padding: 60px 90px; min-height: 220px; display: flex; justify-content: center; align-items: center; width: 100% !important; }
+  .cases-carousel .flickity-viewport { padding: 60px 90px; min-height: 220px; display: flex; justify-content: center; align-items: center; width: 100% !important; }
   .carousel-cell { min-height: 220px; width: 75%; margin: 40px 20px; padding: 10px 20px; }
   .flickity-button { max-width: 20px; }
 
@@ -121,7 +121,7 @@ const sliderContent = [
   <div id="rightContainer" class="w-full lg:w-2/5 px-4 md:px-8 z-5">
 
     <!-- START flickity slider for Case Studies -->
-    <div class="product-carousel w-full h-full">
+    <div class="cases-carousel w-full h-full">
       { sliderContent.map((item) => (
           
           
@@ -163,7 +163,7 @@ const sliderContent = [
 <script>
   // element argument can be a selector string
   //   for an individual element
-  var flkty = new Flickity( '.product-carousel', {
+  var flkty = new Flickity( '.cases-carousel', {
   contain: true,
   autoPlay: 3200,
   imagesLoaded: true,
