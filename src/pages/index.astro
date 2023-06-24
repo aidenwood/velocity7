@@ -1,12 +1,14 @@
 ---
-import Container from "@components/container.astro";
 import ContainerFW from "@components/container-fullwidth.astro";
 import ContainerXL from "@components/container-xl.astro";
 import Hero from "@components/hero.astro";
 import HeroSecondary from "@components/hero-secondary-slider.astro";
-import Hero3D from "@components/hero-secondary-3D.astro";
 import Clients from "@components/grid-4x3-clients.astro";
+import { Picture } from "@astrojs/image/components";
+import SectionHeadImg from "@components/sectionhead-img.astro";
 import MoonshotHero from "@components/hero-secondary-singleproduct-moonshot.astro";
+import MoonshotCover from '../assets/backgrounds/cubed.webp';
+import VelocityCover from '../assets/backgrounds/balance.webp';
 import Cta from "@components/cta.astro";
 import Grid from "@components/grid-4x1-services.astro";
 import ProductSlider from "@components/slider-lrg-services-main.astro";
@@ -21,13 +23,62 @@ import Layout from "@layouts/Layout.astro";
     <Grid /> 
     <HeroSecondary />
   </ContainerFW>
-  <Container>
+  <ContainerXL>
     <Clients />
+    <SectionHeadImg>
+      <Fragment slot="title">
+        Streamlined management for success.
+      </Fragment>
+      <Fragment slot="desc">
+        We've worked with businesses over the years as a freelancer, in-house manager and agency-based manager. 
+        In a range of industries from Finance, Real Estate, E-Commerce and marketing agencies themselves. 
+        There are some things that work in each situation, but I knew it could easily be so much better.
+        There is a certain amount of digital leverage that's helpful before it's time / money wasting. 
+        Our across the board is to save you more of both. Helping businesses with innovative solutions or 
+        products get back to what they do best. Only 10 spaces at any time, for serious marketing management.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={MoonshotCover}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadImg>
     <MoonshotHero />
+
+    <SectionHeadImg>
+      <Fragment slot="title">
+        Velocity7, our high-performance theme.
+      </Fragment>
+      <Fragment slot="desc">
+        Over our 10 years in web design we have obsessed over website performance. It seriously matters and makes 
+        competing in any industry a breeze. Then came along the era of website builders and Wordpress. Although they can be 
+        helpful, they will quickly leave your business trapped with their bloat. A blend between low-code and custom code. 
+        High-performance code, high-converting design packed into one theme. Pay once, own forever. Infinitely extendable.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={VelocityCover}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadImg>
     <Logos />
-    <Hero3D />
+    
     <Cta />
-  </Container>
+  </ContainerXl>
   <ContainerFW>
     <ProductSlider />
     <BlogSlider />

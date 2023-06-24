@@ -1,0 +1,81 @@
+---
+
+---
+
+
+
+<style>
+/* Astro Fragementation still in development - 24 june */
+
+
+  .carousel-cell { padding: 10px 20px; }
+
+  /* Glass-card effect dial in, needs a moving background css only if possible */
+  #glass-card {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 40px 20px;
+    transition-duration: 200ms;
+  }
+  #glass-card:hover {
+    box-shadow: 0 15px 20px #00000010, 0 15px 20px #00000010;;
+  }
+  
+  [astro-icon="bgIcon"] {
+        color: #a600ff10;
+        /* OR */
+        fill: #a600ff10;
+  }
+</style>
+
+
+<main class="my-32 md:my-16">
+<div id="heroSection" class="flex flex-col lg:flex-row justify-center items-center">
+  
+  <div id="leftContainer" class="w-full lg:w-3/5">
+
+    <div class="py-6">
+      <h2 style="heroTagline" class="text-2xl md:text-3xl lg:text-5xl w-full font-bold tracking-tight">
+        <slot name="title">Title</slot>
+      </h2>
+      <p class="text-sm lg:text-lg mt-6 pr-8 text-slate-700 w-full lg:max-w-3xl">
+        <slot name="desc">Description goes here</slot>
+      </p>
+      
+      <div class="mt-12 flex flex-col sm:flex-row gap-3">
+        <slot name="btnPrimary">Button</slot>
+        <slot name="btnSecondary">Button</slot>
+      </div>
+    </div>
+  </div>
+
+  <div id="rightContainer" class="w-full lg:w-2/5 z-5">
+
+
+    <div class="w-full h-full">
+      <div id="glass-card" class="carousel-cell w-full px-8 py-32">
+        <div id="slideContainer" class="flex flex-col gap-y-4">
+          <div id="iconContainer" >
+            <slot class="w-16 h-16" name="prodicon"></slot>
+          </div>
+          <div id="textContainer" class="w-full flex flex-col gap-y-4">
+            <slot name="prodcategory" class="text-gray-700 mr-3 font-thin uppercase text-md">Category</slot>
+            <h3 class="font-semibold text-lg md:text-xl lg:text-2xl"><slot name="prodtitle">Title</slot></h3>
+            <p class="text-xs lg:sm max-w-3xl font-regular text-slate-500 pr-8 leading-relaxed"><slot name="proddesc">Some description goes here</slot></p>
+            <p class="text-xl lg:text-3xl font-semibold text-black cursor-auto my-3"><slot name="prodprice">$2445</slot></p>
+            <div id="btnContainer" class="mt-8">
+              <slot name="prodlink">Some description goes here</slot>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+</main>
