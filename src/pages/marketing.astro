@@ -5,7 +5,8 @@ import ContainerXL from "@components/container-xl.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionmid.astro";
 import SectionEmail from "@components/sectionhead-email.astro";
-import Hero3D from "@components/hero-secondary-3D.astro";
+import Integrations from "@components/logos-integrations.astro";
+import MoonshotHero from "@components/sectionmid-singleproduct-moonshot.astro";
 import Cta from "@components/cta.astro";
 import SectionHeadImg from "@components/sectionhead-img.astro";
 import SectionHeadSecImg from "@components/sectionhead-img-rev.astro";
@@ -17,8 +18,6 @@ import Pagecover from '../assets/backgrounds/balance.webp';
 import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
 import CoverTextarea from '../assets/backgrounds/cubed.webp';
 import { Icon } from "astro-icon";
-import ContainerXl from "@components/container-xl.astro";
-
 ---
 
 <Layout title="Scale your Marketing with an Expert">
@@ -102,10 +101,9 @@ import ContainerXl from "@components/container-xl.astro";
                 />
       </Fragment>
     </SectionHeadSecImg>
-  </ContainerXL>
 
-  <ContainerXL>
-    <Hero3D />
+    <Integrations />
+
   </ContainerXL>
 
   <ContainerXL>
@@ -190,7 +188,7 @@ import ContainerXl from "@components/container-xl.astro";
   <Container>
 
     <Sectionhead>
-      <Fragment slot="title">Complete management with the Moonshot Plan.</Fragment>
+      <Fragment slot="title">Monthly marketing optimisation, managed on the Gold Coast.</Fragment>
       <Fragment slot="desc"
         >Get back to providing your customers with your best service and we'll make sure the leads keep coming in. 
         Website, brand design, marketing management + automation all at a fixed monthly price. Aiming to optimise your ad spend, 
@@ -200,7 +198,10 @@ import ContainerXl from "@components/container-xl.astro";
       </Fragment>
     </Sectionhead>
 
+    <MoonshotHero />
+
   </Container>
+
 
   <Container>
     <Cta />

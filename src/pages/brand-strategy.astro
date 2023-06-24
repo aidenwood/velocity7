@@ -9,7 +9,7 @@ import Cta from "@components/cta-moonshot.astro";
 import SectionHeadImg from "@components/sectionhead-img.astro";
 import SectionHeadSecImg from "@components/sectionhead-img-rev.astro";
 import SectionTextarea from "@components/sectionmid-textarea.astro";
-import Hero3D from "@components/hero-secondary-3D.astro";
+import MoonshotHero from "@components/sectionmid-singleproduct-moonshot.astro";
 import Integrations from "@components/logos-integrations.astro";
 import GallerySlider from "@components/slider-lrg-services-brand.astro";
 import { Picture } from "@astrojs/image/components";
@@ -176,11 +176,9 @@ const pricing = [
                 />
       </Fragment>
     </SectionHeadSecImg>
-    
-  </ContainerXL>
 
-  <ContainerXL>
-    <Hero3D />
+    <Integrations />
+    
   </ContainerXL>
 
   <ContainerXL>
@@ -273,7 +271,7 @@ const pricing = [
       </Fragment>
     </Sectionhead>
 
-    <Integrations />
+    <MoonshotHero />
 
   </Container>
 

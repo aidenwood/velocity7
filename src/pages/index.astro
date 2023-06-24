@@ -1,6 +1,7 @@
 ---
 import ContainerFW from "@components/container-fullwidth.astro";
 import ContainerXL from "@components/container-xl.astro";
+import Container from "@components/container.astro";
 import Hero from "@components/hero.astro";
 import Grid from "@components/hero-grid-services.astro";
 import HeroSecondary from "@components/sectionmid-slider-cases.astro";
@@ -85,6 +86,8 @@ import Layout from "@layouts/Layout.astro";
   <ContainerFW>
     <ProductSlider />
     <BlogSlider />
-    <Cta />
   </ContainerFW>
+  <Container>
+    <Cta />
+  </Container>
 </Layout>

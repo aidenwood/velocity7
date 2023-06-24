@@ -168,9 +168,8 @@ const pricing = [
     <Sectionhead>
       <Fragment slot="title">Introducing Velocity7.</Fragment>
       <Fragment slot="desc">
-        Helping businesses move to web3 for less. Our performance website framework, complete with everything needed to 
-        generate leads and sales online. Developed specifically for Australian businesses. Crush competition + SEO rankings 
-        with A+ web performance and web vitals. Works with any framework, infinitely extendable.
+        Helping brands scale from launch faster. Complete with everything needed to generate leads and sales online with ease. 
+        Crush SEO with A+ web vitals. Works with any javascript framework and infinitely extendable with any NPM package.
       </Fragment>
     </Sectionhead>
   </Container>
@@ -180,8 +179,58 @@ const pricing = [
   </ContainerFW>
 
   <ContainerXL>
+    <SectionHeadImg>
+      <Fragment slot="title">
+        Developed over 5 years.
+      </Fragment>
+      <Fragment slot="desc">
+        Velocity takes years of code structuring and debugging to create a website framework that truly speeds up the development process. 
+        Taking everything we know from 10+ years of web dev and specilising in high-performance web design. Ditch bloated website builders and subscriptions.
+        Packed with everything you need for generating business with 30+ integrations + performant, user-friendly components. Pay once, own forever.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={Pagecover}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadImg>
+  </ContainerXL>
+
+  <ContainerXL>
+    <SectionHeadSecImg>
+      <Fragment slot="title">
+        21-day turnaround.
+      </Fragment>
+      <Fragment slot="desc">
+        We've worked with hundreds of brands and have refined our process to deliver websites in 21 days, aiming to get as much of your input in minutes not hours. 
+        When working with agencies, we noticed how much of everyone's time they wanted to waste for the sake of looking busy. Our management system allows you to check in 
+        on our progress and add simple or complex feedback from any device. With Asana, Slack and Figma completely integrated across our process. 
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={PagecoverSecondary}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadSecImg>
+  </ContainerXL>
+
+  <ContainerXL>
     <SectionTextarea>
-      <Fragment slot="title">Lowcode and limitless.</Fragment>
+      <Fragment slot="title">Low-code + limitless.</Fragment>
       <Fragment slot="desc">
         Velocity 7 is a low-code framework that allows us to build websites faster than ever before. 
         While maintaining high-performance and high-conversion rate through faster design iterations. 
