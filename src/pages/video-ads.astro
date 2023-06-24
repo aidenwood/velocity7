@@ -9,10 +9,7 @@ import Cta from "@components/cta.astro";
 import SectionHeadImg from "@components/sectionhead-img.astro";
 import SectionHeadSecImg from "@components/sectionhead-img-rev.astro";
 import SectionTextarea from "@components/sectionmid-textarea.astro";
-import FeaturesGrid from "@components/grid-4x4-features.astro";
-import Pricing from "@components/pricing.astro";
-import Logos from "@components/logos.astro";
-import Integrations from "@components/logos-integrations.astro";
+import MoonshotHero from "@components/sectionmid-singleproduct-moonshot.astro";
 import GallerySlider from "@components/slider-lrg-services-marketing.astro";
 import { Picture } from "@astrojs/image/components";
 import PagecoverHero from '../assets/products-sqr/google-search-ad-management.webp';
@@ -288,6 +285,9 @@ const pricing = [
         from day one for your business. For frictionless payment experiences.
       </Fragment>      
     </SectionTextarea>
+
+    <MoonshotHero />
+
   </ContainerXL>
 
   <Container>
