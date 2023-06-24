@@ -21,7 +21,7 @@ const { title } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "Gold Coast Web Design & Marketing"
-  : "Aidxn Design, award-winning Gold Coast web design & monthly marketing management at a fixed price.";
+  : "Award-winning Gold Coast web design, brand strategy + marketing management all at a fixed price, pause anytime, with our Moonshot Plan.";
 ---
 
 
@@ -32,7 +32,7 @@ const makeTitle = title
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="sitemap" href="/sitemap-index.xml">
+    <link rel="sitemap" href="/sitemap.xml">
     
     <!-- preload custom font -->
     <link
@@ -46,7 +46,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Cutting Edge Web Design & Marketing Automation on the Gold Coast. Refresh your brand and get a faster, more competitive website for less with Velocity7, our in-house website framework."
+      description="Award-winning Gold Coast web design, brand strategy + marketing management all at a fixed price, pause anytime, with our Moonshot Plan."
       canonical={canonicalURL}
       twitter={{
         creator: "@aidenwood",
@@ -57,22 +57,14 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Aidxn Design - Gold Coast Web Design & Marketing`,
+          title: `Aidxn Design | web design, Brand strategy + marketing management`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Cutting Edge Web Design & Marketing Automation on the Gold Coast. Refresh your brand and get a faster, more competitive website for less with Velocity7, our in-house website framework.",
+          alt: "Award-winning Gold Coast web design, brand strategy + marketing management all at a fixed price, pause anytime, with our Moonshot Plan.",
         },
       }}
     />
-    
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WZGGV3Q');</script>
-  <!-- End Google Tag Manager -->
 
   <!-- aidxn.com property linked to search console for better SEO - Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MN4T5PXYLD"></script>
@@ -108,10 +100,6 @@ const makeTitle = title
   </style>
   
   <body class="bg-white">
-    <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZGGV3Q"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <Navbar />
     <slot />
     <Detailedfooter />
