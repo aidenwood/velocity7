@@ -6,7 +6,7 @@ import HeroSecondary from "@components/hero-secondary-slider.astro";
 import Clients from "@components/grid-4x3-clients.astro";
 import { Picture } from "@astrojs/image/components";
 import SectionHeadImg from "@components/sectionhead-img.astro";
-import MoonshotHero from "@components/hero-secondary-singleproduct-moonshot.astro";
+import MoonshotHero from "@components/sectionmid-singleproduct-moonshot.astro";
 import MoonshotCover from '../assets/backgrounds/cubed.webp';
 import VelocityCover from '../assets/backgrounds/balance.webp';
 import Cta from "@components/cta.astro";
@@ -21,9 +21,9 @@ import Layout from "@layouts/Layout.astro";
   <ContainerFW>
     <Hero />
     <Grid /> 
-    <HeroSecondary />
   </ContainerFW>
   <ContainerXL>
+    <HeroSecondary />
     <Clients />
     <SectionHeadImg>
       <Fragment slot="title">
