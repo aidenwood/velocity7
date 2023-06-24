@@ -7,7 +7,8 @@ import HeroSecondary from "@components/sectionmid-slider-cases.astro";
 import Clients from "@components/sectionmid-grid-clients.astro";
 import { Picture } from "@astrojs/image/components";
 import SectionHeadImg from "@components/sectionhead-img.astro";
-import MoonshotHero from "@components/sectionmid-singleproduct-moonshot.astro";
+import MoonshotSectionmid from "@components/sectionmid-singleproduct-moonshot.astro";
+import VelocitySectionmid from "@components/sectionmid-singleproduct-velocity.astro";
 import MoonshotCover from '../assets/backgrounds/cubed.webp';
 import VelocityCover from '../assets/backgrounds/balance.webp';
 import Cta from "@components/cta.astro";
@@ -51,7 +52,8 @@ import Layout from "@layouts/Layout.astro";
                 />
       </Fragment>
     </SectionHeadImg>
-    <MoonshotHero />
+
+    <MoonshotSectionmid />
 
     <SectionHeadImg>
       <Fragment slot="title">
@@ -76,12 +78,14 @@ import Layout from "@layouts/Layout.astro";
                 />
       </Fragment>
     </SectionHeadImg>
+
+    <VelocitySectionmid />
     <Logos />
-    
-    <Cta />
+
   </ContainerXl>
   <ContainerFW>
     <ProductSlider />
     <BlogSlider />
+    <Cta />
   </ContainerFW>
 </Layout>
