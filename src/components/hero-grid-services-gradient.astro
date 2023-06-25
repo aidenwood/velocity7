@@ -83,6 +83,7 @@ const features = [
 h2, h3 {
   mix-blend-mode: difference;
 }
+
 </style>
 
 <main class="my-16 md:my-32">
@@ -105,7 +106,7 @@ h2, h3 {
   </div>
 
 
-  <canvas id="gradient-canvas">
+  <canvas id="gradient-canvas"></canvas>
   <div id="gridContainer" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
     {
       features.map((item) => (
@@ -139,7 +140,7 @@ h2, h3 {
       ))
     }
   </div>
-  </canvas>
+  
 </main>
 
 <script>
