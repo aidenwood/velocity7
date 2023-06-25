@@ -77,7 +77,7 @@ const features = [
   --gradient-color-2: #FFF5FF; 
   --gradient-color-3: #a600ff;  
   --gradient-color-4: #420065;
-  z-index:0;
+  z-index:-50;
 }
 
 h2, h3 {
@@ -106,7 +106,7 @@ h2, h3 {
   </div>
 
 
-  <canvas id="gradient-canvas" class="-z-50 rounded-3xl">
+  <canvas id="gradient-canvas" class="rounded-3xl">
   <div id="gridContainer" class="z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
     {
       features.map((item) => (
