@@ -1,148 +1,22 @@
 ---
-// @ts-ignore
-import { Icon } from "astro-icon";
-import Link from "@components/ui/link.astro";
-import { Picture } from "@astrojs/image/components";
-import GraphicDesign from '../assets/graph-des.png';
-import WebDesign from '../assets/web-dev.png';
-import Marketing from '../assets/dig-mark.png';
-import VideoProd from '../assets/3d-video.png';
-
-
-const features = [
-  {
-    title: "Brand Strategy.",
-    description:
-      "Brand design, strategy + direction that avoid design churn and huge ad spend.",
-    imgsrc: GraphicDesign,
-    imgalt: "Brand Design and strategy direction for the age of social marketing.",
-    link: "/brand-strategy",
-    style: "outline",
-    btntxt: "More info",
-  },
-  {
-    title: "Web Design.",
-    description:
-      "Award-winning web design. 10+ years experience. High-performance web dev.",
-    imgsrc: WebDesign,
-    imgalt: "Gold Coast's best web design and development agency with over 10 years experience.",
-    link: "/web-design",
-    style: "outline",
-    btntxt: "More info",
-  },
-  {
-    title: "Marketing.",
-    description:
-      "Deploy + scale marketing campaigns for local businesses + global brands.",
-    imgsrc: Marketing,
-    imgalt: "Ad strategy management on the Gold Coast without the giant fees.",
-    link: "/marketing",
-    style: "outline",
-    btntxt: "More info",
-  },
-  {
-    title: "Videography.",
-    description:
-      "Capture cheaper attention early in the funnel with professional video ads.",
-    imgsrc: VideoProd,
-    imgalt: "3D Video Design and Videography Production for Marketing",
-    link: "/video-ads",
-    style: "outline",
-    btntxt: "More info",
-  },
-];
+const { class: className } = Astro.props;
 ---
-
 <style>
-    /* Glass-card effect dial in, needs a moving background css only if possible */
-    #glass-card {
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(30px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    padding: 30px 15px;
-    margin: 0 0px;
-    transition-duration: 200ms;
-  }
-  #glass-card:hover {
-    box-shadow: 0 40px 60px 0px #0000001a, 0 20px 40px 0px #0000000d;
-  }
-
-
 #gradient-canvas {
-  height:650px;
+  height:fit-content;
   width:100%;
-  margin-top: -325px;
-  margin-bottom: -325px;
   --gradient-color-1: #FFF5FF; 
   --gradient-color-2: #FFF5FF; 
   --gradient-color-3: #a600ff;  
   --gradient-color-4: #00CAAF;
   z-index:-50 !important;
-  display: flex;
 }
-
 </style>
 
-<main class="my-16 md:my-32">
-  <div id="introContainer" class="mb-4 md:mb-8">
-    <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold lg:tracking-tight">
-      Design, Develop. Market, Moonshot.
-    </h2>
-    <div class="flex flex-col lg:flex-row">
-    <p class="w-full lg:w-1/2 text-sm lg:text-lg pr-4 lg:pr-8 mt-4 max-w-6xl text-slate-600"> 
-      We can't stand the way some digital marketing agencies burn ad spend for the sake of 'results'. 
-      Here to take full responsibility of our any sector of your business we're managing. With expertise 
-      across design, development + marketing, we help businesses launch more professionally for less.
-    </p>
-    <p class="w-full lg:w-1/2 text-sm lg:text-lg pr-4 lg:pr-8 mt-4 max-w-6xl text-slate-600"> 
-      Covering businesses from A-Z of marketing brands in the toughest, most competitive spaces.
-      We're excited by the challenge of achieving what feels impossible, and trust us when we say,
-      this absolutely is't our first space-rodeo. Book a 15-min strategy call today to kick things off.
-    </p>
-    </div>
-  </div>
-
-
-
-  <div id="gridContainer" class="z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-    
-    {
-      features.map((item) => (
-        <div class="flex gap-4 items-start">
-          <div id="glass-card" class="w-full h-full flex flex-row md:flex-col items-center">
-            <div id="imgContainer" class="mt-1 w-1/4 md:w-48 md:h-48 xl:w-64 xl:h-64 px-4">
-              <Picture
-                    src={item.imgsrc}
-                    sizes="(max-width: 1000px) 1000px, 500px"
-                    widths={[500, 1000]}
-                    aspectRatio="1:1"
-                    background="#f2f2f2"
-                    fit="contain"
-                    position="center"
-                    class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-                  />
-            </div>
-            <div id="textContainer" class="w-3/4 md:w-full p-4">
-              <h3 class="font-semibold text-lg md:text-xl lg:text-2xl">{item.title}</h3>{" "}
-              <p class="text-slate-700 text-xs md:text-md max-w-3xl mt-2 mb-6 leading-relaxed">{item.description}</p>
-              <Link 
-                class="mr-4"
-                href={item.link || "#"}
-                block
-                style={item.style ? "primary" : "outline"}>
-                {item.btntxt || "Get Started"}
-              </Link>
-            </div>
-          </div>
-        </div>
-      ))
-    }
-    
-  </div>
-  <canvas id="gradient-canvas" class="rounded-3xl"></canvas>
-</main>
+<canvas id="gradient-canvas" class=""></canvas>
+<div class:list={["w-full absolute mx-auto px-2 md:px-4 lg:px-8", className]}>
+  <slot />
+</div>
 
 <script>
 
