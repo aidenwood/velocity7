@@ -3,7 +3,7 @@ const { class: className } = Astro.props;
 ---
 <style>
 #gradient-canvas {
-  height:fit-content;
+  height:100%;
   width:100%;
   --gradient-color-1: #FFF5FF; 
   --gradient-color-2: #FFF5FF; 
@@ -13,8 +13,8 @@ const { class: className } = Astro.props;
 }
 </style>
 
-<canvas id="gradient-canvas" class=""></canvas>
-<div class:list={["w-full absolute mx-auto px-2 md:px-4 lg:px-8", className]}>
+<canvas id="gradient-canvas" class="absolute"></canvas>
+<div class:list={["w-full relative mx-auto px-2 md:px-4 lg:px-8", className]}>
   <slot />
 </div>
 
