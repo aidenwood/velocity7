@@ -1,13 +1,26 @@
 ---
 import Link from "./ui/link.astro";
 ---
-
+<style>
+    /* Glass-card effect dial in, minimal */
+    #glass-card {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition-duration: 200ms;
+  }
+  #glass-card:hover {
+    box-shadow: 0 15px 20px #00000010, 0 15px 20px #00000010;
+  }
+</style>
 <div
-  style="background-color: #420065;" class="px-4 md:px-16 lg:px-32 my-16 md:my-32 py-16 md:py-32 mx-4 md:mx-16 rounded-lg flex flex-col items-center text-center">
-  <h2 class="text-white font-bold text-3xl md:text-5xl tracking-tight">
+  id="glass-card" class="px-4 md:px-16 lg:px-32 my-16 md:my-32 py-16 md:py-32 mx-4 md:mx-16 rounded-lg flex flex-col items-center text-center">
+  <h2 class="text-black font-bold text-3xl md:text-5xl tracking-tight">
     Let's chat.
   </h2>
-  <p class="text-slate-400 px-4 lg:px-16 my-8 text-md md:text-lg">
+  <p class="text-slate-800 px-4 lg:px-16 my-8 text-md md:text-lg">
     Find 15-mins in the calendar that suits you for a quick chat. Clear up any questions before kick-off.
   </p>
   
