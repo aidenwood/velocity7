@@ -1,0 +1,52 @@
+---
+import Link from "./ui/link.astro";
+---
+<style>
+    /* Glass-card effect dial in, minimal */
+    #glass-card {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition-duration: 200ms;
+  }
+  #glass-card:hover {
+    box-shadow: 0 15px 20px #00000010, 0 15px 20px #00000010;
+  }
+
+  svg{width:100%;height:100%;perspective:50px}circle{stroke:#6D00A8;stroke-width:8px;fill:none}.equator{transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
+</style>
+<main >
+<div class="w-4/5" style="margin-left: 10%; margin-top: 50px; margin-bottom: -85%; padding-bottom: 190px;"  id="animationWrapper" translate="no">
+  <svg viewBox="-500 -500 1000 1000">
+    <circle r="450"></circle>
+    <circle class="equator" r="450"></circle>
+    <circle class="meridian" r="450" style="--start:165deg; --end:180deg"></circle>
+    <circle class="meridian" r="450" style="--start:150deg; --end:165deg"></circle>
+    <circle class="meridian" r="450" style="--start:135deg; --end:150deg"></circle>
+    <circle class="meridian" r="450" style="--start:120deg; --end:135deg"></circle>
+    <circle class="meridian" r="450" style="--start:105deg; --end:120deg"></circle>
+    <circle class="meridian" r="450" style="--start:90deg; --end:105deg"></circle>
+    <circle class="meridian" r="450" style="--start:75deg; --end:90deg"></circle>
+    <circle class="meridian" r="450" style="--start:60deg; --end:75deg"></circle>
+    <circle class="meridian" r="450" style="--start:45deg; --end:60deg"></circle>
+    <circle class="meridian" r="450" style="--start:30deg; --end:45deg"></circle>
+    <circle class="meridian" r="450" style="--start:15deg; --end:30deg"></circle>
+    <circle class="meridian" r="450" style="--start:0deg; --end:15deg"></circle>
+  </svg>
+</div>
+
+<div id="glass-card" class="px-4 md:px-16 lg:px-32 my-32 md:my-48 py-16 md:py-32 mx-4 md:mx-16 rounded-lg flex flex-col items-center text-center">
+  <h2 class="text-black font-bold text-3xl md:text-5xl tracking-tight">
+    Let's chat.
+  </h2>
+  <p class="text-slate-800 px-4 lg:px-16 my-8 text-md md:text-lg">
+    We make sure we are a good fit for where your business is currently. Clear up any questions before kick-off.
+  </p>
+  
+  <div class="flex">
+    <Link href="https://g2ok5807scs.typeform.com/to/tCmzlDza" style="inverted">Book a Strategy Call</Link>
+  </div>
+</div>
+</main>
