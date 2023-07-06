@@ -11,7 +11,7 @@ import SectionHeadImg from "@components/sectionhead-img.astro";
 import MoonshotSectionmid from "@components/sectionmid-singleproduct-moonshot.astro";
 import VelocitySectionmid from "@components/sectionmid-singleproduct-velocity.astro";
 import MoonshotCover from '../assets/backgrounds/cubed.webp';
-import VelocityCover from '../assets/backgrounds/balance.webp';
+import VelocityCover from '../assets/previous-works/velocity-tsd.webp';
 import Cta from "@components/cta.astro";
 import ProductSlider from "@components/slider-lrg-services-main.astro";
 import BlogSlider from "@components/slider-content.astro";
@@ -25,9 +25,37 @@ import Layout from "@layouts/Layout.astro";
     <Grid />
   </ContainerFW>
   <ContainerXL>
+
     <ProductSlider />
 
-    <SectionHeadImg>
+      <SectionHeadImg>
+        <Fragment slot="title">
+          Velocity7, our high-performance theme.
+        </Fragment>
+        <Fragment slot="desc">
+          Over our 10 years in web design we have obsessed over website performance. It seriously matters and makes 
+          competing in any industry a breeze. Then came along the era of website builders and Wordpress. Although they can be 
+          helpful, they will quickly leave your business trapped with their bloat. A blend between low-code and custom code. 
+          High-performance code, high-converting design packed into one theme. Pay once, own forever. Infinitely extendable.
+        </Fragment>
+        <Fragment slot="cover">
+          <Picture
+                    src={VelocityCover}
+                    sizes="(max-width: 2000px) 2000px, 1000px"
+                    widths={[1000, 1500, 2000]}
+                    aspectRatio="3:2"
+                    background="#f2f2f2"
+                    fit="cover"
+                    position="center"
+                    class="w-full rounded duration-200 hover:shadow-sm"
+                  />
+        </Fragment>
+      </SectionHeadImg>
+
+    <VelocitySectionmid />
+    <Logos />
+
+      <SectionHeadImg>
       <Fragment slot="title">
         Streamlined management for success.
       </Fragment>
@@ -52,34 +80,6 @@ import Layout from "@layouts/Layout.astro";
                 />
       </Fragment>
     </SectionHeadImg>
-
-    <VelocitySectionmid />
-    <Logos />
-
-    <SectionHeadImg>
-      <Fragment slot="title">
-        Velocity7, our high-performance theme.
-      </Fragment>
-      <Fragment slot="desc">
-        Over our 10 years in web design we have obsessed over website performance. It seriously matters and makes 
-        competing in any industry a breeze. Then came along the era of website builders and Wordpress. Although they can be 
-        helpful, they will quickly leave your business trapped with their bloat. A blend between low-code and custom code. 
-        High-performance code, high-converting design packed into one theme. Pay once, own forever. Infinitely extendable.
-      </Fragment>
-      <Fragment slot="cover">
-        <Picture
-                  src={VelocityCover}
-                  sizes="(max-width: 2000px) 2000px, 1000px"
-                  widths={[1000, 1500, 2000]}
-                  aspectRatio="3:2"
-                  background="#f2f2f2"
-                  fit="cover"
-                  position="center"
-                  class="w-full rounded duration-200 hover:shadow-sm"
-                />
-      </Fragment>
-    </SectionHeadImg>
-
     
     <MoonshotSectionmid />
     <Clients />
