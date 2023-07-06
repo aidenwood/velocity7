@@ -20,8 +20,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Gold Coast Web Design & Marketing"
-  : "Award-winning Gold Coast web design, brand strategy + marketing management all at a fixed price, pause anytime, with our Moonshot Plan.";
+  ? title + " | " + "Design by Aiden"
+  : "Award-winning web design and marketing management based on the Gold Coast, over 10 years experience. Monthly marketing management and optisation all at a fixed price, pause anytime.";
 ---
 
 
@@ -46,7 +46,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Award-winning Gold Coast web design, brand strategy + marketing management all at a fixed price, pause anytime, with our Moonshot Plan."
+      description="Award-winning web design and marketing management based on the Gold Coast, over 10 years experience. Monthly marketing management and optisation all at a fixed price, pause anytime."
       canonical={canonicalURL}
       twitter={{
         creator: "@aidenwood",
@@ -57,11 +57,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Aidxn Design | web design, Brand strategy + marketing management`,
+          title: `Aidxn Design | Web Design + Marketing Management`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Award-winning Gold Coast web design, brand strategy + marketing management all at a fixed price, pause anytime, with our Moonshot Plan.",
+          alt: "Award-winning web design and marketing management based on the Gold Coast, over 10 years experience. Monthly marketing management and optisation all at a fixed price, pause anytime.",
         },
       }}
     />
