@@ -10,7 +10,7 @@ import { Picture } from "@astrojs/image/components";
 import SectionHeadImg from "@components/sectionhead-img.astro";
 import MoonshotSectionmid from "@components/sectionmid-singleproduct-moonshot.astro";
 import VelocitySectionmid from "@components/sectionmid-singleproduct-velocity.astro";
-import MoonshotCover from '../assets/backgrounds/cubed.webp';
+import MoonshotCover from '../assets/previous-works/moonshot-asana.webp';
 import VelocityCover from '../assets/previous-works/velocity-tsd.webp';
 import Cta from "@components/cta.astro";
 import ProductSlider from "@components/slider-lrg-services-main.astro";
@@ -27,6 +27,7 @@ import Layout from "@layouts/Layout.astro";
   <ContainerXL>
 
     <ProductSlider />
+    <Clients />
 
       <SectionHeadImg>
         <Fragment slot="title">
@@ -57,7 +58,7 @@ import Layout from "@layouts/Layout.astro";
 
       <SectionHeadImg>
       <Fragment slot="title">
-        Streamlined management for success.
+        Streamlined for success.
       </Fragment>
       <Fragment slot="desc">
         We've worked with businesses over the years as a freelancer, in-house manager and agency-based manager. 
@@ -82,7 +83,6 @@ import Layout from "@layouts/Layout.astro";
     </SectionHeadImg>
     
     <MoonshotSectionmid />
-    <Clients />
 
     <HeroSecondary />
 
