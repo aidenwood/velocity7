@@ -403,7 +403,7 @@ const services = [
   {
     services.map((item) => (
       <div id="glass-card" class="carousel-cell flex flex-col xl:flex-row justify-center md:items-center h-fit w-full md:w-3/4">
-          <div id="imgContainer" class="w-full md:3/4 xl:w-3/5 px-2">
+          <div id="imgContainer" class="w-full md:w-3/5 px-2">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1200px) 1200px, 900px, 600px"
@@ -416,7 +416,7 @@ const services = [
                   class="w-full rounded"
                 />
           </div>
-          <div class="my-4 w-full xl:w-3/5 px-2">
+          <div class="my-4 w-full md:w-2/5 px-2">
             <span class="text-gray-400 mr-3 uppercase text-xs">{item.category}</span>
             <h3 class="font-semibold text-xl md:text-2xl">{item.title}</h3>{" "}
             <p class="text-xs lg:text-md max-w-3xl text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
