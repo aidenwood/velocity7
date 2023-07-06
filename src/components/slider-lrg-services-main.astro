@@ -403,12 +403,12 @@ const services = [
   {
     services.map((item) => (
       <div id="glass-card" class="carousel-cell flex flex-col xl:flex-row justify-center md:items-center h-fit w-full md:w-3/4">
-          <div id="imgContainer" class="w-1/2 md:3/4 xl:w-3/5 px-2">
+          <div id="imgContainer" class="w-full md:3/4 xl:w-3/5 px-2">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1200px) 1200px, 900px, 600px"
                   widths={[600, 900, 1200]}
-                  aspectRatio="9:16"
+                  aspectRatio="5:3"
                   loading="eager"
                   background="#f2f2f200"
                   fit="cover"
