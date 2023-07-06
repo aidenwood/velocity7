@@ -2,11 +2,11 @@
 // @ts-ignore
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
-import { Picture } from "@astrojs/image/components";
-import GraphicDesign from '../assets/graph-des.png';
-import WebDesign from '../assets/web-dev.png';
-import Marketing from '../assets/dig-mark.png';
-import VideoProd from '../assets/3d-video.png';
+
+import GraphicDesign from '../assets/aidxn/trig.svg';
+import WebDesign from '../assets/aidxn/sqr.svg';
+import Marketing from '../assets/aidxn/poly.svg';
+import VideoProd from '../assets/aidxn/hex.svg';
 
 
 const features = [
@@ -95,17 +95,7 @@ const features = [
         <div class="flex gap-4 items-start">
           <div id="glass-card" class="w-full flex flex-col items-start xl:items-center">
             <div id="imgContainer" class="mt-1 w-1/2 md:w-24 md:h-24 xl:w-64 xl:h-64">
-              <Picture
-                    src={item.imgsrc}
-                    sizes="(max-width: 1000px) 1000px, 500px"
-                    widths={[500, 1000]}
-                    aspectRatio="1:1"
-                    loading="eager"
-                    background="#f2f2f2"
-                    fit="contain"
-                    position="center"
-                    class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-                  />
+              <img src={item.imgsrc} class="w-3/4 md:w-48" />
             </div>
             <div id="textContainer" class="w-full my-4">
               <h3 class="font-semibold text-lg md:text-xl lg:text-2xl">{item.title}</h3>{" "}
