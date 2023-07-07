@@ -14,10 +14,10 @@ module.exports = {
     // => @media (min-width: 1024px) { ... }
 
     'xl': '1480px',
-    // => @media (min-width: 1480px) { ... }
+    // => @media (min-width: 1680px) { ... }
 
     '2xl': '1920px',
-    // => @media (min-width: 1920px) { ... }
+    // => @media (min-width: 2160px) { ... }
   },
     extend: {
       fontFamily: {
