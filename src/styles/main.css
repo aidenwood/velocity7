@@ -4,9 +4,9 @@
 
 @layer base {
   @font-face {
-    font-family: 'inconsolata';
+    font-family: 'quarto';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Inconsolata-UltraExpanded-Black.ttf') format('ttf');
+    src: url('/fonts/Quarto-Black.ttf') format('ttf');
   }
   @font-face {
     font-family: 'wotfard';
@@ -16,7 +16,7 @@
 }
 
 
-h1, h2, h3 { font-family: 'inconsolata'; }
+h1, h2, h3 { font-family: 'quarto'; }
 h4, p, html, span { font-family: 'wotfard'; }
 
 .flickity-page-dots { bottom: 10px !important; }
