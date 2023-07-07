@@ -12,6 +12,12 @@
   @font-face {
     font-family: 'wotfard';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/Wotfard-Bold.woff2') format('woff2');
+    src: url('/fonts/Wotfard-Bold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'wotfard-light';
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
     src: url('/fonts/Wotfard-Light.woff2') format('woff2');
     src: url('/fonts/Wotfard-Light.ttf') format('truetype');
   }
@@ -19,6 +25,8 @@
 
 
 h1, h2, h3 { font-family: 'quarto'; }
-h4, p, html, span { font-family: 'wotfard'; }
+p, html { font-family: 'wotfard'; }
+h4, span { font-family: 'wotfard-light'; }
+
 
 .flickity-page-dots { bottom: 10px !important; }
