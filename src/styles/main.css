@@ -6,17 +6,17 @@
   @font-face {
     font-family: 'inconsolata';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Inconsolata-ExtraExpanded-Black.ttf') format('ttf');
+    src: url('/fonts/Inconsolata-UltraExpanded-Black.ttf') format('ttf');
   }
   @font-face {
-    font-family: 'circular';
+    font-family: 'wotfard';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Circular-Medium.ttf') format('ttf');
+    src: url('/fonts/Wotfard-Semibold.woff2') format('woff2');
   }
 }
 
 
 h1, h2, h3 { font-family: 'inconsolata'; }
-h4, p { font-family: 'circular'; }
+h4, p, html, span { font-family: 'wotfard'; }
 
 .flickity-page-dots { bottom: 10px !important; }
