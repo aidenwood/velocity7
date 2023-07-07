@@ -2,7 +2,23 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  theme: {
+  theme: { 
+    screens: {
+    'sm': '640px',
+    // => @media (min-width: 640px) { ... }
+
+    'md': '768px',
+    // => @media (min-width: 768px) { ... }
+
+    'lg': '1024px',
+    // => @media (min-width: 1024px) { ... }
+
+    'xl': '1480px',
+    // => @media (min-width: 1480px) { ... }
+
+    '2xl': '1920px',
+    // => @media (min-width: 1920px) { ... }
+  },
     extend: {
       fontFamily: {
         sans: ["Inconsolata", "InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
