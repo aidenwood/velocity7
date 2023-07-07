@@ -30,7 +30,6 @@ const sliderContent = [
     backdrop-filter: blur(30px);
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    padding: 40px 20px;
     transition-duration: 200ms;
   }
   #glass-card:hover {
@@ -86,7 +85,7 @@ const sliderContent = [
 
     <div class="w-full h-full">
       { sliderContent.map((item) => (
-        <div id="glass-card" class="carousel-cell w-full mx-4 py-32">
+        <div id="glass-card" class="carousel-cell w-full py-32">
           <div id="slideContainer" class="flex flex-col gap-y-4">
             <Icon name="bgIcon" class="h-16 w-16" name={item.icon} />
             <div id="textContainer" class="w-full flex flex-col gap-y-4">
