@@ -12,21 +12,21 @@
   @font-face {
     font-family: 'wotfard';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Wotfard-Bold.woff2') format('woff2');
-    src: url('/fonts/Wotfard-Bold.ttf') format('truetype');
+    src: url('/fonts/Wotfard-Medium.otf') format('otf');
+    src: url('/fonts/Wotfard-Medium.ttf') format('truetype');
   }
   @font-face {
-    font-family: 'wotfard-light';
+    font-family: 'wotfard-bold';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Wotfard-Light.woff2') format('woff2');
-    src: url('/fonts/Wotfard-Light.ttf') format('truetype');
+    src: url('/fonts/Wotfard-Bold.woff2') format('woff2');
+    src: url('/fonts/Wotfard-Bold.ttf') format('truetype');
   }
 }
 
 
 h1, h2, h3 { font-family: 'quarto'; }
 p, html { font-family: 'wotfard'; }
-h4, span { font-family: 'wotfard-light'; }
+h4, span { font-family: 'wotfard-bold'; }
 
 
 .flickity-page-dots { bottom: 10px !important; }
