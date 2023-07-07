@@ -7,11 +7,13 @@
     font-family: 'quarto';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
     src: url('/fonts/Quarto-Black.ttf') format('ttf');
+    src: url('/fonts/Quarto-Black.ttf') format('truetype');
   }
   @font-face {
     font-family: 'wotfard';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
     src: url('/fonts/Wotfard-Light.woff2') format('woff2');
+    src: url('/fonts/Wotfard-Light.ttf') format('truetype');
   }
 }
 
