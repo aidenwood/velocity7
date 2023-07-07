@@ -4,19 +4,19 @@
 
 @layer base {
   @font-face {
-    font-family: 'akzidenz';
+    font-family: 'inconsolata';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Akzidenz-Grotesk-Light.ttf') format('ttf');
+    src: url('/fonts/Inconsolata-ExtraExpanded-Black.ttf') format('ttf');
   }
   @font-face {
     font-family: 'wotfard';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Wotfard-Semibold.woff2') format('woff2');
+    src: url('/fonts/Wotfard-Light.woff2') format('woff2');
   }
 }
 
 
-h1, h2, h3 { font-family: 'akzidenz'; }
+h1, h2, h3 { font-family: 'inconsolata'; }
 h4, p, html, span { font-family: 'wotfard'; }
 
 .flickity-page-dots { bottom: 10px !important; }
