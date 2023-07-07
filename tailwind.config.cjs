@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["inconsolata", "InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
+        serif: ["wotfard", "InterVariable", "Inter", ...defaultTheme.fontFamily.serif],
       },
     },
   },
