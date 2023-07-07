@@ -16,7 +16,7 @@
 }
 
 
-h1, h2 { font-family: 'inconsolata'; }
-h3, h4, p { font-family: 'circular', serif; }
+h1, h2, h3 { font-family: 'inconsolata'; }
+h4, p { font-family: 'circular'; }
 
 .flickity-page-dots { bottom: 10px !important; }
