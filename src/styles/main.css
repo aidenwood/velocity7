@@ -30,3 +30,15 @@ h4, span { font-family: 'wotfard-bold'; }
 
 
 .flickity-page-dots { bottom: 10px !important; }
+
+
+
+#glass-card-dark {     
+  border-radius: 30px;
+  background: rgba(255,255,255,.2);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  border: 0.5px solid rgb(0 0 0 / 30%);
+  box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -2px #0000000d;
+  transition-duration: .2s; 
+}
