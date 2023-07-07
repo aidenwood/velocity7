@@ -2,19 +2,14 @@
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 
+import GraphicDesign from '../assets/aidxn/trig.svg';
+import WebDesign from '../assets/aidxn/sqr.svg';
+import Marketing from '../assets/aidxn/poly.svg';
+import Automation from '../assets/aidxn/hex.svg';
+
 const sliderContent = [
   {
-    icon: "ph:codesandbox-logo-thin",
-    category: "Brand Strategy",
-    title: "$50k in sales, 3 months from launch, with $0 ad spend.",
-    paragraph:
-      "We helped the small team at The Boogie Collective create one of the most successful small business launches we've seen. Saving them a huge % on revenue by using smarter integrations.",
-    btntxt: "Read more",
-    style: "outline",
-    link: "https://aidxn.com/blog/viral-marketing-strategies/",
-  },
-  {
-    icon: "ph:intersect-light",
+    img: GraphicDesign,
     category: "Brand Strategy",
     title: "Strategic brand for effective multi-modal marketing.",
     paragraph:
@@ -24,8 +19,19 @@ const sliderContent = [
     link: "https://aidxn.com/blog/multi-modal-marketing/",
   },
   {
-    icon: "ph:codesandbox-logo-thin",
-    category: "Moonshot Plan",
+    img: WebDesign,
+    category: "Web Design",
+    title: "$50k in sales, 3 months from launch, with $0 ad spend.",
+    paragraph:
+      "We helped the small team at The Boogie Collective create one of the most successful small business launches we've seen. Saving them a huge % on revenue by using smarter integrations.",
+    btntxt: "Read more",
+    style: "outline",
+    link: "https://aidxn.com/blog/viral-marketing-strategies/",
+  },
+  
+  {
+    img: Marketing,
+    category: "Marketing",
     title: "CPA reduced by over $50/sale in first month of Moonshot.",
     paragraph:
       "Reduced CPA of a 3 year old, $8k / week campaign from $84 to $36.5 for a 20 year old Gold Coast business. Until we came and more than doubled the results of their ad spend after only one month of Moonshot.",
@@ -34,7 +40,17 @@ const sliderContent = [
     link: "https://aidxn.com/blog/conversion-focused-design/",
   },
   {
-    icon: "ph:codepen-logo-light",
+    img: Automation,
+    category: "Moonshot Plan",
+    title: "Launch to global scale in 12 months with total ad spend under $10k.",
+    paragraph:
+      "We initially developed a brand design as a one of service, then was immediately hired for monthly management with the Moonshot Plan. 12 months of direct, highly focused management has quickly scaled this business with a few of our best secrets.",
+    btntxt: "Read more",
+    style: "outline",
+    link: "https://aidxn.com/blog/conversion-focused-design/",
+  },
+  {
+    img: WebDesign,
     category: "Web Design",
     title: "Wordpress Pageload optimisation: 5.2 to 1.2 sec.",
     paragraph:
@@ -131,7 +147,7 @@ const sliderContent = [
               <div id="glass-card" class="carousel-cell w-full px-8 py-32">
                 <div id="slideContainer" class="flex flex-col gap-y-4">
                   <div id="iconContainer" class="pt-6 -z-10 w-1/3">
-                    <Icon name="bgIcon" class="h-full bg-gray-50" style="opacity: 10%;" name={item.icon} />
+                    <img src={item.img} class="" />
                   </div>  
                   <div id="textContainer" class="w-full flex flex-col gap-y-4">
                     <span class="text-gray-700 mr-3 font-thin uppercase text-md">{item.category}</span>
