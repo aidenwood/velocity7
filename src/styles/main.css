@@ -6,8 +6,17 @@
   @font-face {
     font-family: 'inconsolata';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Inconsolata-Variable.ttf') format('ttf');
+    src: url('/fonts/Inconsolata-ExtraExpanded-Black.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'circular';
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/Circular-Medium.ttf') format('ttf');
   }
 }
+
+
+h1, h2 { font-family: 'inconsolata'; }
+h3, h4, p { font-family: 'circular', serif; }
 
 .flickity-page-dots { bottom: 10px !important; }
