@@ -3,7 +3,7 @@ const { align = "center" } = Astro.props;
 ---
 
 <div class="my-8 md:my-16 flex flex-col-reverse md:flex-row-reverse justify-start items-center">
-  <div id="leftContainer" class="w-full md:w-1/2 px-4 md:px-8">
+  <div id="leftContainer" class="w-full md:w-3/5 px-4 md:px-8">
     <h3 class="text-2xl md:text-3xl lg:text-5xl font-bold lg:tracking-tight">
       <slot name="title">Title</slot>
     </h3>
@@ -11,7 +11,7 @@ const { align = "center" } = Astro.props;
       <slot name="desc">Some description goes here</slot>
     </p>
   </div>
-  <div id="glass-card-dark" class="w-full md:w-1/2">
-    <slot class="bg-grey-700 rounded" name="cover"></slot>
+  <div class="w-full md:w-2/5">
+    <slot id="glass-card-dark" class="bg-grey-700" name="cover"></slot>
   </div>
 </div>
