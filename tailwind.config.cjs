@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["akzidenz", "InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["inconsolata", "InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
+        serif: ["wotfard", "InterVariable", "Inter", ...defaultTheme.fontFamily.serif],a
       },
     },
   },
