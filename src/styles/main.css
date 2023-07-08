@@ -31,7 +31,7 @@ h4, span { font-family: 'wotfard-bold'; }
 
 .flickity-page-dots { bottom: 10px !important; }
 
-
+.card-padding { margin-right: 20px; margin-bottom: 30px; }
 
 #glass-card-dark {     
   border-radius: 30px;
