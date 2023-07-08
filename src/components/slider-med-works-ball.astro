@@ -86,7 +86,7 @@ const services = [
 <div id="sliderContainer" class="ball-carousel h-fit pb-16">
   {
     services.map((item) => (
-      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-3/4 md:w-1/5 xl:w-1/6">
+      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-3/4 md:w-2/5 xl:w-1/5">
         <Picture
               id="glass-card"
               src={item.imgsrc}
@@ -109,7 +109,7 @@ const services = [
   // element argument can be a selector string
   //   for an individual element
   var flkty = new Flickity( '.ball-carousel', {
-  cellAlign: 'center',
+  cellAlign: 'left',
   contain: true,
   autoPlay: 1800,
   imagesLoaded: true,  
