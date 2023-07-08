@@ -45,14 +45,14 @@ const services = [
   .carousel-cell {
     margin-right: 20px;
     margin-bottom: 30px;
-    min-height: 350px;
+    min-height: 250px;
   }
 
   /* Start Flickity viewport safeguards V4 */
   main { max-width: 100%; }
   .flickity-viewport { margin: 0 auto; }
   .cobra-carousel, .flickity-viewport { max-width: 100vw !important; }
-  .cobra-carousel { margin: 20px auto; min-height: 350px; }
+  .cobra-carousel { margin: 20px auto; min-height: 250px; }
   /* End Flickity viewport safeguards V4 */
 
   /* Glass-card effect dial in, minimal */
@@ -85,7 +85,7 @@ const services = [
 <div id="sliderContainer" class="cobra-carousel pb-8">
   {
     services.map((item) => (
-      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-3/4 md:w-2/5 xl:w-1/5">
+      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center w-3/4 md:w-2/5 xl:w-1/5">
         <Picture
               id="glass-card"
               src={item.imgsrc}
