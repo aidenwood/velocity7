@@ -3,32 +3,22 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
-import Hero from '../assets/previous-works/estem/1.jpg';
-import Split from '../assets/previous-works/estem/2.jpg';
-import Shop from '../assets/previous-works/estem/3.jpg';
-import CTA from '../assets/previous-works/estem/4.jpg';
-import Product from '../assets/previous-works/estem/5.jpg';
+import Lrg from '../assets/previous-works/raywhite/1.jpg';
+import Dual from '../assets/previous-works/raywhite/2.jpg';
+import Wide from '../assets/previous-works/raywhite/3.jpg';
 
 
 const services = [
   {
-    imgsrc: Hero,
+    imgsrc: Lrg,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
   },
   {
-    imgsrc: Shop,
+    imgsrc: Dual,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
   },
   {
-    imgsrc: Product,
-    imgalt: "Advertising with Google for free through organic SEO improvements.",
-  },
-  {
-    imgsrc: Split,
-    imgalt: "Advertising with Google for free through organic SEO improvements.",
-  },
-  {
-    imgsrc: CTA,
+    imgsrc: Wide,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
   },
 ];
@@ -51,8 +41,8 @@ const services = [
   /* Start Flickity viewport safeguards V4 */
   main { max-width: 100%; }
   .flickity-viewport { margin: 0 auto; }
-  .estem-carousel, .flickity-viewport { max-width: 100vw !important; }
-  .estem-carousel { margin: 20px auto; height: fit-content; }
+  .raywhite-carousel, .flickity-viewport { max-width: 100vw !important; }
+  .raywhite-carousel { margin: 20px auto; height: fit-content; }
   /* End Flickity viewport safeguards V4 */
 
   /* Glass-card effect dial in, minimal */
@@ -81,7 +71,7 @@ const services = [
   </p>
 </div>
 
-<div id="sliderContainer" class="estem-carousel">
+<div id="sliderContainer" class="raywhite-carousel">
   {
     services.map((item) => (
       <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center w-3/5 lg:w-1/3 xl:w-1/4">
@@ -106,7 +96,7 @@ const services = [
 <script>
   // element argument can be a selector string
   //   for an individual element
-  var flkty = new Flickity( '.estem-carousel', {
+  var flkty = new Flickity( '.raywhite-carousel', {
   cellAlign: 'left',
   contain: true,
   freeScroll: true,
