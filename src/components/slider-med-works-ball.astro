@@ -55,7 +55,8 @@ const services = [
 <style>
 
   .carousel-cell {
-    margin: 40px 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
     padding: 20px 40px;
   }
 
@@ -80,7 +81,7 @@ const services = [
     box-shadow: 0 15px 20px #00000010, 0 15px 20px #00000010;
   }
 
-  #works-row { border-top: 0.5px black; }
+  #works-row { border: black; border-top: ridge; }
 
   </style>
 
@@ -97,7 +98,7 @@ const services = [
 <div id="sliderContainer" class="ball-carousel h-fit pb-8">
   {
     services.map((item) => (
-      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-1/2 lg:w-2/5">
+      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-full lg:w-3/4 xl:w-2/5">
         <Picture
               id="glass-card"
               src={item.imgsrc}
