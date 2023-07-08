@@ -7,13 +7,13 @@ module.exports = {
     'sm': '640px',
     // => @media (min-width: 640px) { ... }
 
-    'md': '768px',
-    // => @media (min-width: 768px) { ... }
+    'md': '968px',
+    // => @media (min-width: 968px) { ... }
 
-    'lg': '1024px',
-    // => @media (min-width: 1024px) { ... }
+    'lg': '1199px',
+    // => @media (min-width: 1199px) { ... }
 
-    'xl': '1480px',
+    'xl': '1680px',
     // => @media (min-width: 1680px) { ... }
 
     '2xl': '1920px',
