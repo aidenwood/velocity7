@@ -45,7 +45,6 @@ const services = [
   .carousel-cell {
     margin-right: 20px;
     margin-bottom: 30px;
-    padding: 20px 40px;
     min-height: 350px;
   }
 
@@ -87,7 +86,7 @@ const services = [
 <div id="sliderContainer" class="ball-carousel h-fit pb-16">
   {
     services.map((item) => (
-      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-full lg:w-3/4 xl:w-2/5">
+      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-3/4 md:w-1/5 xl:w-1/6">
         <Picture
               id="glass-card"
               src={item.imgsrc}
