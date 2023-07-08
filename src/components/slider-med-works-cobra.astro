@@ -3,44 +3,32 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
-import VelocityEcomm from '../assets/products-sqr/velocity-ecommerce.webp';
-import VelocityLrg from '../assets/products-sqr/web-design-render.webp';
-import VelocitySml from '../assets/products-sqr/velocity-web-design.webp';
-import BrandPack from '../assets/products-sqr/brand-refresh.webp';
-import CPCmarketing from '../assets/products-sqr/google-search-ad-management.webp';
-import MetaAds from '../assets/products-sqr/fb-marketing-design.webp';
-import MetaAdManagement from '../assets/products-sqr/fb-marketing-management.webp';
-import AnimatedAds from '../assets/products-sqr/animated-ad-design.webp';
-import DisplayMarketing from '../assets/products-sqr/google-display-ad-management.webp';
-import PrintAds from '../assets/products-sqr/billboard-ad-design.webp';
-import BusAds from '../assets/products-sqr/bus-ad-management.webp';
-import CompleteBrandPack from '../assets/products-sqr/complete-brand-packages.webp';
-import BillboardAds from '../assets/products-sqr/sml-billboard-design.webp';
+import Test from '../assets/previous-works/cobra/test.jpg';
+import Hero from '../assets/previous-works/cobra/hero.jpg';
+import Logo from '../assets/previous-works/cobra/logolrg.jpg';
+import LogoSet from '../assets/previous-works/cobra/logo.jpg';
+import Icons from '../assets/previous-works/cobra/icons.jpg';
 
 
 const services = [
   {
-    imgsrc: MetaAds,
+    imgsrc: Icons,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
   },
   {
-    imgsrc: BrandPack,
+    imgsrc: Logo,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
   },
   {
-    imgsrc: VelocityLrg,
+    imgsrc: LogoSet,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
   },
   {
-    imgsrc: AnimatedAds,
+    imgsrc: Test,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
   },
   {
-    imgsrc: BusAds,
-    imgalt: "Advertising with Google for free through organic SEO improvements.",
-  },
-  {
-    imgsrc: PrintAds,
+    imgsrc: Hero,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
   },
 ];
@@ -57,7 +45,6 @@ const services = [
   .carousel-cell {
     margin-right: 20px;
     margin-bottom: 30px;
-    padding: 20px 40px;
     min-height: 350px;
   }
 
@@ -98,7 +85,7 @@ const services = [
 <div id="sliderContainer" class="cobra-carousel h-fit pb-16">
   {
     services.map((item) => (
-      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-full lg:w-3/4 xl:w-2/5">
+      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-3/4 md:w-1/5 xl:w-1/6">
         <Picture
               id="glass-card"
               src={item.imgsrc}
