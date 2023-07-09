@@ -57,9 +57,11 @@ const services = [
     margin-bottom: 30px;
     height: 280px;
   }
-  .carousel-cell (max-width: 1199px) {
+  @media only screen and (max-width: 968px) {
+  .carousel-cell {
     height: 180px;
   }
+}
 
   /* Start Flickity viewport safeguards V4 */
   main { max-width: 100%; }
