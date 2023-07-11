@@ -1,0 +1,139 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+import { Picture } from "@astrojs/image/components";
+import Slider from '../assets/previous-works/snacks/slidersml.jpg';
+import SliderLrg from '../assets/previous-works/snacks/sliderlrg.jpg';
+import Hero from '../assets/previous-works/snacks/hero.jpg';
+import Brand from '../assets/previous-works/snacks/brand.jpg';
+import Contact from '../assets/previous-works/snacks/contact.jpg';
+import Info from '../assets/previous-works/snacks/info.jpg';
+
+
+const services = [
+  {
+    imgsrc: Hero,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+  },
+  {
+    imgsrc: Slider,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+  },
+  {
+    imgsrc: SliderLrg,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+  },
+  {
+    imgsrc: Brand,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+  },
+  {
+    imgsrc: Info,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+  },
+  {
+    imgsrc: Contact,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+  },
+];
+---
+
+<!-- Flickity -->
+<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<!-- Flickity Custom Styles -->
+<style>
+
+.carousel-cell {
+    margin-right: 20px;
+    margin-bottom: 30px;
+    height: 280px;
+  }
+  @media only screen and (max-width: 1199px) {
+  .carousel-cell {
+    height: 220px;
+  }
+}
+  @media only screen and (max-width: 768px) {
+  .carousel-cell {
+    height: 180px;
+  }
+}
+  /* Start Flickity viewport safeguards V4 */
+  main { max-width: 100%; }
+  .flickity-viewport { margin: 0 auto; }
+  .tsd-carousel, .flickity-viewport { max-width: 100vw !important; }
+  .tsd-carousel { margin: 20px auto; height: fit-content; }
+  /* End Flickity viewport safeguards V4 */
+
+  /* Glass-card effect dial in, minimal */
+  #glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition-duration: 200ms;
+  }
+  #glass-card:hover {
+    box-shadow: 0 15px 20px #00000010, 0 15px 20px #00000010;
+  }
+
+  #works-row { border: black; border-top: ridge; }
+
+  </style>
+
+<main id="works-row" class="my-12 md:my-16 pb-4 md:pb-8">
+<div class="pt-4 flex items-center justify-between">
+  <div>
+    <h3 class="text-2xl md:text-3xl lg:text-5xl font-bold lg:tracking-tight">
+      The Social Dandelion.
+    </h3>
+    <p class="text-sm lg:text-lg max-w-6xl mt-2 text-slate-600">
+      Velocity7 Web design.
+    </p>
+  </div>
+  <div>
+    <a href="/velocity7">read more</a>
+  </div>
+</div>
+
+<div id="sliderContainer" class="tsd-carousel">
+  {
+    services.map((item) => (
+      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center w-3/5 lg:w-1/3 xl:w-1/4">
+        <Picture
+              id="glass-card"
+              src={item.imgsrc}
+              sizes="(max-width: 1200px) 1200px, 900px, 600px"
+              widths={[600, 900, 1200]}
+              aspectRatio="5:3"
+              loading="eager"
+              background="#f2f2f200"
+              fit="cover"
+              position="center"
+              class="w-full h-full"
+            />
+      </div>
+    ))
+  }
+</div>
+</main>
+
+<script>
+  // element argument can be a selector string
+  //   for an individual element
+  var flkty = new Flickity( '.tsd-carousel', {
+  cellAlign: 'left',
+  contain: true,
+  freeScroll: true,
+  prevNextButtons: false,
+  pageDots: false
+  // lower attraction and lower friction
+  // slower transitions
+  // easier to flick past cells
+  });
+</script>
+
