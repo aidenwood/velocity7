@@ -7,6 +7,8 @@ import Bill from '../assets/previous-works/br/br-bill.webp';
 import Gwd1 from '../assets/previous-works/br/br-gwd.webp';
 import Gwd2 from '../assets/previous-works/br/br-gwd2.webp';
 import Bus from '../assets/previous-works/br/br-bus.webp';
+import Re from '../assets/previous-works/br/br-re.webp';
+
 import FB from '../assets/previous-works/br/br-fb.webp';
 import Vox from '../assets/previous-works/br/br-vox.webp';
 import Weather from '../assets/previous-works/br/br-wth.webp';
@@ -19,6 +21,10 @@ const services = [
   },
   {
     imgsrc: Bus,
+    imgalt: "Advertising with Google for free through organic SEO improvements.",
+  },
+  {
+    imgsrc: Re,
     imgalt: "Advertising with Google for free through organic SEO improvements.",
   },
   {
@@ -67,7 +73,7 @@ const services = [
   main { max-width: 100%; }
   .flickity-viewport { margin: 0 auto; }
   .ball-carousel, .flickity-viewport { max-width: 100vw !important; }
-  .ball-carousel { margin: 20px auto; height: fit-content; }
+  .ball-carousel { height: fit-content; }
   /* End Flickity viewport safeguards V4 */
 
 
@@ -87,7 +93,7 @@ const services = [
 
   </style>
 
-<main id="works-row" class="my-8 md:my-16 pb-4 md:pb-8">
+<main id="works-row" class="my-8 md:my-16">
   <div class="pt-4 flex items-center justify-between">
     <div>
       <h3 class="text-2xl md:text-3xl lg:text-5xl font-bold lg:tracking-tight">
@@ -105,7 +111,7 @@ const services = [
 <div id="sliderContainer" class="ball-carousel">
   {
     services.map((item) => (
-      <div class="carousel-cell flex flex-col md:flex-row justify-center md:items-center w-3/5 lg:w-1/3 xl:w-1/4">
+      <div class="carousel-cell flex flex-row justify-start items-center w-2/5 lg:w-1/3 xl:w-1/5">
         <Picture
               id="glass-card"
               src={item.imgsrc}
