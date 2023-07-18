@@ -11,8 +11,8 @@ const sliderContent = [
     title: "Moonshot Plan",
     paragraph:
       "Complete website + marketing management at a fixed price, pause anytime. Accounts managed by a real marketing expert, with experience managing over $18m in ad spend and global marketing strategies.",
-    btntxt: "Purchase",
-    price: "4445",
+    btntxt: "Get started",
+    price: "4445/mth",
     style: "outline",
     link: "https://buy.stripe.com/7sIeWtdTB6df676eVc",
   }
@@ -89,14 +89,14 @@ const sliderContent = [
       { sliderContent.map((item) => (
         <div id="glass-card" class="carousel-cell w-full py-32">
           <div id="slideContainer" class="flex flex-col gap-y-4">
-            <div id="iconContainer" class="pt-6 -z-10 w-48">
+            <div id="iconContainer" class="pt-6 -z-10 w-16">
               <img src={item.icon} class="" />
             </div>  
             <div id="textContainer" class="w-full flex flex-col gap-y-4">
               <span class="text-gray-700 mr-3 font-thin uppercase text-md">{item.category}</span>
               <h3 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h3>{" "}
               <p class="text-xs lg:text-sm max-w-xl font-regular text-slate-700 pr-8 leading-relaxed">{item.paragraph}</p>
-              <p class="text-xl lg:text-3xl font-semibold text-black cursor-auto my-3">${item.price}<span class="text-lg lg:text-2xl font-normal">/mth</span></p>
+              <p class="text-xl lg:text-3xl font-semibold text-black cursor-auto my-3">${item.price}</p>
               <p class="text-slate-500 mt-8 leading-relaxed">
                 <Link 
                   class="mr-4"
