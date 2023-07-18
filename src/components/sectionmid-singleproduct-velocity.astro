@@ -1,15 +1,17 @@
 ---
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
+import WebDesign from '../assets/aidxn/sqr.svg';
+
 
 const sliderContent = [
   {
-    icon: "ph:codesandbox-logo-thin",
+    icon: WebDesign,
     category: "Web Design / Dev",
     title: "Velocity7",
     paragraph:
       "Our high-performance website theme, developed over 5 years with a focus on performance and conversion through UX.",
-    btntxt: "Purchase",
+    btntxt: "More info",
     price: "1445",
     style: "outline",
     link: "/web-design",
@@ -87,11 +89,13 @@ const sliderContent = [
       { sliderContent.map((item) => (
         <div id="glass-card" class="carousel-cell w-full py-32">
           <div id="slideContainer" class="flex flex-col gap-y-4">
-            <Icon name="bgIcon" class="h-16 w-16" name={item.icon} />
+            <div id="iconContainer" class="pt-6 -z-10 w-48">
+              <img src={item.icon} class="" />
+            </div>  
             <div id="textContainer" class="w-full flex flex-col gap-y-4">
               <span class="text-gray-700 mr-3 font-thin uppercase text-md">{item.category}</span>
               <h3 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h3>{" "}
-              <p class="text-xs lg:sm max-w-3xl font-regular text-slate-500 pr-8 leading-relaxed">{item.paragraph}</p>
+              <p class="text-xs lg:text-sm max-w-xl font-regular text-slate-500 pr-8 leading-relaxed">{item.paragraph}</p>
               <p class="text-xl lg:text-3xl font-semibold text-black cursor-auto my-3">from ${item.price}<span class="text-lg lg:text-2xl font-normal"></span></p>
               <p class="text-slate-500 mt-8 leading-relaxed">
                 <Link 
