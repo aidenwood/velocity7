@@ -3,9 +3,9 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
-import Lrg from '../assets/previous-works/raywhite/1.jpg';
-import Dual from '../assets/previous-works/raywhite/2.jpg';
-import Wide from '../assets/previous-works/raywhite/3.jpg';
+import Lrg from '../assets/previous-works/raywhite/1.webp';
+import Dual from '../assets/previous-works/raywhite/2.webp';
+import Wide from '../assets/previous-works/raywhite/3.webp';
 
 
 const services = [
@@ -87,8 +87,8 @@ const services = [
         <Picture
               id="glass-card"
               src={item.imgsrc}
-              sizes="(max-width: 1200px) 1200px, 900px, 600px"
-              widths={[600, 900, 1200]}
+              sizes="(max-width: 1680px) 1680px, 1260px, 840px"
+              widths={[840, 1260, 1680]}
               aspectRatio="5:3"
               loading="eager"
               background="#f2f2f200"

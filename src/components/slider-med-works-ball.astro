@@ -3,13 +3,13 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
-import Bill from '../assets/previous-works/br/br-bill.jpg';
-import Gwd1 from '../assets/previous-works/br/br-gwd.jpg';
-import Gwd2 from '../assets/previous-works/br/br-gwd2.jpg';
-import Bus from '../assets/previous-works/br/br-bus.jpg';
-import FB from '../assets/previous-works/br/br-fb.jpg';
-import Vox from '../assets/previous-works/br/br-vox.jpg';
-import Weather from '../assets/previous-works/br/br-wth.jpg';
+import Bill from '../assets/previous-works/br/br-bill.webp';
+import Gwd1 from '../assets/previous-works/br/br-gwd.webp';
+import Gwd2 from '../assets/previous-works/br/br-gwd2.webp';
+import Bus from '../assets/previous-works/br/br-bus.webp';
+import FB from '../assets/previous-works/br/br-fb.webp';
+import Vox from '../assets/previous-works/br/br-vox.webp';
+import Weather from '../assets/previous-works/br/br-wth.webp';
 
 
 const services = [
@@ -109,8 +109,8 @@ const services = [
         <Picture
               id="glass-card"
               src={item.imgsrc}
-              sizes="(max-width: 1200px) 1200px, 900px, 600px"
-              widths={[600, 900, 1200]}
+              sizes="(max-width: 1680px) 1680px, 1260px, 840px"
+              widths={[840, 1260, 1680]}
               aspectRatio="5:3"
               loading="eager"
               background="#f2f2f200"
