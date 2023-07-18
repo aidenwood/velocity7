@@ -16,7 +16,7 @@ import ProductConcepts from '../assets/previous-works/branded-product-design.web
 import BusAds from '../assets/previous-works/br/br-bus.webp';
 import BillboardAds from '../assets/previous-works/store-front-ad-design.webp';
 import SimpleService from '../assets/previous-works/conversion-optimisation.webp';
-import MoonshotDesign from '../assets/previous-works/moonshot-web-design.webp';
+import MoonshotDesign from '../assets/previous-works/moonshot-mgmt.webp';
 
 
 
@@ -367,7 +367,7 @@ const services = [
 
   .carousel-cell {
     margin: 40px 20px;
-    padding: 20px 40px;
+    padding: 40px 20px;
     min-height: 350px;
   }
 
@@ -387,6 +387,11 @@ const services = [
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     transition-duration: 200ms;
+  }
+  @media only screen and (max-width: 1199px) {
+  #glass-card {
+    padding: 30px 10px;
+    }
   }
   #glass-card:hover {
     box-shadow: 0 15px 20px #00000010, 0 15px 20px #00000010;
@@ -408,8 +413,8 @@ const services = [
 <div id="sliderContainer" class="services-carousel">
   {
     services.map((item) => (
-      <div id="glass-card" class="carousel-cell flex flex-col md:flex-row justify-center md:items-center h-fit w-full xl:w-3/5">
-          <div id="imgContainer" class="w-full lg:w-1/2 px-2 py-2">
+      <div id="glass-card" class="carousel-cell flex flex-col xl:flex-row justify-center items-center md:items-start lg:items-center h-fit w-full md:w-4/5 lg:w-2/5 xl:w-3/5">
+          <div id="imgContainer" class="w-full md:w-2/3 lg:w-full xl:w-1/2 px-2 py-2">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1680px) 1680px, 1260px, 840px"
@@ -422,10 +427,10 @@ const services = [
                   class="w-full rounded"
                 />
           </div>
-          <div class="my-4 w-full lg:w-1/2 px-2">
+          <div class="my-4 w-full lg:w-full xl:w-1/2 px-2">
             <span class="text-gray-400 pt-12 mr-3 uppercase text-xs">{item.category}</span>
-            <h3 class="font-semibold text-xl md:text-2xl lg:text-4xl">{item.title}</h3>{" "}
-            <p class="text-xs lg:text-md max-w-3xl text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
+            <h3 class="font-semibold text-xl lg:text-2xl :text-4xl">{item.title}</h3>{" "}
+            <p class="text-xs lg:text-md text-slate-700 mt-2 mb-4 pr-4 lg:pr-8 leading-relaxed">{item.description}</p>
             <div class="hidden md:block">
               <h4 class="text-lg font-semibold">Includes:</h4>
               <ul class="mt-4 mb-8 grid grid-cols-2 gap-x-4 gap-y-2">
