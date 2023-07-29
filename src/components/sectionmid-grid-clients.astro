@@ -80,7 +80,7 @@ const clients = [
 
 
 <main class="my-8 md:my-16 mx-auto">
-  <div id="introContainer" class="px-4 md:px-8 pb-8">
+  <div id="introContainer" class="pb-4">
     <h3 style="fullysickHeader" class="text-2xl md:text-3xl lg:text-5xl mb-4 font-bold lg:tracking-tight">
       Trusted in the most competitive industries.
     </h3>
@@ -90,12 +90,12 @@ const clients = [
     </p>
   </div>
 
-<div id="gridContainer" class="px-4 md:px-8 grid grid-cols-3 md:grid-cols-4 mt-4 mb-24 gap-4 md:gap-8 gap-y-12">
+<div id="gridContainer" class="grid grid-cols-3 md:grid-cols-4 mt-4 mb-24 gap-4 md:gap-8">
   {
     clients.map((logo) => (
     <div id="container" class="relative group">
-      <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg blur opacity-10 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-      <div id="cardInner" class="relative ring-1 ring-gray-300 bg-gray-200 hover:bg-gray-50 duration-200 rounded-lg leading-none flex items-top justify-start space-x-6">
+      <div id="cardOuter" class="absolute -inset-1 bg-gradient-to-br from-pink-700 to-purple-700 rounded blur opacity-10 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+      <div id="cardInner" class="relative ring-1 ring-gray-300 bg-gray-200 hover:bg-gray-50 duration-200 rounded leading-none flex items-top justify-start space-x-6">
         <div id="imgContainer" class="w-full rounded py-2 px-4">
           <img src={logo.src} alt={logo.alt} class="w-full h-24 md:h-36" />
         </div>
