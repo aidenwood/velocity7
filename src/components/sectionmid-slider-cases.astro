@@ -69,8 +69,8 @@ const sliderContent = [
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <!-- Flickity Custom Styles -->
 <style>
-  .cases-carousel .flickity-viewport { padding: 60px 90px; min-height: 520px; display: flex; justify-content: center; align-items: center; width: 100% !important; }
-  .carousel-cell { width: 75%; margin: 40px 20px; padding: 10px 20px; }
+  .cases-carousel .flickity-viewport { padding: 60px 90px; }
+  .carousel-cell { height: 520px; min-width: 300px; width: 66%; margin: 40px 20px; padding: 10px 20px; }
   .flickity-button { max-width: 20px; }
 
   /* accessibility */
@@ -142,7 +142,7 @@ const sliderContent = [
       { sliderContent.map((item) => (
           
           
-              <div id="glass-card" class="carousel-cell w-full px-4 md:px-8 py-32">
+              <div id="glass-card" class="carousel-cell w-full flex items-center justify-center px-4 md:px-8 py-32">
                 <div id="slideContainer" class="flex flex-col gap-y-4">
                   <div id="iconContainer" class="pt-6 -z-10 w-16">
                     <img src={item.img} class="" />
