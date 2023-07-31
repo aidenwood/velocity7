@@ -111,16 +111,16 @@ const features = [
             <div id="textContainer" class="w-full my-4">
               <h2 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h2>{" "}
               <p class="text-slate-700 text-xs md:text-md mt-2 leading-relaxed">{item.description}</p>
-              <div class="flex">
+              <div class="flex mt-6">
                 <Link 
-                  class="mr-4"
+                  class="mr-2"
                   href={item.link || "#"}
                   block
                   style={item.style ? "primary" : "outline"}>
                   {item.btntxt || "Get Started"}
                 </Link>
                 <Link 
-                  class="mr-4"
+                  class="mr-2"
                   href={item.resultslink || "#"}
                   block
                   style={item.resultsstyle ? "primary" : "outline"}>

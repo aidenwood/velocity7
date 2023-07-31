@@ -39,34 +39,35 @@ b { font-family: 'wotfard-bold'; }
     
 /* Velocity brand slider dots are lines */
 .flickity-page-dots .dot {
-  height: 2px;
-  width: 220px;
-  margin: 0.5px;
-  border-radius: 3px;
+  height: 2px !important;
+  width: 220px !important;
+  margin: 0.5px !important;
+  border-radius: 3px !important;
 }
   @media only screen and (max-width: 1680px) {
     .flickity-page-dots .dot {
-    width: 160px;
+    width: 160px !important;
   }
 }
   @media only screen and (max-width: 1199px) {
     .flickity-page-dots .dot {
-      width: 90px;
+      width: 90px !important;
   }
 }
 @media only screen and (max-width: 768px) {
     .flickity-page-dots .dot {
-    width: 65px;
+    width: 65px !important;
   }
 }
 @media only screen and (max-width: 568px) {
     .flickity-page-dots .dot {
-    width: 30px;
+    width: 30px !important;
   }
 }
 /* position dots up a bit */
 .flickity-page-dots {
-  bottom: -22px;
+  top: -22px !important;
+  padding-bottom: 30px;
 }
 
 
