@@ -36,8 +36,38 @@ button, a, h5, h6, span { font-family: 'inconsolata'; }
 p, html { font-family: 'wotfard'; }
 b { font-family: 'wotfard-bold'; }
 
-
-.flickity-page-dots { bottom: 10px !important; }
+    
+/* Velocity brand slider dots are lines */
+.flickity-page-dots .dot {
+  height: 2px;
+  width: 220px;
+  margin: 0.5px;
+  border-radius: 3px;
+}
+  @media only screen and (max-width: 1680px) {
+    .flickity-page-dots .dot {
+    width: 160px;
+  }
+}
+  @media only screen and (max-width: 1199px) {
+    .flickity-page-dots .dot {
+      width: 90px;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .flickity-page-dots .dot {
+    width: 65px;
+  }
+}
+@media only screen and (max-width: 568px) {
+    .flickity-page-dots .dot {
+    width: 30px;
+  }
+}
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -22px;
+}
 
 
 #glass-card-dark {     
