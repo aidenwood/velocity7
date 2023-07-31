@@ -37,9 +37,9 @@
 
 
 h1, h2, h3, h4 { font-family: 'quarto'; }
-button, a, h5, h6, span { font-family: 'inconsolata'; }
+h5, h6, span { font-family: 'inconsolata'; }
 p, html { font-family: 'wotfard'; }
-b { font-family: 'wotfard-bold'; }
+button, a, b { font-family: 'wotfard-bold'; }
 
     
 /* Velocity brand slider dots are lines */
