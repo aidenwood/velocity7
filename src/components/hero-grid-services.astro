@@ -11,44 +11,56 @@ import VideoProd from '../assets/aidxn/hex.svg';
 
 const features = [
   {
-    title: "Brand Strategy.",
+    title: "Brand Strategy + Direction.",
     description:
-      "Brand design, strategy + direction that avoid design churn and huge ad spend.",
+      "Brand design, strategy + direction that avoid design churn. Reducing ad costs through data collection and winning SEO strategies.",
     imgsrc: GraphicDesign,
     imgalt: "Brand Design and strategy direction for the age of social marketing.",
     link: "/brand-strategy",
-    style: "outline",
-    btntxt: "More info",
+    style: "primary",
+    btntxt: "Read more",
+    resultslink: "/blog/multi-modal-marketing",
+    resultsstyle: "outline",
+    resultsbtntxt: "Our strategies",
   },
   {
-    title: "Web Design.",
+    title: "Web Design + Development.",
     description:
-      "Award-winning web design. 10+ years experience. High-performance web dev.",
+      "Award-winning web design. 10+ years experience. High-performance web design with Wordpress, Shopify, and Velocity.",
     imgsrc: WebDesign,
     imgalt: "Gold Coast's best web design and development agency with over 10 years experience.",
     link: "/web-design",
-    style: "outline",
+    style: "primary",
     btntxt: "More info",
+    resultslink: "/blog/ecommerce-design-tricks",
+    resultsstyle: "outline",
+    resultsbtntxt: "Our web design",
   },
   {
-    title: "Marketing.",
+    title: "Marketing + Automation.",
     description:
-      "Deploy + scale marketing campaigns for local businesses + global brands.",
+      "Effective marketing is simply no accident, we're here with honest result drive marketing management from the Gold Coast.",
     imgsrc: Marketing,
-    imgalt: "Ad strategy management on the Gold Coast without the giant fees.",
+    imgalt: "Digital marketing strategy and management with award-winning experts for less, based on the Gold Coast.",
     link: "/marketing",
-    style: "outline",
+    style: "primary",
     btntxt: "More info",
+    resultslink: "/blog/multi-modal-marketing",
+    resultsstyle: "outline",
+    resultsbtntxt: "Marketing campaign cases",
   },
   {
-    title: "Automation.",
+    title: "Scale to Global Markets.",
     description:
-      "Capture engagement with higher conversion rate and less labour costs using AI.",
+      "Monthly website and marketing management. Pause anytime to guarentee results. Optimisation of KPI's and winning audience conversion.",
     imgsrc: VideoProd,
-    imgalt: "3D Video Design and Videography Production for Marketing",
-    link: "/video-ads",
-    style: "outline",
+    imgalt: "Monthly management of website and marketing campaigns, on the Gold Coast.",
+    link: "/moonshot-plan",
+    style: "primary",
     btntxt: "More info",
+    resultslink: "/moonshot-plan#results",
+    resultsstyle: "outline",
+    resultsbtntxt: "Moonshot Plan results",
   },
 ];
 ---
@@ -99,6 +111,22 @@ const features = [
             <div id="textContainer" class="w-full my-4">
               <h2 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h2>{" "}
               <p class="text-slate-700 text-xs md:text-md mt-2 leading-relaxed">{item.description}</p>
+              <div class="flex">
+                <Link 
+                  class="mr-4"
+                  href={item.link || "#"}
+                  block
+                  style={item.style ? "primary" : "outline"}>
+                  {item.resultsbtntxt || "Get Started"}
+                </Link>
+                <Link 
+                  class="mr-4"
+                  href={item.link || "#"}
+                  block
+                  style={item.resultsstyle ? "primary" : "outline"}>
+                  {item.resultsbtntxt || "Get Started"}
+                </Link>
+              </div>
             </div>
           </div>
         </div>
