@@ -6,8 +6,14 @@
   @font-face {
     font-family: 'quarto';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Quarto-Black.ttf') format('ttf');
     src: url('/fonts/Quarto-Black.ttf') format('truetype');
+    src: url('/fonts/Quarto-Black.otf') format('otf');
+  }
+  @font-face {
+    font-family: 'inconsolata';
+    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+    src: url('/fonts/Inconsolata-UltraExpanded-Regular.ttf') format('truetype');
+    src: url('/fonts/Inconsolata-UltraExpanded-Regular.otf') format('otf');
   }
   @font-face {
     font-family: 'wotfard';
@@ -21,12 +27,14 @@
     src: url('/fonts/Wotfard-Bold.woff2') format('woff2');
     src: url('/fonts/Wotfard-Bold.ttf') format('truetype');
   }
+  
 }
 
 
-h1, h2, h3 { font-family: 'quarto'; }
+h1, h2, h3, h4 { font-family: 'quarto'; }
+h5, h6, span { font-family: 'inconsolata'; }
 p, html { font-family: 'wotfard'; }
-h4, span { font-family: 'wotfard-bold'; }
+b { font-family: 'wotfard-bold'; }
 
 
 .flickity-page-dots { bottom: 10px !important; }
