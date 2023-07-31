@@ -40,23 +40,23 @@ b { font-family: 'wotfard-bold'; }
 /* Velocity brand slider dots are lines */
 .flickity-page-dots .dot {
   height: 2px !important;
-  width: 240px !important;
+  width: 160px !important;
   margin: 0.5px !important;
   border-radius: 3px !important;
 }
   @media only screen and (max-width: 1680px) {
     .flickity-page-dots .dot {
-    width: 180px !important;
+    width: 120px !important;
   }
 }
   @media only screen and (max-width: 1199px) {
     .flickity-page-dots .dot {
-      width: 120px !important;
+      width: 80px !important;
   }
 }
 @media only screen and (max-width: 768px) {
     .flickity-page-dots .dot {
-    width: 90px !important;
+    width: 60px !important;
   }
 }
 @media only screen and (max-width: 568px) {
