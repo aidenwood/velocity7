@@ -18,7 +18,7 @@ const features = [
     imgalt: "Brand Design and strategy direction for the age of social marketing.",
     link: "/brand-strategy",
     style: "primary",
-    btntxt: "Read more",
+    btntxt: "More info",
     resultslink: "/blog/multi-modal-marketing",
     resultsstyle: "outline",
     resultsbtntxt: "Our strategies",
@@ -83,6 +83,9 @@ const features = [
 
 <main class="my-16 md:my-32">
   <div id="introContainer" class="mb-4 md:mb-8">
+    <h5 class="text-sm lg:text-md text-slate-700 mb-2">
+      Services
+    </h5>
     <h3 class="text-2xl md:text-3xl lg:text-5xl mb-4 font-bold lg:tracking-tight">
       Design, Develop. Market, Moonshot.
     </h3>
@@ -108,12 +111,12 @@ const features = [
             <div id="imgContainer" class="mt-1 w-1/6 sm:w-1/4 md:w-1/3">
               <img src={item.imgsrc} class="" />
             </div>
-            <div id="textContainer" class="w-full my-4">
+            <div id="textContainer" class="w-full mt-6">
               <h2 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h2>{" "}
-              <p class="text-slate-700 text-xs md:text-md mt-2 leading-relaxed">{item.description}</p>
-              <div class="flex mt-6">
+              <p class="text-slate-700 text-xs md:text-md mt-4 leading-relaxed">{item.description}</p>
+              <div class="mt-6">
                 <Link 
-                  class="mr-2"
+                  class="mr-2 text-xs md:text-sm"
                   href={item.link || "#"}
                   block
                   style={item.style ? "primary" : "outline"}>

@@ -36,43 +36,43 @@
 }
 
 
-h1, h2, h3, h4 { font-family: 'quarto'; }
-h5, h6, span { font-family: 'inconsolata'; }
+h1, h2, h3, h4, button, a { font-family: 'quarto'; }
+h5, h6, span { font-family: 'inconsolata'; text-transform: uppercase; }
 p, html { font-family: 'wotfard'; }
-button, a, b { font-family: 'wotfard-bold'; }
+b { font-family: 'wotfard-bold'; }
 
     
 /* Velocity brand slider dots are lines */
 .flickity-page-dots .dot {
   height: 2px !important;
-  width: 160px !important;
-  margin: 0.5px !important;
-  border-radius: 3px !important;
+  width: 120px !important;
+  margin: 1px !important;
+  border-radius: 2px !important;
 }
   @media only screen and (max-width: 1680px) {
     .flickity-page-dots .dot {
-    width: 120px !important;
+    width: 90px !important;
   }
 }
   @media only screen and (max-width: 1199px) {
     .flickity-page-dots .dot {
-      width: 80px !important;
+      width: 65px !important;
   }
 }
 @media only screen and (max-width: 768px) {
     .flickity-page-dots .dot {
-    width: 60px !important;
+    width: 45px !important;
   }
 }
 @media only screen and (max-width: 568px) {
     .flickity-page-dots .dot {
-    width: 45px !important;
+    width: 30px !important;
   }
 }
 /* position dots up a bit */
 .flickity-page-dots {
-  margin-top: -22px !important;
-  margin-bottom: 30px !important;
+  bottom: -45px !important;
+  padding-bottom: 30px !important;
 }
 
 
