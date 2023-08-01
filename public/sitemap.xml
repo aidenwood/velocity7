@@ -1,161 +1,152 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<!--  created with sitemap generator https://octopus.do  -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-    <url>
-        <loc>https://aidxn.com</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/brand-strategy</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/web-design</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/marketing</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/moonshot-plan</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/video-ads</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.75</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/automation</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.75</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/viral-marketing-strategies</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/multi-modal-marketing</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/conversion-focused-design</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/website-pageload-optimisation</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/dev-notes-v-7-4</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/10-reasons-to-leave-web2-for-businesses-in-australia</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/improve-website-speed-with-velocity</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/velocity-performance-benchmarks</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/dev-notes-v-7-3</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/ecommerce-design-tricks</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/dev-notes-v-7-2</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/how-web-design-went-from-table-based-hell-to-app-like-experiences</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/wordpress-advancements-in-performance</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/essential-data-structures-algorithms</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/complete-guide-fullstack-development</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/blog/how-to-become-frontend-master</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/about</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
-    <url>
-        <loc>https://aidxn.com/contact</loc>
-        <lastmod>2023-06-23</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.35</priority>
-    </url>
+
+<url>
+  <loc>https://aidxn.com/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/brand-strategy/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/web-design/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/marketing/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/moonshot-plan/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/velocity/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/shopify/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/wordpress/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/automation/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/about/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/contact/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/multi-modal-marketing/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/viral-marketing-strategies/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/conversion-focused-design/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/website-pageload-optimisation/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/dev-notes-v-7-4/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/10-reasons-to-leave-web2-for-businesses-in-australia/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/improve-website-speed-with-velocity/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/velocity-performance-benchmarks/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/dev-notes-v-7-3/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/ecommerce-design-tricks/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/dev-notes-v-7-2/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/how-web-design-went-from-table-based-hell-to-app-like-experiences/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/wordpress-advancements-in-performance/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/essential-data-structures-algorithms/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/complete-guide-fullstack-development/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aidxn.com/blog/how-to-become-frontend-master/</loc>
+  <lastmod>2023-08-01T00:58:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
 </urlset>
