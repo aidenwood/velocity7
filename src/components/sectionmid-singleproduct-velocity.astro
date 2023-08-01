@@ -52,6 +52,9 @@ const sliderContent = [
   <div id="leftContainer" class="w-full md:w-3/5 px-4 md:px-8">
 
     <div class="py-6">
+      <h5 class="text-xs md:text-sm lg:text-md my-4 text-slate-700">
+        Compete online with ease
+      </h5>
       <h3 style="heroTagline" class="text-2xl md:text-3xl lg:text-5xl max-w-3xl w-full font-bold tracking-tight">
         Helping businesses generate leads online faster + cheaper.
       </h3>
@@ -92,12 +95,12 @@ const sliderContent = [
             <div id="iconContainer" class="w-24 lg:w-48">
               <img src={item.icon} class="" />
             </div>  
-            <div id="textContainer" class="w-full flex flex-col gap-y-4">
+            <div id="textContainer" class="w-full flex flex-col gap-y-2">
               <span class="text-slate-700 text-xs md:text-sm lg:text-md mr-3 font-thin uppercase text-md">{item.category}</span>
-              <h4 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h4>{" "}
+              <h4 class="font-semibold text-2xl md:text-3xl lg:text-4xl">{item.title}</h4>{" "}
               <p class="text-xs lg:text-sm max-w-3xl font-regular text-slate-700 pr-8 leading-relaxed">{item.paragraph}</p>
-              <p class="text-xl lg:text-3xl font-semibold text-black cursor-auto my-3">from ${item.price}<span class="text-lg lg:text-2xl font-normal"></span></p>
-              <p class="text-slate-500 mt-8 leading-relaxed">
+              <p class="text-xl lg:text-2xl font-semibold text-black cursor-auto my-3">from ${item.price}<span class="text-lg lg:text-2xl font-normal"></span></p>
+              <p class="text-slate-500 mt-6 leading-relaxed">
                 <Link 
                   class="mr-4"
                   href={item.link || "#"}
