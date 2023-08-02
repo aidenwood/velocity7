@@ -21,7 +21,7 @@ const sliderContent = [
   {
     img: WebDesign,
     category: "Web Design",
-    title: "$50k in sales, 3 months from launch, with $0 ad spend.",
+    title: "$50k in sales in 3 months, $0 ad spend.",
     paragraph:
       "We helped the small team at The Boogie Collective create one of the most successful small business launches we've seen. Saving them a huge % on revenue by using smarter integrations.",
     btntxt: "Read more",
@@ -32,9 +32,9 @@ const sliderContent = [
   {
     img: Marketing,
     category: "Marketing",
-    title: "CPA reduced by over $50/sale in first month of Moonshot.",
+    title: "CPA reduced by over $50/sale in 21 days.",
     paragraph:
-      "Reduced CPA of a 3 year old, $8k / week campaign from $84 to $36.5 for a 20 year old Gold Coast business. Until we came and more than doubled the results of their ad spend after only one month of Moonshot.",
+      "Reduced CPA of a 3 year old, $8k/week campaign from $84 to $36.5. Until we came and more than doubled the results of their ad spend after only one month of Moonshot.",
     btntxt: "Read more",
     style: "outline",
     link: "https://aidxn.com/blog/conversion-focused-design/",
@@ -42,9 +42,9 @@ const sliderContent = [
   {
     img: Automation,
     category: "Moonshot Plan",
-    title: "Launch to global scale in 12 months with total ad spend under $10k.",
+    title: "Breaking into global markets, 4 months from launch.",
     paragraph:
-      "We initially developed a brand design as a one of service, then was immediately hired for monthly management with the Moonshot Plan. 12 months of direct, highly focused management has quickly scaled this business with a few of our best secrets.",
+      "E-commerce brand launches can really set a business up for success. We helped consult on launch design and development to ensure all goals were met in time.",
     btntxt: "Read more",
     style: "outline",
     link: "https://aidxn.com/blog/conversion-focused-design/",
@@ -81,7 +81,7 @@ const sliderContent = [
 </style>
 
 
-<main class="my-8 md:my-16 py-8">
+<main class="my-8 md:my-16">
 <div id="heroSection" class="flex flex-col lg:flex-row justify-center items-center">
   
   <div id="leftContainer" class="w-full lg:w-1/2 px-4 md:px-8">
@@ -129,15 +129,15 @@ const sliderContent = [
           
               <div id="glass-card" class="carousel-cell flex items-center justify-center px-4 md:px-8 py-12">
                 <div id="slideContainer" class="flex flex-col gap-y-4">
-                  <div id="iconContainer" class="pt-6 -z-10 w-16">
-                    <img src={item.img} class="" />
+                  <div id="iconContainer" class="w-16">
+                    <img src={item.img} />
                   </div>  
                   <div id="textContainer" class="w-full flex flex-col gap-y-4">
                     <h5 class="text-slate-700 text-xs md:text-sm lg:text-md">{item.category}</h5>
                     <h4 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h4>{" "}
                     <p class="text-xs lg:sm max-w-3xl font-regular text-gray-700 pr-8 leading-relaxed">{item.paragraph}</p>
         
-                    <p class="text-slate-500 my-8 leading-relaxed">
+                    <p class="text-slate-500 mt-6 leading-relaxed">
                       <Link 
                         class="mr-4"
                         href={item.link || "#"}
