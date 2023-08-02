@@ -41,6 +41,19 @@ h5, h6, span { font-family: 'inconsolata'; text-transform: uppercase; }
 p, html { font-family: 'wotfard'; }
 b { font-family: 'wotfard-bold'; }
 
+/* Glass-card effect v7 */
+#glass-card {
+  border-radius: 30px;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px 5px rgba(0, 0, 0, 0.1);
+  transition-duration: 400ms;
+}
+#glass-card:hover {
+  box-shadow: 0 30px 45px 2px #00000035;
+}
     
 /* Velocity brand slider dots are lines */
 .flickity-page-dots .dot {

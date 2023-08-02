@@ -70,26 +70,8 @@ const sliderContent = [
 <!-- Flickity Custom Styles -->
 <style>
   .cases-carousel .flickity-viewport { padding: 60px 90px; }
-  .carousel-cell { height: 520px; min-width: 300px; width: 66%; margin: 40px 20px; padding: 10px 20px; }
-  .flickity-button { max-width: 20px; }
+  .carousel-cell { min-width: 300px; width: 66%; margin: 40px 20px; padding: 10px 20px; }
 
-  /* accessibility */
-  .flickity-enabled:focus .flickity-viewport { outline: thin dotted; outline: 2px auto -webkit-focus-ring-color; }
-  
-
-  /* Glass-card effect dial in, needs a moving background css only if possible */
-  #glass-card {
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(30px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    transition-duration: 200ms;
-    padding: 10px 20px;
-  }
-  #glass-card:hover {
-    box-shadow: 0 15px 20px #00000010, 0 15px 20px #00000010;
-  }
 
   [astro-icon="bgIcon"] {
         color: #a600ff10;
@@ -102,7 +84,7 @@ const sliderContent = [
 <main class="my-8 md:my-16 py-8">
 <div id="heroSection" class="flex flex-col lg:flex-row justify-center items-center">
   
-  <div id="leftContainer" class="w-full lg:w-2/5 px-4 md:px-8">
+  <div id="leftContainer" class="w-full lg:w-1/2 px-4 md:px-8">
 
     <div class="flex justify-center flex-col py-6">
       <h5 class="text-xs md:text-sm lg:text-md my-4 text-slate-700">
@@ -111,13 +93,13 @@ const sliderContent = [
       <h3 style="heroTagline" class="text-2xl md:text-3xl lg:text-5xl w-full font-bold tracking-tight">
         Reliable lead generation, by design.
       </h3>
-      <p class="text-sm lg:text-lg mt-6 pr-8 text-slate-700 w-full lg:max-w-3xl">
+      <p class="text-sm lg:text-lg mt-4 pr-8 text-slate-700 w-full lg:max-w-3xl">
         Our month to month manangement is capped at 10 clients at once, and is designed to be 
         outgrown. Helping scale small businesses to break into larger markets fast.
         Book a call to hear our individual solutions we would apply for your niche.
       </p>
       
-      <div class="mt-12 flex flex-col sm:flex-row justify-start gap-3">
+      <div class="mt-6 flex flex-col sm:flex-row justify-start gap-3">
         <a href="https://g2ok5807scs.typeform.com/to/tCmzlDza" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-black text-white hover:bg-gray-800 border-2 border-transparent flex gap-1 items-center justify-center">
           <svg viewBox="0 0 24 24" class="w-4 h-4">
             <Icon class="text-white" name="ph:chat-teardrop-dots-light" />
@@ -138,14 +120,14 @@ const sliderContent = [
     </div>
   </div>
 
-  <div id="rightContainer" class="w-full lg:w-3/5 z-5">
+  <div id="rightContainer" class="w-full lg:w-1/2 z-5">
 
     <!-- START flickity slider for Case Studies -->
-    <div class="cases-carousel w-full h-full">
+    <div class="cases-carousel">
       { sliderContent.map((item) => (
           
           
-              <div id="glass-card" class="carousel-cell w-full flex items-center justify-center px-4 md:px-8 py-32">
+              <div id="glass-card" class="carousel-cell flex items-center justify-center px-4 md:px-8 py-12">
                 <div id="slideContainer" class="flex flex-col gap-y-4">
                   <div id="iconContainer" class="pt-6 -z-10 w-16">
                     <img src={item.img} class="" />
