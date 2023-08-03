@@ -10,6 +10,7 @@ import { Picture } from "@astrojs/image/components";
 import SectionHeadImg from "@components/sectionhead-img.astro";
 import MoonshotSectionmid from "@components/sectionmid-singleproduct-moonshot.astro";
 import VelocitySectionmid from "@components/sectionmid-singleproduct-velocity.astro";
+import VelocityFeatures from "@components/grid-4x4-features.astro";
 import MoonshotCover from '../assets/previous-works/moonshot-asana.webp';
 import VelocityCover from '../assets/previous-works/velocity-tsd.webp';
 import Cta from "@components/cta.astro";
@@ -47,11 +48,9 @@ import Layout from "@layouts/Layout.astro";
         Velocity, our high-performance, conversion-focused website theme.
       </Fragment>
       <Fragment slot="desc">
-        Over our 10 years in web design we have obsessed over website performance. It seriously matters and makes 
-        competing in ranks and breaking past competition, as well as lowering ad costs and server costs. Velocity has been 
-        designed to have instant high-conversion design and perfect website performance, SEO and accessibility, all out-of-the-box. 
-        With 50+ components for faster development and 30+ integrations to generate real business from your website in different ways.
-        Escape never ending monthly costs of other web design options and pay once, own your code forever.
+        Reducing costs businesses face in the digital space such as marketing, website frameworks and hosting.
+        Velocity is an all inclusive, out-of-the-box framework to help businesses achieve more for less online. 
+        50+ components for faster development and 30+ integrations to generate more leads and sales, sooner.
       </Fragment>
       <Fragment slot="cover">
         <Picture  id="glass-card-dark"
@@ -67,8 +66,9 @@ import Layout from "@layouts/Layout.astro";
       </Fragment>
     </SectionHeadImg>
 
+    <VelocityFeatures />
     <VelocitySectionmid />
-    <Logos />
+    
   </ContainerXL>
 
   <ContainerFW>
@@ -85,11 +85,8 @@ import Layout from "@layouts/Layout.astro";
       Award-winning web design directly managed from the Gold Coast.
     </Fragment>
     <Fragment slot="desc">
-      Our business and project management system for Moonshot plan customers has been designed to take
-      the least of your time, while generating custom website and e-commerce solutions that are inline with your brand.
-      There is a certain amount of digital leverage that's helpful before it's time / money wasting. 
-      Serving a maximum of 10 clients at any time, the Moonshot Plan is designed to help businesses break into 
-      international markets with ease.
+      Complete website, brand and marketing management without the lock in contracts. With the pressure to improve monthly, we generate serious results.
+      Serving a maximum of 10 clients at any time, the Moonshot Plan is designed to be outgrown when you break global markets and hire a full internal team.
     </Fragment>
     <Fragment slot="cover">
       <Picture  id="glass-card-dark"
@@ -105,7 +102,9 @@ import Layout from "@layouts/Layout.astro";
     </Fragment>
     </SectionHeadImg>    
     
+    <Logos />
     <MoonshotSectionmid />
+
   </ContainerXl>
 
   <ContainerFW>
