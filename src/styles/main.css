@@ -38,8 +38,8 @@
 
 
 h1, h2, h3, h4 { font-family: 'quarto'; }
-h5, h6, span { font-family: 'inconsolata'; text-transform: uppercase; }
-p, html, button, a, b { font-family: 'wotfard'; }
+h5, h6 { font-family: 'inconsolata'; text-transform: uppercase; }
+p, span, html, button, a, b { font-family: 'wotfard'; }
 
 /* Glass-card effect v7 */
 #glass-card {
