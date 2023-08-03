@@ -20,31 +20,31 @@
   @font-face {
     font-family: 'wotfard';
     font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Wotfard-Medium.otf') format('otf');
-    src: url('/fonts/Wotfard-Medium.ttf') format('truetype');
-    src: url('/fonts/Wotfard-Medium.woff2') format('woff2');
+    src: url('/fonts/Wotfard-Light.otf') format('otf');
+    src: url('/fonts/Wotfard-Light.ttf') format('truetype');
+    src: url('/fonts/Wotfard-Light.woff2') format('woff2');
   }
+  /* 4th font load, if needed
   @font-face {
     font-family: 'wotfard-bold';
-    font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
-    src: url('/fonts/Wotfard-Bold.woff2') format('woff2');
-    src: url('/fonts/Wotfard-Bold.ttf') format('truetype');
-    src: url('/fonts/Wotfard-Bold.otf') format('otf');
+    font-display: block;  
+    src: url('/fonts/Wotfard-Medium.woff2') format('woff2');
+    src: url('/fonts/Wotfard-Medium.ttf') format('truetype');
+    src: url('/fonts/Wotfard-Medium.otf') format('otf');
 
   }
-  
+  */
 }
 
 
-h1, h2, h3, h4, button, a { font-family: 'quarto'; }
+h1, h2, h3, h4 { font-family: 'quarto'; }
 h5, h6, span { font-family: 'inconsolata'; text-transform: uppercase; }
-p, html { font-family: 'wotfard'; }
-b { font-family: 'wotfard-bold'; }
+p, html, button, a, b { font-family: 'wotfard'; }
 
 /* Glass-card effect v7 */
 #glass-card {
   border-radius: 30px;
-  padding: 60px 20px;
+  padding: 45px 20px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(30px);
   border: 2px solid rgba(255, 255, 255, 0.1);
