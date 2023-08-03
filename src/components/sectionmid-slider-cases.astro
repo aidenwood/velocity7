@@ -42,9 +42,9 @@ const sliderContent = [
   {
     img: Automation,
     category: "Moonshot Plan",
-    title: "Success in global markets, 4 months from launch.",
+    title: "Breaking in global markets in 4 months.",
     paragraph:
-      "E-commerce brand launches can really set a business up for success. We helped consult on launch design to ensure all goals were met in time.",
+      "E-commerce brand launches can really set a business up for success for a 3 month hard launch straight to selling in global markets. We helped consult on launch design to ensure all goals were met in time.",
     btntxt: "Read more",
     style: "outline",
     link: "https://aidxn.com/blog/conversion-focused-design/",
@@ -52,7 +52,7 @@ const sliderContent = [
   {
     img: WebDesign,
     category: "Web Design",
-    title: "Wordpress Pageload optimisation: 5.2 to 1.2 sec.",
+    title: "Wordpress Pageload: 5.2 to 1.2 sec.",
     paragraph:
       "A Gold Coast brand was looking at migrating from Wordpress to Shopify after using the framework for 15 years. We optimised their Wordpress loadtimes so much they didn't need to migrate.",
     btntxt: "Read more",
@@ -69,9 +69,12 @@ const sliderContent = [
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <!-- Flickity Custom Styles -->
 <style>
-  .cases-carousel .flickity-viewport { padding: 60px 90px; }
-  .carousel-cell { min-width: 300px; width: 66%; margin: 40px 20px; padding: 10px 20px; }
+  .carousel-cell { min-width: 300px; width: 66%; margin: 60px 20px !important; padding: 20px 30px; }
 
+  .flickity-viewport, .flickity-slider {
+  transition: 0.4s !important;
+  margin: 20px 30px !important;
+  }
 
   [astro-icon="bgIcon"] {
         color: #a600ff10;
@@ -81,17 +84,17 @@ const sliderContent = [
 </style>
 
 
-<main class="my-8 md:my-16">
-<div id="heroSection" class="flex flex-col lg:flex-row justify-center items-center">
+<main class="my-8 md:my-16 pb-8">
+<div id="heroSection" class="flex h-full flex-col lg:flex-row justify-center items-center">
   
-  <div id="leftContainer" class="w-full lg:w-1/2 px-4 md:px-8">
+  <div id="leftContainer" class="w-full lg:w-3/5 px-4 md:px-8">
 
     <div class="flex justify-center flex-col py-6">
       <h5 class="text-xs md:text-sm lg:text-md my-4 text-slate-700">
         Our results
       </h5>
       <h3 style="heroTagline" class="text-2xl md:text-3xl lg:text-5xl w-full font-bold tracking-tight">
-        Generating results in any industry.
+        Results in any industry.
       </h3>
       <p class="text-sm lg:text-lg mt-4 pr-8 text-slate-700 w-full lg:max-w-3xl">
         Our month to month manangement is capped at 10 clients at once, and is designed to be 
@@ -120,21 +123,21 @@ const sliderContent = [
     </div>
   </div>
 
-  <div id="rightContainer" class="w-full lg:w-1/2 z-5">
+  <div id="rightContainer" class="w-full lg:w-2/5 z-5">
 
     <!-- START flickity slider for Case Studies -->
     <div class="cases-carousel">
       { sliderContent.map((item) => (
           
           
-              <div id="glass-card" class="carousel-cell flex items-center justify-center px-4 md:px-8 py-12">
+              <div id="glass-card" class="carousel-cell flex items-center justify-center">
                 <div id="slideContainer" class="flex flex-col gap-y-4">
                   <div id="iconContainer" class="w-16">
                     <img src={item.img} />
                   </div>  
                   <div id="textContainer" class="w-full flex flex-col gap-y-4">
                     <h5 class="text-slate-700 text-xs md:text-sm lg:text-md">{item.category}</h5>
-                    <h4 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h4>{" "}
+                    <h4 class="font-semibold text-lg md:text-xl lg:text-2xl">{item.title}</h4>{" "}
                     <p class="text-xs lg:sm max-w-3xl font-regular text-gray-700 pr-8 leading-relaxed">{item.paragraph}</p>
         
                     <p class="text-slate-500 mt-6 leading-relaxed">
@@ -168,9 +171,8 @@ const sliderContent = [
   var flkty = new Flickity( '.cases-carousel', {
   contain: true,
   autoPlay: 3200,
-  imagesLoaded: true,
-  adaptiveHeight: true,
   prevNextButtons: false,
+  adaptiveHeight: true,
   // lower attraction and lower friction
   // slower transitions
   // easier to flick past cells

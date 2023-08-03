@@ -2,24 +2,29 @@
 import ContainerFW from "@components/container-fullwidth.astro";
 import ContainerXL from "@components/container-xl.astro";
 import Container from "@components/container.astro";
+import { Picture } from "@astrojs/image/components";
+
 import Hero from "@components/hero.astro";
 import Grid from "@components/hero-grid-services.astro";
-import HeroSecondary from "@components/sectionmid-slider-cases.astro";
 import Clients from "@components/sectionmid-grid-clients.astro";
-import { Picture } from "@astrojs/image/components";
-import SectionHeadImg from "@components/sectionhead-img.astro";
-import MoonshotSectionmid from "@components/sectionmid-singleproduct-moonshot.astro";
-import VelocitySectionmid from "@components/sectionmid-singleproduct-velocity.astro";
-import VelocityFeatures from "@components/grid-4x4-features.astro";
-import MoonshotCover from '../assets/previous-works/moonshot-asana.webp';
-import VelocityCover from '../assets/previous-works/velocity-tsd.webp';
-import Cta from "@components/cta.astro";
-import ProductSlider from "@components/slider-lrg-services-main.astro";
+
 import WorksSliderBall from "@components/slider-med-works-ball.astro";
 import WorksSliderRay from "@components/slider-med-works-rw.astro";
 import WorksSliderTsd from "@components/slider-med-works-tsd.astro";
 import WorksSliderSnacks from "@components/slider-med-works-snacks.astro";
 import WorksSliderEstem from "@components/slider-med-works-estem.astro";
+
+import HeroSecondary from "@components/sectionmid-slider-cases.astro";
+import SectionHeadImg from "@components/sectionhead-img.astro";
+import MoonshotSectionmid from "@components/sectionmid-singleproduct-moonshot.astro";
+import VelocitySectionmid from "@components/sectionmid-singleproduct-velocity.astro";
+import Integrations from "@components/logos-integrations.astro";
+import VelocityFeatures from "@components/grid-4x4-features.astro";
+import MoonshotCover from '../assets/previous-works/moonshot-asana.webp';
+import VelocityCover from '../assets/previous-works/velocity-tsd.webp';
+import Cta from "@components/cta.astro";
+import CtaMoon from "@components/cta-moonshot.astro";
+import ProductSlider from "@components/slider-lrg-services-main.astro";
 import BlogSlider from "@components/slider-content.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
@@ -66,14 +71,16 @@ import Layout from "@layouts/Layout.astro";
       </Fragment>
     </SectionHeadImg>
 
+    <Integrations />
     <VelocityFeatures />
-    <VelocitySectionmid />
+
+    <VelocitySectionmid />    
     
   </ContainerXL>
 
-  <ContainerFW>
-    <HeroSecondary />
-  </ContainerFW>
+  <Container>
+    <Cta />
+  </Container>
 
   <ContainerXL>
 
@@ -101,21 +108,24 @@ import Layout from "@layouts/Layout.astro";
               />
     </Fragment>
     </SectionHeadImg>    
+
+    <HeroSecondary />
     
-    <Logos />
     <MoonshotSectionmid />
+    <Logos />
 
   </ContainerXl>
 
-  <ContainerFW>
-    <ProductSlider />
-  </ContainerFW>
-  
   <Container>
-    <Cta />
+    <CtaMoon />
   </Container>
   
   <ContainerFW>
     <BlogSlider />
   </ContainerFW>
+
+  <ContainerFW>
+    <ProductSlider />
+  </ContainerFW>
+  
 </Layout>
