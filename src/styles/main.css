@@ -84,7 +84,7 @@ p, span, html, button, a, b { font-family: 'wotfard'; }
 }
 /* position dots up a bit */
 .flickity-page-dots {
-  bottom: -45px !important;
+  bottom: -15px !important;
   padding-bottom: 30px !important;
 }
 
