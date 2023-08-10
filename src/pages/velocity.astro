@@ -23,32 +23,7 @@ import { Icon } from "astro-icon";
 
 
 const pricing = [
-{
-    name: "Velocity SPA",
-    popular: false,
-    features: [
-      "1x 15-min video-call brand sessions",
-      "1x design revisions",
-      "Domain & DNS setup",
-      "Initial website branding and content setup",
-      "1x web page w/ 0.2 sec load time avg.",
-      "50+ components",
-      "30+ integrations",
-      "1x lead gen funnels",
-      "A+ SEO performance",
-      "Integrated conversion tracking",
-      "Cookie-less social user tracking",
-      "Email handling + forwarding",
-      "Infitely extendable with any NPM package",
-      "Lifetime license of your site",
-    ],
-    
-    price: "$1445",
-    button: {
-      text: "Purchase",
-      link: "https://buy.stripe.com/4gwaGdg1JeJL0MM6oF",
-    },
-  },
+
   {
     name: "Velocity - Small",
     price: "$2445",
@@ -61,12 +36,12 @@ const pricing = [
       "3x web pages w/ 0.2 sec load time avg.",
       "50+ components",
       "30+ integrations",
-      "2x lead gen funnels",
+      "Custom lead generation funnel",
+      "Stripe payment processing",
       "A+ SEO performance",
       "Integrated conversion tracking",
       "Cookie-less social user tracking",
       "Email handling + forwarding",
-      "Stripe payment processing",
       "Infitely extendable with any NPM package",
       "Lifetime license of your site",
     ],
@@ -88,12 +63,13 @@ const pricing = [
       "6x web pages w/ 0.2 sec load time avg.",
       "50+ components",
       "30+ integrations",
-      "3x lead gen funnels",
+      "2x custom lead gen funnels",
+      "Basic Storefront w/ 4 products / services",
+      "Stripe payment processing",
       "A+ SEO performance",
       "Integrated conversion tracking",
       "Cookie-less social user tracking",
       "Email handling + forwarding",
-      "Stripe payment processing",
       "Data CMS integration",
       "Infitely extendable with any NPM package",
       "Lifetime license of your site",
@@ -104,8 +80,8 @@ const pricing = [
     },
   },
   {
-    name: "Velocity - E-Commerce",
-    price: "$6445",
+    name: "Velocity - Large",
+    price: "$4445",
     popular: false,
     features: [
       "8x 15-min video-call brand sessions",
@@ -115,12 +91,13 @@ const pricing = [
       "32x web page and products.",
       "50+ components",
       "30+ integrations",
-      "2x lead gen funnels",
+      "4x custom lead gen funnels",
+      "Large Storefront w/ 12 products / services",
+      "Stripe payment processing",
       "A+ SEO performance",
       "Integrated conversion tracking",
       "Cookie-less social user tracking",
       "Email handling + forwarding",
-      "Stripe payment processing",
       "Data CMS integration",
       "Custom website storefront",
       "Infitely extendable with any NPM package",
@@ -128,7 +105,7 @@ const pricing = [
     ],
     button: {
       text: "Purchase",
-      link: "https://buy.stripe.com/3cs7u102L0SV5328wA",
+      link: "https://buy.stripe.com/7sIaGd7vdgRT9jidRa",
     },
   },
 ];
@@ -150,10 +127,25 @@ const pricing = [
     <FeaturesGrid />
   </ContainerFW>
 
+  <ContainerFW>
+    <Sectionhead>
+      <Fragment slot="title">Go live in 24 hours, finalised over 21 days.</Fragment>
+      <Fragment slot="desc" class="max-w-4xl">
+        We work fast to get an initial Velocity powered version 1 of your site live at a staging address, that way it can be accessed 
+        and revised easily on real devices by any memeber of the teams working on the project. Edit tickets are submitted and managed 
+        via any device easily using Asana.
+      </Fragment>
+    </Sectionhead>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </ContainerFW>
+
   <ContainerXL>
     <SectionHeadImg>
       <Fragment slot="title">
-        Developed over 5 years.
+        Designed to make it easier to move to custom code.
+        Developed over 5 years with focus on lead generation + UX.
       </Fragment>
       <Fragment slot="desc">
         Velocity takes years of code structuring and debugging to create a website framework that truly speeds up the development process. 
@@ -178,7 +170,7 @@ const pricing = [
   <ContainerXL>
     <SectionHeadSecImg>
       <Fragment slot="title">
-        21-day turnaround.
+        Improved conversion rate + lowered cost per aquisition.
       </Fragment>
       <Fragment slot="desc">
         We've worked with hundreds of brands and have refined our process to deliver websites in 21 days, aiming to get as much of your input in minutes not hours. 
@@ -202,7 +194,7 @@ const pricing = [
 
   <ContainerXL>
     <SectionTextarea>
-      <Fragment slot="title">Low-code + limitless.</Fragment>
+      <Fragment slot="title">80+ components such as layouts, page containers, galleries and product cards.</Fragment>
       <Fragment slot="desc">
         Velocity 7 is a low-code framework that allows us to build websites faster than ever before. 
         While maintaining high-performance and high-conversion rate through faster design iterations. 
@@ -275,28 +267,16 @@ const pricing = [
     <Integrations />
   </Container>
 
-  <ContainerFW>
-    <Sectionhead>
-      <Fragment slot="title">Ready for launch?</Fragment>
-      <Fragment slot="desc" class="max-w-4xl">
-        Move to Velocity7 and start crushing competition with ease in even the most competitive industries. Leave the world of churn web design. Turn around in a blazing 21 days, perfect for your next brand launch.
-      </Fragment>
-    </Sectionhead>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mx-auto mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
-  </ContainerFW>
 
   <ContainerXL>
     <SectionHeadImg>
       <Fragment slot="title">
-        Shopify website design
+        24 hour support with 24 hour turnaround for 12 months included.
       </Fragment>
       <Fragment slot="desc">
-        We've worked in web design and development for over 10 years, if you're 
-        looking for someone you can honestly trust with your Shopify Plus store, 
-        we're worth giving a call. Velocity even comes in RubyonRails for use as 
-        a Shopify theme. (Shopify theme available to Moonshot customers only)
+        Let our team know of basic changes and our team with have them done within 24 turnaround 
+        so your customers can always know of new changes in your business. Also includes our team 
+        tracking and improving on keywork strategy using Search Console and working with your team.
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -316,13 +296,11 @@ const pricing = [
   <ContainerXL>
     <SectionHeadSecImg>
       <Fragment slot="title">
-        Wordpress website design
+        Reducing the cost of websites + escaping subscriptions. 
       </Fragment>
       <Fragment slot="desc">
-        We're absolutely nuts about perfect web performance, after all, it's what the customer demands. 
-        If your business is locked into a Web2 stack like Wordpress we have plenty of experience optimising 
-        these sites with great results. From code structure improvement to waterfall optimisation, 
-        we comb through your site constantly as new content arrives, always keeping your site fast and ranking well.
+        Pay for your site once and own your code forever. No more endless subscriptions no server costs whatsoever. The only other 
+        cost your website needs with Velocity is the yearly cost of your Domain and DNS ownership. 
       </Fragment>
       <Fragment slot="cover">
         <Picture
