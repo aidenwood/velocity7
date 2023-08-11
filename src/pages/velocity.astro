@@ -147,7 +147,7 @@ const pricing = [
     </SectionHeadImg>
 
     
-    
+
     <SectionHeadSecImg>
       <Fragment slot="smltitle">
         Results
@@ -308,14 +308,7 @@ const pricing = [
     <Integrations />
   </Container>
 
-
-  
-
   <ContainerXL>
-    <Accordian />
-  </ContainerXL>
-
-  <ContainerFW>
     <Sectionhead>
       <Fragment slot="smltitle">
         Deploy
@@ -330,7 +323,11 @@ const pricing = [
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
-  </ContainerFW>
+  </ContainerXL>
+
+  <ContainerXL>
+    <Accordian />
+  </ContainerXL>
 
   <Container>
     <Cta />
