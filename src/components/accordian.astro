@@ -1,0 +1,180 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+
+import GraphicDesign from '../assets/aidxn/trig.svg';
+import WebDesign from '../assets/aidxn/sqr.svg';
+import Marketing from '../assets/aidxn/poly.svg';
+import VideoProd from '../assets/aidxn/hex.svg';
+
+---
+
+
+<style>
+  [x-cloak] { 
+      display: none !important;
+  }
+  nav[role=tablist] {
+      justify-content: flex-start;
+      user-select: none;
+      border-bottom: 0.5px solid black;
+      margin-bottom: 30px;
+  }
+  a[role=tab] {
+
+      transition: 200ms;
+  }
+  a[role=tab].active {
+
+  }
+  a[role=tab]:focus {     
+
+  }
+  div.grid div {
+      min-height: 200px;
+      animation-duration: 0.45s;
+      -webkit-animation-duration: 0.45s;
+      animation-fill-mode: both;
+      -webkit-animation-fill-mode: both;
+      -webkit-animation-name: slideIn;
+      animation-name: slideIn;
+  }
+  @keyframes slideIn {
+      0% {
+          transform: translateY(3rem);
+          opacity: 0;
+      }
+      100% {
+          transform:translateY(0rem);
+          opacity: 1;
+      }
+      0% {
+          transform: translateY(1rem);
+          opacity: 0;
+      }
+  }
+  @-webkit-keyframes slideIn {
+      0% {
+          -webkit-transform: transform;
+          -webkit-opacity: 0;
+      }
+      100% {
+          -webkit-transform: translateY(0);
+          -webkit-opacity: 1;
+      }
+      0% {
+          -webkit-transform: translateY(3rem);
+          -webkit-opacity: 0;
+      }
+  }
+</style>
+
+
+<main class="my-16 md:my-32">
+  <div id="introContainer" class="mb-4 md:mb-8">
+    <h5 class="text-sm lg:text-md text-slate-700 mb-2">
+      Finer Details
+    </h5>
+    <h3 class="text-2xl md:text-3xl lg:text-5xl mb-4 font-bold lg:tracking-tight">
+      No hidden costs or tricks.
+    </h3>
+    
+  </div>
+
+  <section x-data="slider()">
+    <article x-ref="slider" data-interval="6000">
+        
+        <nav role="tablist">
+            <ul class="flex flex-row gap-8 text-xl font-semibold pb-6">
+                <li class="bg-gray-100 px-8 py-2 rounded-3xl border-black"><a href="#" role="tab">Lifetime License</a></li>
+                <li class="bg-gray-100 px-6 py-2 rounded-3xl border-black"><a href="#" role="tab">GST Inclusive Pricing</a></li>
+                <li class="bg-gray-100 px-6 py-2 rounded-3xl border-black"><a href="#" role="tab">No Server Costs</a></li>
+                <li class="bg-gray-100 px-6 py-2 rounded-3xl border-black"><a href="#" role="tab">Low-code Design</a></li>
+            </ul>
+        </nav>
+        
+        <div class="grid">
+            <div x-show="tab == 0" x-cloak>
+                <h5>Pay once, own forever. Say goodbye to website subscriptions.</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam quo odit veritatis distinctio mollitia error, delectus minima exercitationem vitae minus maiores sapiente praesentium ut velit impedit beatae commodi soluta magni!</p>
+            </div>
+            <div x-show="tab == 1" x-cloak>
+                <h5>GST Included in pricing for all Velocity products.</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam quo odit veritatis distinctio mollitia error, delectus minima exercitationem vitae minus maiores sapiente praesentium ut velit impedit beatae commodi soluta magni!</p>
+            </div>
+            <div x-show="tab == 2" x-cloak>
+                <h5>Velocity runs on a server-less architecture.</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam quo odit veritatis distinctio mollitia error, delectus minima exercitationem vitae minus maiores sapiente praesentium ut velit impedit beatae commodi soluta magni!</p>
+            </div>
+            <div x-show="tab == 3" x-cloak>
+                <h5>Velocity's low-code design means faster development and less costs.</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam quo odit veritatis distinctio mollitia error, delectus minima exercitationem vitae minus maiores sapiente praesentium ut velit impedit beatae commodi soluta magni!</p>
+            </div>
+         </div>
+        
+    </article>
+  </section>
+</main>
+
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('slider', () => ({
+                
+                // set initial tab
+                tab: 0,
+                
+                // slider tabs
+                tabs: [...document.querySelectorAll('nav[role=tablist] a[role=tab]')],
+                
+                init() {
+                    // initialize main function
+                    this.changeSlide()
+                },
+                
+                // main function
+                changeSlide() {
+                    let timeInterval = this.$refs.slider.dataset.interval;
+                    this.tabs[this.tab].setAttribute('class', 'active')
+                    
+                    // set interval to change slide
+                    let startInterval = () => {
+                        this.tab = (this.tab < this.tabs.length - 1)? this.tab + 1 : 0;
+                        this.tabs.forEach( (tab)=> {
+                            (this.tab == this.tabs.indexOf(tab)) ?  tab.setAttribute('class', 'active') : tab.removeAttribute('class') 
+                        })
+                    }
+                    
+                    // start interval to change slide
+                    let slideInterval = setInterval(startInterval, timeInterval);
+                    
+                    // mouse over slider stops slide
+                    this.$refs.slider.onmouseover = () => {
+                        if (slideInterval) { 
+                            clearInterval(slideInterval)
+                            slideInterval = null;
+                        }
+                    }
+                    
+                    // mouse out slider starts again slide
+                    this.$refs.slider.onmouseout = () => {
+                        if (slideInterval === null) { 
+                            slideInterval = setInterval(startInterval, timeInterval);
+                        }
+                    }
+                    
+                    // slider tabs click event 
+                    this.tabs.forEach( (tab)=> {
+                        tab.addEventListener('click', (e)=> {
+                            e.preventDefault()
+                            this.tab = this.tabs.indexOf(e.target)
+                            this.tabs.forEach( (tab)=> {
+                                (this.tab == this.tabs.indexOf(tab)) ?  tab.setAttribute('class', 'active') : tab.removeAttribute('class') 
+                            }) 
+                        })
+                    })
+                }
+            }))
+        })
+    </script>

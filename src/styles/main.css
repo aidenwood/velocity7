@@ -42,6 +42,14 @@ h5, h6 { font-family: 'inconsolata'; text-transform: uppercase; }
 p, span, html, button, a { font-family: 'wotfard'; }
 b { font-family: 'wotfard-bold'; }
 
+:root {
+  --primary: #26003A;
+  --primary-light: #a600ff;
+  --secondary: #420065;
+  --secondary-light: #F9F0FF;
+  --contrast: #D6581D;
+}
+
 /* Glass-card effect v7 */
 #glass-card {
   border-radius: 30px;
