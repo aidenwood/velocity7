@@ -94,10 +94,12 @@ const features = [
 ---
 
 <main class="my-8 md:my-16 pb-12">
-  <h5 class="text-xs md:text-sm text-center text-black uppercase mb-4">50+ components</h5>
-  <h3 class="text-2xl md:text-3xl lg:text-5xl font-bold lg:tracking-tight mb-8 text-center">Everything you could want in a website.</h3>
+  <div>
+    <h5 class="text-xs md:text-sm text-center text-black uppercase mb-4">Develop better web experiences</h5>
+    <h3 class="text-2xl md:text-3xl lg:text-5xl font-bold lg:tracking-tight mb-16 text-center">80+ components.</h3>
+  </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-4 gap-4 md:gap-8 gap-y-4 px-4 md:px-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-8 gap-4 md:gap-8 gap-y-4 px-4 md:px-8">
     {
       features.map((item) => (
       <div id="container" class="relative group">
@@ -117,4 +119,16 @@ const features = [
       ))
     }
   </div>
+
+  <div class="flex flex-col sm:flex-row justify-center gap-3 my-8">
+    <a href="https://aidxn.com/velocity/" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white border-2 border-black hover:bg-gray-100 text-black flex gap-1 items-center justify-center">
+      <svg viewBox="0 0 24 24" class="w-4 h-4">
+        <Icon class="text-black" name="ph:lightning-fill" />
+      </svg>
+      
+      More info
+
+    </a>
+  </div>
+  
 </main>

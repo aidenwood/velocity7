@@ -11,56 +11,56 @@ import VideoProd from '../assets/aidxn/hex.svg';
 
 const features = [
   {
-    title: "Brand Strategy + Direction.",
+    title: "Brand Design.",
     description:
       "Brand design, strategy + direction that avoid design churn. Reducing ad costs through data collection and winning SEO strategies.",
     imgsrc: GraphicDesign,
     imgalt: "Brand Design and strategy direction for the age of social marketing.",
     link: "/brand-strategy",
     style: "primary",
-    btntxt: "More info",
+    btntxt: "Design",
     resultslink: "/blog/multi-modal-marketing",
     resultsstyle: "outline",
     resultsbtntxt: "Our strategies",
   },
   {
-    title: "Web Design + Development.",
+    title: "Web Design + Dev.",
     description:
       "Award-winning web design. 10+ years experience. High-performance web design with Wordpress, Shopify, and Velocity.",
     imgsrc: WebDesign,
     imgalt: "Gold Coast's best web design and development agency with over 10 years experience.",
     link: "/web-design",
     style: "primary",
-    btntxt: "More info",
+    btntxt: "Develop",
     resultslink: "/blog/ecommerce-design-tricks",
     resultsstyle: "outline",
     resultsbtntxt: "Our web design",
   },
   {
-    title: "Video Ads + Automation.",
+    title: "Video + Interactive Ads.",
     description:
-      "Effective marketing is simply no accident, we're here with honest result drive marketing management from the Gold Coast.",
+      "Effective video advertising is simply no accident. Beautiful interactive ad design that collect extra conversion data.",
     imgsrc: Marketing,
     imgalt: "Digital marketing strategy and management with award-winning experts for less, based on the Gold Coast.",
-    link: "/video-ads",
+    link: "/marketing",
     style: "primary",
-    btntxt: "More info",
+    btntxt: "Market",
     resultslink: "/blog/multi-modal-marketing",
     resultsstyle: "outline",
     resultsbtntxt: "Campaign results",
   },
   {
-    title: "Marketing Strategy Development.",
+    title: "Monthly Optimisation.",
     description:
       "Monthly website and marketing management. Pause anytime to guarentee results. Optimisation of KPI's and winning audience conversion.",
     imgsrc: VideoProd,
     imgalt: "Monthly management of website and marketing campaigns, on the Gold Coast.",
-    link: "/marketing",
+    link: "/moonshot-plan",
     style: "primary",
-    btntxt: "More info",
-    resultslink: "/moonshot-plan#results",
+    btntxt: "Moonshot",
+    resultslink: "/blog/multi-modal-marketing",
     resultsstyle: "outline",
-    resultsbtntxt: "Moonshot results",
+    resultsbtntxt: "Case Studies",
   },
 ];
 ---
@@ -74,14 +74,17 @@ const features = [
       Design, Develop. Market, Moonshot.
     </h3>
     <div class="flex flex-col sm:flex-row">
-    <p class="w-full sm:w-1/2 text-sm lg:text-lg pr-4 mb-6 lg:max-w-6xl text-slate-700"> 
+    <p class="w-full sm:w-1/2 text-sm lg:text-lg pr-6 mb-6 lg:max-w-6xl text-slate-700"> 
        
-      I help businesses grow faster by connecting the dots between your branding, website and marketing. From print and digital design, photography and videography, SEO and conversion optimisation, complete ad strategy testing and management.
+      Scaling brands faster by connecting the dots between your brand design and direction, 
+      website design and user experience, marketing strategy and funnels. Experienced with 
+      a range of technologies and creating end-to-end marketing campaigns that cover all ad mediums. 
+      Developing ad strategy in person with the aim to improve KPI's month-to-month with the Moonshot Plan.
     
     </p>
-    <p class="w-full sm:w-1/2 text-sm lg:text-lg pr-4 mb-6 lg:max-w-6xl text-slate-700"> 
+    <p class="w-full sm:w-1/2 text-sm lg:text-lg pr-6 mb-6 lg:max-w-6xl text-slate-700"> 
  
-      I specialise in web performance and conversion-focused design. I work with Wordpress, Shopify, and create fully custom sites with my framework, Velocity. Designed to improve conversion rates through sheer web performance and perfect UX.
+      Working with Wordpress for 10 years, Shopify and Webflow for 8 years, and specialising in web performance and 'minimal high conversion UX design' for 6 years. I began developing Velocity in 2017 as a way to combine everything I have learned about what makes a good website and make it easier for businesses to move to custom code.
     
     </p>
     </div>
@@ -92,7 +95,7 @@ const features = [
       features.map((item) => (
         <div class="flex items-start">
           <div id="glass-card" class="card-padding w-full flex flex-col items-start justify-center">
-            <div id="imgContainer" class="mt-1 w-1/6 sm:w-1/4 md:w-1/3">
+            <div id="imgContainer" class="mt-1 w-16">
               <img src={item.imgsrc} class="" />
             </div>
             <div id="textContainer" class="w-full mt-6">

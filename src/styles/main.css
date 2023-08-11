@@ -24,22 +24,23 @@
     src: url('/fonts/Wotfard-Light.ttf') format('truetype');
     src: url('/fonts/Wotfard-Light.woff2') format('woff2');
   }
-  /* 4th font load, if needed
+
   @font-face {
     font-family: 'wotfard-bold';
     font-display: block;  
-    src: url('/fonts/Wotfard-Medium.woff2') format('woff2');
-    src: url('/fonts/Wotfard-Medium.ttf') format('truetype');
-    src: url('/fonts/Wotfard-Medium.otf') format('otf');
+    src: url('/fonts/Wotfard-Regular.woff2') format('woff2');
+    src: url('/fonts/Wotfard-Regular.ttf') format('truetype');
+    src: url('/fonts/Wotfard-Regular.otf') format('otf');
 
   }
-  */
+  
 }
 
 
 h1, h2, h3, h4 { font-family: 'quarto'; }
 h5, h6 { font-family: 'inconsolata'; text-transform: uppercase; }
-p, span, html, button, a, b { font-family: 'wotfard'; }
+p, span, html, button, a { font-family: 'wotfard'; }
+b { font-family: 'wotfard-bold'; }
 
 /* Glass-card effect v7 */
 #glass-card {
