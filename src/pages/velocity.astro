@@ -9,7 +9,7 @@ import Cta from "@components/cta.astro";
 import VelocityHero from "@components/hero-centered.astro";
 
 import SectionHeadImg from "@components/sectionhead-img.astro";
-import SectionHeadSecImg from "@components/sectionhead-img-rev.astro";
+import SectionHeadImgRev from "@components/sectionhead-img-rev.astro";
 import SectionTextarea from "@components/sectionmid-textarea.astro";
 import FeaturesGrid from "@components/grid-4x4-features.astro";
 import Pricing from "@components/pricing.astro";
@@ -31,19 +31,22 @@ const pricing = [
     features: [
       "2x 15-min video-call brand sessions",
       "2x design revisions",
+      "9x web pages",
+      "6x graphic design assets",
+      "2x lead generation funnels",
+      "Medium Storefront with 4 products",
       "Domain & DNS setup",
-      "Initial website branding and content setup",
-      "3x web pages w/ 0.2 sec load time avg.",
-      "50+ components",
-      "30+ integrations",
-      "Custom lead generation funnel",
+      "Velocity customised to your brand",
       "Stripe payment processing",
       "A+ SEO performance",
-      "Integrated conversion tracking",
-      "Cookie-less social user tracking",
-      "Email handling + forwarding",
-      "Infitely extendable with any NPM package",
-      "Lifetime license of your site",
+      "Conversion tracking",
+      "Cookie-less tracking",
+      "Email handling",
+      "Automated lead notifications",
+      "0Auth user identity",
+      "CMS integration",
+      "Extendable with any NPM",
+      "Lifetime license",
     ],
     button: {
       text: "Purchase",
@@ -56,23 +59,24 @@ const pricing = [
       "$3445",
     popular: true,
     features: [
-      "3x 15-min video-call brand sessions",
-      "3x design revisions",
+      "4x 15-min video-call brand sessions",
+      "4x design revisions",
+      "18x web pages and products",
+      "12x graphic design assets",
+      "4x lead generation funnels",
+      "Medium Storefront with 8 products",
       "Domain & DNS setup",
-      "Initial website branding and content setup",
-      "6x web pages w/ 0.2 sec load time avg.",
-      "50+ components",
-      "30+ integrations",
-      "2x custom lead gen funnels",
-      "Basic Storefront w/ 4 products / services",
+      "Velocity customised to your brand",
       "Stripe payment processing",
       "A+ SEO performance",
-      "Integrated conversion tracking",
-      "Cookie-less social user tracking",
-      "Email handling + forwarding",
-      "Data CMS integration",
-      "Infitely extendable with any NPM package",
-      "Lifetime license of your site",
+      "Conversion tracking",
+      "Cookie-less tracking",
+      "Email handling",
+      "Automated lead notifications",
+      "0Auth user identity",
+      "CMS integration",
+      "Extendable with any NPM",
+      "Lifetime license",
     ],
     button: {
       text: "Purchase",
@@ -86,22 +90,22 @@ const pricing = [
     features: [
       "8x 15-min video-call brand sessions",
       "8x design revisions",
+      "32x web page and products",
+      "24x graphic design assets",
+      "8x lead generation funnels",
+      "Storefront with 12 products",
       "Domain & DNS setup",
-      "Initial website branding and content setup",
-      "32x web page and products.",
-      "50+ components",
-      "30+ integrations",
-      "4x custom lead gen funnels",
-      "Large Storefront w/ 12 products / services",
+      "Velocity customised to your brand",
       "Stripe payment processing",
       "A+ SEO performance",
-      "Integrated conversion tracking",
-      "Cookie-less social user tracking",
-      "Email handling + forwarding",
-      "Data CMS integration",
-      "Custom website storefront",
-      "Infitely extendable with any NPM package",
-      "Lifetime license of your site",
+      "Conversion tracking",
+      "Cookie-less tracking",
+      "Email handling",
+      "Automated lead notifications",
+      "0Auth user identity",
+      "CMS integration",
+      "Extendable with any NPM",
+      "Lifetime license",
     ],
     button: {
       text: "Purchase",
@@ -115,9 +119,11 @@ const pricing = [
 
   <ContainerFW>
     <VelocityHero />
+    <Integrations />
     <FeaturesGrid />
+    
   </ContainerFW>
-
+ 
   <ContainerXL>
     <SectionHeadImg>
       <Fragment slot="smltitle">
@@ -125,12 +131,11 @@ const pricing = [
       </Fragment>
       <Fragment slot="title">
         Designed to make it easier to move to custom code.
-        Developed over 5 years with focus on lead generation + UX.
       </Fragment>
       <Fragment slot="desc">
-        Velocity takes years of code structuring and debugging to create a website framework that truly speeds up the development process. 
-        Taking everything we know from 10+ years of web dev and specilising in high-performance web design. Ditch bloated website builders and subscriptions.
-        Packed with everything you need for generating business with 30+ integrations + performant, user-friendly components. Pay once, own forever.
+        Velocity makes it easier to build out beautiful custom code websites, with a low-code design 
+        that anyone with experience with using Wordpress or Shopify will be comfortable understanding. 
+        Making it cheaper for businesses to have a more professional, blazing fast website. Pay once, own forever.
       </Fragment>
       <Fragment slot="cover">
         <Picture
@@ -146,14 +151,38 @@ const pricing = [
       </Fragment>
     </SectionHeadImg>
 
-    
-
-    <SectionHeadSecImg>
+    <SectionHeadImgRev>
       <Fragment slot="smltitle">
         Results
       </Fragment>
       <Fragment slot="title">
-        Improved conversion rate + lowered cost per aquisition.
+        Developed over 5 years with focus on lead generation + UX.
+      </Fragment>
+      <Fragment slot="desc">
+        Packed with everything needed to generate more business online. 
+        SEO friendly components and integrations to boost conversions allows 
+        Velocity to generate leads for businesses in as little as 3 days.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={Pagecover}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadImgRev>
+
+    <SectionHeadImg>
+      <Fragment slot="smltitle">
+        Performance
+      </Fragment>
+      <Fragment slot="title">
+        A+ web vitals + 0.2 second pageload speed, out-of-the-box.
       </Fragment>
       <Fragment slot="desc">
         We've worked with hundreds of brands and have refined our process to deliver websites in 21 days, aiming to get as much of your input in minutes not hours. 
@@ -172,39 +201,10 @@ const pricing = [
                   class="w-full rounded duration-200 hover:shadow-sm"
                 />
       </Fragment>
-    </SectionHeadSecImg>
-
-    
-
-    <SectionHeadImg>
-      <Fragment slot="smltitle">
-        Support
-      </Fragment>
-      <Fragment slot="title">
-        24 hour support with 24 hour turnaround for 12 months included.
-      </Fragment>
-      <Fragment slot="desc">
-        Let our team know of basic changes and our team with have them done within 24 turnaround 
-        so your customers can always know of new changes in your business. Also includes our team 
-        tracking and improving on keywork strategy using Search Console and working with your team.
-      </Fragment>
-      <Fragment slot="cover">
-        <Picture
-                  src={Pagecover}
-                  sizes="(max-width: 2000px) 2000px, 1000px"
-                  widths={[1000, 1500, 2000]}
-                  aspectRatio="3:2"
-                  background="#f2f2f2"
-                  fit="cover"
-                  position="center"
-                  class="w-full rounded duration-200 hover:shadow-sm"
-                />
-      </Fragment>
     </SectionHeadImg>
 
 
-
-    <SectionHeadSecImg>
+    <SectionHeadImgRev>
       <Fragment slot="smltitle">
         Manages
       </Fragment>
@@ -227,7 +227,7 @@ const pricing = [
                   class="w-full rounded duration-200 hover:shadow-sm"
                 />
       </Fragment>
-    </SectionHeadSecImg>
+    </SectionHeadImgRev>
 
 
 
@@ -305,7 +305,7 @@ const pricing = [
   </ContainerXL>
 
   <Container>
-    <Integrations />
+    <Accordian />
   </Container>
 
   <ContainerXL>
@@ -323,10 +323,6 @@ const pricing = [
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
-  </ContainerXL>
-
-  <ContainerXL>
-    <Accordian />
   </ContainerXL>
 
   <Container>
