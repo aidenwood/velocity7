@@ -14,6 +14,7 @@ import SectionTextarea from "@components/sectionmid-textarea.astro";
 import FeaturesGrid from "@components/grid-4x4-features.astro";
 import Pricing from "@components/pricing.astro";
 import Accordian from "@components/accordian.astro";
+import AccordianTabs from "@components/accordian-tabs.astro";
 import Integrations from "@components/logos-integrations.astro";
 import { Picture } from "@astrojs/image/components";
 import Pagecover from '../assets/backgrounds/balance.webp';
@@ -119,10 +120,24 @@ const pricing = [
 
   <ContainerFW>
     <VelocityHero />
-    <Integrations />
-    <FeaturesGrid />
-    
   </ContainerFW>
+
+  <ContainerXL>
+    <Sectionhead>
+      <Fragment slot="smltitle">
+        Deploy
+      </Fragment>
+      <Fragment slot="title">Go live in 24 hours, finalised over 21 days.</Fragment>
+      <Fragment slot="desc" class="max-w-4xl">
+        We work fast to get an initial Velocity powered version 1 of your site live at a staging address, that way it can be accessed 
+        and revised easily on real devices by any memeber of the teams working on the project. Edit tickets are submitted and managed 
+        via any device easily using Asana.
+      </Fragment>
+    </Sectionhead>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </ContainerXL>
  
   <ContainerXL>
     <SectionHeadImg>
@@ -177,6 +192,8 @@ const pricing = [
       </Fragment>
     </SectionHeadImgRev>
 
+    <FeaturesGrid />
+
     <SectionHeadImg>
       <Fragment slot="smltitle">
         Performance
@@ -202,7 +219,6 @@ const pricing = [
                 />
       </Fragment>
     </SectionHeadImg>
-
 
     <SectionHeadImgRev>
       <Fragment slot="smltitle">
@@ -302,28 +318,15 @@ const pricing = [
         from day one for your business. For frictionless payment experiences.
       </Fragment>      
     </SectionTextarea>
+
+    <Integrations />
+
   </ContainerXL>
 
   <Container>
     <Accordian />
+    <AccordianTabs />
   </Container>
-
-  <ContainerXL>
-    <Sectionhead>
-      <Fragment slot="smltitle">
-        Deploy
-      </Fragment>
-      <Fragment slot="title">Go live in 24 hours, finalised over 21 days.</Fragment>
-      <Fragment slot="desc" class="max-w-4xl">
-        We work fast to get an initial Velocity powered version 1 of your site live at a staging address, that way it can be accessed 
-        and revised easily on real devices by any memeber of the teams working on the project. Edit tickets are submitted and managed 
-        via any device easily using Asana.
-      </Fragment>
-    </Sectionhead>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
-  </ContainerXL>
 
   <Container>
     <Cta />

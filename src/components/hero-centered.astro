@@ -8,8 +8,8 @@ import { Icon } from "astro-icon";
   svg{width:100%;height:100%;perspective:50px}circle{stroke:#26003A;stroke-width:8px;fill:none}.equator{stroke:#a600ff;transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
 </style>
 
-<main class="my-8 md:my-16 pb-8">
-  <div id="heroSection" class="flex flex-col-reverse items-center text-center mb-8">
+<main class="my-8 md:my-16">
+  <div id="heroSection" class="flex flex-col-reverse items-center text-center">
     
     <div class="w-full max-w-6xl">
 
@@ -17,12 +17,21 @@ import { Icon } from "astro-icon";
         <h1 style="heroTagline" class="mx-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl w-full max-w-6xl pt-4 font-bold tracking-tight">
           Introducing Velocity.
         </h1>
-        <p class="text-lg lg:text-xl mt-6 text-slate-700 max-w-3xl mx-auto">
+        <p class="text-lg lg:text-xl mt-6 mb-8 text-slate-700 max-w-3xl mx-auto">
           Helping brands scale from launch faster. Complete with everything needed to generate leads and sales online no matter what product or service. 
           0.2 second pageload out-of-the-box. Works with any next-gen javascript framework, extendable with any NPM package. Currently at version 7.8.
-          <wbr>
         </p>
-       
+        <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+          
+          <a href="https://g2ok5807scs.typeform.com/to/tCmzlDza" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white border-2 border-black hover:bg-gray-100 text-black flex gap-1 items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-4 h-4">
+              <Icon class="text-black" name="ph:chat-teardrop-dots-light" />
+            </svg>
+            
+            Book a Call
+  
+          </a>
+        </div>
       </div>
     </div>
     <div class="w-1/6 block mx-auto">
