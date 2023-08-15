@@ -11,7 +11,7 @@ const sliderContent = [
   {
     img: GraphicDesign,
     category: "Brand Strategy",
-    title: "Brand design for multi-modal marketing.",
+    title: "Design for multi-modal campaigns.",
     paragraph:
       "Working with real estate companies over Covid-19's most impactful months on marketing were an interesting time. One that proved you can't put all your eggs in one (marketing) basket.",
     btntxt: "Read more",
@@ -69,7 +69,7 @@ const sliderContent = [
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <!-- Flickity Custom Styles -->
 <style>
-  .carousel-cell { min-width: 300px; width: 66%; margin: 40px 20px; padding: 20px 30px; }
+  .carousel-cell { margin: 40px 20px; padding: 20px 30px; }
 
    /* Start Flickity viewport safeguards V3 */
    main { max-width: 100%; }
@@ -99,7 +99,7 @@ const sliderContent = [
       <h3 style="heroTagline" class="text-2xl md:text-3xl lg:text-5xl w-full font-bold tracking-tight">
         Results in any industry.
       </h3>
-      <p class="text-sm lg:text-lg mt-4 pr-8 text-slate-700 w-full md:max-w-4xl">
+      <p class="text-sm lg:text-lg mt-4 pr-8 text-slate-700 w-full md:max-w-3xl">
         Our month to month manangement is capped at 10 clients at once, and is designed to be 
         outgrown. Helping scale small businesses to break into larger markets fast.
         Book a call to hear our individual solutions we would apply for your niche.
@@ -133,7 +133,7 @@ const sliderContent = [
       { sliderContent.map((item) => (
           
           
-              <div id="glass-card" class="carousel-cell flex items-center justify-center h-fit mb-8">
+              <div id="glass-card" class="carousel-cell w-4/5 lg:w-3/5 flex items-center justify-center h-fit mb-8">
                 <div id="slideContainer" class="flex flex-col gap-y-4">
                   <div id="iconContainer" class="w-16">
                     <img src={item.img} />
@@ -141,7 +141,7 @@ const sliderContent = [
                   <div id="textContainer" class="w-full flex flex-col gap-y-4">
                     <h5 class="text-slate-700 text-xs md:text-sm lg:text-md">{item.category}</h5>
                     <h4 class="font-semibold text-lg md:text-xl lg:text-2xl">{item.title}</h4>{" "}
-                    <p class="text-xs lg:sm max-w-3xl font-regular text-gray-700 pr-8 leading-relaxed">{item.paragraph}</p>
+                    <p class="text-xs font-regular text-gray-700 pr-8 leading-relaxed">{item.paragraph}</p>
         
                     <p class="text-slate-500 my-6 leading-relaxed">
                       <Link 
@@ -173,8 +173,10 @@ const sliderContent = [
   //   for an individual element
   var flkty = new Flickity( '.cases-carousel', {
   contain: true,
+  cellAlign: 'center',
   autoPlay: 3200,
   prevNextButtons: false,
+  imagesLoaded: true,  
   // lower attraction and lower friction
   // slower transitions
   // easier to flick past cells
