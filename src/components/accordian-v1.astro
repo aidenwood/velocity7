@@ -1,0 +1,180 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+
+import GraphicDesign from '../assets/aidxn/trig.svg';
+import WebDesign from '../assets/aidxn/sqr.svg';
+import Marketing from '../assets/aidxn/poly.svg';
+import VideoProd from '../assets/aidxn/hex.svg';
+
+---
+
+
+<style>
+  [x-cloak] { 
+      display: none !important;
+  }
+  nav[role=tablist] {
+      justify-content: flex-start;
+      user-select: none;
+      border-bottom: 0.5px solid black;
+      margin-bottom: 30px;
+  }
+  a[role=tab] {
+
+      transition: 200ms;
+  }
+  a[role=tab].active {
+
+  }
+  a[role=tab]:focus {     
+
+  }
+  div.grid div {
+      min-height: 200px;
+      animation-duration: 0.45s;
+      -webkit-animation-duration: 0.45s;
+      animation-fill-mode: both;
+      -webkit-animation-fill-mode: both;
+      -webkit-animation-name: slideIn;
+      animation-name: slideIn;
+  }
+  @keyframes slideIn {
+      0% {
+          transform: translateY(3rem);
+          opacity: 0;
+      }
+      100% {
+          transform:translateY(0rem);
+          opacity: 1;
+      }
+      0% {
+          transform: translateY(1rem);
+          opacity: 0;
+      }
+  }
+  @-webkit-keyframes slideIn {
+      0% {
+          -webkit-transform: transform;
+          -webkit-opacity: 0;
+      }
+      100% {
+          -webkit-transform: translateY(0);
+          -webkit-opacity: 1;
+      }
+      0% {
+          -webkit-transform: translateY(3rem);
+          -webkit-opacity: 0;
+      }
+  }
+</style>
+
+
+<main class="my-16 md:my-32">
+  <div id="introContainer" class="mb-4 md:mb-8">
+    <h5 class="text-sm lg:text-md text-slate-700 mb-2">
+      Finer Details
+    </h5>
+    <h3 class="text-2xl md:text-3xl lg:text-5xl mb-4 font-bold lg:tracking-tight">
+      No hidden costs or tricks.
+    </h3>
+    
+  </div>
+
+  <section x-data="slider()">
+    <article x-ref="slider" data-interval="6000">
+        
+        <nav role="tablist">
+            <ul class="flex flex-row gap-8 text-lg font-semibold pb-6">
+                <li class="bg-gray-50 hover:bg-gray-100 hover:shadow-sm duration-200 px-8 py-2 rounded-3xl border-black"><a href="#" role="tab">Lifetime License</a></li>
+                <li class="bg-gray-50 hover:bg-gray-100 hover:shadow-sm px-6 py-2 rounded-3xl border-black"><a href="#" role="tab">GST Inclusive Pricing</a></li>
+                <li class="bg-gray-50 hover:bg-gray-100 hover:shadow-sm px-6 py-2 rounded-3xl border-black"><a href="#" role="tab">No Server Costs</a></li>
+                <li class="bg-gray-50 hover:bg-gray-100 hover:shadow-sm px-6 py-2 rounded-3xl border-black"><a href="#" role="tab">Low-code Design</a></li>
+            </ul>
+        </nav>
+        
+        <div class="grid">
+            <div x-show="tab == 0" x-cloak>
+                <h5>Pay Once, Own Forever.</h5>
+                <p>Say goodbye to endless subscriptions and expensive hosting. We believe you and your business should truly own your website. Velocity is designed to be able to be managed and understood by even a junior Wordpress developer, keeping your future development costs down. Pay once to have Velocity installed and customised to your business before having the code and assets completely released to your team. That doesn't mean we leave you in the dark however. With 6 months of SEO management included free with all Velocity packages, keeping and eye and making minor improvements during the months following launch.</p>
+            </div>
+            <div x-show="tab == 1" x-cloak>
+                <h5>GST Inclusive Pricing.</h5>
+                <p>We've been in plenty of business decisions where GST inclusions were overlooked and they always feel like a backstabbing pain. We completely take on the cost of GST in our pricing to help your business understand your cost from the start and never have that awkward conversation with your boss again. All additionals and future code / graphic design work are offered at extremely competitive rates in comparison to industry and level of experience. Future graphic design one-off hourly work rate at $60/hr and web design / development one-off hourly rate work at $90/hr.</p>
+            </div>
+            <div x-show="tab == 2" x-cloak>
+                <h5>Server-less Architecture.</h5>
+                <p>Velocity runs on a serverless architecture allowing you to save thousands of dollars a year in hosting for high traffic sites. Scale to a global capacity easily with CDN networks and never need to fall into the expensive grips of outsourced server rental, compute and hosting. Velocity's base is written in Astro, completely compatible with any javascript framework and NPM. This allows your site to easily offer the experiences your customers demand now and in the future. This means that after the one-off cost of Velocity, your only other cost to run your websites will be your domain name registration.</p>
+            </div>
+            <div x-show="tab == 3" x-cloak>
+                <h5>Low-Code Design + DevX.</h5>
+                <p>We understand why a lot of clients still want to use website builders like Wordpress and Canva, but a lot of the time it will just never do the trick to generate a single lead. Usually simply causing a brand harm. Velocity was designed and developed with the end customer in mind and their ability to cheaply maintain their site well into the future, after our team have customised the site intially to your liking. Wordpress developers have worked for years mostly with tools such as Divi and Elementor. Velocity's low-code design is shaped around the fundamentals that have been learned here. Shopify and Webflow builders will also feel very comfortable with code maintaining. Allowing even the most junior developer to quickly create effective, high-conversion web pages with out us if need be. Even though we are always just a phone call away for all Velocity clients.</p>
+            </div>
+         </div>
+        
+    </article>
+  </section>
+</main>
+
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('slider', () => ({
+                
+                // set initial tab
+                tab: 0,
+                
+                // slider tabs
+                tabs: [...document.querySelectorAll('nav[role=tablist] a[role=tab]')],
+                
+                init() {
+                    // initialize main function
+                    this.changeSlide()
+                },
+                
+                // main function
+                changeSlide() {
+                    let timeInterval = this.$refs.slider.dataset.interval;
+                    this.tabs[this.tab].setAttribute('class', 'active')
+                    
+                    // set interval to change slide
+                    let startInterval = () => {
+                        this.tab = (this.tab < this.tabs.length - 1)? this.tab + 1 : 0;
+                        this.tabs.forEach( (tab)=> {
+                            (this.tab == this.tabs.indexOf(tab)) ?  tab.setAttribute('class', 'active') : tab.removeAttribute('class') 
+                        })
+                    }
+                    
+                    // start interval to change slide
+                    let slideInterval = setInterval(startInterval, timeInterval);
+                    
+                    // mouse over slider stops slide
+                    this.$refs.slider.onmouseover = () => {
+                        if (slideInterval) { 
+                            clearInterval(slideInterval)
+                            slideInterval = null;
+                        }
+                    }
+                    
+                    // mouse out slider starts again slide
+                    this.$refs.slider.onmouseout = () => {
+                        if (slideInterval === null) { 
+                            slideInterval = setInterval(startInterval, timeInterval);
+                        }
+                    }
+                    
+                    // slider tabs click event 
+                    this.tabs.forEach( (tab)=> {
+                        tab.addEventListener('click', (e)=> {
+                            e.preventDefault()
+                            this.tab = this.tabs.indexOf(e.target)
+                            this.tabs.forEach( (tab)=> {
+                                (this.tab == this.tabs.indexOf(tab)) ?  tab.setAttribute('class', 'active') : tab.removeAttribute('class') 
+                            }) 
+                        })
+                    })
+                }
+            }))
+        })
+    </script>

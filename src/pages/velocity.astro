@@ -14,7 +14,6 @@ import SectionTextarea from "@components/sectionmid-textarea.astro";
 import FeaturesGrid from "@components/grid-4x4-features.astro";
 import Pricing from "@components/pricing.astro";
 import Accordian from "@components/accordian.astro";
-import AccordianTabs from "@components/accordian-tabs.astro";
 import Integrations from "@components/logos-integrations.astro";
 import { Picture } from "@astrojs/image/components";
 import Pagecover from '../assets/backgrounds/balance.webp';
@@ -35,7 +34,6 @@ const pricing = [
       "9x web pages",
       "6x graphic design assets",
       "2x lead generation funnels",
-      "Medium Storefront with 4 products",
       "Domain & DNS setup",
       "Velocity customised to your brand",
       "Stripe payment processing",
@@ -142,10 +140,10 @@ const pricing = [
   <ContainerXL>
     <SectionHeadImg>
       <Fragment slot="smltitle">
-        Focus
+        Design
       </Fragment>
       <Fragment slot="title">
-        Designed to make it easier to move to custom code.
+        Making it easier to move to custom code.
       </Fragment>
       <Fragment slot="desc">
         Velocity makes it easier to build out beautiful custom code websites, with a low-code design 
@@ -168,10 +166,10 @@ const pricing = [
 
     <SectionHeadImgRev>
       <Fragment slot="smltitle">
-        Results
+        Development
       </Fragment>
       <Fragment slot="title">
-        Developed over 5 years with focus on lead generation + UX.
+        Improved over 5 years, conversion-focused.
       </Fragment>
       <Fragment slot="desc">
         Packed with everything needed to generate more business online. 
@@ -199,7 +197,7 @@ const pricing = [
         Performance
       </Fragment>
       <Fragment slot="title">
-        A+ web vitals + 0.2 second pageload speed, out-of-the-box.
+        + 0.2 second pageload speed, out-of-the-box.
       </Fragment>
       <Fragment slot="desc">
         We've worked with hundreds of brands and have refined our process to deliver websites in 21 days, aiming to get as much of your input in minutes not hours. 
@@ -222,10 +220,10 @@ const pricing = [
 
     <SectionHeadImgRev>
       <Fragment slot="smltitle">
-        Manages
+        Pay-Once
       </Fragment>
       <Fragment slot="title">
-        Reducing the cost of websites + escaping subscriptions. 
+        Reducing the cost of digital business. 
       </Fragment>
       <Fragment slot="desc">
         Pay for your site once and own your code forever. No more endless subscriptions no server costs whatsoever. The only other 
@@ -249,9 +247,9 @@ const pricing = [
 
     <SectionTextarea>
       <Fragment slot="smltitle">
-        Includes
+        Integrations
       </Fragment>
-      <Fragment slot="title">80+ components from accordians, galleries and product cards.</Fragment>
+      <Fragment slot="title">30+ integrations to make more sales from your website.</Fragment>
       <Fragment slot="desc">
         Velocity 7 is a low-code framework that allows us to build websites faster than ever before. 
         While maintaining high-performance and high-conversion rate through faster design iterations. 
@@ -325,7 +323,6 @@ const pricing = [
 
   <Container>
     <Accordian />
-    <AccordianTabs />
   </Container>
 
   <Container>
