@@ -47,10 +47,10 @@ import VideoProd from '../assets/aidxn/hex.svg';
 <main class="my-16 md:my-32">
   <div id="introContainer" class="mb-4 md:mb-8">
     <h5 class="text-sm lg:text-md text-slate-700 mb-2">
-      Finer Details
+      Velocity Details
     </h5>
     <h3 class="text-2xl md:text-3xl lg:text-5xl mb-4 font-bold lg:tracking-tight">
-      Velocity Performance Details.
+      Frequently Asked Questions.
     </h3>
     
   </div>
@@ -60,17 +60,14 @@ import VideoProd from '../assets/aidxn/hex.svg';
 
 
   <section x-data="slider()">
-    <div class="mr-8">
-    
-        <h3 class="font-medium mx-auto pt-10 pb-4">Velocity Frequently Asked Questions.</h3>
-        
+    <div class="">
         <div class="bg-white border border-gray-200" x-data="{selected:1}">
 
             <ul class="shadow-box">
 
                 <li class="relative border-b border-gray-200">
                     <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-center justify-between text-xl font-semibold">
                             <span>
                                 Pay Once, Own Forever. No Hidden Fees.
                             </span>
@@ -88,7 +85,7 @@ import VideoProd from '../assets/aidxn/hex.svg';
           
                 <li class="relative border-b border-gray-200">
                     <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 2 ? selected = 2 : selected = null">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-center justify-between text-xl font-semibold">
                             <span>
                                 How does Velocity run without Hosting?    
                             </span>
@@ -105,7 +102,7 @@ import VideoProd from '../assets/aidxn/hex.svg';
           
                 <li class="relative border-b border-gray-200">
                     <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-center justify-between text-xl font-semibold">
                             <span>
                                 Can I edit my Velocity website myself?    
                             </span>
@@ -118,7 +115,75 @@ import VideoProd from '../assets/aidxn/hex.svg';
                             <p>We understand why a lot of clients still want to use website builders like Wordpress and Canva, but a lot of the time it will just never do the trick to generate a single lead. Usually simply causing a brand harm. Velocity was designed and developed with the end customer in mind and their ability to cheaply maintain their site well into the future, after our team have customised the site intially to your liking. Wordpress developers have worked for years mostly with tools such as Divi and Elementor. Velocity's low-code design is shaped around the fundamentals that have been learned here. Shopify and Webflow builders will also feel very comfortable with code maintaining. Allowing even the most junior developer to quickly create effective, high-conversion web pages with out us if need be. Even though we are always just a phone call away for all Velocity clients.</p>
                         </div>
                     </div>
-                </li> 
+                </li>
+                
+                <li class="relative border-b border-gray-200">
+                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+                        <div class="flex items-center justify-between text-xl font-semibold">
+                            <span>
+                                Can Velocity work with Shopify?    
+                            </span>
+                            <span class="ico-plus"></span>
+                        </div>    
+                    </button>
+      
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+                        <div class="p-6">
+                            <p>Velocity can be used in-front of Shopify Storefronts, allowing for the ability to create extremely professional, fully custom website experiences for landing pages rapidly and cost-effectively. Shopify is recommended to clients when their business already exceeds $4,000 / month in revenue, reliable with no sales. Before this point, Velocity is recommended to clients to completely take the wheel and save you money while your business is fragile. With better SEO ability and image compression built-in on par with Shopify's image engine, Velocity is the perfect partner to businesses selling in global markets needing more flexibility with their landing pages and product / service documentation.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="relative border-b border-gray-200">
+                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 5 ? selected = 5 : selected = null">
+                        <div class="flex items-center justify-between text-xl font-semibold">
+                            <span>
+                                Can Velocity work with Wordpress?    
+                            </span>
+                            <span class="ico-plus"></span>
+                        </div>    
+                    </button>
+      
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''">
+                        <div class="p-6">
+                            <p>Velocity was developed at the start to make it easier for me to offer clients a way out of Wordpress. Years later and unfortunately I'm still getting asked by clients if they can keep their Wordpress website, and I explain the long list of SEO and performance deficiencies that impose on your rankings and run up the costs of running larger business websites / storefronts. Built on Web3, Velocity doesn't require any expensive hosting or performance optimising plugins, it comes standard with no bloat. Also included with over 30 integrations which are all similar to your favourite WP plugins you would see powering most sites. Everything you're wanting from Wordpress we can promise has been built in and bettered with Velocity to make this exact question an easy one. Get started today with the pricing plan that fits a migration of your current Wordpress website and you'll be laughing in under 21 days. For any website migration from Wordpress that is larger pages and products wise, just book in a call.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="relative border-b border-gray-200">
+                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 6 ? selected = 6 : selected = null">
+                        <div class="flex items-center justify-between text-xl font-semibold">
+                            <span>
+                                What we will need from you.
+                            </span>
+                            <span class="ico-plus"></span>
+                        </div>    
+                    </button>
+      
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container6" x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''">
+                        <div class="p-6">
+                            <p>When you purchase a Velocity package, your Velocity website will be customised by our team and revised numerous times. We do our best to only ask for a single page of information from your end. An email address for leads to go to, a single paragraph of website text to expand upon with your tone, and some questions on what your want most from your site functionality and design. From here we will keep you posted with notifications through Asana that mostly will require no input from your end, but just to be informative on progress. Any Asana requests that require your input will be clearly labelled and notified in the 'For Approval' section. Velocity has been designed to be a solution for all common digital business needs, with no need from development by your team by to also easily allow for future development by anyone.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="relative border-b border-gray-200">
+                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 7 ? selected = 7 : selected = null">
+                        <div class="flex items-center justify-between text-xl font-semibold">
+                            <span>
+                                Is Velocity only open to Moonshot customers.
+                            </span>
+                            <span class="ico-plus"></span>
+                        </div>    
+                    </button>
+      
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container7" x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''">
+                        <div class="p-6">
+                            <p>Short and sweet, no. Velocity is a one-off product and service that we hope offers a great way for businesses to see just how quickly we can take your business further than other agencies ever have. If you'd like marketing management that genuinely doesn't muck around, please do look into our Moonshot Plan.</p>
+                        </div>
+                    </div>
+                </li>
 
             </ul>
 
