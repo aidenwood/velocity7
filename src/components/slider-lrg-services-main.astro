@@ -245,7 +245,7 @@ const services = [
   main { max-width: 100%; }
   .services-carousel { max-width: 100vw !important; }
   .flickity-viewport { margin: 0 auto !important; overflow-y: visible !important; }
-  .carousel-cell { min-height: 675px !important; margin: 20px 10px !important; }
+  .carousel-cell { height: 750px !important; margin: 20px 10px !important; }
   
   /* End Flickity viewport safeguards V4 - Testing */
 
@@ -269,7 +269,7 @@ const services = [
 <div id="sliderContainer" class="services-carousel">
   {
     services.map((item) => (
-      <div id="glass-card" class="carousel-cell w-4/5 md:w-2/5 lg:w-1/4 xl:w-1/5">
+      <div id="glass-card" class="carousel-cell w-4/5 md:w-1/3 lg:w-1/4">
           <div id="imgContainer" class="w-full block h-fit">
             <Picture
                   src={item.imgsrc}
