@@ -266,8 +266,8 @@ const services = [
 <div id="sliderContainer" class="services-carousel ">
   {
     services.map((item) => (
-      <div id="glass-card" class="carousel-cell block h-fit w-4/5 lg:w-2/5 xl:w-1/4">
-          <div id="imgContainer" class="w-full">
+      <div id="glass-card" class="carousel-cell h-fit w-4/5 md:w-2/5 lg:w-1/4 xl:1/5">
+          <div id="imgContainer" class="w-full block h-fit">
             <Picture
                   src={item.imgsrc}
                   sizes="(max-width: 1680px) 1680px, 1260px, 840px"
@@ -277,7 +277,7 @@ const services = [
                   background="#f2f2f200"
                   fit="cover"
                   position="center"
-                  class="w-full h-full rounded pb-8"
+                  class="w-full rounded pb-8"
                 />
           </div>
           <div class="w-full gap-6 ">
