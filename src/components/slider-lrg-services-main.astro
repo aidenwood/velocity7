@@ -242,10 +242,10 @@ const services = [
   }
 
     /* Start Flickity viewport safeguards V4 - Testing */
-    main { max-width: 100%; }
+  main { max-width: 100%; }
   .services-carousel, .flickity-viewport { max-width: 100vw !important; height: fit-content !important; min-height: 650px !important; margin: 0 auto !important; }
   /* End Flickity viewport safeguards V4 - Testing */
-  .services-carousel { margin: 40px auto; }
+
 
   </style>
 
@@ -263,7 +263,7 @@ const services = [
   </p>
 </div>
 
-<div id="sliderContainer" class="services-carousel min-h-fit py-4">
+<div id="sliderContainer" class="services-carousel ">
   {
     services.map((item) => (
       <div id="glass-card" class="carousel-cell block h-fit w-4/5 lg:w-2/5 xl:w-1/4">
@@ -277,10 +277,10 @@ const services = [
                   background="#f2f2f200"
                   fit="cover"
                   position="center"
-                  class="w-full rounded"
+                  class="w-full h-full rounded pb-8"
                 />
           </div>
-          <div class="w-full gap-6 mt-8">
+          <div class="w-full gap-6 ">
             <h5 class="text-slate-700 mr-3 uppercase text-xs">{item.category}</h5>
             <h3 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h3>{" "}
             <p class="text-xs lg:text-md text-slate-700 pt-2 leading-relaxed">{item.description}</p>
@@ -302,7 +302,7 @@ const services = [
               <div class="flex">
                 <Link 
                   onClick="onClick()"
-                  class="ml-8"
+                  class="ml-2"
                   href={item.buylink || "#"}
                   block
                   style={item.style ? "primary" : "outline"}>
@@ -326,7 +326,6 @@ const services = [
   prevNextButtons: false,
   freeScroll: true,
   adaptiveHeight: true,
-  imagesLoaded: true,  
   });
 </script>
 
