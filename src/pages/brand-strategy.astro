@@ -13,7 +13,7 @@ import MoonshotHero from "@components/sectionmid-singleproduct-moonshot.astro";
 import Integrations from "@components/logos-integrations.astro";
 import GallerySlider from "@components/slider-lrg-services-brand.astro";
 import { Picture } from "@astrojs/image/components";
-import PagecoverHero from '../assets/aidxn/trig.svg';
+import PagecoverHero from '../assets/products-sqr/complete-brand-packages.webp';
 import Pagecover from '../assets/backgrounds/balance.webp';
 import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
 import CoverTextarea from '../assets/backgrounds/cubed.webp';
@@ -90,7 +90,7 @@ const pricing = [
 
 
 
-  <ContainerFW transition:animate="slide">
+  <ContainerFW>
     <SectionEmail>
       <Fragment slot="title">
         Complete brand design packs + industry specific strategies.
@@ -105,8 +105,8 @@ const pricing = [
                   sizes="(max-width: 2000px) 2000px, 1000px"
                   widths={[1000, 1500, 2000]}
                   aspectRatio="3:2"
-                  background="#ffffff00"
-                  fit="contain"
+                  background="#f2f2f2"
+                  fit="cover"
                   position="center"
                   class="w-full rounded duration-200 hover:shadow-sm"
                 />

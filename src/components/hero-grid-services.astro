@@ -3,11 +3,10 @@
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 
-
 import GraphicDesign from '../assets/aidxn/trig.svg';
 import WebDesign from '../assets/aidxn/sqr.svg';
 import Marketing from '../assets/aidxn/poly.svg';
-import Moonshot from '../assets/aidxn/hex.svg';
+import VideoProd from '../assets/aidxn/hex.svg';
 
 
 const features = [
@@ -18,7 +17,6 @@ const features = [
     imgsrc: GraphicDesign,
     imgalt: "Brand Design and strategy direction for the age of social marketing.",
     link: "/brand-strategy",
-    transition: "brandicon",
     style: "primary",
     btntxt: "Design",
     resultslink: "/blog/multi-modal-marketing",
@@ -32,7 +30,6 @@ const features = [
     imgsrc: WebDesign,
     imgalt: "Gold Coast's best web design and development agency with over 10 years experience.",
     link: "/web-design",
-    transition: "devicon",
     style: "primary",
     btntxt: "Develop",
     resultslink: "/blog/ecommerce-design-tricks",
@@ -46,7 +43,6 @@ const features = [
     imgsrc: Marketing,
     imgalt: "Digital marketing strategy and management with award-winning experts for less, based on the Gold Coast.",
     link: "/marketing",
-    transition: "marketicon",
     style: "primary",
     btntxt: "Market",
     resultslink: "/blog/multi-modal-marketing",
@@ -54,13 +50,12 @@ const features = [
     resultsbtntxt: "Campaign results",
   },
   {
-    title: "Marketing Optimisation.",
+    title: "Monthly Optimisation.",
     description:
       "Monthly website and marketing management. Pause anytime to guarentee results. Optimisation of KPI's and winning audience conversion.",
-    imgsrc: Moonshot,
+    imgsrc: VideoProd,
     imgalt: "Monthly management of website and marketing campaigns, on the Gold Coast.",
     link: "/moonshot-plan",
-    transition: "moonshoticon",
     style: "primary",
     btntxt: "Moonshot",
     resultslink: "/blog/multi-modal-marketing",
@@ -101,7 +96,7 @@ const features = [
         <div class="flex items-start">
           <div id="glass-card" class="card-padding w-full flex flex-col items-start justify-center">
             <div id="imgContainer" class="mt-1 w-16">
-              <img src={item.imgsrc} class="" transition:name="hero" />
+              <img src={item.imgsrc} class="" />
             </div>
             <div id="textContainer" class="w-full mt-6">
               <h2 class="font-semibold text-xl md:text-2xl lg:text-3xl">{item.title}</h2>{" "}
