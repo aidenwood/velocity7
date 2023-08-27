@@ -5,6 +5,8 @@ import Detailedfooter from "@components/detailed-footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource/inter/variable.css";
 import '../styles/main.css';
+import { ViewTransitions } from 'astro:transitions';
+
 
 export interface Props {
   title: string;
@@ -33,7 +35,7 @@ const makeTitle = title
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap.xml">
-    
+    <ViewTransitions />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
@@ -57,6 +59,7 @@ const makeTitle = title
         },
       }}
     />
+    
 
   <!-- aidxn.com property linked to search console for better SEO - Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MN4T5PXYLD"></script>
@@ -75,7 +78,7 @@ const makeTitle = title
   
   <body class="bg-white">
     <Navbar />
-    <slot />
+    <slot transition:animate="slide" />
     <Detailedfooter />
     <style is:global>
       /* Improve Page speed */

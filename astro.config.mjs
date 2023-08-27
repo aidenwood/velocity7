@@ -16,5 +16,8 @@ export default defineConfig({
     } [sitemap()],
   ), image({
     serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx(), sitemap(), alpinejs()]
+  }), mdx(), sitemap(), alpinejs()],
+  experimental: {
+    viewTransitions: true
+   },
 });

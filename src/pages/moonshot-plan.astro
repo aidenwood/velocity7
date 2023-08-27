@@ -12,7 +12,7 @@ import SectionTextarea from "@components/sectionmid-textarea.astro";
 import ClientLogos from "@components/grid-4x4-clients.astro";
 import Integrations from "@components/logos-integrations.astro";
 import { Picture } from "@astrojs/image/components";
-import PagecoverHero from '../assets/products-sqr/animated-ad-design.webp';
+import PagecoverHero from '../assets/aidxn/hex.svg';
 import Pagecover from '../assets/backgrounds/balance.webp';
 import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
 import CoverTextarea from '../assets/backgrounds/cubed.webp';
@@ -32,13 +32,13 @@ import { Icon } from "astro-icon";
         World-class web optimisation, SEO, automation + digital marketing, at a fraction of the cost.
         Focusing on improving KPI's with detailed focus. Improve conversion rate and CPA, every month. 
       </Fragment>
-      <Fragment slot="cover">
+      <Fragment slot="cover" transition:name="hero">
         <Picture
                   src={PagecoverHero}
                   sizes="(max-width: 2000px) 2000px, 1000px"
                   widths={[1000, 1500, 2000]}
                   aspectRatio="3:2"
-                  background="#f2f2f2"
+                  background="#ffffff00"
                   fit="contain"
                   position="center"
                   class="w-full rounded duration-200 hover:shadow-sm"
