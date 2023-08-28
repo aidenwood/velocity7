@@ -1,0 +1,24 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import ContainerFW from "@components/container-fullwidth.astro";
+import BallSlider from "@components/slider-med-works-ball.astro";
+
+
+import Sectionhead from "@components/sectionhead-simple.astro";
+import Button from "@components/ui/button.astro";
+import Contactform from "@components/contactform.astro";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">How we improved Ball Realty's marketing and website conversion across the board.</Fragment>
+      <Fragment slot="desc">Extreme reduction in CPC and CPM marketing costs, before expanding marketing campaigns to almost every medium in the local customers daily use from highly targeted bus routes instead of standard offers and daily customer ad impressions for warm and hot leads.</Fragment>
+    </Sectionhead>
+  </Container>
+  <ContainerFW>
+    <BallSlider transition:name="ball" />
+  </ContainerFW>
+</Layout>
