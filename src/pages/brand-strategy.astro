@@ -18,6 +18,8 @@ import Pagecover from '../assets/backgrounds/balance.webp';
 import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
 import CoverTextarea from '../assets/backgrounds/cubed.webp';
 import { Icon } from "astro-icon";
+import IconSrc from '../assets/aidxn/trig.svg';
+
 
 
 const pricing = [
@@ -92,6 +94,11 @@ const pricing = [
 
   <ContainerFW>
     <SectionEmail>
+      <Fragment slot="icon">
+        <div id="imgContainer" class="mt-1 w-16">
+          <img src={IconSrc} class="" transition:name="icon" transition:animate="morph"/>
+        </div>
+      </Fragment>
       <Fragment slot="title">
         Complete brand design packs + industry specific strategies.
       </Fragment>
