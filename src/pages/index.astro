@@ -18,6 +18,8 @@ import SectionHeadImg from "@components/sectionhead-img.astro";
 import MoonshotSectionmid from "@components/sectionmid-singleproduct-moonshot.astro";
 import VelocitySectionmid from "@components/sectionmid-singleproduct-velocity.astro";
 
+import ContactForm from '@components/contactform-simple-row.astro';
+
 import MoonshotCover from '../assets/previous-works/moonshot-asana.webp';
 import VelocityCover from '../assets/previous-works/velocity-tsd.webp';
 import Cta from "@components/cta.astro";
@@ -71,6 +73,8 @@ import Layout from "@layouts/Layout.astro";
 
     <VelocitySectionmid />
 
+    <ContactForm />
+
   </ContainerXL>
 
   <ContainerFW>
@@ -109,10 +113,9 @@ import Layout from "@layouts/Layout.astro";
     </SectionHeadImg>    
     
     <MoonshotSectionmid />
+    <Logos />
 
     <Cta />
-
-    <Logos />
 
   </ContainerXl>
 

@@ -39,7 +39,7 @@
 
 h1, h2, h3, h4 { font-family: 'quarto'; }
 h5, h6 { font-family: 'inconsolata'; text-transform: uppercase; }
-p, span, html, button, a { font-family: 'wotfard'; }
+p, span, html, button, a, li { font-family: 'wotfard'; }
 b { font-family: 'wotfard-bold'; }
 
 :root {

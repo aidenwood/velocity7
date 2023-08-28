@@ -6,23 +6,27 @@ import { Icon } from "astro-icon";
 <!-- SVG CSS and Animate for Aidxn Moving Logo -->
 <style>
   svg{width:100%;height:100%;perspective:50px}circle{stroke:#26003A;stroke-width:8px;fill:none}.equator{stroke:#a600ff;transform:rotateZ(-20deg) rotateX(125deg)}.meridian{animation:2s linear infinite turn;transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--start))}@keyframes turn{100%{transform:rotateZ(-20deg) rotateX(35deg) rotateY(var(--end))}}
+  #spec { border-top: 0.5px #000 solid; padding: 15px 0px; }
 </style>
 
 <main class="my-8 md:my-16">
   <div id="heroSection" class="flex flex-col-reverse md:flex-row items-center mb-8">
     
-    <div class="w-full md:w-2/3 lg:w-3/5">
+    <div class="w-full text-center md:text-left mx-auto md:w-2/3 lg:w-3/5">
 
-      <div id="glassCard">
-        <h1 style="heroTagline" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl w-full max-w-6xl pt-4 md:pt-8 md:pr-8 lg:pr-24 font-bold tracking-tight">
-          All-in-one brand + web design improvement.
+      <div id="glassCard" class="gap-4">
+        <h1 style="heroTagline" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl w-full max-w-5xl py-4 md:py-8 font-bold tracking-tight">
+          Website, brand strategy + marketing optimisation. All-in-one.
         </h1>
-        <ul class="text-lg lg:text-xl mt-6 text-slate-700 w-full max-w-3xl gap-2">
-          <li>10+ years developing websites, specialising in conversion rate improvement.</li>
-          <li>8+ years designing for print, branding and interactive experiences.</li> 
-          <li>6+ years managing marketing campaigns in over 15 industries.</li>
+
+        <p class="text-md lg:text-lg text-slate-700 w-full max-w-6xl">The current model of digital marketing agencies was making me hate the service that was being provided. I started a new business name and model with one-off, predictable pricing and no more endless subscriptions. For the small percentage of businesses in a stage where they are ready to scale month on month, we've still go you with no work outsourced, with our Moonshot Plan. Fixed price of $4445/month, pause anytime.</p>
+
+        <ul class="grid grid-cols-1 lg:grid-cols-3 text-lg lg:text-xl my-8 text-slate-700 w-full max-w-5xl gap-6">
+          <li id="spec"><b>10+ years of dev</b> for websites, specialising in UX improvement.</li>
+          <li id="spec"><b>8+ years of design</b> for print and interactive experiences.</li> 
+          <li id="spec"><b>6+ years of marketing</b> in over 15 industries.</li>
         </ul>
-        <div class="mt-6 flex flex-col sm:flex-row justify-start gap-3">
+        <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
           <a href="https://aidxn.com/velocity" rel="noopener" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-black text-white hover:bg-gray-800 border-2 border-transparent flex gap-1 items-center justify-center">
             <svg viewBox="0 0 24 24" class="w-4 h-4">
               <Icon class="text-white" name="ph:lightning-fill" />
