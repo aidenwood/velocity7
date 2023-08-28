@@ -1,0 +1,328 @@
+---
+import Layout from "@layouts/Layout.astro";
+import ContainerFW from "@components/container-fullwidth.astro";
+import ContainerXL from "@components/container-xl.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionmid.astro";
+import SectionEmail from "@components/sectionhead-email.astro";
+import Cta from "@components/cta.astro";
+import SectionHeadImg from "@components/sectionhead-img.astro";
+import SectionHeadSecImg from "@components/sectionhead-img-rev.astro";
+import SectionTextarea from "@components/sectionmid-textarea.astro";
+import Pricing from "@components/pricing.astro";
+import Logos from "@components/logos.astro";
+import Integrations from "@components/logos-integrations.astro";
+import GallerySlider from "@components/slider-gallery.astro";
+import BlogSlider from "@components/slider-content.astro";
+import { Picture } from "@astrojs/image/components";
+import PagecoverHero from '../assets/previous-works/website-conversion-optimisation.webp';
+import Pagecover from '../assets/backgrounds/balance.webp';
+import PagecoverSecondary from '../assets/backgrounds/funnel.webp';
+import CoverTextarea from '../assets/backgrounds/cubed.webp';
+import { Icon } from "astro-icon";
+
+
+const pricing = [
+  {
+    name: "Velocity - Online Starter",
+    price: "$1445",
+    popular: false,
+    features: [
+      "2x 15-min video-call brand sessions",
+      "2x design revisions",
+      "3x web pages w/ 0.2 sec load time avg.",
+      "High conversion landing pages with purposeful marketing",
+      "Simple social conversion tracking",
+      "Social brand pack w/ 2x design releases",
+      "50+ Velocity7 components",
+      "Out-of-the-box SEO performance",
+      "Cookie-less social user tracking",
+      "Domain & DNS optimisation",
+      "Email forwarding setup",
+      "2x lead gen funnels",
+      "Stripe payment processing",
+      "Infitely extendable, ultra-light codebase",
+      "Lifetime license of your site",
+    ],
+    button: {
+      text: "Purchase",
+      link: "https://buy.stripe.com/4gwaGdg1JeJL0MM6oF",
+    },
+  }, 
+  {
+    name: "Velocity - Small",
+    price: "$2445",
+    popular: false,
+    features: [
+      "2x 15-min video-call brand sessions",
+      "2x design revisions",
+      "3x web pages w/ 0.2 sec load time avg.",
+      "High conversion landing pages with purposeful marketing",
+      "Simple social conversion tracking",
+      "Social brand pack w/ 2x design releases",
+      "50+ Velocity7 components",
+      "Out-of-the-box SEO performance",
+      "Cookie-less social user tracking",
+      "Domain & DNS optimisation",
+      "Email forwarding setup",
+      "2x lead gen funnels",
+      "Stripe payment processing",
+      "Infitely extendable, ultra-light codebase",
+      "Lifetime license of your site",
+    ],
+    button: {
+      text: "Purchase",
+      link: "https://buy.stripe.com/7sIcOleXFgRTbrq4gg",
+    },
+  },
+  {
+    name: "Velocity - Medium",
+    price: 
+      "$3445",
+    popular: true,
+    features: [
+      "3x 15-min video-call brand sessions",
+      "4x design revisions",
+      "6x web pages w/ 0.2 sec load time avg.",
+      "High conversion landing pages with purposeful marketing",
+      "Custom social conversion tracking",
+      "Social brand pack w/ 4x design releases",
+      "50+ Velocity7 components",
+      "Out-of-the-box SEO performance",
+      "Cookie-less social user tracking",
+      "Domain & DNS optimisation",
+      "Email forwarding setup",
+      "4x lead gen funnels",
+      "Stripe payment processing",
+      "Infitely extendable, ultra-light codebase",
+      "Lifetime license of your site",
+    ],
+    button: {
+      text: "Purchase",
+      link: "https://buy.stripe.com/28o15Dg1JfNPcvufZ6",
+    },
+  },
+  {
+    name: "Velocity - E-Commerce",
+    price: "$6445",
+    popular: false,
+    features: [
+      "4x 15-min video-call brand sessions",
+      "6x design revisions",
+      "12x web pages w/ 0.2 sec load time avg.",
+      "2x in-person strategy sessions",
+      "E-Commerce store extension on sub-domain",
+      "Custom social conversion tracking",
+      "Social brand pack w/ 8x design releases",
+      "50+ Velocity7 components",
+      "Out-of-the-box SEO performance",
+      "Cookie-less social user tracking",
+      "Domain & DNS optimisation",
+      "Email forwarding setup",
+      "2x lead gen funnels",
+      "Stripe payment processing",
+      "Infitely extendable, ultra-light codebase",
+      "Lifetime license of your site",
+    ],
+    button: {
+      text: "Purchase",
+      link: "https://buy.stripe.com/cN2eWtdTBdFH1QQ14d",
+    },
+  },
+];
+---
+
+<Layout title="Marketing Automation for Lead Generation + Conversion Optimisation">
+
+
+
+  <ContainerFW>
+    <SectionEmail>
+      <Fragment slot="title">
+        Marketing automation for lead gen + conversion optimisation.
+      </Fragment>
+      <Fragment slot="desc">
+        We apply the same cutting-edge AI / Automations within your marketing 
+        that the best performing global brands are using. Helping reduce manual hours 
+        across your business, completely customised to your needs. Only available to <a href="/moonshot">Moonshot Plan</a> customers.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={PagecoverHero}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionEmail>
+
+  </ContainerFW>
+
+  <ContainerXL>
+    <SectionHeadImg>
+      <Fragment slot="title">
+        Performance-focused code.
+      </Fragment>
+      <Fragment slot="desc">
+        Velocity is one of the most powerful and versatile website frameworks available. Version 7 built on the best of Web3 languages, AstroJS (in our humble opinion).
+        Completely accessible, seo-friendly code. Pre-integrated with the necessities, without losing any pageload performance.
+        Visually stunning, TailwindCSS styling, with codelinting and postcss preconfigured. 50+ user-friendly components worth of truly beautiful code.
+        Completely owned by your business with a lifetime license, so you don't need to worry about subscription traps again.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={Pagecover}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadImg>
+  </ContainerXL>
+
+  <ContainerXL>
+    <SectionHeadSecImg>
+      <Fragment slot="title">
+        Conversion-focused design.
+      </Fragment>
+      <Fragment slot="desc">
+        Velocity's conversion-focused component and layout design optimizes user-flow for your business with ease. 
+        Quickly building web pages for your business that showcase a beautiful user journey to sales and conversions.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={PagecoverSecondary}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+    </SectionHeadSecImg>
+  </ContainerXL>
+
+  <ContainerXL>
+    <SectionTextarea>
+      <Fragment slot="title">Rock-solid integrations.</Fragment>
+      <Fragment slot="desc">
+        Velocity7 is writen in AstroJS and ready to be extended endlessly. But we've taken the liberty of
+        pre-integrating, in the most perfomant way, the best web technologies we know of. All of our secrets, 
+        with a helping hand from our team and some good laughs along the way.
+      </Fragment>
+      <Fragment slot="cover">
+        <Picture
+                  src={CoverTextarea}
+                  sizes="(max-width: 2000px) 2000px, 1000px"
+                  widths={[1000, 1500, 2000]}
+                  aspectRatio="3:2"
+                  background="#f2f2f2"
+                  fit="cover"
+                  position="center"
+                  class="w-full rounded duration-200 hover:shadow-sm"
+                />
+      </Fragment>
+      <Fragment slot="iconleft">
+        <Icon class="w-16 h-16" name="simple-icons:zapier" />
+      </Fragment>
+      <Fragment slot="titleleft">
+        Zapier API
+      </Fragment>
+      <Fragment slot="textleft">
+        Zapier's powerful automation platform works directly
+        with Velocity7. Automate tasks, synchronize data, 
+        and reduce costs. All made simple with Velocity7 
+        API connection.
+      </Fragment>
+      <Fragment slot="iconright">
+        <Icon class="w-16 h-16" name="simple-icons:netlify" />
+      </Fragment>
+      <Fragment slot="titleright">
+        Netlify DNS & CDN
+      </Fragment>
+      <Fragment slot="textright">
+        All our Velocity sites are powered by Netlify's powerful, 
+        load-balancing network of servers to deliver your content 
+        to the end user faster than anyone else. Absolutely necessary
+        with the cell networks available in Australia. Take back control 
+        of your website's velocity with the speed of Velocity7 on Netlify's network.
+      </Fragment>
+      <Fragment slot="iconleft2">
+        <Icon class="w-16 h-16" name="simple-icons:googleads" />
+      </Fragment>
+      <Fragment slot="titleleft2">
+        GTM Conversion Tracking
+      </Fragment>
+      <Fragment slot="textleft2">
+        Maximize your advertising effectiveness with Google Ads' 
+        conversion tracking built deeply into Velocity7. Easily 
+        track and measure conversions that matter most to your 
+        business. Gain valuable insights into customer behavior 
+        and optimize your ad strategy accordingly. With Google Ads' 
+        comprehensive conversion tracking, you can make data-driven 
+        decisions and drive higher ROI for your advertising efforts.
+      </Fragment>
+      <Fragment slot="iconright2">
+        <Icon class="w-16 h-16" name="simple-icons:stripe" />
+      </Fragment>
+      <Fragment slot="titleright2">
+        Stripe Payments
+      </Fragment>
+      <Fragment slot="textright2">
+        Streamline your payment process and boost sales with Stripe's 
+        secure payment gateway. With one-click checkout, you can 
+        provide a seamless payment experience for your customers, 
+        reducing cart abandonment and driving conversions. Benefit 
+        from Stripe's transparent pricing, and robust fraud prevention 
+        from day one for your business. For frictionless payment experiences.
+      </Fragment>      
+    </SectionTextarea>
+  </ContainerXL>
+
+  <Container>
+
+    <Sectionhead>
+      <Fragment slot="title">Turn Around in 21 Days.</Fragment>
+      <Fragment slot="desc"
+        >We get straight to work when you're ready, just order below. I'll come directly to your businesses anywhere in South East Queensland 
+        before any designs are started, to see your current position and learn your future goals. From here, a 21 day turn around will be 
+        accomplished with a 97% success rate. While still giving you the option for 2 free full revisions at any point, keeping you kept in the 
+        creative loop as frequently as you'd like.
+      </Fragment>
+    </Sectionhead>
+
+    <Integrations />
+
+  </Container>
+
+  <ContainerXL>
+    <Sectionhead>
+      <Fragment slot="title">Ready to Launch?</Fragment>
+      <Fragment slot="desc" class="max-w-4xl">
+        Move your business to Velocity7 with Aidxn Design and start crushing it with ease in your industry. Leave the world of churn web design.
+      </Fragment>
+    </Sectionhead>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mx-auto mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </ContainerXL>
+
+  <Container>
+    <Cta />
+  </Container>
+
+  <ContainerFW>
+    <GallerySlider />
+  </ContainerFW>
+  
+</Layout>
