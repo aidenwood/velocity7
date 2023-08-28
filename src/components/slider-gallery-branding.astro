@@ -130,7 +130,7 @@ const services = [
 <!-- Flickity -->
 <!-- CSS -->
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/partytown" src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <!-- Flickity Custom Styles -->
 <style>
@@ -149,7 +149,7 @@ const services = [
     max-width: 100vw;
     }
     .flickity-viewport { min-height: fit-content ; }
-    .blog-carousel, .flickity-viewport { max-width: 100% !important; margin: 0 auto; }
+    .branding-carousel, .flickity-viewport { max-width: 100% !important; margin: 0 auto; }
     /* End Flickity viewport safeguards V3 */
 </style>
 <main class="my-8 md:my-16">
@@ -159,7 +159,7 @@ const services = [
   </h2>
 </div>
 
-<div id="sliderContainer" class="brandimg-carousel w-full mb-16">
+<div id="sliderContainer" class="branding-carousel w-full mb-16">
   {
     services.map((item) => (
       <div id="productCard" class="carousel-cell rounded-xl backdrop-blur-lg bg-gradient-to-b from-white/60 to-white/30 border-[1px] border-solid border-white border-opacity-30 shadow-black/70 shadow-2xl duration-200">
@@ -170,6 +170,7 @@ const services = [
                   widths={[200, 400]}
                   aspectRatio="1:1"
                   background="#f2f2f2"
+                  loading="lazy"
                   fit="cover"
                   position="center"
                   class="w-full h-fit rounded"
@@ -208,7 +209,7 @@ const services = [
 <script>
   // element argument can be a selector string
   //   for an individual element
-  var flkty = new Flickity( '.brandimg-carousel', {
+  var flkty = new Flickity( '.branding-carousel', {
   cellAlign: 'left',
   contain: true,  
   freeScroll: true,
