@@ -76,9 +76,9 @@ const makeTitle = title
     html { max-width: 100vw; overflow-x: hidden; }
   </style>
   
-  <body class="bg-white" transition:animate="fade">
+  <body class="bg-white">
     <Navbar />
-    <slot />
+    <slot  transition:animate="fade" />
     <Detailedfooter />
     <style is:global>
       /* Improve Page speed */
