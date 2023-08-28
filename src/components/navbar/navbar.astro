@@ -33,6 +33,8 @@ const menuitems = [
       height: 45px;
     }
   }
+  #navTitle { border: 0.5px; }
+  #navTitle:hover { border:2px; }
   header { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(30px); border: 2px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
   .dashboard-button {display: none;}
 </style>
@@ -63,7 +65,7 @@ const menuitems = [
 
                 {!item.children && (
                   <li>
-                    <a
+                    <a id="navTitle"
                       href={item.path}
                       class="flex lg:px-3 py-2 text-black hover:text-gray-700"
                     >
