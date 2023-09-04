@@ -5,10 +5,6 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import alpinejs from "@astrojs/alpinejs";
 import partytown from "@astrojs/partytown";
-import compress from "astro-compress";
-import purgecss from "astro-purgecss";
-
-import criticalCss from "astro-critical-css";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,7 +15,7 @@ export default defineConfig({
     }
   }[sitemap()]), image({
     serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx(), sitemap(), alpinejs(), partytown(), compress(), purgecss(), criticalCss()],
+  }), mdx(), sitemap(), alpinejs(), partytown()],
   experimental: {
     viewTransitions: true
   }
