@@ -32,10 +32,7 @@ const sliderContent = [
 
 
 
-<style>
-  .carousel-cell { padding: 10px 20px; }
-
-  
+<style>  
   [astro-icon="bgIcon"] {
         color: #a600ff10;
         /* OR */
@@ -88,7 +85,7 @@ const sliderContent = [
 
     <div class="w-full h-full">
       { sliderContent.map((item) => (
-        <div id="glass-card" class="carousel-cell w-full py-32">
+        <div id="glass-card" class="carousel-cell w-fit py-32">
           <div id="slideContainer" class="flex flex-col gap-y-4">
             <div id="iconContainer" class="w-16 lg:w-24">
               <img src={item.icon} class="" />
