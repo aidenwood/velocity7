@@ -162,10 +162,6 @@ const services = [
 
 <!-- Flickity Custom Styles -->
 <style>
-.carousel-cell {
-  margin: 40px 20px;
-  padding: 20px 30px;
-}
 
   /* Start Flickity viewport safeguards V3 */
   main { max-width: 100%; }
@@ -190,7 +186,7 @@ const services = [
 <div id="sliderContainer" class="blog-carousel grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 py-8">
   {
     services.map((item) => (
-      <div id="glass-card" class="carousel-cell w-full h-fit">
+      <div id="glass-card" class="carousel-cell w-fit h-fit">
         <div id="imgContainer" class="lg:w-1/3 px-2">
           <Icon class="h-8 md:h-12" name={item.icon} />
         </div>  
