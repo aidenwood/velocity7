@@ -14,22 +14,10 @@ const menuitems = [
   {
     title: "Develop",
     path: "/web-design",
-    children: [
-      { title: "Web Design", path: "/web-design" },
-      { title: "Velocity", path: "/velocity" },
-      { title: "Shopify", path: "/shopify" },
-      { title: "Wordpress", path: "/wordpress" },
-    ],
   },
   {
     title: "Market",
     path: "/marketing",
-    children: [
-      { title: "Marketing", path: "/marketing" },
-      { title: "Video Ads", path: "/video-ads" },
-      { title: "Interactive Ads", path: "/interactive-ads" },
-      { title: "Automation", path: "/automation" },
-    ],
   },
   {
     title: "Moonshot",
@@ -37,7 +25,13 @@ const menuitems = [
   },
 ];
 ---
-
+<!--
+ children: [
+{ title: "Web Design", path: "/web-design" },
+{ title: "Velocity", path: "/velocity" },
+{ title: "Shopify", path: "/shopify" },
+{ title: "Wordpress", path: "/wordpress" },
+], -->
 <style>
   #navLogo { height: 60px; margin: 15px auto; } 
   @media only screen and (max-width: 1199px) {
