@@ -3,6 +3,10 @@ import Button from "./ui/button.astro";
 import { Picture } from "@astrojs/image/components";
 import FormCover from '../assets/backgrounds/balance.webp';
 ---
+<!-- Event snippet for web3form-contact conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+   function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-11327549432/rkE7CNaw_94YEPjfspkq', 'event_callback': callback }); return false; }
+</script>
 
 <div class="my-16">
   <div id="Container" class="px-8 max-w-6xl mx-auto">
@@ -66,7 +70,7 @@ import FormCover from '../assets/backgrounds/balance.webp';
           Please provide a valid website address.
         </div>
       </div>
-      <Button type="submit" size="lg" block>Roast at 300°</Button>
+      <Button onclick="return gtag_report_conversion('http://example.com/your-link');" type="submit" size="lg" block>Roast at 300°</Button>
       <div id="result" class="mt-3 text-center"></div>
     </form>
   </div>
