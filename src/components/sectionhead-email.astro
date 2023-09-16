@@ -19,7 +19,7 @@ import Button from "./ui/button.astro";
     
     <div id="formContainer" class="w-full lg:max-w-2xl">
       <h3 name="emailTitle" class="text-black text-lg md:text-2xl lg:text-3xl font-semibold mb-4">
-        10 quick ways to improve website and marketing conversion rate.
+        Let me offer some ideas to improve your website and conversion rate.
       </h3>
           <!-- To make this contact form work, create your free access key from https://web3forms.com/
           Then you will get all form submissions in your email inbox. -->
@@ -47,19 +47,35 @@ import Button from "./ui/button.astro";
             </div>
           </div>
           <div class="my-2 w-full lg:w-1/2">
-            <label for="email_address" class="sr-only">Email Address</label><input
-              id="email_address"
-              type="email"
-              placeholder="Email Address"
-              name="email"
+            <label for="phone" class="sr-only">Phone Number</label><input
+              id="phone"
+              type="number"
+              placeholder="Phone Number"
+              name="phone"
               required
               class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
             />
             <div class="empty-feedback text-red-400 text-sm mt-1">
-              Please provide your email address.
+              Please provide your phone number.
             </div>
             <div class="invalid-feedback text-red-400 text-sm mt-1">
-              Please provide a valid email address.
+              Please provide a valid phone number.
+            </div>
+          </div>
+          <div class="mb-5">
+            <label for="website" class="sr-only">Website or Brand</label><input
+              id="website"
+              type="text"
+              placeholder="yourbrand.com/"
+              name="website"
+              required
+              class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+            />
+            <div class="empty-feedback text-red-400 text-sm mt-1">
+              Please provide an answer.
+            </div>
+            <div class="invalid-feedback text-red-400 text-sm mt-1">
+              Please provide an answer.
             </div>
           </div>
         </div>
